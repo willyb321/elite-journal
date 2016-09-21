@@ -1,4 +1,4 @@
-# elite-journal [![Build status](https://ci.appveyor.com/api/projects/status/hng82lbontx2lm3c?svg=true)](https://ci.appveyor.com/project/willyb321/elite-journal)[![Github All Releases](https://img.shields.io/github/downloads/willyb321/elite-journal/total.svg?maxAge=2592000)](https://github.com/willyb321/elite-journal)
+# elite-journal [![Build status](https://ci.appveyor.com/api/projects/status/hng82lbontx2lm3c?svg=true)](https://ci.appveyor.com/project/willyb321/elite-journal)[![Github All Releases](https://img.shields.io/github/downloads/willyb321/elite-journal/total.svg?maxAge=2592000)](https://github.com/willyb321/elite-journal/releases)
 
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
 
