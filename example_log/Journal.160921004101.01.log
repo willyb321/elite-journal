@@ -1,0 +1,51 @@
+{ "timestamp":"2016-09-21T06:41:01Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 2)", "build":"r121783/r0 " }
+{ "timestamp":"2016-09-21T06:45:42Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Anaconda", "ShipID":67, "GameMode":"Open", "Credits":379618404, "Loan":0 }
+{ "timestamp":"2016-09-21T06:45:42Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T06:45:42Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T06:45:43Z", "event":"ApproachSettlement", "Name":"Durrance Camp" }
+{ "timestamp":"2016-09-21T06:46:13Z", "event":"Location", "StarSystem":"Sol", "StarPos":[0.000,0.000,0.000], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"Mother Gaia" }
+{ "timestamp":"2016-09-21T06:48:56Z", "event":"DockingRequested", "StationName":"Durrance Camp" }
+{ "timestamp":"2016-09-21T06:48:57Z", "event":"DockingGranted", "LandingPad":11, "StationName":"Durrance Camp" }
+{ "timestamp":"2016-09-21T06:50:07Z", "event":"Docked", "StationName":"Durrance Camp", "StarSystem":"Sol", "Faction":"Mother Gaia", "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-21T06:50:35Z", "event":"RefuelAll", "Cost":86, "Amount":1.700057 }
+{ "timestamp":"2016-09-21T06:50:38Z", "event":"RepairAll", "Cost":1049 }
+{ "timestamp":"2016-09-21T06:53:53Z", "event":"BuyDrones", "Type":"Drones", "Count":19, "BuyPrice":101, "TotalCost":1919 }
+{ "timestamp":"2016-09-21T06:54:09Z", "event":"MarketSell", "Type":"usscargoblackbox", "Count":1, "SellPrice":2511, "TotalSale":2511, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2016-09-21T06:54:12Z", "event":"MarketSell", "Type":"personaleffects", "Count":2, "SellPrice":75, "TotalSale":150, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2016-09-21T06:54:18Z", "event":"MarketSell", "Type":"scrap", "Count":6, "SellPrice":11, "TotalSale":66, "AvgPricePaid":0, "StolenGoods":true, "BlackMarket":true }
+{ "timestamp":"2016-09-21T06:54:25Z", "event":"PayFines", "Amount":4122 }
+{ "timestamp":"2016-09-21T06:55:48Z", "event":"CrewAssign", "Name":"Sinai Kelley", "Role":"Active" }
+{ "timestamp":"2016-09-21T06:56:08Z", "event":"SellExplorationData", "Systems":[ "Col 285 Sector VJ-W b16-0", "Col 285 Sector UT-R d4-70", "Sosolingati", "ICZ BK-Z b4", "ICZ YO-Z b6", "Puppis Sector JC-M a7-2" ], "Discovered":[  ], "BaseValue":25125, "Bonus":0 }
+{ "timestamp":"2016-09-21T06:56:51Z", "event":"Undocked", "StationName":"Durrance Camp" }
+{ "timestamp":"2016-09-21T06:57:34Z", "event":"SupercruiseEntry", "StarSystem":"Sol" }
+{ "timestamp":"2016-09-21T07:00:17Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Torval's Shield", "IsPlayer":false, "Faction":"Zemina Torval", "Power":"Empire" }
+{ "timestamp":"2016-09-21T07:00:19Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Jupiter" }
+{ "timestamp":"2016-09-21T07:00:27Z", "event":"LaunchFighter", "Loadout":"four", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T07:01:16Z", "event":"Bounty", "Faction":"Mother Gaia", "Reward":8362, "VictimFaction":"Zemina Torval" }
+{ "timestamp":"2016-09-21T07:01:55Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T07:02:56Z", "event":"SupercruiseEntry", "StarSystem":"Sol" }
+{ "timestamp":"2016-09-21T07:03:55Z", "event":"ApproachSettlement", "Name":"$NumberStation;", "Name_Localised":"Unregistered Comms Beacon" }
+{ "timestamp":"2016-09-21T07:03:56Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Europa" }
+{ "timestamp":"2016-09-21T07:04:32Z", "event":"LaunchFighter", "Loadout":"four", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T07:05:24Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T07:25:46Z", "event":"WingJoin", "Others":[ "Lexic Meise" ] }
+{ "timestamp":"2016-09-21T07:25:46Z", "event":"WingAdd", "Name":"Lexic Meise" }
+{ "timestamp":"2016-09-21T07:32:08Z", "event":"WingLeave" }
+{ "timestamp":"2016-09-21T07:33:15Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T07:33:25Z", "event":"SendText", "To":"$cmdr_decorate:#name=Tiger L.I.V.R.;", "To_Localised":"CMDR Tiger L.I.V.R.", "Message":"o7" }
+{ "timestamp":"2016-09-21T07:33:43Z", "event":"SendText", "To":"$cmdr_decorate:#name=Tiger L.I.V.R.;", "To_Localised":"CMDR Tiger L.I.V.R.", "Message":"This number station just transmitted a series of numbers about ten minutes ago." }
+{ "timestamp":"2016-09-21T07:34:07Z", "event":"SendText", "To":"$cmdr_decorate:#name=Tiger L.I.V.R.;", "To_Localised":"CMDR Tiger L.I.V.R.", "Message":"May do it again in roughly an hour, I think" }
+{ "timestamp":"2016-09-21T07:44:15Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T07:45:29Z", "event":"EjectCargo", "Type":"drones", "Count":1, "Abandoned":false }
+{ "timestamp":"2016-09-21T07:46:00Z", "event":"FSDJump", "StarSystem":"Bhritzameno", "StarPos":[-11.313,-1.031,15.344], "Allegiance":"Federation", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":19.091, "FuelUsed":3.890212, "FuelLevel":27.039789, "Faction":"Green Party of Bhritzameno" }
+{ "timestamp":"2016-09-21T07:46:36Z", "event":"FuelScoop", "Scooped":4.960211, "Total":32.000000 }
+{ "timestamp":"2016-09-21T07:47:10Z", "event":"FSDJump", "StarSystem":"V1285 Aquilae", "StarPos":[-25.281,1.625,28.844], "Allegiance":"Independent", "Economy":"$economy_Colony;", "Economy_Localised":"Colony", "Government":"$government_Feudal;", "Government_Localised":"Feudal", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":19.607, "FuelUsed":4.170206, "FuelLevel":27.829794, "Faction":"V1285 Aquilae Nobles" }
+{ "timestamp":"2016-09-21T07:47:42Z", "event":"FuelScoop", "Scooped":4.170206, "Total":32.000000 }
+{ "timestamp":"2016-09-21T07:48:16Z", "event":"FSDJump", "StarSystem":"BD-01 3500", "StarPos":[-29.563,3.594,52.906], "Allegiance":"Independent", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":24.520, "FuelUsed":7.458332, "FuelLevel":24.541668, "Faction":"BD-01 3500 Electronics Services", "FactionState":"Boom" }
+{ "timestamp":"2016-09-21T07:48:50Z", "event":"FuelScoop", "Scooped":7.458332, "Total":32.000000 }
+{ "timestamp":"2016-09-21T07:49:30Z", "event":"FSDJump", "StarSystem":"Eravate", "StarPos":[-42.438,-3.156,59.656], "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":16.028, "FuelUsed":2.469213, "FuelLevel":29.530788, "Faction":"Adle's Armada" }
+{ "timestamp":"2016-09-21T07:50:10Z", "event":"FuelScoop", "Scooped":2.469212, "Total":32.000000 }
+{ "timestamp":"2016-09-21T07:54:18Z", "event":"ApproachSettlement", "Name":"$NumberStation;", "Name_Localised":"Unregistered Comms Beacon" }
+{ "timestamp":"2016-09-21T07:54:19Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Eravate 5" }
+{ "timestamp":"2016-09-21T07:55:02Z", "event":"LaunchFighter", "Loadout":"four", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T07:55:47Z", "event":"ShieldState", "ShieldsUp":false }

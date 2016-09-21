@@ -1,0 +1,27 @@
+{ "timestamp":"2016-09-20T12:42:11Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2", "build":"r121645/r0 " }
+{ "timestamp":"2016-09-20T12:44:27Z", "event":"LoadGame", "Commander":"McDonald", "Ship":"BelugaLiner", "ShipID":33, "GameMode":"Open", "Credits":530884715, "Loan":0 }
+{ "timestamp":"2016-09-20T12:44:27Z", "event":"Rank", "Combat":7, "Trade":7, "Explore":5, "Empire":13, "Federation":10, "CQC":1 }
+{ "timestamp":"2016-09-20T12:44:27Z", "event":"Progress", "Combat":29, "Trade":47, "Explore":83, "Empire":9, "Federation":92, "CQC":73 }
+{ "timestamp":"2016-09-20T12:44:27Z", "event":"ApproachSettlement", "Name":"The Elite" }
+{ "timestamp":"2016-09-20T12:44:52Z", "event":"Location", "StarSystem":"Shinrarta Dezhra", "StarPos":[55.719,17.594,27.156], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"The Pilots Federation" }
+{ "timestamp":"2016-09-20T12:45:16Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra" }
+{ "timestamp":"2016-09-20T12:48:44Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T12:48:51Z", "event":"SendText", "To":"local", "Message":"Hi" }
+{ "timestamp":"2016-09-20T12:48:57Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T12:48:58Z", "event":"DockingGranted", "LandingPad":17, "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T12:49:14Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Titus_Lucretius_Carus;", "From_Localised":"CMDR Titus_Lucretius_Carus", "Message":"yo" }
+{ "timestamp":"2016-09-20T12:50:21Z", "event":"CommitCrime", "CrimeType":"dockingMinorBlockingAirlock", "Faction":"The Pilots Federation", "Fine":200 }
+{ "timestamp":"2016-09-20T12:50:23Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T12:50:31Z", "event":"HullDamage", "Health":0.794472 }
+{ "timestamp":"2016-09-20T12:50:42Z", "event":"CommitCrime", "CrimeType":"dockingMajorBlockingAirlock", "Faction":"The Pilots Federation", "Bounty":400 }
+{ "timestamp":"2016-09-20T12:50:42Z", "event":"DockingDenied", "Reason":"Hostile", "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T12:50:43Z", "event":"HullDamage", "Health":0.459545 }
+{ "timestamp":"2016-09-20T12:50:43Z", "event":"HullDamage", "Health":0.300797 }
+{ "timestamp":"2016-09-20T12:50:43Z", "event":"HullDamage", "Health":0.142048 }
+{ "timestamp":"2016-09-20T12:50:43Z", "event":"Died" }
+{ "timestamp":"2016-09-20T12:51:03Z", "event":"Resurrect", "Option":"rebuy", "Cost":549078, "Bankrupt":false }
+{ "timestamp":"2016-09-20T12:51:26Z", "event":"Location", "Docked":1, "StationName":"Schachner Dock", "StationType":"Coriolis", "StarSystem":"Fong Wang", "StarPos":[58.031,9.656,36.031], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"Fong Wang Limited", "FactionState":"Boom" }
+{ "timestamp":"2016-09-20T12:51:26Z", "event":"Docked", "StationName":"Schachner Dock", "StationType":"Coriolis", "StarSystem":"Fong Wang", "Faction":"Fong Wang Limited", "FactionState":"Boom", "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T12:53:20Z", "event":"Undocked", "StationName":"Schachner Dock", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-20T12:57:13Z", "event":"FSDJump", "StarSystem":"Shinrarta Dezhra", "StarPos":[55.719,17.594,27.156], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":12.129, "FuelUsed":3.402108, "FuelLevel":28.597893, "Faction":"The Pilots Federation" }
+{ "timestamp":"2016-09-20T12:59:44Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial" }

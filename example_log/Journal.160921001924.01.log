@@ -1,0 +1,16 @@
+{ "timestamp":"2016-09-21T06:19:24Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 2)", "build":"r121783/r0 " }
+{ "timestamp":"2016-09-21T06:20:39Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Anaconda", "ShipID":67, "GameMode":"Open", "Credits":379618404, "Loan":0 }
+{ "timestamp":"2016-09-21T06:20:39Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T06:20:39Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T06:21:07Z", "event":"Location", "StarSystem":"Sol", "StarPos":[0.000,0.000,0.000], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"Mother Gaia" }
+{ "timestamp":"2016-09-21T06:22:25Z", "event":"SupercruiseEntry", "StarSystem":"Sol" }
+{ "timestamp":"2016-09-21T06:28:45Z", "event":"ApproachSettlement", "Name":"Durrance Camp" }
+{ "timestamp":"2016-09-21T06:28:56Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Ganymede" }
+{ "timestamp":"2016-09-21T06:29:16Z", "event":"DockingRequested", "StationName":"Durrance Camp" }
+{ "timestamp":"2016-09-21T06:29:31Z", "event":"DockingTimeout", "StationName":"Durrance Camp" }
+{ "timestamp":"2016-09-21T06:29:37Z", "event":"DockingRequested", "StationName":"Durrance Camp" }
+{ "timestamp":"2016-09-21T06:29:52Z", "event":"DockingTimeout", "StationName":"Durrance Camp" }
+{ "timestamp":"2016-09-21T06:38:44Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Anaconda", "ShipID":67, "GameMode":"Open", "Credits":379618404, "Loan":0 }
+{ "timestamp":"2016-09-21T06:38:44Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T06:38:44Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T06:38:45Z", "event":"ApproachSettlement", "Name":"Durrance Camp" }

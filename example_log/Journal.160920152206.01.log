@@ -1,0 +1,77 @@
+{ "timestamp":"2016-09-20T14:22:06Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2", "build":"r121645/r0 " }
+{ "timestamp":"2016-09-20T14:24:42Z", "event":"LoadGame", "Commander":"McDonald", "Ship":"Federation_Corvette", "ShipID":38, "GameMode":"Open", "Credits":422764281, "Loan":0 }
+{ "timestamp":"2016-09-20T14:24:42Z", "event":"Rank", "Combat":7, "Trade":7, "Explore":5, "Empire":13, "Federation":10, "CQC":1 }
+{ "timestamp":"2016-09-20T14:24:42Z", "event":"Progress", "Combat":29, "Trade":47, "Explore":83, "Empire":9, "Federation":92, "CQC":73 }
+{ "timestamp":"2016-09-20T14:25:11Z", "event":"Location", "StarSystem":"Shinrarta Dezhra", "StarPos":[55.719,17.594,27.156], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"The Pilots Federation" }
+{ "timestamp":"2016-09-20T14:25:30Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra" }
+{ "timestamp":"2016-09-20T14:26:20Z", "event":"LoadGame", "Commander":"McDonald", "Ship":"Federation_Corvette", "ShipID":38, "GameMode":"Solo", "Credits":422764281, "Loan":0 }
+{ "timestamp":"2016-09-20T14:26:20Z", "event":"Rank", "Combat":7, "Trade":7, "Explore":5, "Empire":13, "Federation":10, "CQC":1 }
+{ "timestamp":"2016-09-20T14:26:20Z", "event":"Progress", "Combat":29, "Trade":47, "Explore":83, "Empire":9, "Federation":92, "CQC":73 }
+{ "timestamp":"2016-09-20T14:26:38Z", "event":"Location", "StarSystem":"Shinrarta Dezhra", "StarPos":[55.719,17.594,27.156], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"The Pilots Federation" }
+{ "timestamp":"2016-09-20T14:26:55Z", "event":"SupercruiseEntry", "StarSystem":"Shinrarta Dezhra" }
+{ "timestamp":"2016-09-20T14:27:37Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T14:27:46Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T14:27:47Z", "event":"DockingGranted", "LandingPad":40, "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T14:29:18Z", "event":"Docked", "StationName":"Jameson Memorial", "StationType":"Orbis", "StarSystem":"Shinrarta Dezhra", "Faction":"The Pilots Federation", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T14:30:16Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0001.bmp", "Width":3840, "Height":2160, "System":"Shinrarta Dezhra", "Body":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T14:30:19Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0002.bmp", "Width":3840, "Height":2160, "System":"Shinrarta Dezhra", "Body":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T14:30:33Z", "event":"ModuleBuy", "Slot":"Slot04_Size6", "BuyItem":"$int_fighterbay_size6_class1_name;", "BuyItem_Localised":"Fighter Hangar", "BuyPrice":16322, "Ship":"federation_corvette", "ShipID":38 }
+{ "timestamp":"2016-09-20T14:31:06Z", "event":"ModuleBuy", "Slot":"Slot05_Size6", "BuyItem":"$int_buggybay_size6_class2_name;", "BuyItem_Localised":"Planetary Vehicle Hangar", "BuyPrice":60653, "Ship":"federation_corvette", "ShipID":38 }
+{ "timestamp":"2016-09-20T14:31:06Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T14:31:58Z", "event":"ModuleSwap", "FromSlot":"TinyHardpoint8", "ToSlot":"TinyHardpoint7", "FromItem":"$hpt_shieldbooster_size0_class5_name;", "FromItem_Localised":"Shield Booster", "ToItem":"$hpt_shieldbooster_size0_class5_name;", "ToItem_Localised":"Shield Booster", "Ship":"federation_corvette", "ShipID":38 }
+{ "timestamp":"2016-09-20T14:32:03Z", "event":"ModuleSell", "Slot":"TinyHardpoint8", "SellItem":"$hpt_shieldbooster_size0_class5_name;", "SellItem_Localised":"Shield Booster", "SellPrice":24658, "Ship":"federation_corvette", "ShipID":38 }
+{ "timestamp":"2016-09-20T14:32:06Z", "event":"ModuleSell", "Slot":"TinyHardpoint7", "SellItem":"$hpt_shieldbooster_size0_class5_name;", "SellItem_Localised":"Shield Booster", "SellPrice":24658, "Ship":"federation_corvette", "ShipID":38 }
+{ "timestamp":"2016-09-20T14:32:25Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T14:32:25Z", "event":"CrewHire", "Name":"Lillian Coffey", "Faction":"The Pilots Federation", "Cost":30000, "CombatRank":1 }
+{ "timestamp":"2016-09-20T14:32:29Z", "event":"CrewAssign", "Name":"Lillian Coffey", "Role":"Active" }
+{ "timestamp":"2016-09-20T14:33:07Z", "event":"RefuelAll", "Cost":670, "Amount":13.384903 }
+{ "timestamp":"2016-09-20T14:33:09Z", "event":"BuyAmmo", "Cost":12000 }
+{ "timestamp":"2016-09-20T14:33:20Z", "event":"ModuleBuy", "Slot":"PaintJob", "BuyItem":"$paintjob_federation_corvette_blackfriday_01_name;", "BuyItem_Localised":"Black Friday", "BuyPrice":0, "Ship":"federation_corvette", "ShipID":38 }
+{ "timestamp":"2016-09-20T14:33:40Z", "event":"ModuleBuy", "Slot":"Bobble03", "BuyItem":"$bobble_pilotfemale_name;", "BuyItem_Localised":"Female Pilot", "BuyPrice":0, "Ship":"federation_corvette", "ShipID":38 }
+{ "timestamp":"2016-09-20T14:33:46Z", "event":"ModuleBuy", "Slot":"Bobble08", "BuyItem":"$bobble_pilotmale_name;", "BuyItem_Localised":"Male Pilot", "BuyPrice":0, "Ship":"federation_corvette", "ShipID":38 }
+{ "timestamp":"2016-09-20T14:34:11Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2016-09-20T14:35:50Z", "event":"FSDJump", "StarSystem":"Nuenets", "StarPos":[48.000,17.656,28.313], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":7.805, "FuelUsed":2.314846, "FuelLevel":29.685154, "Faction":"Nuenets Corp.", "FactionState":"Boom" }
+{ "timestamp":"2016-09-20T14:37:07Z", "event":"SupercruiseExit", "StarSystem":"Nuenets", "Body":"Nuenets A" }
+{ "timestamp":"2016-09-20T14:38:00Z", "event":"LaunchFighter", "Loadout":"one", "PlayerControlled":false }
+{ "timestamp":"2016-09-20T14:38:15Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"bulkscandata" }
+{ "timestamp":"2016-09-20T14:39:16Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shieldpatternanalysis" }
+{ "timestamp":"2016-09-20T14:39:52Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shieldsoakanalysis" }
+{ "timestamp":"2016-09-20T14:40:05Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T14:40:27Z", "event":"Bounty", "Faction":"Nuenets Corp.", "Reward":53935, "VictimFaction":"Constitution Party of Nuenets" }
+{ "timestamp":"2016-09-20T14:42:34Z", "event":"Bounty", "Faction":"Nuenets Corp.", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":18280, "VictimFaction":"Nuenets Jet State Limited" }
+{ "timestamp":"2016-09-20T14:44:05Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T14:44:12Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T14:44:42Z", "event":"FSDJump", "StarSystem":"Shinrarta Dezhra", "StarPos":[55.719,17.594,27.156], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":7.805, "FuelUsed":2.306871, "FuelLevel":27.378283, "Faction":"The Pilots Federation" }
+{ "timestamp":"2016-09-20T14:46:52Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T14:47:01Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T14:47:02Z", "event":"DockingGranted", "LandingPad":40, "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-20T14:48:11Z", "event":"Docked", "StationName":"Jameson Memorial", "StationType":"Orbis", "StarSystem":"Shinrarta Dezhra", "Faction":"The Pilots Federation", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T14:49:10Z", "event":"ModuleBuy", "Slot":"TinyHardpoint8", "BuyItem":"$hpt_crimescanner_size0_class3_name;", "BuyItem_Localised":"K-Warrant Scanner", "BuyPrice":10697, "Ship":"federation_corvette", "ShipID":38 }
+{ "timestamp":"2016-09-20T14:55:53Z", "event":"ShipyardSell", "ShipType":"sidewinder", "SellShipID":36, "ShipPrice":2527 }
+{ "timestamp":"2016-09-20T15:05:59Z", "event":"ShipyardSell", "ShipType":"cutter", "SellShipID":28, "ShipPrice":388878897 }
+{ "timestamp":"2016-09-20T15:06:54Z", "event":"ShipyardSwap", "ShipType":"cutter", "ShipID":37, "StoreOldShip":"Federation_Corvette", "StoreShipID":38 }
+{ "timestamp":"2016-09-20T15:07:00Z", "event":"Docked", "StationName":"Jameson Memorial", "StationType":"Orbis", "StarSystem":"Shinrarta Dezhra", "Faction":"The Pilots Federation", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T15:07:12Z", "event":"ShipyardSwap", "ShipType":"asp", "ShipID":24, "StoreOldShip":"Cutter", "StoreShipID":37 }
+{ "timestamp":"2016-09-20T15:07:24Z", "event":"Docked", "StationName":"Jameson Memorial", "StationType":"Orbis", "StarSystem":"Shinrarta Dezhra", "Faction":"The Pilots Federation", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T15:08:06Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2016-09-20T15:09:22Z", "event":"FSDJump", "StarSystem":"Alchita", "StarPos":[36.219,29.281,14.219], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":26.158, "FuelUsed":3.566373, "FuelLevel":28.433626, "Faction":"Alchita Interstellar" }
+{ "timestamp":"2016-09-20T15:09:59Z", "event":"FuelScoop", "Scooped":3.566374, "Total":32.000000 }
+{ "timestamp":"2016-09-20T15:10:20Z", "event":"FSDJump", "StarSystem":"Wolf 417", "StarPos":[13.688,42.063,4.813], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":27.559, "FuelUsed":4.052751, "FuelLevel":27.947248 }
+{ "timestamp":"2016-09-20T15:10:53Z", "event":"FuelScoop", "Scooped":4.052752, "Total":32.000000 }
+{ "timestamp":"2016-09-20T15:11:26Z", "event":"FSDJump", "StarSystem":"10 Canum Venaticorum", "StarPos":[-9.375,55.438,-7.000], "Allegiance":"Alliance", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":29.160, "FuelUsed":4.653592, "FuelLevel":27.346409, "Faction":"10 Canum Venaticorum Bridge Ltd" }
+{ "timestamp":"2016-09-20T15:12:01Z", "event":"FuelScoop", "Scooped":4.653591, "Total":32.000000 }
+{ "timestamp":"2016-09-20T15:12:34Z", "event":"FSDJump", "StarSystem":"He Bo", "StarPos":[-34.500,69.281,-14.719], "Allegiance":"Alliance", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Patronage;", "Government_Localised":"Patronage", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":29.707, "FuelUsed":4.870412, "FuelLevel":27.129587, "Faction":"He Bo Pro-Alliance Party" }
+{ "timestamp":"2016-09-20T15:13:05Z", "event":"FuelScoop", "Scooped":4.503265, "Total":31.632853 }
+{ "timestamp":"2016-09-20T15:13:35Z", "event":"FSDJump", "StarSystem":"Kaunan", "StarPos":[-60.969,72.250,-18.531], "Allegiance":"Alliance", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":26.906, "FuelUsed":3.808843, "FuelLevel":27.824009, "Faction":"Kaunan Jet Galactic Limited" }
+{ "timestamp":"2016-09-20T15:13:55Z", "event":"FuelScoop", "Scooped":0.461269, "Total":28.285278 }
+{ "timestamp":"2016-09-20T15:14:28Z", "event":"FSDJump", "StarSystem":"Viruachi", "StarPos":[-82.844,79.031,-23.094], "Allegiance":"Alliance", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Confederacy;", "Government_Localised":"Confederacy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":23.352, "FuelUsed":2.641314, "FuelLevel":25.643965, "Faction":"New Viruachi Confederation" }
+{ "timestamp":"2016-09-20T15:14:51Z", "event":"FuelScoop", "Scooped":1.164997, "Total":26.808962 }
+{ "timestamp":"2016-09-20T15:15:15Z", "event":"FSDJump", "StarSystem":"Kongga", "StarPos":[-104.156,82.719,-32.375], "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":23.536, "FuelUsed":2.668513, "FuelLevel":24.140450, "Faction":"Kongga Labour", "FactionState":"Boom" }
+{ "timestamp":"2016-09-20T15:15:55Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shieldcyclerecordings" }
+{ "timestamp":"2016-09-20T15:16:36Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0003.bmp", "Width":3840, "Height":2160, "System":"Kongga", "Body":"Kongga 1" }
+{ "timestamp":"2016-09-20T15:17:16Z", "event":"SupercruiseExit", "StarSystem":"Kongga", "Body":"Laplace Ring" }
+{ "timestamp":"2016-09-20T15:17:24Z", "event":"DockingRequested", "StationName":"Laplace Ring" }
+{ "timestamp":"2016-09-20T15:17:25Z", "event":"DockingGranted", "LandingPad":38, "StationName":"Laplace Ring" }
+{ "timestamp":"2016-09-20T15:18:28Z", "event":"Docked", "StationName":"Laplace Ring", "StationType":"Coriolis", "StarSystem":"Kongga", "Faction":"Kongga Labour", "FactionState":"Boom", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T15:18:46Z", "event":"MarketBuy", "Type":"konggaale", "Count":23, "BuyPrice":787, "TotalCost":18101 }
+{ "timestamp":"2016-09-20T15:21:25Z", "event":"HeatWarning" }

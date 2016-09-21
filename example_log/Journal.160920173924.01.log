@@ -1,0 +1,202 @@
+{ "timestamp":"2016-09-20T23:39:24Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 2)", "build":"r121783/r0 " }
+{ "timestamp":"2016-09-20T23:40:04Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Federation_Corvette", "ShipID":62, "GameMode":"Open", "Credits":409524791, "Loan":0 }
+{ "timestamp":"2016-09-20T23:40:04Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-20T23:40:04Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-20T23:40:06Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:44:46Z", "event":"Location", "StarSystem":"Brestla", "StarPos":[159.469,-103.750,-19.688], "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"The Imperial Inquisition", "FactionState":"Boom" }
+{ "timestamp":"2016-09-20T23:46:27Z", "event":"WingJoin", "Others":[] }
+{ "timestamp":"2016-09-20T23:46:27Z", "event":"WingAdd", "Name":"Lexic Meise" }
+{ "timestamp":"2016-09-20T23:46:58Z", "event":"SendText", "To":"$cmdr_decorate:#name=Lexic Meise;", "To_Localised":"CMDR Lexic Meise", "Message":"oops. o.o" }
+{ "timestamp":"2016-09-20T23:47:05Z", "event":"ReceiveText", "From":"$RolePanel2_crew; $cmdr_decorate:#name=Lexic Meise;", "From_Localised":"Crew CMDR Lexic Meise", "Message":"WHAT HAVE I DONE" }
+{ "timestamp":"2016-09-20T23:47:27Z", "event":"SendText", "To":"$cmdr_decorate:#name=Lexic Meise;", "To_Localised":"CMDR Lexic Meise", "Message":"On my screen you're just jiggling about" }
+{ "timestamp":"2016-09-20T23:47:48Z", "event":"LaunchFighter", "Loadout":"one", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T23:47:49Z", "event":"ReceiveText", "From":"$RolePanel2_crew; $cmdr_decorate:#name=Lexic Meise;", "From_Localised":"Crew CMDR Lexic Meise", "Message":"Can you help me with this clipper up here?" }
+{ "timestamp":"2016-09-20T23:48:26Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Brestla Silver Vision Network", "Victim":"$ShipName_Military_Empire;", "Victim_Localised":"Imperial Navy Vessel", "Bounty":400 }
+{ "timestamp":"2016-09-20T23:50:01Z", "event":"ReceiveText", "From":"$RolePanel2_crew; $cmdr_decorate:#name=Lexic Meise;", "From_Localised":"Crew CMDR Lexic Meise", "Message":"OH no" }
+{ "timestamp":"2016-09-20T23:51:32Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"Alright, let's actually dogfight now" }
+{ "timestamp":"2016-09-20T23:51:43Z", "event":"SendText", "To":"wing", "Message":"Alright. =D have report crimes off?" }
+{ "timestamp":"2016-09-20T23:51:49Z", "event":"SendText", "To":"wing", "Message":"And is your ship ordered to stand down?" }
+{ "timestamp":"2016-09-20T23:52:06Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"Should be, where are you?" }
+{ "timestamp":"2016-09-20T23:52:17Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"I think we're de-instanced" }
+{ "timestamp":"2016-09-20T23:52:19Z", "event":"SendText", "To":"wing", "Message":"7km up" }
+{ "timestamp":"2016-09-20T23:52:22Z", "event":"SendText", "To":"wing", "Message":"Oh, probably" }
+{ "timestamp":"2016-09-20T23:53:12Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T23:53:31Z", "event":"SupercruiseEntry", "StarSystem":"Brestla" }
+{ "timestamp":"2016-09-20T23:53:46Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:53:49Z", "event":"SupercruiseExit", "StarSystem":"Brestla", "Body":"Brestla A 1" }
+{ "timestamp":"2016-09-20T23:54:24Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T23:55:02Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T23:55:02Z", "event":"HullDamage", "Health":0.748671 }
+{ "timestamp":"2016-09-20T23:55:03Z", "event":"HullDamage", "Health":0.546839 }
+{ "timestamp":"2016-09-20T23:55:03Z", "event":"HullDamage", "Health":0.181465 }
+{ "timestamp":"2016-09-20T23:55:03Z", "event":"HullDamage", "Health":0.181465 }
+{ "timestamp":"2016-09-20T23:55:04Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T23:55:10Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"LOL" }
+{ "timestamp":"2016-09-20T23:55:12Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"WHAT" }
+{ "timestamp":"2016-09-20T23:55:17Z", "event":"SendText", "To":"wing", "Message":"ow" }
+{ "timestamp":"2016-09-20T23:55:20Z", "event":"LaunchFighter", "Loadout":"one", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T23:55:46Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T23:55:48Z", "event":"HullDamage", "Health":0.788056 }
+{ "timestamp":"2016-09-20T23:55:55Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T23:55:57Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T23:55:57Z", "event":"HullDamage", "Health":0.489498 }
+{ "timestamp":"2016-09-20T23:55:57Z", "event":"HullDamage", "Health":0.378744 }
+{ "timestamp":"2016-09-20T23:55:58Z", "event":"HullDamage", "Health":0.130700 }
+{ "timestamp":"2016-09-20T23:55:59Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T23:56:22Z", "event":"SendText", "To":"wing", "Message":"ow again. Have you got gimbals or fixed?" }
+{ "timestamp":"2016-09-20T23:56:30Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"gimbal" }
+{ "timestamp":"2016-09-20T23:56:32Z", "event":"SendText", "To":"wing", "Message":"ahh." }
+{ "timestamp":"2016-09-20T23:56:48Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T23:57:09Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T23:57:18Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T23:57:23Z", "event":"HullDamage", "Health":0.575966 }
+{ "timestamp":"2016-09-20T23:57:23Z", "event":"HullDamage", "Health":0.575966 }
+{ "timestamp":"2016-09-20T23:57:24Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T23:57:24Z", "event":"HullDamage", "Health":0.307846 }
+{ "timestamp":"2016-09-20T23:57:24Z", "event":"HullDamage", "Health":0.131544 }
+{ "timestamp":"2016-09-20T23:57:26Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T23:57:32Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"What weapon are you using?" }
+{ "timestamp":"2016-09-20T23:57:38Z", "event":"LaunchFighter", "Loadout":"one", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T23:57:59Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T23:58:07Z", "event":"HullDamage", "Health":0.727405 }
+{ "timestamp":"2016-09-20T23:58:07Z", "event":"HullDamage", "Health":0.521363 }
+{ "timestamp":"2016-09-20T23:58:08Z", "event":"HullDamage", "Health":0.309831 }
+{ "timestamp":"2016-09-20T23:58:08Z", "event":"HullDamage", "Health":0.086985 }
+{ "timestamp":"2016-09-20T23:58:09Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T23:58:25Z", "event":"SendText", "To":"wing", "Message":"Fixed beams and fixed plasmas" }
+{ "timestamp":"2016-09-20T23:58:36Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"gimbals are probably a tad" }
+{ "timestamp":"2016-09-20T23:58:37Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"op" }
+{ "timestamp":"2016-09-20T23:58:40Z", "event":"SendText", "To":"wing", "Message":"apparently not great against fighters. =P" }
+{ "timestamp":"2016-09-20T23:58:49Z", "event":"SendText", "To":"wing", "Message":"But I bet I can do a fair bit against bigger ships!" }
+{ "timestamp":"2016-09-20T23:58:57Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T23:59:11Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T23:59:11Z", "event":"HullDamage", "Health":0.640974 }
+{ "timestamp":"2016-09-20T23:59:12Z", "event":"HullDamage", "Health":0.464865 }
+{ "timestamp":"2016-09-20T23:59:12Z", "event":"HullDamage", "Health":0.172142 }
+{ "timestamp":"2016-09-20T23:59:12Z", "event":"HullDamage", "Health":0.172142 }
+{ "timestamp":"2016-09-20T23:59:14Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T23:59:30Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"ok, that one was super cheap" }
+{ "timestamp":"2016-09-20T23:59:38Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"I hid behind where you were deploying :P" }
+{ "timestamp":"2016-09-20T23:59:51Z", "event":"SendText", "To":"wing", "Message":"to be fair, I was going to run away and go attack your conda to be a dink. =P" }
+{ "timestamp":"2016-09-20T23:59:58Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"lol" }
+{ "timestamp":"2016-09-21T00:00:01Z", "event":"LaunchFighter", "Loadout":"one", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T00:00:21Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:00:21Z", "event":"HullDamage", "Health":0.781616 }
+{ "timestamp":"2016-09-21T00:00:22Z", "event":"HullDamage", "Health":0.551801 }
+{ "timestamp":"2016-09-21T00:00:22Z", "event":"HullDamage", "Health":0.319997 }
+{ "timestamp":"2016-09-21T00:00:23Z", "event":"HullDamage", "Health":0.093997 }
+{ "timestamp":"2016-09-21T00:00:29Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T00:00:59Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:01:00Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T00:01:18Z", "event":"SendText", "To":"wing", "Message":"Yeah. I think gimbals are needed in dogfighting, and fixed are for big ships." }
+{ "timestamp":"2016-09-21T00:01:27Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"Makes sense" }
+{ "timestamp":"2016-09-21T00:01:44Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T00:02:05Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:02:06Z", "event":"HullDamage", "Health":0.783284 }
+{ "timestamp":"2016-09-21T00:02:06Z", "event":"HullDamage", "Health":0.579120 }
+{ "timestamp":"2016-09-21T00:02:06Z", "event":"HullDamage", "Health":0.331325 }
+{ "timestamp":"2016-09-21T00:02:06Z", "event":"HullDamage", "Health":0.142300 }
+{ "timestamp":"2016-09-21T00:02:08Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T00:02:21Z", "event":"SendText", "To":"wing", "Message":"I'll go try some gimbals. =P" }
+{ "timestamp":"2016-09-21T00:02:30Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"lol" }
+{ "timestamp":"2016-09-21T00:02:40Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"rip" }
+{ "timestamp":"2016-09-21T00:03:14Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T00:03:16Z", "event":"DockingGranted", "LandingPad":7, "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T00:03:59Z", "event":"DockingDenied", "Reason":"Hostile", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T00:04:11Z", "event":"CommitCrime", "CrimeType":"dockingMinorBlockingLandingPad", "Faction":"Brestla Silver Vision Network", "Fine":400 }
+{ "timestamp":"2016-09-21T00:04:47Z", "event":"HullDamage", "Health":0.798816 }
+{ "timestamp":"2016-09-21T00:04:49Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T00:04:54Z", "event":"Died", "KillerName":"$ShipName_Police_Empire;", "KillerName_Localised":"Internal Security Service", "KillerShip":"empire_fighter", "KillerRank":"Master" }
+{ "timestamp":"2016-09-21T00:05:14Z", "event":"Resurrect", "Option":"rebuy", "Cost":2692048, "Bankrupt":false }
+{ "timestamp":"2016-09-21T00:05:15Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T00:05:37Z", "event":"Location", "Docked":1, "StationName":"i Sola Prospect", "StationType":"", "StarSystem":"Brestla", "StarPos":[159.469,-103.750,-19.688], "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"The Imperial Inquisition", "FactionState":"Boom" }
+{ "timestamp":"2016-09-21T00:05:37Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T00:07:15Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"I switched to fixed" }
+{ "timestamp":"2016-09-21T00:07:34Z", "event":"SendText", "To":"wing", "Message":"Oh? On both? o.o" }
+{ "timestamp":"2016-09-21T00:07:38Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"Yeah" }
+{ "timestamp":"2016-09-21T00:07:42Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"I wanna see how I can do" }
+{ "timestamp":"2016-09-21T00:07:44Z", "event":"SendText", "To":"wing", "Message":"I just switched to gimballed, want me to switch back?" }
+{ "timestamp":"2016-09-21T00:07:46Z", "event":"SendText", "To":"wing", "Message":"Alright" }
+{ "timestamp":"2016-09-21T00:07:51Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"Up to you" }
+{ "timestamp":"2016-09-21T00:07:54Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"Use what you prefer" }
+{ "timestamp":"2016-09-21T00:08:40Z", "event":"SendText", "To":"wing", "Message":"Got one of each" }
+{ "timestamp":"2016-09-21T00:08:57Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"This plasma is scary O.O" }
+{ "timestamp":"2016-09-21T00:09:02Z", "event":"Undocked", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T00:09:29Z", "event":"MissionFailed", "Name":"Mission_PassengerBulk_name", "MissionID":26476090 }
+{ "timestamp":"2016-09-21T00:09:51Z", "event":"SupercruiseEntry", "StarSystem":"Brestla" }
+{ "timestamp":"2016-09-21T00:09:58Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T00:10:07Z", "event":"SupercruiseExit", "StarSystem":"Brestla", "Body":"Brestla A 1" }
+{ "timestamp":"2016-09-21T00:10:43Z", "event":"LaunchFighter", "Loadout":"four", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T00:11:21Z", "event":"ReceiveText", "From":"$RolePanel2_unmanned; $cmdr_decorate:#name=Lexic Meise;", "From_Localised":"unmanned CMDR Lexic Meise", "Message":"This does like nothing" }
+{ "timestamp":"2016-09-21T00:11:57Z", "event":"SendText", "To":"wing", "Message":"The big ships seem to tank it well" }
+{ "timestamp":"2016-09-21T00:12:42Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"For the record" }
+{ "timestamp":"2016-09-21T00:12:47Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"I am not used to fixed at all" }
+{ "timestamp":"2016-09-21T00:13:00Z", "event":"SendText", "To":"wing", "Message":"Did you grab one of each? or just fixed" }
+{ "timestamp":"2016-09-21T00:13:14Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"Just fixed" }
+{ "timestamp":"2016-09-21T00:13:19Z", "event":"SendText", "To":"wing", "Message":"I can switch to my fixed. =)" }
+{ "timestamp":"2016-09-21T00:13:28Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"Multicanonns and plasma" }
+{ "timestamp":"2016-09-21T00:13:40Z", "event":"SendText", "To":"wing", "Message":"those're extra rough compared to fixed beams" }
+{ "timestamp":"2016-09-21T00:14:23Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T00:14:35Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T00:15:52Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:15:52Z", "event":"HullDamage", "Health":0.791331 }
+{ "timestamp":"2016-09-21T00:16:02Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T00:17:29Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T00:17:40Z", "event":"SendText", "To":"wing", "Message":"that was a lot more intense. o.o" }
+{ "timestamp":"2016-09-21T00:19:02Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:19:10Z", "event":"HullDamage", "Health":0.557020 }
+{ "timestamp":"2016-09-21T00:19:11Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T00:19:12Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T00:19:52Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:19:53Z", "event":"HullDamage", "Health":0.385513 }
+{ "timestamp":"2016-09-21T00:19:54Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T00:20:04Z", "event":"SendText", "To":"wing", "Message":"lol" }
+{ "timestamp":"2016-09-21T00:20:06Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"Did that kill you too?" }
+{ "timestamp":"2016-09-21T00:20:15Z", "event":"SendText", "To":"wing", "Message":"Yeah" }
+{ "timestamp":"2016-09-21T00:20:21Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"LOL" }
+{ "timestamp":"2016-09-21T00:21:03Z", "event":"SendText", "To":"wing", "Message":"You can hear that think from a kilometer away" }
+{ "timestamp":"2016-09-21T00:21:06Z", "event":"SendText", "To":"wing", "Message":"literally" }
+{ "timestamp":"2016-09-21T00:21:32Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T00:22:25Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:22:33Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T00:22:53Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T00:23:15Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T00:23:38Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T00:23:57Z", "event":"SendText", "To":"wing", "Message":"do we start with damage? O.o" }
+{ "timestamp":"2016-09-21T00:25:03Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:25:03Z", "event":"HullDamage", "Health":0.390562 }
+{ "timestamp":"2016-09-21T00:25:03Z", "event":"HullDamage", "Health":0.190820 }
+{ "timestamp":"2016-09-21T00:25:19Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T00:25:28Z", "event":"ReceiveText", "From":"$RolePanel2_unmanned; $cmdr_decorate:#name=Lexic Meise;", "From_Localised":"unmanned CMDR Lexic Meise", "Message":"Literally 1% hull" }
+{ "timestamp":"2016-09-21T00:25:34Z", "event":"SendText", "To":"wing", "Message":"Yeah that was close" }
+{ "timestamp":"2016-09-21T00:25:55Z", "event":"SendText", "To":"wing", "Message":"Fighter has to reconstruct. I've got to brb and do laundry in the meantime (I won't be too long)" }
+{ "timestamp":"2016-09-21T00:26:03Z", "event":"ReceiveText", "From":"$RolePanel2_unmanned; $cmdr_decorate:#name=Lexic Meise;", "From_Localised":"unmanned CMDR Lexic Meise", "Message":"alright" }
+{ "timestamp":"2016-09-21T00:29:28Z", "event":"SendText", "To":"wing", "Message":"back" }
+{ "timestamp":"2016-09-21T00:29:50Z", "event":"SendText", "To":"wing", "Message":"So the fighters are pretty fun, should change things up a bit, but looks like a big ship with turrets could defend against them rather easily" }
+{ "timestamp":"2016-09-21T00:29:56Z", "event":"SendText", "To":"wing", "Message":"They've got so little health" }
+{ "timestamp":"2016-09-21T00:31:47Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T00:32:52Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:32:55Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T00:34:01Z", "event":"SendText", "To":"wing", "Message":"I think the imperial fighter has a spinning problem. o.o" }
+{ "timestamp":"2016-09-21T00:34:29Z", "event":"SendText", "To":"wing", "Message":"Maybe its a bug" }
+{ "timestamp":"2016-09-21T00:34:35Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T00:35:37Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T00:35:44Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T00:36:58Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:37:11Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T00:37:33Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T00:37:35Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T00:38:33Z", "event":"SendText", "To":"wing", "Message":"My fixed fighter is still manufacturing. =(" }
+{ "timestamp":"2016-09-21T00:39:10Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T00:39:20Z", "event":"ReceiveText", "From":"$cmdr_decorate:#name=Lexic Meise;", "From_Localised":"CMDR Lexic Meise", "Message":"Let's find a canyon ;)" }
+{ "timestamp":"2016-09-21T00:39:31Z", "event":"SendText", "To":"wing", "Message":"Alright. =D" }
+{ "timestamp":"2016-09-21T00:40:36Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T00:40:58Z", "event":"SupercruiseEntry", "StarSystem":"Brestla" }
+{ "timestamp":"2016-09-21T00:42:14Z", "event":"ReceiveText", "From":"Lexic Meise", "Message":"Come over to where I am" }
+{ "timestamp":"2016-09-21T00:42:45Z", "event":"WingLeave" }
+{ "timestamp":"2016-09-21T00:42:54Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Federation_Corvette", "ShipID":62, "GameMode":"Open", "Credits":406828162, "Loan":0 }
+{ "timestamp":"2016-09-21T00:42:54Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T00:42:54Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T00:42:55Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T00:43:16Z", "event":"Location", "StarSystem":"Brestla", "StarPos":[159.469,-103.750,-19.688], "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"The Imperial Inquisition", "FactionState":"Boom" }
+{ "timestamp":"2016-09-21T00:43:51Z", "event":"SupercruiseEntry", "StarSystem":"Brestla" }

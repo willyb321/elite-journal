@@ -1,0 +1,89 @@
+{ "timestamp":"2016-09-20T17:18:28Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2", "build":"r121645/r0 " }
+{ "timestamp":"2016-09-20T17:19:16Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"CobraMkIII", "ShipID":42, "GameMode":"Open", "Credits":542574324, "Loan":0 }
+{ "timestamp":"2016-09-20T17:19:16Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-20T17:19:16Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-20T17:19:39Z", "event":"Location", "StarSystem":"Alrai Sector HW-W b1-6", "StarPos":[-54.656,-12.844,42.906], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security" }
+{ "timestamp":"2016-09-20T17:20:59Z", "event":"FSDJump", "StarSystem":"Eravate", "StarPos":[-42.438,-3.156,59.656], "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":22.885, "FuelUsed":2.558523, "FuelLevel":1.965394, "Faction":"Adle's Armada" }
+{ "timestamp":"2016-09-20T17:21:43Z", "event":"FuelScoop", "Scooped":5.227492, "Total":7.192886 }
+{ "timestamp":"2016-09-20T17:22:55Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Cleve Hub" }
+{ "timestamp":"2016-09-20T17:23:05Z", "event":"DockingRequested", "StationName":"Cleve Hub" }
+{ "timestamp":"2016-09-20T17:23:10Z", "event":"DockingGranted", "LandingPad":43, "StationName":"Cleve Hub" }
+{ "timestamp":"2016-09-20T17:24:07Z", "event":"Docked", "StationName":"Cleve Hub", "StationType":"Orbis", "StarSystem":"Eravate", "Faction":"Adle's Armada", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T17:24:28Z", "event":"ShipyardBuy", "ShipType":"independant_trader", "ShipPrice":312615, "StoreOldShip":"CobraMkIII", "StoreShipID":42 }
+{ "timestamp":"2016-09-20T17:24:29Z", "event":"ShipyardNew", "ShipType":"independant_trader", "NewShipID":56 }
+{ "timestamp":"2016-09-20T17:24:41Z", "event":"Docked", "StationName":"Cleve Hub", "StationType":"Orbis", "StarSystem":"Eravate", "Faction":"Adle's Armada", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T17:25:09Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T17:25:10Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T17:26:04Z", "event":"ShipyardSwap", "ShipType":"cobramkiii", "ShipID":42, "StoreOldShip":"Independant_Trader", "StoreShipID":56 }
+{ "timestamp":"2016-09-20T17:26:17Z", "event":"Docked", "StationName":"Cleve Hub", "StationType":"Orbis", "StarSystem":"Eravate", "Faction":"Adle's Armada", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T17:26:45Z", "event":"Undocked", "StationName":"Cleve Hub", "StationType":"Orbis" }
+{ "timestamp":"2016-09-20T17:27:25Z", "event":"SupercruiseEntry", "StarSystem":"Eravate" }
+{ "timestamp":"2016-09-20T17:29:55Z", "event":"ApproachSettlement", "Name":"$NumberStation;", "Name_Localised":"Unregistered Comms Beacon" }
+{ "timestamp":"2016-09-20T17:29:56Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Eravate 5" }
+{ "timestamp":"2016-09-20T17:30:22Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T17:34:50Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T17:36:59Z", "event":"SupercruiseEntry", "StarSystem":"Eravate" }
+{ "timestamp":"2016-09-20T17:37:43Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Ackerman Market" }
+{ "timestamp":"2016-09-20T17:37:55Z", "event":"DockingRequested", "StationName":"Ackerman Market" }
+{ "timestamp":"2016-09-20T17:37:56Z", "event":"DockingGranted", "LandingPad":28, "StationName":"Ackerman Market" }
+{ "timestamp":"2016-09-20T17:38:54Z", "event":"Docked", "StationName":"Ackerman Market", "StationType":"Orbis", "StarSystem":"Eravate", "Faction":"Adle's Armada", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T17:39:28Z", "event":"RefuelAll", "Cost":477, "Amount":9.518222 }
+{ "timestamp":"2016-09-20T17:39:30Z", "event":"BuyAmmo", "Cost":25 }
+{ "timestamp":"2016-09-20T17:39:35Z", "event":"RepairAll", "Cost":10 }
+{ "timestamp":"2016-09-20T17:41:30Z", "event":"Undocked", "StationName":"Ackerman Market", "StationType":"Orbis" }
+{ "timestamp":"2016-09-20T17:42:36Z", "event":"SupercruiseEntry", "StarSystem":"Eravate" }
+{ "timestamp":"2016-09-20T17:45:01Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Cleve Hub" }
+{ "timestamp":"2016-09-20T17:45:28Z", "event":"DockingRequested", "StationName":"Cleve Hub" }
+{ "timestamp":"2016-09-20T17:45:29Z", "event":"DockingGranted", "LandingPad":34, "StationName":"Cleve Hub" }
+{ "timestamp":"2016-09-20T17:46:11Z", "event":"Docked", "StationName":"Cleve Hub", "StationType":"Orbis", "StarSystem":"Eravate", "Faction":"Adle's Armada", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T17:46:20Z", "event":"RefuelAll", "Cost":10, "Amount":0.099107 }
+{ "timestamp":"2016-09-20T17:47:50Z", "event":"ModuleBuy", "Slot":"MediumHardpoint1", "BuyItem":"$hpt_beamlaser_fixed_medium_name;", "BuyItem_Localised":"Beam Laser", "BuyPrice":26957, "Ship":"cobramkiii", "ShipID":42 }
+{ "timestamp":"2016-09-20T17:47:58Z", "event":"ModuleBuy", "Slot":"MediumHardpoint2", "BuyItem":"$hpt_mininglaser_fixed_medium_name;", "BuyItem_Localised":"Mining Laser", "BuyPrice":2258, "Ship":"cobramkiii", "ShipID":42 }
+{ "timestamp":"2016-09-20T17:48:11Z", "event":"ModuleBuy", "Slot":"SmallHardpoint1", "BuyItem":"$hpt_railgun_fixed_small_name;", "BuyItem_Localised":"Rail Gun", "BuyPrice":4644, "Ship":"cobramkiii", "ShipID":42 }
+{ "timestamp":"2016-09-20T17:48:19Z", "event":"ModuleBuy", "Slot":"SmallHardpoint2", "BuyItem":"$hpt_multicannon_gimbal_small_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":1283, "Ship":"cobramkiii", "ShipID":42 }
+{ "timestamp":"2016-09-20T17:48:49Z", "event":"ModuleBuy", "Slot":"TinyHardpoint2", "BuyItem":"$hpt_cargoscanner_size0_class3_name;", "BuyItem_Localised":"Manifest Scanner", "BuyPrice":12190, "Ship":"cobramkiii", "ShipID":42 }
+{ "timestamp":"2016-09-20T17:49:03Z", "event":"ModuleBuy", "Slot":"TinyHardpoint1", "SellItem":"$hpt_heatsinklauncher_turret_tiny_name;", "SellItem_Localised":"Heat Sink", "SellPrice":298, "BuyItem":"$hpt_crimescanner_size0_class1_name;", "BuyItem_Localised":"K-Warrant Scanner", "BuyPrice":1354, "Ship":"cobramkiii", "ShipID":42 }
+{ "timestamp":"2016-09-20T17:49:37Z", "event":"ModuleBuy", "Slot":"Slot03_Size4", "BuyItem":"$int_passengercabin_size4_class3_name;", "BuyItem_Localised":"FC Passenger Cabin", "BuyPrice":17059, "Ship":"cobramkiii", "ShipID":42 }
+{ "timestamp":"2016-09-20T17:51:17Z", "event":"SellExplorationData", "Systems":[ "29 Arietis", "Arietis Sector TJ-Q b5-2", "Piscium Sector UZ-O a6-0", "Piscium Sector BV-Y b5", "Piscium Sector JH-V b2-5", "Alrai Sector HW-W b1-6", "LHS 6410", "Alrai Sector KW-W a1-1" ], "Discovered":[  ], "BaseValue":57970, "Bonus":0 }
+{ "timestamp":"2016-09-20T17:51:46Z", "event":"CrewHire", "Name":"Sinai Kelley", "Faction":"Adle's Armada", "Cost":150000, "CombatRank":4 }
+{ "timestamp":"2016-09-20T17:51:56Z", "event":"CrewHire", "Name":"Chung Gallagher", "Faction":"Adle's Armada", "Cost":150000, "CombatRank":4 }
+{ "timestamp":"2016-09-20T17:52:03Z", "event":"CrewHire", "Name":"Elden Cline", "Faction":"Adle's Armada", "Cost":150000, "CombatRank":4 }
+{ "timestamp":"2016-09-20T17:53:22Z", "event":"Undocked", "StationName":"Cleve Hub", "StationType":"Orbis" }
+{ "timestamp":"2016-09-20T17:54:08Z", "event":"SupercruiseEntry", "StarSystem":"Eravate" }
+{ "timestamp":"2016-09-20T17:56:52Z", "event":"ApproachSettlement", "Name":"$NumberStation;", "Name_Localised":"Unregistered Comms Beacon" }
+{ "timestamp":"2016-09-20T17:56:56Z", "event":"SupercruiseExit", "StarSystem":"Eravate", "Body":"Eravate 5" }
+{ "timestamp":"2016-09-20T18:09:01Z", "event":"FSDJump", "StarSystem":"LHS 3447", "StarPos":[-43.188,-5.281,56.156], "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":4.163, "FuelUsed":0.068460, "FuelLevel":15.931540, "Faction":"LHS 3447 Dynamic & Co" }
+{ "timestamp":"2016-09-20T18:13:18Z", "event":"SupercruiseExit", "StarSystem":"LHS 3447", "Body":"Bluford Orbital" }
+{ "timestamp":"2016-09-20T18:13:26Z", "event":"DockingRequested", "StationName":"Bluford Orbital" }
+{ "timestamp":"2016-09-20T18:13:28Z", "event":"DockingGranted", "LandingPad":43, "StationName":"Bluford Orbital" }
+{ "timestamp":"2016-09-20T18:14:03Z", "event":"Docked", "StationName":"Bluford Orbital", "StationType":"Orbis", "StarSystem":"LHS 3447", "Faction":"LHS 3447 Cartel", "FactionState":"Boom", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T18:14:26Z", "event":"ShipyardBuy", "ShipType":"federation_corvette", "ShipPrice":18796945, "SellOldShip":"CobraMkIII", "SellShipID":42, "SellPrice":950787 }
+{ "timestamp":"2016-09-20T18:14:27Z", "event":"ShipyardNew", "ShipType":"federation_corvette", "NewShipID":42 }
+{ "timestamp":"2016-09-20T18:14:45Z", "event":"Docked", "StationName":"Bluford Orbital", "StationType":"Orbis", "StarSystem":"LHS 3447", "Faction":"LHS 3447 Cartel", "FactionState":"Boom", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T18:15:09Z", "event":"ModuleSell", "Slot":"MediumHardpoint1", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":220, "Ship":"federation_corvette", "ShipID":42 }
+{ "timestamp":"2016-09-20T18:15:17Z", "event":"ModuleSell", "Slot":"MediumHardpoint2", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":220, "Ship":"federation_corvette", "ShipID":42 }
+{ "timestamp":"2016-09-20T18:17:10Z", "event":"ModuleSell", "Slot":"Slot02_Size7", "SellItem":"$int_cargorack_size6_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":36259, "Ship":"federation_corvette", "ShipID":42 }
+{ "timestamp":"2016-09-20T18:17:15Z", "event":"ModuleSell", "Slot":"Slot08_Size4", "SellItem":"$int_cargorack_size3_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":1056, "Ship":"federation_corvette", "ShipID":42 }
+{ "timestamp":"2016-09-20T18:17:28Z", "event":"ModuleSell", "Slot":"Slot10_Size3", "SellItem":"$int_cargorack_size2_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":325, "Ship":"federation_corvette", "ShipID":42 }
+{ "timestamp":"2016-09-20T18:17:31Z", "event":"ModuleSell", "Slot":"Slot09_Size4", "SellItem":"$int_stellarbodydiscoveryscanner_standard_name;", "SellItem_Localised":"D - Scanner", "SellPrice":100, "Ship":"federation_corvette", "ShipID":42 }
+{ "timestamp":"2016-09-20T18:23:21Z", "event":"ShipyardBuy", "ShipType":"hauler", "ShipPrice":5272, "StoreOldShip":"Federation_Corvette", "StoreShipID":42 }
+{ "timestamp":"2016-09-20T18:23:22Z", "event":"ShipyardNew", "ShipType":"hauler", "NewShipID":57 }
+{ "timestamp":"2016-09-20T18:23:33Z", "event":"Docked", "StationName":"Bluford Orbital", "StationType":"Orbis", "StarSystem":"LHS 3447", "Faction":"LHS 3447 Cartel", "FactionState":"Boom", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T18:23:56Z", "event":"ModuleBuy", "Slot":"FrameShiftDrive", "SellItem":"$int_hyperdrive_size2_class1_name;", "SellItem_Localised":"FSD", "SellPrice":198, "BuyItem":"$int_hyperdrive_size2_class5_name;", "BuyItem_Localised":"FSD", "BuyPrice":16022, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:24:02Z", "event":"ModuleBuy", "Slot":"MainEngines", "SellItem":"$int_engine_size2_class1_name;", "SellItem_Localised":"Thrusters", "SellPrice":198, "BuyItem":"$int_engine_size2_class5_name;", "BuyItem_Localised":"Thrusters", "BuyPrice":16022, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:24:10Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size2_class1_name;", "SellItem_Localised":"Power Plant", "SellPrice":198, "BuyItem":"$int_powerplant_size2_class3_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":1780, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:24:11Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T18:24:14Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T18:24:16Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size2_class3_name;", "SellItem_Localised":"Power Plant", "SellPrice":1780, "BuyItem":"$int_powerplant_size2_class2_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":593, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:24:17Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T18:24:20Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T18:24:30Z", "event":"ModuleBuy", "Slot":"LifeSupport", "SellItem":"$int_lifesupport_size1_class1_name;", "SellItem_Localised":"Life Support", "SellPrice":52, "BuyItem":"$int_lifesupport_size1_class2_name;", "BuyItem_Localised":"Life Support", "BuyPrice":129, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:24:36Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size1_class1_name;", "SellItem_Localised":"Power Distributor", "SellPrice":52, "BuyItem":"$int_powerdistributor_size1_class2_name;", "BuyItem_Localised":"Power Distributor", "BuyPrice":129, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:24:41Z", "event":"ModuleBuy", "Slot":"Radar", "SellItem":"$int_sensors_size1_class1_name;", "SellItem_Localised":"Sensors", "SellPrice":52, "BuyItem":"$int_sensors_size1_class2_name;", "BuyItem_Localised":"Sensors", "BuyPrice":129, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:24:49Z", "event":"ModuleBuy", "Slot":"MainEngines", "SellItem":"$int_engine_size2_class5_name;", "SellItem_Localised":"Thrusters", "SellPrice":16022, "BuyItem":"$int_engine_size2_class2_name;", "BuyItem_Localised":"Thrusters", "BuyPrice":593, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:25:43Z", "event":"ModuleSell", "Slot":"Slot02_Size3", "SellItem":"$int_cargorack_size2_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":325, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:25:47Z", "event":"ModuleSell", "Slot":"Slot01_Size3", "SellItem":"$int_cargorack_size2_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":325, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:26:26Z", "event":"ModuleSell", "Slot":"Slot04_Size1", "SellItem":"$int_stellarbodydiscoveryscanner_standard_name;", "SellItem_Localised":"D - Scanner", "SellPrice":100, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:26:30Z", "event":"ModuleSell", "Slot":"Slot03_Size2", "SellItem":"$int_shieldgenerator_size2_class1_name;", "SellItem_Localised":"Shield Generator", "SellPrice":198, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:26:52Z", "event":"ModuleSell", "Slot":"SmallHardpoint1", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":220, "Ship":"hauler", "ShipID":57 }
+{ "timestamp":"2016-09-20T18:27:07Z", "event":"ModuleBuy", "Slot":"PaintJob", "BuyItem":"$paintjob_hauler_blackfriday_01_name;", "BuyItem_Localised":"Black Friday", "BuyPrice":0, "Ship":"hauler", "ShipID":57 }

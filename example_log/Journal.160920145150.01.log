@@ -1,0 +1,180 @@
+{ "timestamp":"2016-09-20T20:51:50Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 2)", "build":"r121783/r0 " }
+{ "timestamp":"2016-09-20T20:52:28Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Hauler", "ShipID":57, "GameMode":"Open", "Credits":523974414, "Loan":0 }
+{ "timestamp":"2016-09-20T20:52:28Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-20T20:52:28Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-20T20:52:56Z", "event":"Location", "StarSystem":"Brestla", "StarPos":[159.469,-103.750,-19.688], "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"The Imperial Inquisition", "FactionState":"Boom" }
+{ "timestamp":"2016-09-20T20:53:27Z", "event":"SupercruiseEntry", "StarSystem":"Brestla" }
+{ "timestamp":"2016-09-20T20:54:35Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T20:54:42Z", "event":"SupercruiseExit", "StarSystem":"Brestla", "Body":"Brestla A 1" }
+{ "timestamp":"2016-09-20T20:56:07Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T20:56:09Z", "event":"DockingGranted", "LandingPad":3, "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T20:56:43Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T21:01:41Z", "event":"ShipyardBuy", "ShipType":"belugaliner", "ShipPrice":8453276, "SellOldShip":"Hauler", "SellShipID":57, "SellPrice":18854 }
+{ "timestamp":"2016-09-20T21:01:42Z", "event":"ShipyardNew", "ShipType":"belugaliner", "NewShipID":57 }
+{ "timestamp":"2016-09-20T21:01:54Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T21:15:16Z", "event":"ModuleSell", "Slot":"MediumHardpoint2", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":220, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:15:24Z", "event":"ModuleSell", "Slot":"MediumHardpoint1", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":220, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:15:58Z", "event":"ModuleBuy", "Slot":"FrameShiftDrive", "SellItem":"$int_hyperdrive_size7_class1_name;", "SellItem_Localised":"FSD", "SellPrice":63320, "BuyItem":"$int_hyperdrive_size7_class5_name;", "BuyItem_Localised":"FSD", "BuyPrice":5128911, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:16:41Z", "event":"ModuleBuy", "Slot":"LifeSupport", "SellItem":"$int_lifesupport_size8_class1_name;", "SellItem_Localised":"Life Support", "SellPrice":69758, "BuyItem":"$int_lifesupport_size8_class2_name;", "BuyItem_Localised":"Life Support", "BuyPrice":174396, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:17:02Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size6_class1_name;", "SellItem_Localised":"Power Distributor", "SellPrice":8898, "BuyItem":"$int_powerdistributor_size6_class2_name;", "BuyItem_Localised":"Power Distributor", "BuyPrice":22244, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:17:12Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size6_class2_name;", "SellItem_Localised":"Power Distributor", "SellPrice":22244, "BuyItem":"$int_powerdistributor_size1_class2_name;", "BuyItem_Localised":"Power Distributor", "BuyPrice":129, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:17:19Z", "event":"ModuleBuy", "Slot":"Radar", "SellItem":"$int_sensors_size5_class1_name;", "SellItem_Localised":"Sensors", "SellPrice":3178, "BuyItem":"$int_sensors_size5_class2_name;", "BuyItem_Localised":"Sensors", "BuyPrice":7944, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:17:29Z", "event":"ModuleBuy", "Slot":"MainEngines", "SellItem":"$int_engine_size7_class1_name;", "SellItem_Localised":"Thrusters", "SellPrice":63320, "BuyItem":"$int_engine_size6_class2_name;", "BuyItem_Localised":"Thrusters", "BuyPrice":59924, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:17:51Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size6_class1_name;", "SellItem_Localised":"Power Plant", "SellPrice":19975, "BuyItem":"$int_powerplant_size4_class2_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":5963, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:17:52Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T21:17:54Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T21:18:08Z", "event":"ModuleSell", "Slot":"Slot01_Size6", "SellItem":"$int_shieldgenerator_size6_class1_name;", "SellItem_Localised":"Shield Generator", "SellPrice":19975, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:18:11Z", "event":"ModuleSell", "Slot":"Slot02_Size6", "SellItem":"$int_cargorack_size5_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":11157, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:18:14Z", "event":"ModuleSell", "Slot":"Slot03_Size6", "SellItem":"$int_passengercabin_size6_class2_name;", "SellItem_Localised":"BC Passenger Cabin", "SellPrice":18423, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:18:17Z", "event":"ModuleSell", "Slot":"Slot04_Size6", "SellItem":"$int_passengercabin_size6_class2_name;", "SellItem_Localised":"BC Passenger Cabin", "SellPrice":18423, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:18:20Z", "event":"ModuleSell", "Slot":"Slot05_Size5", "SellItem":"$int_passengercabin_size4_class2_name;", "SellItem_Localised":"BC Passenger Cabin", "SellPrice":5686, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:18:24Z", "event":"ModuleSell", "Slot":"Slot06_Size5", "SellItem":"$int_passengercabin_size4_class2_name;", "SellItem_Localised":"BC Passenger Cabin", "SellPrice":5686, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:18:27Z", "event":"ModuleSell", "Slot":"Slot07_Size4", "SellItem":"$int_cargorack_size3_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":1056, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:18:30Z", "event":"ModuleSell", "Slot":"Slot08_Size3", "SellItem":"$int_cargorack_size2_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":325, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:18:34Z", "event":"ModuleSell", "Slot":"Slot11_Size3", "SellItem":"$int_stellarbodydiscoveryscanner_standard_name;", "SellItem_Localised":"D - Scanner", "SellPrice":100, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:19:10Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size4_class2_name;", "SellItem_Localised":"Power Plant", "SellPrice":5963, "BuyItem":"$int_powerplant_size3_class2_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":1881, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:24:52Z", "event":"ModuleBuy", "Slot":"Slot01_Size6", "BuyItem":"$int_fighterbay_size6_class1_name;", "BuyItem_Localised":"Fighter Hangar", "BuyPrice":186934, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:51:14Z", "event":"ModuleBuy", "Slot":"Slot02_Size6", "BuyItem":"$int_shieldgenerator_size6_class5_name;", "BuyItem_Localised":"Shield Generator", "BuyPrice":1617953, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:51:15Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T21:51:26Z", "event":"ModuleBuy", "Slot":"Slot11_Size3", "BuyItem":"$int_dockingcomputer_standard_name;", "BuyItem_Localised":"Docking Computer", "BuyPrice":450, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:51:48Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size3_class2_name;", "SellItem_Localised":"Power Plant", "SellPrice":1881, "BuyItem":"$int_powerplant_size6_class5_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":1617953, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:51:53Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T21:51:55Z", "event":"ModuleBuy", "Slot":"MainEngines", "SellItem":"$int_engine_size6_class2_name;", "SellItem_Localised":"Thrusters", "SellPrice":59924, "BuyItem":"$int_engine_size7_class5_name;", "BuyItem_Localised":"Thrusters", "BuyPrice":5128911, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:52:04Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size1_class2_name;", "SellItem_Localised":"Power Distributor", "SellPrice":129, "BuyItem":"$int_powerdistributor_size6_class5_name;", "BuyItem_Localised":"Power Distributor", "BuyPrice":347569, "Ship":"belugaliner", "ShipID":57 }
+{ "timestamp":"2016-09-20T21:52:53Z", "event":"Undocked", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T21:53:32Z", "event":"LaunchFighter", "Loadout":"three", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T21:56:13Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2016-09-20T21:57:10Z", "event":"VehicleSwitch", "To":"Fighter" }
+{ "timestamp":"2016-09-20T21:58:15Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T22:01:06Z", "event":"LaunchFighter", "Loadout":"three", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T22:02:19Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2016-09-20T22:02:34Z", "event":"VehicleSwitch", "To":"Fighter" }
+{ "timestamp":"2016-09-20T22:06:20Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T22:06:42Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T22:06:43Z", "event":"DockingGranted", "LandingPad":7, "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T22:07:38Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T22:07:57Z", "event":"CrewAssign", "Name":"Elden Cline", "Role":"Active" }
+{ "timestamp":"2016-09-20T22:08:10Z", "event":"RefuelAll", "Cost":17, "Amount":0.328923 }
+{ "timestamp":"2016-09-20T22:08:28Z", "event":"Undocked", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T22:08:59Z", "event":"LaunchFighter", "Loadout":"three", "PlayerControlled":false }
+{ "timestamp":"2016-09-20T22:09:52Z", "event":"VehicleSwitch", "To":"Fighter" }
+{ "timestamp":"2016-09-20T22:11:49Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T22:11:50Z", "event":"HullDamage", "Health":0.755906 }
+{ "timestamp":"2016-09-20T22:11:53Z", "event":"HullDamage", "Health":0.543457 }
+{ "timestamp":"2016-09-20T22:11:53Z", "event":"HullDamage", "Health":0.356936 }
+{ "timestamp":"2016-09-20T22:11:53Z", "event":"HullDamage", "Health":0.199170 }
+{ "timestamp":"2016-09-20T22:12:20Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T22:12:22Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T22:12:45Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T22:14:18Z", "event":"HullDamage", "Health":0.798803 }
+{ "timestamp":"2016-09-20T22:15:05Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T22:15:57Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T22:15:58Z", "event":"DockingGranted", "LandingPad":7, "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T22:16:52Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T22:19:24Z", "event":"Undocked", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T22:19:49Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T22:31:49Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"Brestla Silver Vision Network", "Victim":"Tobias As'Lana", "Bounty":400 }
+{ "timestamp":"2016-09-20T22:31:54Z", "event":"HullDamage", "Health":0.707026 }
+{ "timestamp":"2016-09-20T22:31:54Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T22:31:57Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-20T22:33:16Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T22:33:17Z", "event":"HullDamage", "Health":0.589670 }
+{ "timestamp":"2016-09-20T22:33:30Z", "event":"HullDamage", "Health":0.398774 }
+{ "timestamp":"2016-09-20T22:33:44Z", "event":"HullDamage", "Health":0.193491 }
+{ "timestamp":"2016-09-20T22:33:57Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T22:33:58Z", "event":"SupercruiseEntry", "StarSystem":"Brestla" }
+{ "timestamp":"2016-09-20T22:33:59Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T22:35:30Z", "event":"SupercruiseExit", "StarSystem":"Brestla", "Body":"Roed Odegaard Port" }
+{ "timestamp":"2016-09-20T22:35:37Z", "event":"LaunchFighter", "Loadout":"one", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T22:36:06Z", "event":"DockingDenied", "Reason":"ActiveFighter", "StationName":"Roed Odegaard Port" }
+{ "timestamp":"2016-09-20T22:37:07Z", "event":"CommitCrime", "CrimeType":"dockingMinorTresspass", "Faction":"The Imperial Inquisition", "Fine":400 }
+{ "timestamp":"2016-09-20T22:38:20Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2016-09-20T22:39:09Z", "event":"DockingRequested", "StationName":"Roed Odegaard Port" }
+{ "timestamp":"2016-09-20T22:39:11Z", "event":"DockingGranted", "LandingPad":39, "StationName":"Roed Odegaard Port" }
+{ "timestamp":"2016-09-20T22:39:52Z", "event":"Docked", "StationName":"Roed Odegaard Port", "StationType":"Coriolis", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T22:51:09Z", "event":"ShipyardTransfer", "ShipType":"Federation_Corvette", "ShipID":42, "System":"LHS 3447", "Distance":2249163184801841152.000000, "TransferPrice":245786 }
+{ "timestamp":"2016-09-20T22:51:35Z", "event":"ShipyardTransfer", "ShipType":"Eagle", "ShipID":16, "System":"Lembava", "Distance":2029374521261162496.000000, "TransferPrice":8527 }
+{ "timestamp":"2016-09-20T22:52:22Z", "event":"ShipyardBuy", "ShipType":"anaconda", "ShipPrice":14696945, "StoreOldShip":"BelugaLiner", "StoreShipID":57 }
+{ "timestamp":"2016-09-20T22:52:23Z", "event":"ShipyardNew", "ShipType":"anaconda", "NewShipID":60 }
+{ "timestamp":"2016-09-20T22:52:38Z", "event":"Docked", "StationName":"Roed Odegaard Port", "StationType":"Coriolis", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T22:53:15Z", "event":"ModuleBuy", "Slot":"PaintJob", "BuyItem":"$paintjob_anaconda_squadron_red_name;", "BuyItem_Localised":"Squadron Red", "BuyPrice":0, "Ship":"anaconda", "ShipID":60 }
+{ "timestamp":"2016-09-20T22:53:22Z", "event":"ModuleSell", "Slot":"Slot01_Size7", "SellItem":"$int_cargorack_size6_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":36259, "Ship":"anaconda", "ShipID":60 }
+{ "timestamp":"2016-09-20T22:53:33Z", "event":"ModuleBuy", "Slot":"Slot01_Size7", "BuyItem":"$int_fighterbay_size7_class1_name;", "BuyItem_Localised":"Fighter Hangar", "BuyPrice":236932, "Ship":"anaconda", "ShipID":60 }
+{ "timestamp":"2016-09-20T22:54:45Z", "event":"ShipyardSwap", "ShipType":"belugaliner", "ShipID":57, "StoreOldShip":"Anaconda", "StoreShipID":60 }
+{ "timestamp":"2016-09-20T22:55:01Z", "event":"Docked", "StationName":"Roed Odegaard Port", "StationType":"Coriolis", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T22:55:40Z", "event":"Undocked", "StationName":"Roed Odegaard Port", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-20T22:55:50Z", "event":"Died" }
+{ "timestamp":"2016-09-20T22:56:06Z", "event":"Resurrect", "Option":"rebuy", "Cost":1118132, "Bankrupt":false }
+{ "timestamp":"2016-09-20T22:56:25Z", "event":"Location", "Docked":1, "StationName":"Roed Odegaard Port", "StationType":"Coriolis", "StarSystem":"Brestla", "StarPos":[159.469,-103.750,-19.688], "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"The Imperial Inquisition", "FactionState":"Boom" }
+{ "timestamp":"2016-09-20T22:56:25Z", "event":"Docked", "StationName":"Roed Odegaard Port", "StationType":"Coriolis", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T22:56:52Z", "event":"Undocked", "StationName":"Roed Odegaard Port", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-20T22:57:36Z", "event":"SupercruiseEntry", "StarSystem":"Brestla" }
+{ "timestamp":"2016-09-20T22:58:23Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T22:58:30Z", "event":"SupercruiseExit", "StarSystem":"Brestla", "Body":"Brestla A 1" }
+{ "timestamp":"2016-09-20T22:59:28Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T22:59:30Z", "event":"DockingGranted", "LandingPad":7, "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T22:59:59Z", "event":"DockingDenied", "Reason":"Hostile", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:00:11Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T23:00:18Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T23:00:18Z", "event":"HullDamage", "Health":0.791232 }
+{ "timestamp":"2016-09-20T23:00:23Z", "event":"HullDamage", "Health":0.578165 }
+{ "timestamp":"2016-09-20T23:00:32Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T23:00:33Z", "event":"HullDamage", "Health":0.341602 }
+{ "timestamp":"2016-09-20T23:00:37Z", "event":"HullDamage", "Health":0.130739 }
+{ "timestamp":"2016-09-20T23:00:46Z", "event":"LaunchFighter", "Loadout":"one", "PlayerControlled":true }
+{ "timestamp":"2016-09-20T23:01:13Z", "event":"Died", "KillerName":"$ShipName_Police_Empire;", "KillerName_Localised":"Internal Security Service", "KillerShip":"viper", "KillerRank":"Deadly" }
+{ "timestamp":"2016-09-20T23:01:45Z", "event":"Resurrect", "Option":"rebuy", "Cost":1117732, "Bankrupt":false }
+{ "timestamp":"2016-09-20T23:02:12Z", "event":"Location", "Docked":1, "StationName":"Roed Odegaard Port", "StationType":"Coriolis", "StarSystem":"Brestla", "StarPos":[159.469,-103.750,-19.688], "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"The Imperial Inquisition", "FactionState":"Boom" }
+{ "timestamp":"2016-09-20T23:02:12Z", "event":"Docked", "StationName":"Roed Odegaard Port", "StationType":"Coriolis", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T23:03:11Z", "event":"Undocked", "StationName":"Roed Odegaard Port", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-20T23:04:10Z", "event":"SupercruiseEntry", "StarSystem":"Brestla" }
+{ "timestamp":"2016-09-20T23:04:43Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:04:56Z", "event":"SupercruiseExit", "StarSystem":"Brestla", "Body":"Brestla A 1" }
+{ "timestamp":"2016-09-20T23:05:48Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:05:48Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:05:55Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:05:55Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:06:04Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:06:04Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:06:09Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:06:09Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:06:21Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:06:23Z", "event":"DockingGranted", "LandingPad":7, "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-20T23:07:00Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T23:07:13Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T23:07:16Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T23:07:39Z", "event":"ShipyardBuy", "ShipType":"cutter", "ShipPrice":20896945, "StoreOldShip":"BelugaLiner", "StoreShipID":57 }
+{ "timestamp":"2016-09-20T23:07:40Z", "event":"ShipyardNew", "ShipType":"cutter", "NewShipID":61 }
+{ "timestamp":"2016-09-20T23:07:54Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T23:08:42Z", "event":"ShipyardBuy", "ShipType":"federation_corvette", "ShipPrice":18796945, "StoreOldShip":"Cutter", "StoreShipID":61 }
+{ "timestamp":"2016-09-20T23:08:44Z", "event":"ShipyardNew", "ShipType":"federation_corvette", "NewShipID":62 }
+{ "timestamp":"2016-09-20T23:08:48Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T23:09:02Z", "event":"ModuleBuy", "Slot":"PaintJob", "BuyItem":"$paintjob_federation_corvette_blackfriday_01_name;", "BuyItem_Localised":"Black Friday", "BuyPrice":0, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:09:11Z", "event":"ModuleSell", "Slot":"Slot02_Size7", "SellItem":"$int_cargorack_size6_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":36259, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:09:22Z", "event":"ModuleBuy", "Slot":"Slot01_Size7", "SellItem":"$int_shieldgenerator_size7_class1_name;", "SellItem_Localised":"Shield Generator", "SellPrice":63320, "BuyItem":"$int_shieldgenerator_size7_class5_name;", "BuyItem_Localised":"Shield Generator", "BuyPrice":5128911, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:09:28Z", "event":"ModuleSell", "Slot":"MediumHardpoint1", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":220, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:09:36Z", "event":"ModuleSell", "Slot":"MediumHardpoint2", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":220, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:09:52Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size8_class1_name;", "SellItem_Localised":"Power Plant", "SellPrice":200724, "BuyItem":"$int_powerplant_size8_class5_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":16258649, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:09:54Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T23:09:59Z", "event":"ModuleBuy", "Slot":"MainEngines", "SellItem":"$int_engine_size7_class1_name;", "SellItem_Localised":"Thrusters", "SellPrice":63320, "BuyItem":"$int_engine_size7_class5_name;", "BuyItem_Localised":"Thrusters", "BuyPrice":5128911, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:10:04Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-20T23:10:04Z", "event":"ModuleBuy", "Slot":"LifeSupport", "SellItem":"$int_lifesupport_size5_class1_name;", "SellItem_Localised":"Life Support", "SellPrice":3178, "BuyItem":"$int_lifesupport_size5_class5_name;", "BuyItem_Localised":"Life Support", "BuyPrice":124132, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:10:10Z", "event":"ModuleBuy", "Slot":"Radar", "SellItem":"$int_sensors_size8_class1_name;", "SellItem_Localised":"Sensors", "SellPrice":69758, "BuyItem":"$int_sensors_size8_class5_name;", "BuyItem_Localised":"Sensors", "BuyPrice":2724939, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:10:19Z", "event":"ModuleBuy", "Slot":"FrameShiftDrive", "SellItem":"$int_hyperdrive_size6_class1_name;", "SellItem_Localised":"FSD", "SellPrice":19975, "BuyItem":"$int_hyperdrive_size6_class5_name;", "BuyItem_Localised":"FSD", "BuyPrice":1617953, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:10:26Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size8_class1_name;", "SellItem_Localised":"Power Distributor", "SellPrice":69758, "BuyItem":"$int_powerdistributor_size8_class5_name;", "BuyItem_Localised":"Power Distributor", "BuyPrice":2724939, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:10:49Z", "event":"ModuleBuy", "Slot":"Slot04_Size6", "BuyItem":"$int_fighterbay_size6_class1_name;", "BuyItem_Localised":"Fighter Hangar", "BuyPrice":186934, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:11:52Z", "event":"ModuleSell", "Slot":"Slot08_Size4", "SellItem":"$int_cargorack_size3_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":1056, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:11:55Z", "event":"ModuleSell", "Slot":"Slot10_Size3", "SellItem":"$int_cargorack_size2_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":325, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:12:25Z", "event":"ModuleSell", "Slot":"Slot09_Size4", "SellItem":"$int_stellarbodydiscoveryscanner_standard_name;", "SellItem_Localised":"D - Scanner", "SellPrice":100, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:13:48Z", "event":"ModuleBuy", "Slot":"Slot05_Size6", "BuyItem":"$int_passengercabin_size6_class3_name;", "BuyItem_Localised":"FC Passenger Cabin", "BuyPrice":55270, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:14:01Z", "event":"ModuleBuy", "Slot":"Slot08_Size4", "BuyItem":"$int_buggybay_size4_class1_name;", "BuyItem_Localised":"Planetary Vehicle Hangar", "BuyPrice":7200, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:14:25Z", "event":"ModuleBuy", "Slot":"Slot10_Size3", "BuyItem":"$int_stellarbodydiscoveryscanner_advanced_name;", "BuyItem_Localised":"D - Scanner", "BuyPrice":154500, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:14:37Z", "event":"ModuleBuy", "Slot":"Slot09_Size4", "BuyItem":"$int_detailedsurfacescanner_tiny_name;", "BuyItem_Localised":"Surface Scanner", "BuyPrice":25000, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:15:03Z", "event":"ModuleBuy", "Slot":"Slot02_Size7", "BuyItem":"$int_dronecontrol_fueltransfer_size7_class5_name;", "BuyItem_Localised":"Fuel Transfer", "BuyPrice":699840, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:15:14Z", "event":"ModuleBuy", "Slot":"Slot03_Size7", "BuyItem":"$int_dronecontrol_resourcesiphon_size7_class5_name;", "BuyItem_Localised":"Hatch Breaker", "BuyPrice":699840, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:15:22Z", "event":"ModuleBuy", "Slot":"Slot06_Size5", "BuyItem":"$int_cargorack_size5_class1_name;", "BuyItem_Localised":"Cargo Rack", "BuyPrice":11157, "Ship":"federation_corvette", "ShipID":62 }
+{ "timestamp":"2016-09-20T23:16:22Z", "event":"MissionAccepted", "Faction":"The Imperial Inquisition", "Name":"Mission_PassengerBulk", "DestinationSystem":"Alina", "DestinationStation":"Vogel Station", "Expiry":"2016-09-21T02:49:10Z", "PassengerCount":6, "PassengerVIPs":false, "PassengerWanted":false, "PassengerType":"Tourist", "MissionID":26476090 }
+{ "timestamp":"2016-09-20T23:17:00Z", "event":"MissionAccepted", "Faction":"Union of Brestla Resistance", "Name":"Mission_Massacre_Skimmer_CivilUnrest", "Expiry":"2016-09-22T12:51:01Z", "MissionID":26476094 }
+{ "timestamp":"2016-09-20T23:17:03Z", "event":"MissionAccepted", "Faction":"Union of Brestla Resistance", "Name":"Mission_Massacre_Skimmer_CivilUnrest", "Expiry":"2016-09-22T21:50:05Z", "MissionID":26476095 }
+{ "timestamp":"2016-09-20T23:18:38Z", "event":"BuyDrones", "Type":"Drones", "Count":20, "BuyPrice":101, "TotalCost":2020 }
+{ "timestamp":"2016-09-20T23:19:05Z", "event":"Undocked", "StationName":"i Sola Prospect" }

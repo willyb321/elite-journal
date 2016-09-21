@@ -1,0 +1,5 @@
+{ "timestamp":"2016-09-20T23:32:48Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 2)", "build":"r121783/r0 " }
+{ "timestamp":"2016-09-20T23:35:01Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Federation_Corvette", "ShipID":62, "GameMode":"Open", "Credits":409524791, "Loan":0 }
+{ "timestamp":"2016-09-20T23:35:01Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-20T23:35:01Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-20T23:35:04Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }

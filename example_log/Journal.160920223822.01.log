@@ -1,0 +1,114 @@
+{ "timestamp":"2016-09-21T04:38:22Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 2)", "build":"r121783/r0 " }
+{ "timestamp":"2016-09-21T04:39:35Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Federation_Corvette", "ShipID":62, "GameMode":"Open", "Credits":406828162, "Loan":0 }
+{ "timestamp":"2016-09-21T04:39:35Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T04:39:35Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T04:39:38Z", "event":"ApproachSettlement", "Name":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:40:07Z", "event":"Location", "StarSystem":"Brestla", "StarPos":[159.469,-103.750,-19.688], "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"The Imperial Inquisition", "FactionState":"Boom" }
+{ "timestamp":"2016-09-21T04:48:17Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:48:17Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:48:25Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:48:25Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:48:53Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:48:53Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:49:09Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:49:09Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:49:13Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T04:49:14Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:49:14Z", "event":"DockingDenied", "Reason":"NoSpace", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:49:21Z", "event":"DockingRequested", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:49:22Z", "event":"DockingGranted", "LandingPad":8, "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T04:50:03Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T04:50:11Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T05:06:32Z", "event":"ShipyardBuy", "ShipType":"anaconda", "ShipPrice":14696945, "StoreOldShip":"Federation_Corvette", "StoreShipID":62 }
+{ "timestamp":"2016-09-21T05:06:33Z", "event":"ShipyardNew", "ShipType":"anaconda", "NewShipID":67 }
+{ "timestamp":"2016-09-21T05:06:46Z", "event":"Docked", "StationName":"i Sola Prospect", "StarSystem":"Brestla", "Faction":"The Imperial Inquisition", "FactionState":"Boom", "Allegiance":"Empire", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Dictatorship;", "Government_Localised":"Dictatorship", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T05:07:21Z", "event":"ModuleBuy", "Slot":"PaintJob", "BuyItem":"$paintjob_anaconda_squadron_green_name;", "BuyItem_Localised":"Squadron Green", "BuyPrice":0, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:07:38Z", "event":"ModuleBuy", "Slot":"FrameShiftDrive", "SellItem":"$int_hyperdrive_size6_class1_name;", "SellItem_Localised":"FSD", "SellPrice":19975, "BuyItem":"$int_hyperdrive_size6_class5_name;", "BuyItem_Localised":"FSD", "BuyPrice":1617953, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:07:48Z", "event":"ModuleBuy", "Slot":"LifeSupport", "SellItem":"$int_lifesupport_size5_class1_name;", "SellItem_Localised":"Life Support", "SellPrice":3178, "BuyItem":"$int_lifesupport_size5_class2_name;", "BuyItem_Localised":"Life Support", "BuyPrice":7944, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:08:39Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size8_class1_name;", "SellItem_Localised":"Power Distributor", "SellPrice":69758, "BuyItem":"$int_powerdistributor_size7_class2_name;", "BuyItem_Localised":"Power Distributor", "BuyPrice":62284, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:08:56Z", "event":"ModuleBuy", "Slot":"MainEngines", "SellItem":"$int_engine_size7_class1_name;", "SellItem_Localised":"Thrusters", "SellPrice":63320, "BuyItem":"$int_engine_size6_class2_name;", "BuyItem_Localised":"Thrusters", "BuyPrice":59924, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:09:05Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size8_class1_name;", "SellItem_Localised":"Power Plant", "SellPrice":200724, "BuyItem":"$int_powerplant_size5_class2_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":18904, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:09:07Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T05:09:13Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T05:09:27Z", "event":"ModuleBuy", "Slot":"Radar", "SellItem":"$int_sensors_size8_class1_name;", "SellItem_Localised":"Sensors", "SellPrice":69758, "BuyItem":"$int_sensors_size8_class5_name;", "BuyItem_Localised":"Sensors", "BuyPrice":2724939, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:09:40Z", "event":"ModuleSell", "Slot":"SmallHardpoint1", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":220, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:09:49Z", "event":"ModuleSell", "Slot":"SmallHardpoint2", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":220, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:10:59Z", "event":"ModuleSell", "Slot":"Slot03_Size6", "SellItem":"$int_shieldgenerator_size6_class1_name;", "SellItem_Localised":"Shield Generator", "SellPrice":19975, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:11:08Z", "event":"ModuleBuy", "Slot":"Slot01_Size7", "SellItem":"$int_cargorack_size6_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":36259, "BuyItem":"$int_shieldgenerator_size7_class5_name;", "BuyItem_Localised":"Shield Generator", "BuyPrice":5128911, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:11:12Z", "event":"ModuleSell", "Slot":"Slot02_Size6", "SellItem":"$int_cargorack_size5_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":11157, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:11:36Z", "event":"ModuleBuy", "Slot":"Slot02_Size6", "BuyItem":"$int_fighterbay_size6_class1_name;", "BuyItem_Localised":"Fighter Hangar", "BuyPrice":186934, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:14:14Z", "event":"ModuleSell", "Slot":"Slot05_Size5", "SellItem":"$int_cargorack_size4_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":3433, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:14:19Z", "event":"ModuleSell", "Slot":"Slot10_Size4", "SellItem":"$int_stellarbodydiscoveryscanner_standard_name;", "SellItem_Localised":"D - Scanner", "SellPrice":100, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:14:22Z", "event":"ModuleSell", "Slot":"Slot13_Size2", "SellItem":"$int_cargorack_size1_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":100, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:14:35Z", "event":"ModuleBuy", "Slot":"Slot13_Size2", "BuyItem":"$int_stellarbodydiscoveryscanner_advanced_name;", "BuyItem_Localised":"D - Scanner", "BuyPrice":154500, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:14:45Z", "event":"ModuleBuy", "Slot":"Slot10_Size4", "BuyItem":"$int_detailedsurfacescanner_tiny_name;", "BuyItem_Localised":"Surface Scanner", "BuyPrice":25000, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:15:02Z", "event":"ModuleBuy", "Slot":"Slot03_Size6", "BuyItem":"$int_buggybay_size6_class2_name;", "BuyItem_Localised":"Planetary Vehicle Hangar", "BuyPrice":69120, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:15:03Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T05:15:40Z", "event":"ModuleBuy", "Slot":"Slot04_Size6", "BuyItem":"$int_fuelscoop_size6_class5_name;", "BuyItem_Localised":"Fuel Scoop", "BuyPrice":2876361, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:15:54Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size5_class2_name;", "SellItem_Localised":"Power Plant", "SellPrice":18904, "BuyItem":"$int_powerplant_size6_class2_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":59924, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:16:03Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T05:16:16Z", "event":"ModuleBuy", "Slot":"Slot05_Size5", "BuyItem":"$int_cargorack_size5_class1_name;", "BuyItem_Localised":"Cargo Rack", "BuyPrice":11157, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:16:24Z", "event":"ModuleBuy", "Slot":"Slot06_Size5", "BuyItem":"$int_cargorack_size5_class1_name;", "BuyItem_Localised":"Cargo Rack", "BuyPrice":11157, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:16:44Z", "event":"ModuleBuy", "Slot":"Slot07_Size5", "BuyItem":"$int_dronecontrol_collection_size5_class2_name;", "BuyItem_Localised":"Collector", "BuyPrice":9720, "Ship":"anaconda", "ShipID":67 }
+{ "timestamp":"2016-09-21T05:18:24Z", "event":"Undocked", "StationName":"i Sola Prospect" }
+{ "timestamp":"2016-09-21T05:19:24Z", "event":"FSDJump", "StarSystem":"ICZ BK-Z b4", "StarPos":[141.875,-87.000,-13.781], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":25.000, "FuelUsed":7.407042, "FuelLevel":24.592958 }
+{ "timestamp":"2016-09-21T05:20:05Z", "event":"FuelScoop", "Scooped":7.407042, "Total":32.000000 }
+{ "timestamp":"2016-09-21T05:20:29Z", "event":"FSDJump", "StarSystem":"ICZ YO-Z b6", "StarPos":[123.969,-69.531,-13.625], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":25.016, "FuelUsed":7.419818, "FuelLevel":24.580181 }
+{ "timestamp":"2016-09-21T05:21:07Z", "event":"FuelScoop", "Scooped":7.244061, "Total":31.824242 }
+{ "timestamp":"2016-09-21T05:21:31Z", "event":"FSDJump", "StarSystem":"Col 285 Sector UT-R d4-70", "StarPos":[106.438,-52.406,-6.094], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":25.638, "FuelUsed":7.904730, "FuelLevel":23.919512 }
+{ "timestamp":"2016-09-21T05:22:06Z", "event":"FuelScoop", "Scooped":8.080488, "Total":32.000000 }
+{ "timestamp":"2016-09-21T05:22:30Z", "event":"FSDJump", "StarSystem":"Col 285 Sector VJ-W b16-0", "StarPos":[81.906,-45.594,-4.125], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":25.536, "FuelUsed":7.826651, "FuelLevel":24.173349 }
+{ "timestamp":"2016-09-21T05:22:58Z", "event":"FuelScoop", "Scooped":7.022886, "Total":31.196236 }
+{ "timestamp":"2016-09-21T05:23:31Z", "event":"FSDJump", "StarSystem":"Puppis Sector JC-M a7-2", "StarPos":[62.500,-30.906,0.563], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":24.785, "FuelUsed":7.224945, "FuelLevel":23.971291 }
+{ "timestamp":"2016-09-21T05:24:26Z", "event":"FSDJump", "StarSystem":"Ennead", "StarPos":[40.688,-26.594,3.719], "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":22.458, "FuelUsed":5.468544, "FuelLevel":18.502747, "Faction":"Values Party of Ennead", "FactionState":"Boom" }
+{ "timestamp":"2016-09-21T05:25:02Z", "event":"FuelScoop", "Scooped":10.158989, "Total":28.661736 }
+{ "timestamp":"2016-09-21T05:25:37Z", "event":"FSDJump", "StarSystem":"Sosolingati", "StarPos":[21.313,-13.875,-2.094], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":23.894, "FuelUsed":6.518184, "FuelLevel":22.143551, "Faction":"Sosolingati Independents" }
+{ "timestamp":"2016-09-21T05:26:32Z", "event":"FuelScoop", "Scooped":9.856449, "Total":32.000000 }
+{ "timestamp":"2016-09-21T05:27:05Z", "event":"FSDJump", "StarSystem":"Sol", "StarPos":[0.000,0.000,0.000], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":25.517, "FuelUsed":7.812216, "FuelLevel":24.187784, "Faction":"Mother Gaia" }
+{ "timestamp":"2016-09-21T05:28:02Z", "event":"FuelScoop", "Scooped":7.812216, "Total":32.000000 }
+{ "timestamp":"2016-09-21T05:37:04Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Anaconda", "ShipID":67, "GameMode":"Open", "Credits":379618404, "Loan":0 }
+{ "timestamp":"2016-09-21T05:37:04Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T05:37:04Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T05:37:22Z", "event":"Location", "StarSystem":"Sol", "StarPos":[0.000,0.000,0.000], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"Mother Gaia" }
+{ "timestamp":"2016-09-21T05:38:54Z", "event":"SupercruiseEntry", "StarSystem":"Sol" }
+{ "timestamp":"2016-09-21T05:46:41Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Actaea" }
+{ "timestamp":"2016-09-21T05:48:18Z", "event":"SupercruiseEntry", "StarSystem":"Sol" }
+{ "timestamp":"2016-09-21T05:49:31Z", "event":"USSDrop", "USSType":"$USS_Type_Salvage;", "USSType_Localised":"Degraded emissions detected", "USSThreat":0 }
+{ "timestamp":"2016-09-21T05:49:32Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Salacia" }
+{ "timestamp":"2016-09-21T05:50:08Z", "event":"CollectCargo", "Type":"Drones", "Stolen":true }
+{ "timestamp":"2016-09-21T05:50:23Z", "event":"CollectCargo", "Type":"USSCargoBlackBox", "Stolen":true }
+{ "timestamp":"2016-09-21T05:50:34Z", "event":"CollectCargo", "Type":"Scrap", "Stolen":true }
+{ "timestamp":"2016-09-21T05:50:43Z", "event":"CollectCargo", "Type":"Scrap", "Stolen":true }
+{ "timestamp":"2016-09-21T05:50:52Z", "event":"CollectCargo", "Type":"PersonalEffects", "Stolen":true }
+{ "timestamp":"2016-09-21T05:51:06Z", "event":"CollectCargo", "Type":"Scrap", "Stolen":true }
+{ "timestamp":"2016-09-21T05:51:27Z", "event":"CollectCargo", "Type":"Drones", "Stolen":true }
+{ "timestamp":"2016-09-21T05:51:46Z", "event":"CollectCargo", "Type":"Drones", "Stolen":true }
+{ "timestamp":"2016-09-21T05:52:06Z", "event":"CollectCargo", "Type":"Scrap", "Stolen":true }
+{ "timestamp":"2016-09-21T05:52:29Z", "event":"CollectCargo", "Type":"Scrap", "Stolen":true }
+{ "timestamp":"2016-09-21T05:52:54Z", "event":"CollectCargo", "Type":"Scrap", "Stolen":true }
+{ "timestamp":"2016-09-21T05:53:53Z", "event":"CollectCargo", "Type":"PersonalEffects", "Stolen":true }
+{ "timestamp":"2016-09-21T05:54:20Z", "event":"SupercruiseEntry", "StarSystem":"Sol" }
+{ "timestamp":"2016-09-21T05:55:26Z", "event":"SupercruiseExit", "StarSystem":"Sol", "Body":"Actaea" }
+{ "timestamp":"2016-09-21T05:56:02Z", "event":"LaunchFighter", "Loadout":"four", "PlayerControlled":true }
+{ "timestamp":"2016-09-21T06:02:17Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2016-09-21T06:04:50Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Anaconda", "ShipID":67, "GameMode":"Open", "Credits":379618404, "Loan":0 }
+{ "timestamp":"2016-09-21T06:04:50Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T06:04:50Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T06:05:16Z", "event":"Location", "StarSystem":"Sol", "StarPos":[0.000,0.000,0.000], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"Mother Gaia" }
+{ "timestamp":"2016-09-21T06:05:36Z", "event":"VehicleSwitch", "To":"Fighter" }
+{ "timestamp":"2016-09-21T06:07:02Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Independent_Fighter", "ShipID":68, "GameMode":"Open", "Credits":379618404, "Loan":0 }
+{ "timestamp":"2016-09-21T06:07:02Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T06:07:02Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T06:07:26Z", "event":"Location", "StarSystem":"Sol", "StarPos":[0.000,0.000,0.000], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"Mother Gaia" }
+{ "timestamp":"2016-09-21T06:08:55Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2016-09-21T06:10:21Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Anaconda", "ShipID":67, "GameMode":"Open", "Credits":379618404, "Loan":0 }
+{ "timestamp":"2016-09-21T06:10:21Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T06:10:21Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T06:10:43Z", "event":"Location", "StarSystem":"Sol", "StarPos":[0.000,0.000,0.000], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"Mother Gaia" }
+{ "timestamp":"2016-09-21T06:11:30Z", "event":"VehicleSwitch", "To":"Fighter" }
+{ "timestamp":"2016-09-21T06:12:31Z", "event":"LoadGame", "Commander":"Lucienn", "Ship":"Independent_Fighter", "ShipID":68, "GameMode":"Open", "Credits":379618404, "Loan":0 }
+{ "timestamp":"2016-09-21T06:12:31Z", "event":"Rank", "Combat":5, "Trade":6, "Explore":7, "Empire":2, "Federation":6, "CQC":0 }
+{ "timestamp":"2016-09-21T06:12:31Z", "event":"Progress", "Combat":88, "Trade":60, "Explore":48, "Empire":80, "Federation":58, "CQC":55 }
+{ "timestamp":"2016-09-21T06:12:56Z", "event":"Location", "StarSystem":"Sol", "StarPos":[0.000,0.000,0.000], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"Mother Gaia" }
+{ "timestamp":"2016-09-21T06:13:31Z", "event":"DockFighter" }
+{ "timestamp":"2016-09-21T06:18:00Z", "event":"SupercruiseEntry", "StarSystem":"Sol" }
