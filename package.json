@@ -13,13 +13,8 @@
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "electron-packager . --out=dist --asar --overwrite --all"
+    "build": "electron-packager . --out=dist --overwrite --platform=win32 --arch=x64"
   },
-  "files": [
-    "index.js",
-    "index.html",
-    "index.css"
-  ],
   "keywords": [
     "electron-app",
     "electron"

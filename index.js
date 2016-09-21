@@ -37,7 +37,7 @@ lr.on('line', line => {
 	const test = JSON.parse(line);
 	const html = tableify(test);
 
-	fs.appendFile('./index2.html', html, err => {
+	fs.appendFile(`${__dirname}/index2.html`, html, err => {
 		if (err) {
 			return console.log(err);
 		}
