@@ -2,6 +2,7 @@
 
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
 
+Builds are released nightly at 2300 UTC, so if its close to then, maybe wait a bit to download it from the releases page?
 
 ## Dev
 
@@ -21,7 +22,7 @@ $ npm start
 $ npm run build
 ```
 
-Builds the app for macOS, Linux, and Windows, using [electron-packager](https://github.com/electron-userland/electron-packager).
+Builds the app for Windows x64, using [electron-zip-packager](https://github.com/azu/electron-zip-packager).
 
 
 ## License
