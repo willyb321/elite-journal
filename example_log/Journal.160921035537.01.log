@@ -1,0 +1,30 @@
+{ "timestamp":"2016-09-21T07:55:37Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 2)", "build":"r121783/r0 " }
+{ "timestamp":"2016-09-21T07:56:53Z", "event":"ClearSavedGame", "Name":"Shyn Darkly" }
+{ "timestamp":"2016-09-21T07:57:10Z", "event":"NewCommander", "Name":"Shyn Darkly", "Package":"SideWinder_HZ" }
+{ "timestamp":"2016-09-21T07:57:18Z", "event":"LoadGame", "Commander":"Shyn Darkly", "Ship":"SideWinder", "ShipID":0, "GameMode":"Group", "Group":"Shyn Darkly", "Credits":1000, "Loan":0 }
+{ "timestamp":"2016-09-21T07:57:18Z", "event":"Rank", "Combat":0, "Trade":0, "Explore":0, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2016-09-21T07:57:18Z", "event":"Progress", "Combat":0, "Trade":0, "Explore":0, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2016-09-21T07:57:19Z", "event":"ApproachSettlement", "Name":"Baker's Prospect" }
+{ "timestamp":"2016-09-21T07:57:51Z", "event":"Location", "Docked":1, "StationName":"Baker's Prospect", "StationType":"", "StarSystem":"Asellus Primus", "StarPos":[-23.938,40.875,-1.344], "Allegiance":"Independent", "Economy":"$economy_Extraction;", "Economy_Localised":"Extraction", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"Asellus Primus Gold Legal Ind", "FactionState":"Boom" }
+{ "timestamp":"2016-09-21T07:57:51Z", "event":"Docked", "StationName":"Baker's Prospect", "StarSystem":"Asellus Primus", "Faction":"Asellus Primus Gold Legal Ind", "FactionState":"Boom", "Allegiance":"Independent", "Economy":"$economy_Extraction;", "Economy_Localised":"Extraction", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T07:59:34Z", "event":"ModuleBuy", "Slot":"Decal1", "BuyItem":"$decal_paxprime_name;", "BuyItem_Localised":"PAX", "BuyPrice":0, "Ship":"sidewinder", "ShipID":0 }
+{ "timestamp":"2016-09-21T07:59:40Z", "event":"ModuleBuy", "Slot":"Bobble01", "BuyItem":"$bobble_pilotfemale_name;", "BuyItem_Localised":"Female Pilot", "BuyPrice":0, "Ship":"sidewinder", "ShipID":0 }
+{ "timestamp":"2016-09-21T08:00:02Z", "event":"ModuleBuy", "Slot":"Bobble07", "BuyItem":"$bobble_christmastree_name;", "BuyItem_Localised":"Christmas Tree", "BuyPrice":0, "Ship":"sidewinder", "ShipID":0 }
+{ "timestamp":"2016-09-21T08:04:31Z", "event":"Undocked", "StationName":"Baker's Prospect" }
+{ "timestamp":"2016-09-21T08:07:26Z", "event":"SupercruiseEntry", "StarSystem":"Asellus Primus" }
+{ "timestamp":"2016-09-21T08:09:02Z", "event":"FSDJump", "StarSystem":"Dahan", "StarPos":[-19.750,41.781,-3.188], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Confederacy;", "Government_Localised":"Confederacy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":4.664, "FuelUsed":0.360344, "FuelLevel":1.639656, "Faction":"Confederation of Dahan", "FactionState":"Boom" }
+{ "timestamp":"2016-09-21T08:10:39Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Joshua Lawrence Welch", "IsPlayer":false, "Faction":"Workers of Lalande 29917 Green Party" }
+{ "timestamp":"2016-09-21T08:10:40Z", "event":"SupercruiseExit", "StarSystem":"Dahan", "Body":"Hathor" }
+{ "timestamp":"2016-09-21T08:11:41Z", "event":"SupercruiseEntry", "StarSystem":"Dahan" }
+{ "timestamp":"2016-09-21T08:12:39Z", "event":"SupercruiseExit", "StarSystem":"Dahan", "Body":"Dahan Gateway" }
+{ "timestamp":"2016-09-21T08:13:08Z", "event":"DockingRequested", "StationName":"Dahan Gateway" }
+{ "timestamp":"2016-09-21T08:13:09Z", "event":"DockingGranted", "LandingPad":14, "StationName":"Dahan Gateway" }
+{ "timestamp":"2016-09-21T08:14:33Z", "event":"Docked", "StationName":"Dahan Gateway", "StationType":"Coriolis", "StarSystem":"Dahan", "Faction":"Confederation of Dahan", "FactionState":"Boom", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Confederacy;", "Government_Localised":"Confederacy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security" }
+{ "timestamp":"2016-09-21T08:14:49Z", "event":"MissionCompleted", "Faction":"United Nang Ta-khian Confederacy", "Name":"Mission_Welcome_name", "MissionID":26477303, "DestinationSystem":"Dahan", "DestinationStation":"Dahan Gateway", "Reward":10000 }
+{ "timestamp":"2016-09-21T08:16:20Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size2_class1_name;", "SellItem_Localised":"Power Plant", "SellPrice":0, "BuyItem":"$int_powerplant_size2_class3_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":1780, "Ship":"sidewinder", "ShipID":0 }
+{ "timestamp":"2016-09-21T08:16:21Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T08:16:24Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T08:16:34Z", "event":"ModuleBuy", "Slot":"FrameShiftDrive", "SellItem":"$int_hyperdrive_size2_class1_name;", "SellItem_Localised":"FSD", "SellPrice":0, "BuyItem":"$int_hyperdrive_size2_class3_name;", "BuyItem_Localised":"FSD", "BuyPrice":1780, "Ship":"sidewinder", "ShipID":0 }
+{ "timestamp":"2016-09-21T08:17:13Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T08:17:23Z", "event":"ModuleBuy", "Slot":"TinyHardpoint1", "BuyItem":"$hpt_chafflauncher_tiny_name;", "BuyItem_Localised":"Chaff", "BuyPrice":850, "Ship":"sidewinder", "ShipID":0 }
+{ "timestamp":"2016-09-21T08:17:23Z", "event":"HeatWarning" }

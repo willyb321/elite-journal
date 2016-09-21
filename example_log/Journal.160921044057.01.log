@@ -1,0 +1,5 @@
+{ "timestamp":"2016-09-21T08:40:57Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 2)", "build":"r121783/r0 " }
+{ "timestamp":"2016-09-21T08:41:41Z", "event":"LoadGame", "Commander":"Shyn Darkly", "Ship":"SideWinder", "ShipID":0, "GameMode":"Solo", "Credits":6565, "Loan":0 }
+{ "timestamp":"2016-09-21T08:41:41Z", "event":"Rank", "Combat":0, "Trade":0, "Explore":0, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2016-09-21T08:41:41Z", "event":"Progress", "Combat":0, "Trade":0, "Explore":0, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2016-09-21T08:42:14Z", "event":"Location", "StarSystem":"Dahan", "StarPos":[-19.750,41.781,-3.188], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Confederacy;", "Government_Localised":"Confederacy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "Faction":"Confederation of Dahan", "FactionState":"Boom" }
