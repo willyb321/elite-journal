@@ -43,6 +43,12 @@ function createMainWindow() {
 			}
 			console.log('The file was saved!');
 		});
+		fs.appendFile(`${__dirname}/index2.html`, '<hr>', err => {
+			if (err) {
+				return console.log(err);
+			}
+			console.log('The file was saved!');
+		});
 	});
 
 	lr.on('end', () => {
