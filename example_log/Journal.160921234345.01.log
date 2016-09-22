@@ -1,0 +1,199 @@
+{ "timestamp":"2016-09-22T03:43:45Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 3)", "build":"r121970/r0 " }
+{ "timestamp":"2016-09-22T03:45:18Z", "event":"LoadGame", "Commander":"Shyn Darkly", "Ship":"Cutter", "ShipID":12, "GameMode":"Open", "Credits":1000000000, "Loan":0 }
+{ "timestamp":"2016-09-22T03:45:18Z", "event":"Rank", "Combat":7, "Trade":7, "Explore":6, "Empire":12, "Federation":12, "CQC":0 }
+{ "timestamp":"2016-09-22T03:45:18Z", "event":"Progress", "Combat":13, "Trade":64, "Explore":35, "Empire":20, "Federation":3, "CQC":0 }
+{ "timestamp":"2016-09-22T03:45:50Z", "event":"Location", "Docked":1, "StationName":"Love Orbital", "StationType":"Coriolis", "StarSystem":"Latugara", "StarPos":[-110.531,-18.813,104.625], "Allegiance":"Independent", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Anarchy;", "Government_Localised":"Anarchy", "Security":"$GAlAXY_MAP_INFO_state_anarchy;", "Security_Localised":"Anarchy", "Faction":"Latugara Society" }
+{ "timestamp":"2016-09-22T03:45:51Z", "event":"Docked", "StationName":"Love Orbital", "StationType":"Coriolis", "StarSystem":"Latugara", "Faction":"Latugara Society", "Allegiance":"Independent", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Anarchy;", "Government_Localised":"Anarchy", "Security":"$GAlAXY_MAP_INFO_state_anarchy;", "Security_Localised":"Anarchy" }
+{ "timestamp":"2016-09-22T03:47:32Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size6_class5_name;", "SellItem_Localised":"Power Plant", "SellPrice":16179531, "BuyItem":"$int_powerplant_size7_class5_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":5128911, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:47:33Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-22T03:47:56Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-22T03:48:41Z", "event":"ModuleBuy", "Slot":"MediumHardpoint2", "BuyItem":"$hpt_pulselaserburst_turret_small_name;", "BuyItem_Localised":"Burst Laser", "BuyPrice":5280, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:48:57Z", "event":"ModuleBuy", "Slot":"MediumHardpoint1", "BuyItem":"$hpt_pulselaserburst_turret_small_name;", "BuyItem_Localised":"Burst Laser", "BuyPrice":5280, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:49:07Z", "event":"ModuleBuy", "Slot":"MediumHardpoint4", "BuyItem":"$hpt_pulselaserburst_turret_small_name;", "BuyItem_Localised":"Burst Laser", "BuyPrice":5280, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:49:19Z", "event":"ModuleBuy", "Slot":"MediumHardpoint3", "BuyItem":"$hpt_pulselaserburst_turret_small_name;", "BuyItem_Localised":"Burst Laser", "BuyPrice":5280, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:49:29Z", "event":"ModuleBuy", "Slot":"LargeHardpoint2", "BuyItem":"$hpt_beamlaser_turret_large_name;", "BuyItem_Localised":"Beam Laser", "BuyPrice":1939960, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:49:42Z", "event":"ModuleBuy", "Slot":"LargeHardpoint1", "BuyItem":"$hpt_beamlaser_turret_large_name;", "BuyItem_Localised":"Beam Laser", "BuyPrice":1939960, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:50:11Z", "event":"ModuleBuy", "Slot":"HugeHardpoint1", "BuyItem":"$hpt_cannon_fixed_huge_name;", "BuyItem_Localised":"Cannon", "BuyPrice":270080, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:53:34Z", "event":"ModuleBuy", "Slot":"Slot08_Size4", "SellItem":"$int_fuelscoop_size3_class5_name;", "SellItem_Localised":"Fuel Scoop", "SellPrice":902954, "BuyItem":"$int_passengercabin_size4_class2_name;", "BuyItem_Localised":"BC Passenger Cabin", "BuyPrice":5686, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:53:48Z", "event":"ModuleBuy", "Slot":"Slot07_Size5", "SellItem":"$int_cargorack_size5_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":111566, "BuyItem":"$int_fighterbay_size5_class1_name;", "BuyItem_Localised":"Fighter Hangar", "BuyPrice":57564, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:54:43Z", "event":"ModuleBuy", "Slot":"Slot09_Size3", "SellItem":"$int_dockingcomputer_standard_name;", "SellItem_Localised":"Docking Computer", "SellPrice":4500, "BuyItem":"$int_stellarbodydiscoveryscanner_advanced_name;", "BuyItem_Localised":"D - Scanner", "BuyPrice":154500, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T03:55:20Z", "event":"CrewHire", "Name":"Eliseo Berger", "Faction":"Latugara Society", "Cost":55000, "CombatRank":2 }
+{ "timestamp":"2016-09-22T03:55:27Z", "event":"CrewAssign", "Name":"Eliseo Berger", "Role":"Active" }
+{ "timestamp":"2016-09-22T03:59:19Z", "event":"ModuleBuy", "Slot":"Slot06_Size5", "SellItem":"$int_cargorack_size5_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":89252, "BuyItem":"$int_fuelscoop_size5_class5_name;", "BuyItem_Localised":"Fuel Scoop", "BuyPrice":907369, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T04:00:06Z", "event":"PayLegacyFines", "Amount":246779, "BrokerPercentage":25.000000 }
+{ "timestamp":"2016-09-22T04:00:20Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":148508, "BrokerPercentage":25.000000 }
+{ "timestamp":"2016-09-22T04:04:42Z", "event":"Undocked", "StationName":"Love Orbital", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-22T04:06:40Z", "event":"FSDJump", "StarSystem":"Col 285 Sector CY-N b21-7", "StarPos":[-94.250,-21.219,97.688], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":17.861, "FuelUsed":10.189430, "FuelLevel":53.810570 }
+{ "timestamp":"2016-09-22T04:07:52Z", "event":"FuelScoop", "Scooped":10.189430, "Total":64.000000 }
+{ "timestamp":"2016-09-22T04:08:27Z", "event":"FSDJump", "StarSystem":"Avan", "StarPos":[-77.313,-17.781,92.063], "Allegiance":"Independent", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Anarchy;", "Government_Localised":"Anarchy", "Security":"$GALAXY_MAP_INFO_state_lawless;", "Security_Localised":"Lawless", "JumpDist":18.175, "FuelUsed":10.690656, "FuelLevel":53.309345, "Faction":"Avan Purple Society" }
+{ "timestamp":"2016-09-22T04:09:10Z", "event":"FuelScoop", "Scooped":9.194248, "Total":62.503593 }
+{ "timestamp":"2016-09-22T04:09:48Z", "event":"FSDJump", "StarSystem":"Alrai Sector IR-W c1-29", "StarPos":[-58.781,-14.313,92.906], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":18.872, "FuelUsed":11.828211, "FuelLevel":50.675385 }
+{ "timestamp":"2016-09-22T04:10:18Z", "event":"FuelScoop", "Scooped":3.428421, "Total":54.103806 }
+{ "timestamp":"2016-09-22T04:10:58Z", "event":"FSDJump", "StarSystem":"Kadu mist", "StarPos":[-48.313,-4.875,85.563], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":15.893, "FuelUsed":7.278024, "FuelLevel":46.825783, "Faction":"Kadu mist Fortune Organisation" }
+{ "timestamp":"2016-09-22T04:11:55Z", "event":"FuelScoop", "Scooped":17.174217, "Total":64.000000 }
+{ "timestamp":"2016-09-22T04:12:39Z", "event":"FSDJump", "StarSystem":"LP 690-1", "StarPos":[-36.188,4.656,75.750], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":18.280, "FuelUsed":10.860578, "FuelLevel":53.139423 }
+{ "timestamp":"2016-09-22T04:13:22Z", "event":"FuelScoop", "Scooped":10.860577, "Total":64.000000 }
+{ "timestamp":"2016-09-22T04:14:05Z", "event":"FSDJump", "StarSystem":"Rish", "StarPos":[-23.500,9.125,62.344], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":18.991, "FuelUsed":12.063232, "FuelLevel":51.936768, "Faction":"Rish Blue Travel Company", "FactionState":"Boom" }
+{ "timestamp":"2016-09-22T04:14:55Z", "event":"FuelScoop", "Scooped":12.063232, "Total":64.000000 }
+{ "timestamp":"2016-09-22T04:15:40Z", "event":"FSDJump", "StarSystem":"58 Ophiuchi", "StarPos":[-6.313,3.594,57.094], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":18.803, "FuelUsed":11.737710, "FuelLevel":52.262291 }
+{ "timestamp":"2016-09-22T04:16:37Z", "event":"FuelScoop", "Scooped":11.737709, "Total":64.000000 }
+{ "timestamp":"2016-09-22T04:17:36Z", "event":"FSDJump", "StarSystem":"L 484-31", "StarPos":[11.813,3.594,53.281], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":18.522, "FuelUsed":11.260454, "FuelLevel":52.739548 }
+{ "timestamp":"2016-09-22T04:18:21Z", "event":"FuelScoop", "Scooped":11.102730, "Total":63.842278 }
+{ "timestamp":"2016-09-22T04:19:01Z", "event":"FSDJump", "StarSystem":"Nu-2 Lupi", "StarPos":[25.781,5.781,40.438], "Allegiance":"Independent", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":19.102, "FuelUsed":12.253944, "FuelLevel":51.588333, "Faction":"Nu-2 Lupi Natural Company" }
+{ "timestamp":"2016-09-22T04:19:45Z", "event":"FuelScoop", "Scooped":9.351288, "Total":60.939621 }
+{ "timestamp":"2016-09-22T04:20:27Z", "event":"FSDJump", "StarSystem":"Gnowee", "StarPos":[41.469,9.031,29.563], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Confederacy;", "Government_Localised":"Confederacy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":19.363, "FuelUsed":12.662628, "FuelLevel":48.276993, "Faction":"Gnowee Partnership" }
+{ "timestamp":"2016-09-22T04:21:24Z", "event":"FuelScoop", "Scooped":15.723007, "Total":64.000000 }
+{ "timestamp":"2016-09-22T04:23:31Z", "event":"SupercruiseExit", "StarSystem":"Gnowee", "Body":"Gnowee 1 A Ring" }
+{ "timestamp":"2016-09-22T04:25:36Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:25:42Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:25:44Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:05Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:13Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:13Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:20Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:20Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:27Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:33Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:35Z", "event":"Bounty", "Faction":"Gnowee Partnership", "Reward":6097, "VictimFaction":"Union of ER 8 Alliance" }
+{ "timestamp":"2016-09-22T04:26:40Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:50Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:51Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:54Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:26:56Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:27:00Z", "event":"MaterialDiscovered", "Category":"Encoded", "Name":"shieldpatternanalysis", "DiscoveryNumber":8 }
+{ "timestamp":"2016-09-22T04:27:13Z", "event":"Bounty", "Faction":"Gnowee Partnership", "Reward":73525, "VictimFaction":"Future of Arro Naga" }
+{ "timestamp":"2016-09-22T04:27:20Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:27:26Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:27:27Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:27:34Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:27:38Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:27:40Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:27:46Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:27:51Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:27:57Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:28:01Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:28:09Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:28:13Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:28:26Z", "event":"Bounty", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":8550, "VictimFaction":"Union of ER 8 Alliance" }
+{ "timestamp":"2016-09-22T04:28:29Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:28:38Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:28:44Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:28:58Z", "event":"Bounty", "Faction":"Gnowee Partnership", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":11095, "VictimFaction":"Union of ER 8 Alliance" }
+{ "timestamp":"2016-09-22T04:29:12Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:29:26Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:29:32Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:29:38Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:29:41Z", "event":"Bounty", "Faction":"Gnowee Partnership", "Reward":10380, "VictimFaction":"Future of Arro Naga" }
+{ "timestamp":"2016-09-22T04:29:46Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:30:00Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:30:05Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:30:48Z", "event":"Bounty", "Faction":"Gnowee Partnership", "Reward":14520, "VictimFaction":"Gnowee Partnership" }
+{ "timestamp":"2016-09-22T04:33:13Z", "event":"Bounty", "Faction":"Gnowee Partnership", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":13105, "VictimFaction":"Union of ER 8 Alliance" }
+{ "timestamp":"2016-09-22T04:34:05Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T04:34:10Z", "event":"Bounty", "Faction":"Gnowee Partnership", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":23687, "VictimFaction":"Future of Arro Naga" }
+{ "timestamp":"2016-09-22T04:34:59Z", "event":"Bounty", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":9270, "VictimFaction":"Future of Arro Naga" }
+{ "timestamp":"2016-09-22T04:38:41Z", "event":"Bounty", "Faction":"Gnowee Partnership", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":21722, "VictimFaction":"Union of ER 8 Alliance" }
+{ "timestamp":"2016-09-22T04:42:45Z", "event":"FSDJump", "StarSystem":"Skeggiko O", "StarPos":[53.688,11.938,16.500], "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":18.121, "FuelUsed":10.584189, "FuelLevel":52.255810, "Faction":"Workers of Skeggiko O Labour" }
+{ "timestamp":"2016-09-22T04:43:15Z", "event":"FuelScoop", "Scooped":4.452171, "Total":56.707981 }
+{ "timestamp":"2016-09-22T04:45:08Z", "event":"SupercruiseExit", "StarSystem":"Skeggiko O", "Body":"Kuo Terminal" }
+{ "timestamp":"2016-09-22T04:45:22Z", "event":"DockingRequested", "StationName":"Kuo Terminal" }
+{ "timestamp":"2016-09-22T04:45:24Z", "event":"DockingGranted", "LandingPad":9, "StationName":"Kuo Terminal" }
+{ "timestamp":"2016-09-22T04:47:08Z", "event":"Docked", "StationName":"Kuo Terminal", "StationType":"Orbis", "StarSystem":"Skeggiko O", "Faction":"Workers of Skeggiko O Labour", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-22T04:48:05Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0002.bmp", "Width":1920, "Height":1080, "System":"Skeggiko O", "Body":"Kuo Terminal" }
+{ "timestamp":"2016-09-22T04:48:06Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0003.bmp", "Width":1920, "Height":1080, "System":"Skeggiko O", "Body":"Kuo Terminal" }
+{ "timestamp":"2016-09-22T04:48:06Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0004.bmp", "Width":1920, "Height":1080, "System":"Skeggiko O", "Body":"Kuo Terminal" }
+{ "timestamp":"2016-09-22T04:48:06Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0005.bmp", "Width":1920, "Height":1080, "System":"Skeggiko O", "Body":"Kuo Terminal" }
+{ "timestamp":"2016-09-22T04:48:13Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0006.bmp", "Width":1920, "Height":1080, "System":"Skeggiko O", "Body":"Kuo Terminal" }
+{ "timestamp":"2016-09-22T04:51:42Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0007.bmp", "Width":1920, "Height":1080, "System":"Skeggiko O", "Body":"Kuo Terminal" }
+{ "timestamp":"2016-09-22T04:52:09Z", "event":"BuyAmmo", "Cost":116 }
+{ "timestamp":"2016-09-22T04:52:11Z", "event":"RefuelAll", "Cost":385, "Amount":7.672437 }
+{ "timestamp":"2016-09-22T04:52:19Z", "event":"RedeemVoucher", "Type":"bounty", "Amount":87029 }
+{ "timestamp":"2016-09-22T04:57:36Z", "event":"MissionAccepted", "Faction":"LHS 2441 Dragons", "Name":"Mission_PassengerVIP", "Commodity":"$Wine_Name;", "Commodity_Localised":"Wine", "Count":3, "DestinationSystem":"CD-55 1514", "DestinationStation":"Edgeworth Terminal", "Expiry":"2016-09-22T08:03:08Z", "PassengerCount":3, "PassengerVIPs":true, "PassengerWanted":true, "PassengerType":"Criminal", "MissionID":26479988 }
+{ "timestamp":"2016-09-22T05:00:11Z", "event":"Undocked", "StationName":"Kuo Terminal", "StationType":"Orbis" }
+{ "timestamp":"2016-09-22T05:01:57Z", "event":"FSDJump", "StarSystem":"LU Velorum", "StarPos":[49.875,5.875,4.313], "Allegiance":"Federation", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":14.136, "FuelUsed":5.355901, "FuelLevel":58.644100, "Faction":"Social LU Velorum Green Party" }
+{ "timestamp":"2016-09-22T05:02:24Z", "event":"FuelScoop", "Scooped":2.213116, "Total":60.857216 }
+{ "timestamp":"2016-09-22T05:02:59Z", "event":"FSDJump", "StarSystem":"Mikir", "StarPos":[42.375,-3.531,0.563], "Allegiance":"Federation", "Economy":"$economy_Extraction;", "Economy_Localised":"Extraction", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":12.601, "FuelUsed":3.885325, "FuelLevel":56.971889, "Faction":"Mikir Free" }
+{ "timestamp":"2016-09-22T05:03:25Z", "event":"FuelScoop", "Scooped":1.163960, "Total":58.135849 }
+{ "timestamp":"2016-09-22T05:04:33Z", "event":"FSDJump", "StarSystem":"Puppis Sector HR-W c1-25", "StarPos":[51.563,-19.125,3.250], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":18.297, "FuelUsed":10.790012, "FuelLevel":47.345837 }
+{ "timestamp":"2016-09-22T05:05:26Z", "event":"FuelScoop", "Scooped":11.801224, "Total":59.147060 }
+{ "timestamp":"2016-09-22T05:05:56Z", "event":"FSDJump", "StarSystem":"LHS 1749", "StarPos":[51.156,-34.156,12.281], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":17.540, "FuelUsed":9.621591, "FuelLevel":49.525471 }
+{ "timestamp":"2016-09-22T05:06:32Z", "event":"FuelScoop", "Scooped":4.775848, "Total":54.301319 }
+{ "timestamp":"2016-09-22T05:07:01Z", "event":"FSDJump", "StarSystem":"LTT 1263", "StarPos":[50.281,-50.188,21.125], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":18.330, "FuelUsed":10.776905, "FuelLevel":43.524414 }
+{ "timestamp":"2016-09-22T05:07:45Z", "event":"FuelScoop", "Scooped":10.144890, "Total":53.669304 }
+{ "timestamp":"2016-09-22T05:08:29Z", "event":"FSDJump", "StarSystem":"Li Chong", "StarPos":[60.313,-63.344,26.125], "Allegiance":"Empire", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":17.283, "FuelUsed":9.159397, "FuelLevel":44.509907, "Faction":"Skiraragea Allied PLC", "FactionState":"Expansion" }
+{ "timestamp":"2016-09-22T05:09:40Z", "event":"FuelScoop", "Scooped":19.490093, "Total":64.000000 }
+{ "timestamp":"2016-09-22T05:10:23Z", "event":"FSDJump", "StarSystem":"ICZ DB-W b2-6", "StarPos":[64.063,-79.594,25.000], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":16.715, "FuelUsed":8.491305, "FuelLevel":55.508694 }
+{ "timestamp":"2016-09-22T05:11:05Z", "event":"FuelScoop", "Scooped":8.491306, "Total":64.000000 }
+{ "timestamp":"2016-09-22T05:11:33Z", "event":"FSDJump", "StarSystem":"ICZ FW-V b2-7", "StarPos":[67.875,-94.531,25.656], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":15.430, "FuelUsed":6.814924, "FuelLevel":57.185074 }
+{ "timestamp":"2016-09-22T05:12:13Z", "event":"FuelScoop", "Scooped":6.814926, "Total":64.000000 }
+{ "timestamp":"2016-09-22T05:12:49Z", "event":"FSDJump", "StarSystem":"Cemiess", "StarPos":[66.063,-105.344,27.094], "Allegiance":"Empire", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Patronage;", "Government_Localised":"Patronage", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":11.057, "FuelUsed":2.725623, "FuelLevel":61.274376, "Faction":"Cemiess Imperial Society" }
+{ "timestamp":"2016-09-22T05:13:33Z", "event":"FuelScoop", "Scooped":2.725624, "Total":64.000000 }
+{ "timestamp":"2016-09-22T05:15:46Z", "event":"ApproachSettlement", "Name":"Terraforming" }
+{ "timestamp":"2016-09-22T05:15:47Z", "event":"SupercruiseExit", "StarSystem":"Cemiess", "Body":"Emerald" }
+{ "timestamp":"2016-09-22T05:16:33Z", "event":"DataScanned", "Type":"TouristBeacon" }
+{ "timestamp":"2016-09-22T05:18:34Z", "event":"FSDJump", "StarSystem":"ICZ BQ-Y d111", "StarPos":[58.281,-92.094,23.719], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":15.732, "FuelUsed":7.188027, "FuelLevel":56.811974 }
+{ "timestamp":"2016-09-22T05:19:23Z", "event":"FuelScoop", "Scooped":7.188026, "Total":64.000000 }
+{ "timestamp":"2016-09-22T05:20:04Z", "event":"FSDJump", "StarSystem":"Recua", "StarPos":[51.938,-77.250,21.313], "Allegiance":"Empire", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Patronage;", "Government_Localised":"Patronage", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":16.321, "FuelUsed":7.951996, "FuelLevel":56.048004, "Faction":"Synteini Imperial Society" }
+{ "timestamp":"2016-09-22T05:20:37Z", "event":"FuelScoop", "Scooped":4.124050, "Total":60.172054 }
+{ "timestamp":"2016-09-22T05:21:13Z", "event":"FSDJump", "StarSystem":"Apadipinook", "StarPos":[53.688,-66.531,8.844], "Allegiance":"Empire", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Patronage;", "Government_Localised":"Patronage", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":16.536, "FuelUsed":8.193681, "FuelLevel":51.978374, "Faction":"Apadipinook Empire Group", "FactionState":"Expansion" }
+{ "timestamp":"2016-09-22T05:21:41Z", "event":"FuelScoop", "Scooped":3.933315, "Total":55.911690 }
+{ "timestamp":"2016-09-22T05:22:23Z", "event":"FSDJump", "StarSystem":"NLTT 9949", "StarPos":[45.531,-53.938,5.563], "Allegiance":"Federation", "Economy":"$economy_Colony;", "Economy_Localised":"Colony", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":15.359, "FuelUsed":6.643712, "FuelLevel":49.267979, "Faction":"People's NLTT 9949 Democrats", "FactionState":"Retreat" }
+{ "timestamp":"2016-09-22T05:23:26Z", "event":"FuelScoop", "Scooped":14.732021, "Total":64.000000 }
+{ "timestamp":"2016-09-22T05:24:02Z", "event":"FSDJump", "StarSystem":"LHS 1552", "StarPos":[39.438,-41.188,5.781], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":14.133, "FuelUsed":5.352872, "FuelLevel":58.647129 }
+{ "timestamp":"2016-09-22T05:24:33Z", "event":"FuelScoop", "Scooped":5.312714, "Total":63.959843 }
+{ "timestamp":"2016-09-22T05:25:13Z", "event":"FSDJump", "StarSystem":"Sikians", "StarPos":[35.656,-29.438,0.750], "Allegiance":"Independent", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Cooperative;", "Government_Localised":"Cooperative", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":13.329, "FuelUsed":4.556597, "FuelLevel":59.403244, "Faction":"Unified Sikians" }
+{ "timestamp":"2016-09-22T05:26:21Z", "event":"FSDJump", "StarSystem":"CD-55 1514", "StarPos":[39.594,-17.375,-3.500], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":13.382, "FuelUsed":4.573183, "FuelLevel":54.830063, "Faction":"Independent CD-55 1514 Progressive Party" }
+{ "timestamp":"2016-09-22T05:26:45Z", "event":"FuelScoop", "Scooped":1.821064, "Total":56.651127 }
+{ "timestamp":"2016-09-22T05:28:21Z", "event":"SupercruiseExit", "StarSystem":"CD-55 1514", "Body":"Edgeworth Terminal" }
+{ "timestamp":"2016-09-22T05:28:32Z", "event":"DockingRequested", "StationName":"Edgeworth Terminal" }
+{ "timestamp":"2016-09-22T05:28:33Z", "event":"DockingGranted", "LandingPad":39, "StationName":"Edgeworth Terminal" }
+{ "timestamp":"2016-09-22T05:30:14Z", "event":"Docked", "StationName":"Edgeworth Terminal", "StationType":"Coriolis", "StarSystem":"CD-55 1514", "Faction":"Independent CD-55 1514 Progressive Party", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-22T05:32:46Z", "event":"MissionAccepted", "Faction":"Independent CD-55 1514 Progressive Party", "Name":"Mission_PassengerVIP", "Commodity":"$Clothing_Name;", "Commodity_Localised":"Clothing", "Count":2, "DestinationSystem":"Cavins", "DestinationStation":"Alcala Hub", "Expiry":"2016-09-22T08:24:37Z", "PassengerCount":4, "PassengerVIPs":true, "PassengerWanted":false, "PassengerType":"Tourist", "MissionID":26480048 }
+{ "timestamp":"2016-09-22T05:33:16Z", "event":"RefuelAll", "Cost":419, "Amount":8.366052 }
+{ "timestamp":"2016-09-22T05:34:26Z", "event":"ModuleBuy", "Slot":"MediumHardpoint2", "SellItem":"$hpt_pulselaserburst_turret_small_name;", "SellItem_Localised":"Burst Laser", "SellPrice":5280, "BuyItem":"$hpt_pulselaserburst_turret_medium_name;", "BuyItem_Localised":"Burst Laser", "BuyPrice":16280, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T05:34:52Z", "event":"ModuleBuy", "Slot":"MediumHardpoint4", "SellItem":"$hpt_pulselaserburst_turret_small_name;", "SellItem_Localised":"Burst Laser", "SellPrice":5280, "BuyItem":"$hpt_pulselaserburst_turret_medium_name;", "BuyItem_Localised":"Burst Laser", "BuyPrice":16280, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T05:35:53Z", "event":"ModuleBuy", "Slot":"MediumHardpoint1", "SellItem":"$hpt_pulselaserburst_turret_small_name;", "SellItem_Localised":"Burst Laser", "SellPrice":5280, "BuyItem":"$hpt_multicannon_turret_medium_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":129280, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T05:36:43Z", "event":"ModuleBuy", "Slot":"MediumHardpoint3", "SellItem":"$hpt_pulselaserburst_turret_small_name;", "SellItem_Localised":"Burst Laser", "SellPrice":5280, "BuyItem":"$hpt_multicannon_turret_medium_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":129280, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T05:39:43Z", "event":"Undocked", "StationName":"Edgeworth Terminal", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-22T05:41:55Z", "event":"FSDJump", "StarSystem":"LHS 2010", "StarPos":[37.063,-2.500,-4.844], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":15.149, "FuelUsed":6.559789, "FuelLevel":57.440212 }
+{ "timestamp":"2016-09-22T05:42:24Z", "event":"FuelScoop", "Scooped":3.222069, "Total":60.662281 }
+{ "timestamp":"2016-09-22T05:42:59Z", "event":"FSDJump", "StarSystem":"Cavins", "StarPos":[27.000,8.781,-7.063], "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":15.279, "FuelUsed":6.681162, "FuelLevel":53.981117, "Faction":"Cavins Systems" }
+{ "timestamp":"2016-09-22T05:43:23Z", "event":"FuelScoop", "Scooped":1.301579, "Total":55.282696 }
+{ "timestamp":"2016-09-22T05:44:52Z", "event":"SupercruiseExit", "StarSystem":"Cavins", "Body":"Alcala Hub" }
+{ "timestamp":"2016-09-22T05:45:06Z", "event":"DockingRequested", "StationName":"Alcala Hub" }
+{ "timestamp":"2016-09-22T05:45:07Z", "event":"DockingGranted", "LandingPad":24, "StationName":"Alcala Hub" }
+{ "timestamp":"2016-09-22T05:48:09Z", "event":"Docked", "StationName":"Alcala Hub", "StationType":"Orbis", "StarSystem":"Cavins", "Faction":"Cavins Systems", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-22T05:48:24Z", "event":"RefuelAll", "Cost":451, "Amount":9.002635 }
+{ "timestamp":"2016-09-22T05:48:51Z", "event":"MissionCompleted", "Faction":"United Carnoeck for Equality", "Name":"Mission_PassengerVIP_name", "MissionID":26480048, "Commodity":"$Clothing_Name;", "Commodity_Localised":"Clothing", "Count":2, "DestinationSystem":"Cavins", "DestinationStation":"Alcala Hub", "Reward":103976 }
+{ "timestamp":"2016-09-22T05:54:00Z", "event":"MissionAccepted", "Faction":"Mafia of Cavins", "Name":"Mission_PassengerVIP", "Commodity":"$DomesticAppliances_Name;", "Commodity_Localised":"Domestic Appliances", "Count":3, "DestinationSystem":"Carnoeck", "DestinationStation":"Bacon City", "Expiry":"2016-09-22T07:38:43Z", "PassengerCount":3, "PassengerVIPs":true, "PassengerWanted":false, "PassengerType":"Tourist", "MissionID":26480079 }
+{ "timestamp":"2016-09-22T05:54:20Z", "event":"MissionFailed", "Name":"Mission_PassengerVIP_name", "MissionID":26479988 }
+{ "timestamp":"2016-09-22T05:56:03Z", "event":"MarketBuy", "Type":"animalmeat", "Count":636, "BuyPrice":1242, "TotalCost":789912 }
+{ "timestamp":"2016-09-22T05:57:05Z", "event":"Undocked", "StationName":"Alcala Hub", "StationType":"Orbis" }
+{ "timestamp":"2016-09-22T05:59:27Z", "event":"SupercruiseEntry", "StarSystem":"Cavins" }
+{ "timestamp":"2016-09-22T06:00:33Z", "event":"FSDJump", "StarSystem":"Carnoeck", "StarPos":[35.969,5.188,1.313], "Allegiance":"Federation", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":12.786, "FuelUsed":9.640865, "FuelLevel":54.359135, "Faction":"Mikir Free" }
+{ "timestamp":"2016-09-22T06:00:57Z", "event":"FuelScoop", "Scooped":1.510502, "Total":55.869637 }
+{ "timestamp":"2016-09-22T06:01:03Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Ian B Walker", "IsPlayer":false, "Faction":"Mob of Carnoeck" }
+{ "timestamp":"2016-09-22T06:01:04Z", "event":"SupercruiseExit", "StarSystem":"Carnoeck", "Body":"Carnoeck" }
+{ "timestamp":"2016-09-22T06:01:30Z", "event":"SupercruiseEntry", "StarSystem":"Carnoeck" }
+{ "timestamp":"2016-09-22T06:01:51Z", "event":"Interdicted", "Submitted":true, "Interdictor":"Ian B Walker", "IsPlayer":false, "Faction":"Mob of Carnoeck" }
+{ "timestamp":"2016-09-22T06:01:52Z", "event":"SupercruiseExit", "StarSystem":"Carnoeck", "Body":"Carnoeck" }
+{ "timestamp":"2016-09-22T06:02:15Z", "event":"SupercruiseEntry", "StarSystem":"Carnoeck" }
+{ "timestamp":"2016-09-22T06:03:22Z", "event":"SupercruiseExit", "StarSystem":"Carnoeck", "Body":"Bacon City" }
+{ "timestamp":"2016-09-22T06:03:50Z", "event":"SupercruiseEntry", "StarSystem":"Carnoeck" }
+{ "timestamp":"2016-09-22T06:03:59Z", "event":"SupercruiseExit", "StarSystem":"Carnoeck", "Body":"Bacon City" }
+{ "timestamp":"2016-09-22T06:04:17Z", "event":"DockingRequested", "StationName":"Bacon City" }
+{ "timestamp":"2016-09-22T06:04:18Z", "event":"DockingGranted", "LandingPad":17, "StationName":"Bacon City" }
+{ "timestamp":"2016-09-22T06:06:14Z", "event":"Docked", "StationName":"Bacon City", "StationType":"Coriolis", "StarSystem":"Carnoeck", "Faction":"Mikir Free", "Allegiance":"Federation", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-22T06:06:51Z", "event":"MissionCompleted", "Faction":"Mikir Free", "Name":"Mission_PassengerVIP_name", "MissionID":26480079, "Commodity":"$DomesticAppliances_Name;", "Commodity_Localised":"Domestic Appliances", "Count":3, "DestinationSystem":"Carnoeck", "DestinationStation":"Bacon City", "Reward":36000 }
+{ "timestamp":"2016-09-22T06:07:28Z", "event":"MarketSell", "Type":"animalmeat", "Count":636, "SellPrice":1286, "TotalSale":817896, "AvgPricePaid":1242 }
+{ "timestamp":"2016-09-22T06:10:14Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size7_class5_name;", "SellItem_Localised":"Power Plant", "SellPrice":5128911, "BuyItem":"$int_powerplant_size8_class5_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":16258649, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T06:10:15Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-22T06:10:39Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-22T06:11:04Z", "event":"ModuleBuy", "Slot":"TinyHardpoint3", "SellItem":"$hpt_shieldbooster_size0_class3_name;", "SellItem_Localised":"Shield Booster", "SellPrice":53000, "BuyItem":"$hpt_shieldbooster_size0_class5_name;", "BuyItem_Localised":"Shield Booster", "BuyPrice":28100, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T06:11:27Z", "event":"ModuleBuy", "Slot":"TinyHardpoint2", "SellItem":"$hpt_shieldbooster_size0_class3_name;", "SellItem_Localised":"Shield Booster", "SellPrice":53000, "BuyItem":"$hpt_shieldbooster_size0_class5_name;", "BuyItem_Localised":"Shield Booster", "BuyPrice":28100, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T06:11:55Z", "event":"ModuleBuy", "Slot":"TinyHardpoint1", "SellItem":"$hpt_shieldbooster_size0_class3_name;", "SellItem_Localised":"Shield Booster", "SellPrice":53000, "BuyItem":"$hpt_shieldbooster_size0_class5_name;", "BuyItem_Localised":"Shield Booster", "BuyPrice":28100, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T06:13:07Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0008.bmp", "Width":1920, "Height":1080, "System":"Carnoeck", "Body":"Bacon City" }
+{ "timestamp":"2016-09-22T06:13:22Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0009.bmp", "Width":1920, "Height":1080, "System":"Carnoeck", "Body":"Bacon City" }
+{ "timestamp":"2016-09-22T06:13:33Z", "event":"ModuleBuy", "Slot":"HugeHardpoint1", "SellItem":"$hpt_cannon_fixed_huge_name;", "SellItem_Localised":"Cannon", "SellPrice":270080, "BuyItem":"$hpt_plasmaaccelerator_fixed_huge_name;", "BuyItem_Localised":"Plasma Acc", "BuyPrice":1379360, "Ship":"cutter", "ShipID":12 }
+{ "timestamp":"2016-09-22T06:14:01Z", "event":"RefuelAll", "Cost":423, "Amount":8.434022 }
+{ "timestamp":"2016-09-22T06:14:39Z", "event":"SellExplorationData", "Systems":[ "HIP 17763", "HIP 21672", "HIP 18154", "Gnowee", "Gliese 9084", "Pleiades Sector YF-N b7-0", "LP 690-1", "Hyades Sector GW-V b2-0", "58 Ophiuchi", "LTT 1263", "Ladakhi", "Nu-2 Lupi", "Chuquiar", "Hyades Sector BQ-Y d64", "Supenges", "Hyades Sector IC-K b9-1", "LP 389-95", "Rish", "ICZ BQ-Y d111", "Puntin", "Hyades Sector LC-U b3-2", "Apadipinook", "LHS 1749", "Sikians", "Hyades Sector RJ-E a13-0", "Recua", "Trianguli Sector CQ-Y c22", "Puppis Sector HR-W c1-25", "Pleiades Sector RO-Q b5-3", "L 484-31", "LHS 1552", "Synuefe GJ-W b48-3", "Alrai Sector IR-W c1-29", "Hyades Sector ST-Q b5-6", "ICZ DB-W b2-6", "Li Chong", "Col 285 Sector GB-C b14-6", "Col 285 Sector CY-N b21-7", "Hyades Sector ON-S b4-7", "ICZ FW-V b2-7", "Trianguli Sector RI-B a1" ], "Discovered":[  ], "BaseValue":208126, "Bonus":0 }
