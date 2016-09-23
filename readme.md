@@ -4,6 +4,8 @@
 
 Builds are released nightly at 2300 UTC, so if its close to then, maybe wait a bit to download it from the releases page?
 
+![Example](https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png)
+
 ## Dev
 
 ```
