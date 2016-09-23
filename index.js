@@ -35,13 +35,8 @@ function createMainWindow() {
 
 	lr.on('line', line => {
 		const lineParse = JSON.parse(line);
-		const html = tableify(lineParse);
+		const html = tableify(lineParse) + '<hr>';
 		fs.appendFile(`${process.resourcesPath}/index2.html`, html, err => {
-			if (err) {
-				return console.log(err);
-			}
-		});
-		fs.appendFile(`${process.resourcesPath}/index2.html`, '<hr>', err => {
 			if (err) {
 				return console.log(err);
 			}
