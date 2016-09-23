@@ -5,6 +5,7 @@ const tableify = require('tableify');
 const {dialog} = require('electron');
 const LineByLineReader = require('line-by-line');
 
+const JSONParsed = [];
 const app = electron.app;
 let file;
 // adds debug features like hotkeys for triggering dev tools and reload
@@ -35,6 +36,8 @@ function createMainWindow() {
 
 	lr.on('line', line => {
 		const lineParse = JSON.parse(line);
+		JSONParsed.push(lineParse);
+		// console.log(JSONParsed);
 		const html = tableify(lineParse) + '<hr>';
 		fs.appendFile(`${process.resourcesPath}/index2.html`, html, err => {
 			if (err) {
