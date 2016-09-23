@@ -36,18 +36,18 @@ function createMainWindow() {
 	lr.on('line', line => {
 		const lineParse = JSON.parse(line);
 		const html = tableify(lineParse);
-		fs.appendFile(`${__dirname}/index2.html`, html, err => {
+		fs.appendFile(`${process.resourcesPath}/index2.html`, html, err => {
 			if (err) {
 				return console.log(err);
 			}
 		});
-		fs.appendFile(`${__dirname}/index2.html`, '<hr>', err => {
+		fs.appendFile(`${process.resourcesPath}/index2.html`, '<hr>', err => {
 			if (err) {
 				return console.log(err);
 			}
 		});
 	});
-	fs.appendFile(`${__dirname}/index2.html`, '<script src="https://use.fontawesome.com/a39359b6f9.js"></script><link rel="stylesheet" href="index.css"><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">', err => {
+	fs.appendFile(`${process.resourcesPath}/index2.html`, '<script src="https://use.fontawesome.com/a39359b6f9.js"></script><link rel="stylesheet" href="./app.asar/index.css"><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">', err => {
 		if (err) {
 			return console.log(err);
 		}
@@ -55,7 +55,7 @@ function createMainWindow() {
 	lr.on('end', () => {
 		console.log('done!');
 		console.log('The file was saved!');
-		win.loadURL(`file://${__dirname}/index2.html`);
+		win.loadURL(`file://${process.resourcesPath}/index2.html`);
 	});
 	return win;
 }
@@ -64,7 +64,7 @@ app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
 		app.quit();
 	}
-	fs.writeFile('./index2.html', '', err => {
+	fs.writeFile(`${process.resourcesPath}/index2.html`, '', err => {
 		if (err) {
 			return console.log(err);
 		}
