@@ -34,25 +34,27 @@ function createMainWindow() {
 	});
 
 	lr.on('line', line => {
-		const test = JSON.parse(line);
-		const html = tableify(test);
-
+		const lineParse = JSON.parse(line);
+		const html = tableify(lineParse);
 		fs.appendFile(`${__dirname}/index2.html`, html, err => {
 			if (err) {
 				return console.log(err);
 			}
-			console.log('The file was saved!');
 		});
 		fs.appendFile(`${__dirname}/index2.html`, '<hr>', err => {
 			if (err) {
 				return console.log(err);
 			}
-			console.log('The file was saved!');
 		});
 	});
-
+	fs.appendFile(`${__dirname}/index2.html`, '<script src="https://use.fontawesome.com/a39359b6f9.js"></script><link rel="stylesheet" href="index.css"><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">', err => {
+		if (err) {
+			return console.log(err);
+		}
+	});
 	lr.on('end', () => {
 		console.log('done!');
+		console.log('The file was saved!');
 		win.loadURL(`file://${__dirname}/index2.html`);
 	});
 	return win;
