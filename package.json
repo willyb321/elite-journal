@@ -30,7 +30,7 @@
     "devtron": "^1.3.0",
     "electron-packager": "^8.0.0",
     "electron": "^1.4.1",
-    "electron-zip-packager": "^3.0.0",
+    "electron-zip-packager": "willyb321/electron-zip-packager",
     "xo": "^0.16.0"
   },
   "xo": {

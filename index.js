@@ -110,7 +110,7 @@ const template = [
 		label: 'File',
 		submenu: [
 	{label: 'Save', click: funcSave},
-	{label: 'Open', click: funcLoad}
+	{label: 'Load', click: funcLoad}
 
 		]
 	},
