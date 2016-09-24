@@ -81,7 +81,20 @@ function funcSave() {
 	}
 );
 }
-
+function funcSaveJSON() {
+	dialog.showSaveDialog(fileName => {
+		if (fileName === undefined) {
+			console.log('You didn\'t save the file');
+			return;
+		}
+		const JSONParsedSave = JSON.stringify(JSONParsed);
+		fs.writeFile(fileName, JSONParsedSave, err => {
+			if (err) {
+				console.log(err.message);
+			}
+		});
+	});
+}
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
 		app.quit();
@@ -92,7 +105,6 @@ app.on('window-all-closed', () => {
 		}
 	});
 });
-
 app.on('activate', () => {
 	if (!mainWindow) {
 		mainWindow = createMainWindow();
@@ -109,7 +121,8 @@ const template = [
 	{
 		label: 'File',
 		submenu: [
-	{label: 'Save', click: funcSave},
+	{label: 'Save as HTML', click: funcSave},
+	{label: 'Save as JSON', click: funcSaveJSON},
 	{label: 'Load', click: funcLoad}
 
 		]
