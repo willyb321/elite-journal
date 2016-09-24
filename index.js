@@ -7,27 +7,39 @@ const LineByLineReader = require('line-by-line');
 
 const JSONParsed = [];
 const app = electron.app;
-let file;
+let loadFile;
+let win;
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
-
 // prevent window being garbage collected
 let mainWindow;
+function createMainWindow() {
+	win = new electron.BrowserWindow({
+		width: 600,
+		height: 400
+	});
+
+	win.on('closed', onClosed);
+
+// menu functions be here
+}
 function onClosed() {
 // dereference the window
 // for multiple windows store them in an array
 	mainWindow = null;
 }
-
-function createMainWindow() {
-	const win = new electron.BrowserWindow({
-		width: 600,
-		height: 400
-	});
-	file = dialog.showOpenDialog({properties: ['openFile', 'multiSelections']});
-
-	win.on('closed', onClosed);
-	const lr = new LineByLineReader(file[0]);
+function funcLoad() {
+	loadFile = dialog.showOpenDialog({properties: ['openFile']});
+	if (/\.[log]+$/i.test(loadFile) === true) {
+		readLine();
+		win.loadURL(`file:///${loadFile}`);
+	} else {
+		console.log('Please load a .log file.');
+	}
+}
+function readLine() {
+	const loadPls = loadFile;
+	const lr = new LineByLineReader(loadPls[0]);
 
 	lr.on('error', err => {
 		return console.log(err);
@@ -57,15 +69,6 @@ function createMainWindow() {
 	return win;
 }
 
-// menu functions be here
-function funcLoad() {
-	const win = new electron.BrowserWindow({
-		width: 600,
-		height: 400
-	});
-	const loadFile = dialog.showOpenDialog({properties: ['openFile']});
-	win.loadURL(`file:///${loadFile}`);
-}
 function funcSave() {
 	dialog.showSaveDialog(fileName => {
 		if (fileName === undefined) {
