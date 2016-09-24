@@ -32,10 +32,10 @@ function funcLoad() {
 	loadFile = dialog.showOpenDialog({properties: ['openFile']});
 	if (/\.[log]+$/i.test(loadFile) === true) {
 		fs.writeFile(`${process.resourcesPath}/index2.html`, '', err => {
-		if (err) {
-			return console.log(err);
-		}
-	});
+			if (err) {
+				return console.log(err);
+			}
+		});
 		readLine();
 		win.loadURL(`file:///${loadFile}`);
 	} else {
