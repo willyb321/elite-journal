@@ -34,18 +34,19 @@ function onClosed() {
 	mainWindow = null;
 }
 function funcLoad() {
-	loadFile = dialog.showOpenDialog({properties: ['openFile',
-		{defaultPath: logPath}]});
+	loadFile = dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved html', extensions: ['log', 'html']}]}, {properties: ['openFile']});
 	if (/\.[log]+$/i.test(loadFile) === true) {
 		fs.writeFile(`${process.resourcesPath}/index2.html`, '', err => {
 			if (err) {
 				return console.log(err);
 			}
+			readLine();
 		});
-		readLine();
+		win.loadURL(`file:///${loadFile}`);
+	} else if (/\.[html]+$/i.test(loadFile) === true) {
 		win.loadURL(`file:///${loadFile}`);
 	} else {
-		console.log('Please load a .log file.');
+		console.log('Stop trying to break me!');
 	}
 }
 function readLine() {
