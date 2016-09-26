@@ -34,7 +34,7 @@ function onClosed() {
 	mainWindow = null;
 }
 function funcLoad() {
-	loadFile = dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved html', extensions: ['log', 'html']}]}, {properties: ['openFile']});
+	loadFile = dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}]}, {properties: ['openFile']});
 	if (/\.[log]+$/i.test(loadFile) === true) {
 		fs.writeFile(`${process.resourcesPath}/index2.html`, '', err => {
 			if (err) {
@@ -48,6 +48,27 @@ function funcLoad() {
 	} else {
 		console.log('Stop trying to break me!');
 	}
+}
+function loadAlternate() {
+	let html;
+	loadFile = dialog.showOpenDialog({properties: ['openFile']});
+	const lr = new LineByLineReader(loadFile[0]);
+	lr.on('error', err => {
+		return console.log(err);
+	});
+	lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
+		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
+		JSONParsed.push(lineParse);
+		let htmlTabled = tableify(lineParse) + '<hr>';  // eslint-disable-line prefer-const
+		html += htmlTabled;
+	});
+	lr.on('end', err => {
+		if (err) {
+			console.log(err.message);
+		}
+		process.htmlDone = html;
+		win.loadURL('data:text/html,' + css + process.htmlDone);
+	});
 }
 function readLine() {
 	const loadPls = loadFile;
@@ -67,7 +88,7 @@ function readLine() {
 			}
 		});
 	});
-	fs.appendFile(`${process.resourcesPath}/index2.html`, '<script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>body {padding: 0; margin: 0; } body {background-color: #313943; color: #bbc8d8; font-family: \'Lato\'; font-size: 22px; font-weight: 500; line-height: 36px; margin-bottom: 36px; text-align: center; } header {position: absolute; width: 500px; height: 250px; top: 50%; left: 50%; margin-top: -125px; margin-left: -250px; text-align: center; } header h1 {font-size: 60px; font-weight: 100; margin: 0; padding: 0; } #grad {background: -webkit-linear-gradient(left, #5A3F37 , #2C7744); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(right, #5A3F37 , #2C7744); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(right,#5A3F37 , #2C7744); /* For Firefox 3.6 to 15 */ background: linear-gradient(to right, #5A3F37 , #2C7744); /* Standard syntax */ } hr {color: red; }</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">', err => {
+	fs.appendFile(`${process.resourcesPath}/index2.html`, css, err => {
 		if (err) {
 			return console.log(err);
 		}
@@ -76,53 +97,9 @@ function readLine() {
 		console.log('done!');
 		console.log('The file was saved!');
 		win.loadURL(`file://${process.resourcesPath}/index2.html`);
-		// win.loadURL(`file://${process.resourcesPath}/index2.html`);
 	});
 	return win;
 }
-// function readLineMemory(converted) {
-// 	// var html = '';
-// 	loadFile = dialog.showOpenDialog({properties: ['openFile']});
-// 	console.log(loadFile);
-// 	var lr = new LineByLineReader(loadFile[0]);
-// 	lr.on('error', err => {
-// 		return console.log(err);
-// 	});
-// 	lr.on('line', function (line) {
-// 		const lineParse = JSON.parse(line);
-// 		JSONParsed.push(lineParse);
-// 		var htmlTabled = tableify(lineParse) + '<hr>';
-// 		html = html + htmlTabled;
-// 	});
-// 	lr.on('end', function () {
-// 		html = 'data:text/html,' + html;
-// 	});
-// 	converted = html;
-// }
-// function lineMem(converted) {
-// 	var html;
-// 	loadFile = dialog.showOpenDialog({properties: ['openFile']});
-// 	// console.log(loadFile);
-// 	var lr = new LineByLineReader(loadFile[0]);
-// 	lr.on('error', err => {
-// 		return console.log(err);
-// 	});
-// 	lr.on('line', function (line) {
-// 		let lineParse = JSON.parse(line);
-// 		JSONParsed.push(lineParse);
-// 		let htmlTabled = tableify(lineParse) + '<hr>';
-// 		html = html + htmlTabled;
-// 		process.htmlDone += html;
-// 	});
-// 	lr.on('end', function () {
-// 		process.htmlDone = html;
-// 	});
-// }
-// function test() {
-// 	var willy = (lineMem(vampire));
-// 	console.log(process.htmlDone);
-// 	win.loadURL('data:text/html,' + encodeURIComponent(process.htmlDone));
-// }
 function funcSave() {
 	dialog.showSaveDialog(fileName => {
 		if (fileName === undefined) {
@@ -181,28 +158,7 @@ const template = [
 	{label: 'Save as HTML', click: funcSave},
 	{label: 'Save as JSON', click: funcSaveJSON},
 	{label: 'Load', click: funcLoad},
-	{label: 'Load log(alternate)', click() {
-		let html;
-		loadFile = dialog.showOpenDialog({properties: ['openFile']});
-	// console.log(loadFile);
-		const lr = new LineByLineReader(loadFile[0]);
-		lr.on('error', err => {
-			return console.log(err);
-		});
-		lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
-			let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-			JSONParsed.push(lineParse);
-			let htmlTabled = tableify(lineParse) + '<hr>';  // eslint-disable-line prefer-const
-			html += htmlTabled;
-		});
-		lr.on('end', err => {
-			if (err) {
-				console.log(err.message);
-			}
-			process.htmlDone = html;
-			win.loadURL('data:text/html,' + css + process.htmlDone);
-		});
-	}}
+	{label: 'Load log(alternate)', click: loadAlternate}
 
 		]
 	},
