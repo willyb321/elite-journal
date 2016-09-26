@@ -13,6 +13,7 @@ const app = electron.app;
 let loadFile;
 let win; // eslint-disable-line no-var
 let htmlDone; // eslint-disable-line no-unused-vars
+var alternateLoad;
 const css = '<script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>body {padding: 0; margin: 0; } body {background-color: #313943; color: #bbc8d8; font-family: \'Lato\'; font-size: 22px; font-weight: 500; line-height: 36px; margin-bottom: 36px; text-align: center; } header {position: absolute; width: 500px; height: 250px; top: 50%; left: 50%; margin-top: -125px; margin-left: -250px; text-align: center; } header h1 {font-size: 60px; font-weight: 100; margin: 0; padding: 0; } #grad {background: -webkit-linear-gradient(left, #5A3F37 , #2C7744); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(right, #5A3F37 , #2C7744); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(right,#5A3F37 , #2C7744); /* For Firefox 3.6 to 15 */ background: linear-gradient(to right, #5A3F37 , #2C7744); /* Standard syntax */ } hr {color: red; }</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
@@ -51,6 +52,7 @@ function funcLoad() {
 }
 function loadAlternate() {
 	let html;
+	process.alterateLoad = true;
 	loadFile = dialog.showOpenDialog({properties: ['openFile']});
 	const lr = new LineByLineReader(loadFile[0]);
 	lr.on('error', err => {
@@ -108,12 +110,16 @@ function funcSave() {
 			return;
 		}
 // fileName is a string that contains the path and filename created in the save file dialog.
+if (process.alternateLoad = true) {
+	fs.writeFile(fileName, css + process.htmlDone)
+	} else {
 		fs.copy(`${process.resourcesPath}/index2.html`, fileName, err => {
 			if (err) {
 				console.log(err.message);
 			}
 		});
 	}
+}
 );
 }
 function funcSaveJSON() {
