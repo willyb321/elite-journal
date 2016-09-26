@@ -67,6 +67,7 @@ function loadAlternate() {
 			console.log(err.message);
 		}
 		process.htmlDone = html;
+		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + css + process.htmlDone);
 	});
 }
