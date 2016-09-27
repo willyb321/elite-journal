@@ -6,8 +6,11 @@ const electron = require('electron');
 const tableify = require('tableify');
 const {dialog} = require('electron');
 const LineByLineReader = require('line-by-line');
+// const _ = require('underscore'); - being used in future updates!
 
-const JSONParsed = [];
+let JSONParsed = []; // eslint-disable-line prefer-const
+// let master = []; also coming in future
+// let filtered; coming in future!
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
 const app = electron.app;
 let loadFile;
@@ -34,26 +37,14 @@ function onClosed() {
 // for multiple windows store them in an array
 	mainWindow = null;
 }
-function funcLoad() {
-	loadFile = dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}]}, {properties: ['openFile']});
-	if (/\.[log]+$/i.test(loadFile) === true) {
-		fs.writeFile(`${process.resourcesPath}/index2.html`, '', err => {
-			if (err) {
-				return console.log(err);
-			}
-			readLine();
-		});
-		win.loadURL(`file:///${loadFile}`);
-	} else if (/\.[html]+$/i.test(loadFile) === true) {
-		win.loadURL(`file:///${loadFile}`);
-	} else {
-		console.log('Stop trying to break me!');
-	}
+function dialogLoad() {
+	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}]}, {properties: ['openFile']});
 }
 function loadAlternate() {
 	let html;
+	JSONParsed = [];
 	process.alterateLoad = true;
-	loadFile = dialog.showOpenDialog({properties: ['openFile']});
+	loadFile = dialogLoad();
 	const lr = new LineByLineReader(loadFile[0]);
 	lr.on('error', err => {
 		return console.log(err);
@@ -73,36 +64,37 @@ function loadAlternate() {
 		win.loadURL('data:text/html,' + css + process.htmlDone);
 	});
 }
-function readLine() {
-	const loadPls = loadFile;
-	const lr = new LineByLineReader(loadPls[0]);
+// function below isn't being used anymore, but is here for historical purposes etc
+// function readLine() {
+// 	const loadPls = loadFile;
+// 	const lr = new LineByLineReader(loadPls[0]);
 
-	lr.on('error', err => {
-		return console.log(err);
-	});
+// 	lr.on('error', err => {
+// 		return console.log(err);
+// 	});
 
-	lr.on('line', line => {
-		const lineParse = JSON.parse(line);
-		JSONParsed.push(lineParse);
-		const html = tableify(lineParse) + '<hr>';
-		fs.appendFile(`${process.resourcesPath}/index2.html`, html, err => {
-			if (err) {
-				return console.log(err);
-			}
-		});
-	});
-	fs.appendFile(`${process.resourcesPath}/index2.html`, css, err => {
-		if (err) {
-			return console.log(err);
-		}
-	});
-	lr.on('end', () => {
-		console.log('done!');
-		console.log('The file was saved!');
-		win.loadURL(`file://${process.resourcesPath}/index2.html`);
-	});
-	return win;
-}
+// 	lr.on('line', line => {
+// 		const lineParse = JSON.parse(line);
+// 		JSONParsed.push(lineParse);
+// 		const html = tableify(lineParse) + '<hr>';
+// 		fs.appendFile(`${process.resourcesPath}/index2.html`, html, err => {
+// 			if (err) {
+// 				return console.log(err);
+// 			}
+// 		});
+// 	});
+// 	fs.appendFile(`${process.resourcesPath}/index2.html`, css, err => {
+// 		if (err) {
+// 			return console.log(err);
+// 		}
+// 	});
+// 	lr.on('end', () => {
+// 		console.log('done!');
+// 		console.log('The file was saved!');
+// 		win.loadURL(`file://${process.resourcesPath}/index2.html`);
+// 	});
+// 	return win;
+// }
 function funcSave() {
 	dialog.showSaveDialog(fileName => {
 		if (fileName === undefined) {
@@ -110,15 +102,11 @@ function funcSave() {
 			return;
 		}
 // fileName is a string that contains the path and filename created in the save file dialog.
-		if (process.alternateLoad === true) {
-			fs.writeFile(fileName, css + process.htmlDone);
-		} else {
-			fs.copy(`${process.resourcesPath}/index2.html`, fileName, err => {
-				if (err) {
-					console.log(err.message);
-				}
-			});
-		}
+		fs.writeFile(fileName, css + process.htmlDone, err => {
+			if (err) {
+				console.log(err.message);
+			}
+		});
 	}
 );
 }
@@ -164,8 +152,7 @@ const template = [
 		submenu: [
 	{label: 'Save as HTML', click: funcSave},
 	{label: 'Save as JSON', click: funcSaveJSON},
-	{label: 'Load', click: funcLoad},
-	{label: 'Load log(alternate)', click: loadAlternate}
+	{label: 'Load', click: loadAlternate}
 
 		]
 	},
