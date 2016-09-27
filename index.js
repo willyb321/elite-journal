@@ -142,6 +142,7 @@ app.on('activate', () => {
 
 app.on('ready', () => {
 	mainWindow = createMainWindow();
+	win.loadURL('data:text/html,' + css + '<h1>Please load a file using the "File" menu</h1>');
 });
 
 const {Menu} = require('electron');
