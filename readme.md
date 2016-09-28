@@ -2,7 +2,8 @@
 
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
 
-Builds are released nightly at 2300 UTC, so if its close to then, maybe wait a bit to download it from the releases page?
+## How to get it?
+Download a setup .exe from the releases page, and then run it. It will automagically update when you run the application from now on!
 
 ![Example](https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png)
 
