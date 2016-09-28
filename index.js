@@ -7,7 +7,6 @@ const tableify = require('tableify');
 const {dialog} = require('electron');
 const LineByLineReader = require('line-by-line');
 // const _ = require('underscore');
-// const smalltalk = require('smalltalk');
 
 let JSONParsed = []; // eslint-disable-line prefer-const
 // let master = []; also coming in future
@@ -42,12 +41,8 @@ function dialogLoad() {
 	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}]}, {properties: ['openFile']});
 }
 // function sortaSorter() {
-// 	smalltalk.prompt('Filtering', 'What event do you want to filter for?').then(function(ok) {
-// 		console.log(_.where(JSONParsed, {event: ok}))
-// 	}, function() {
-// 		console.log('cancelled');
-// 	})
-
+// 	// const filter = figure out how to get dialog
+// 	console.log(_.where(JSONParsed, {event: filter}));
 // }
 function loadAlternate() {
 	let html;
@@ -71,7 +66,6 @@ function loadAlternate() {
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + css + process.htmlDone);
-		// sortaSorter()
 	});
 }
 // function below isn't being used anymore, but is here for historical purposes etc
@@ -164,7 +158,13 @@ const template = [
 	{label: 'Save as HTML', click: funcSave},
 	{label: 'Save as JSON', click: funcSaveJSON},
 	{label: 'Load', click: loadAlternate}
+		]
+	},
+	{
+		label: 'Filtering',
+		submenu: [
 
+				{label: 'Does literally nothing right now'}
 		]
 	},
 	{
