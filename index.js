@@ -7,12 +7,38 @@ const tableify = require('tableify');
 const {dialog} = require('electron');
 const LineByLineReader = require('line-by-line');
 // const _ = require('underscore');
+const app = electron.app;
+const GhReleases = require('electron-gh-releases');
+
+const options = {
+	repo: 'willyb321/elite-journal',
+	currentVersion: app.getVersion()
+};
+
+const updater = new GhReleases(options);
+
+// Check for updates
+// `status` returns true if there is a new update available
+updater.check((err, status) => {
+	if (!err && status) {
+// Download the update
+		updater.download();
+	}
+});
+
+// When an update has been downloaded
+updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
+// Restart the app and install the update
+	updater.install();
+});
+
+// Access electrons autoUpdater
+updater.autoUpdater; // eslint-disable-line no-unused-expressions
 
 let JSONParsed = []; // eslint-disable-line prefer-const
 // let master = []; also coming in future
 // let filtered; coming in future!
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
-const app = electron.app;
 let loadFile;
 let win; // eslint-disable-line no-var
 let htmlDone; // eslint-disable-line no-unused-vars
@@ -155,16 +181,16 @@ const template = [
 	{
 		label: 'File',
 		submenu: [
-	{label: 'Save as HTML', click: funcSave},
-	{label: 'Save as JSON', click: funcSaveJSON},
-	{label: 'Load', click: loadAlternate}
+{label: 'Save as HTML', click: funcSave},
+{label: 'Save as JSON', click: funcSaveJSON},
+{label: 'Load', click: loadAlternate}
 		]
 	},
 	{
 		label: 'Filtering',
 		submenu: [
 
-				{label: 'Does literally nothing right now'}
+{label: 'Does literally nothing right now'}
 		]
 	},
 	{
