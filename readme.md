@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://github.com/willyb321/elite-journal/blob/master/build/icon.png?raw=true"/>
 </p>
-# elite-journal[![AppVeyor](https://img.shields.io/appveyor/ci/willyb321/elite-journal.svg?maxAge=3600)](https://ci.appveyor.com/project/willyb321/elite-journal)[![Github All Releases](https://img.shields.io/github/downloads/willyb321/elite-journal/total.svg?maxAge=3600)](https://github.com/willyb321/elite-journal/releases/latest)[![GitHub release](https://img.shields.io/github/release/willyb321/elite-journal.svg?maxAge=3600)](https://github.com/willyb321/elite-journal/releases)[![GitHub stars](https://img.shields.io/github/stars/willyb321/elite-journal.svg?style=social&label=Star&maxAge=2592000)](https://github.com/willyb321/elite-journal/stargazers)[![Gratipay User](https://img.shields.io/gratipay/user/willyb321.svg?maxAge=3600)](https://gratipay.com/~willyb321/)
+# Elite Journal[![AppVeyor](https://img.shields.io/appveyor/ci/willyb321/elite-journal.svg?maxAge=3600)](https://ci.appveyor.com/project/willyb321/elite-journal)[![Github All Releases](https://img.shields.io/github/downloads/willyb321/elite-journal/total.svg?maxAge=3600)](https://github.com/willyb321/elite-journal/releases/latest)[![GitHub release](https://img.shields.io/github/release/willyb321/elite-journal.svg?maxAge=3600)](https://github.com/willyb321/elite-journal/releases)[![GitHub stars](https://img.shields.io/github/stars/willyb321/elite-journal.svg?style=social&label=Star&maxAge=2592000)](https://github.com/willyb321/elite-journal/stargazers)[![Gratipay User](https://img.shields.io/gratipay/user/willyb321.svg?maxAge=3600)](https://gratipay.com/~willyb321/)
 
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
 
