@@ -3,7 +3,7 @@
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
 
 ## How to get it?
-Download a setup .exe from the releases page, and then run it. It will automagically update when you run the application from now on!
+Download a [setup .exe](https://github.com/willyb321/elite-journal/releases/latest) from the releases page, and then run it. It will automagically update when you run the application from now on!
 
 ![Example](https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png)
 
@@ -22,11 +22,19 @@ $ npm start
 ### Build
 
 ```
-$ npm run build
+$ npm run pack
 ```
 
-Builds the app for Windows x64, using [electron-zip-packager](https://github.com/azu/electron-zip-packager).
+Builds the app for Windows ia32, using [electron-builder](https://github.com/electron-userland/electron-builder).
 
+
+### Build - Distribution
+
+```
+$ npm run dist
+```
+
+Builds the app and distributable exe/nupkg for Windows ia32, using [electron-builder](https://github.com/electron-userland/electron-builder).
 
 ## License
 
