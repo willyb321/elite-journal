@@ -30,7 +30,7 @@ updater.check((err, status) => {
 // When an update has been downloaded
 updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
 // Restart the app and install the update
-	dialog.showMessageBox({title: "Update ready to install", message: "Press OK to install the update, and the application will do its thing."})
+	dialog.showMessageBox({title: 'Update ready to install', message: 'Press OK to install the update, and the application will do its thing.'});
 	updater.install();
 });
 
