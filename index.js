@@ -9,7 +9,7 @@ const LineByLineReader = require('line-by-line');
 // const _ = require('underscore');
 const app = electron.app;
 const GhReleases = require('electron-gh-releases');
-
+if (require('electron-squirrel-startup')) return;
 const options = {
 	repo: 'willyb321/elite-journal',
 	currentVersion: app.getVersion()
