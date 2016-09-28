@@ -25,7 +25,7 @@ $ npm start
 $ npm run pack
 ```
 
-Builds the app for Windows ia32, using [electron-builder](https://github.com/electron-userland/electron-builder).
+Builds the app for Windows x64, using [electron-builder](https://github.com/electron-userland/electron-builder).
 
 
 ### Build - Distribution
@@ -34,7 +34,7 @@ Builds the app for Windows ia32, using [electron-builder](https://github.com/ele
 $ npm run dist
 ```
 
-Builds the app and distributable exe/nupkg for Windows ia32, using [electron-builder](https://github.com/electron-userland/electron-builder).
+Builds the app and distributable exe/nupkg for Windows x64, using [electron-builder](https://github.com/electron-userland/electron-builder).
 
 ## License
 

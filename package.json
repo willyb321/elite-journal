@@ -14,8 +14,8 @@
     "test": "xo",
     "start": "electron .",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
-    "pack": "build --dir",
-    "dist": "build"
+    "pack": "build --dir --x64",
+    "dist": "build --x64"
   },
   "keywords": [
     "electron-app",
