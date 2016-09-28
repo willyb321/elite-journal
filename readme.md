@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://github.com/willyb321/elite-journal/blob/master/build/icon.png?raw=true" width=15% height=15%/>
+</p>
 # elite-journal [![Build status](https://ci.appveyor.com/api/projects/status/hng82lbontx2lm3c?svg=true)](https://ci.appveyor.com/project/willyb321/elite-journal)[![Github All Releases](https://img.shields.io/github/downloads/willyb321/elite-journal/total.svg?maxAge=3600)](https://github.com/willyb321/elite-journal/releases/latest)
 
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
