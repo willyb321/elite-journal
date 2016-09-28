@@ -7,8 +7,9 @@ const tableify = require('tableify');
 const {dialog} = require('electron');
 const LineByLineReader = require('line-by-line');
 // const _ = require('underscore');
-const app = electron.app;
 const GhReleases = require('electron-gh-releases');
+
+const app = electron.app;
 if (require('electron-squirrel-startup')) return; // eslint-disable-line curly
 
 const options = {
@@ -68,10 +69,9 @@ function onClosed() {
 function dialogLoad() {
 	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}]}, {properties: ['openFile']});
 }
-// function sortaSorter() {
-// 	// const filter = figure out how to get dialog
-// 	console.log(_.where(JSONParsed, {event: filter}));
-// }
+function sortaSorter() {
+	// const filterList = _.pluck(JSONParsed, 'event');
+}
 function loadAlternate() {
 	let html;
 	JSONParsed = [];
@@ -174,7 +174,7 @@ app.on('activate', () => {
 
 app.on('ready', () => {
 	mainWindow = createMainWindow();
-	win.loadURL('data:text/html,' + css + '<h1>Please load a file using the "File" menu</h1>');
+	win.loadURL('data:text/html,' + css + '<br><h1>Please load a file using the "File" menu</h1>');
 });
 
 const {Menu} = require('electron');
@@ -192,7 +192,7 @@ const template = [
 		label: 'Filtering',
 		submenu: [
 
-{label: 'Does literally nothing right now'}
+{label: 'Filter for: (in development)', click: sortaSorter}
 		]
 	},
 	{
