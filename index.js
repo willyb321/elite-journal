@@ -72,6 +72,15 @@ function onClosed() {
 function dialogLoad() {
 	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}]}, {properties: ['openFile']});
 }
+function getChecked() {
+	const {ipcMain} = require('electron');
+
+	ipcMain.on('asynchronous-message', (event, arg) => {
+		console.log(arg);  // prints "ping"
+		process.filteredEvent = arg;
+		loadFilter();
+	});
+}
 function sortaSorter() {
 	// let contents = win.webContents;
 	const filterWin = new electron.BrowserWindow({
@@ -88,9 +97,18 @@ function sortaSorter() {
 	process.htmlFormStripped = s(process.htmlForm).strip('undefined');
 	global.sharedObj = {prop1: process.htmlFormStripped};
 	global.test = {prop1: process.unique};
-	// win.loadURL('data:text/html,' + css + process.htmlDone)
+
 	filterWin.loadURL(`file:///filter.html`);
-	// console.log(contents.executeJavaScript("validateForm()"));
+	getChecked();
+}
+function loadFilter() {
+	function findEvent(events) {
+		return events.event === process.filteredEvent;
+	}
+	let filteredJSON = JSONParsed.find(findEvent); // eslint-disable-line prefer-const
+	let filteredHTML = tableify(filteredJSON); // eslint-disable-line prefer-const
+		// console.log(filteredHTML)
+	win.loadURL('data:text/html,' + css + filteredHTML);
 }
 function loadAlternate() {
 	let html;

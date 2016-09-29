@@ -8,6 +8,13 @@
 <h1>Select an event from the dropdown</h1><br>
 <p id="events"></p>
 <script type="text/javascript">
+function sendChecked() {
+const {ipcRenderer} = require('electron')
+var e = document.getElementById("selectNumber");
+var value = e.options[e.selectedIndex].value;
+var text = e.options[e.selectedIndex].text;
+ipcRenderer.send('asynchronous-message', text)
+}
 function populate(){
 	var remote = require('electron').remote;
 	var event = remote.getGlobal('test').prop1;
@@ -17,7 +24,7 @@ function populate(){
 }
 </script>
 <form id="myForm">
-    <select id="selectNumber">
+    <select id="selectNumber" onchange="sendChecked()">
         <option>Choose an event</option>
         <script type="text/javascript"> populate();</script>
     </select>
