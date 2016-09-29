@@ -10,6 +10,10 @@ Download a [setup .exe](https://github.com/willyb321/elite-journal/releases/late
 
 ![Example](https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png)
 
+## WHats it actually do then?
+
+Basically it allows the average joe to have a look at the journal log in a nice easy to read format
+
 ## Dev
 
 ```
