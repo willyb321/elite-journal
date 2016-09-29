@@ -9,6 +9,7 @@ const LineByLineReader = require('line-by-line');
 const _ = require('underscore');
 const GhReleases = require('electron-gh-releases');
 const {Menu} = require('electron');
+const s = require('string');
 
 const app = electron.app;
 if (require('electron-squirrel-startup')) return; // eslint-disable-line curly
@@ -71,21 +72,18 @@ function dialogLoad() {
 	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}]}, {properties: ['openFile']});
 }
 function sortaSorter() {
+	// let contents = win.webContents;
 	const filterList = _.pluck(JSONParsed, 'event');
-	const unique = filterList.filter((elem, index, self) => {
+	process.unique = filterList.filter((elem, index, self) => {
 		return index === self.indexOf(elem);
 	});
-	for (let i = 0; i < unique.length; i++) {
-		console.log(unique[i]);
+	for (let i = 0; i < process.unique.length; i++) {
+		process.htmlForm += ' ' + process.unique[i] + '<br>';
 	}
-	require('electron-context-menu')({
-		prepend: params => [{ // eslint-disable-line no-unused-vars
-			label: 'Filtering:'
-		}],
-		append: params => [{ // eslint-disable-line no-unused-vars
-			label: 'in development'
-		}]
-	});
+	process.htmlFormStripped = s(process.htmlForm).strip('undefined');
+	global.sharedObj = {prop1: process.htmlFormStripped};
+	// win.loadURL(`file:///filter.html`)
+	// console.log(contents.executeJavaScript("validateForm()"));
 }
 function loadAlternate() {
 	let html;
