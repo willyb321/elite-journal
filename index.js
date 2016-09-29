@@ -11,7 +11,7 @@ const GhReleases = require('electron-gh-releases');
 const {Menu} = require('electron');
 const s = require('string');
 
-const filterForm = '<form name="filterForm" onsubmit="return othername()" method="post"><input type="text" name="filterPls" id="userInput"><input type="submit" onclick=""></form>'
+// const filterForm = '<form name="filterForm" onsubmit="return othername()" method="post"><input type="text" name="filterPls" id="userInput"><input type="submit" onclick=""></form>';
 const app = electron.app;
 if (require('electron-squirrel-startup')) return; // eslint-disable-line curly
 
@@ -89,7 +89,7 @@ function sortaSorter() {
 	global.sharedObj = {prop1: process.htmlFormStripped};
 	global.test = {prop1: process.unique};
 	// win.loadURL('data:text/html,' + css + process.htmlDone)
-	filterWin.loadURL(`file:///filter.html`)
+	filterWin.loadURL(`file:///filter.html`);
 	// console.log(contents.executeJavaScript("validateForm()"));
 }
 function loadAlternate() {
