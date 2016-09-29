@@ -5,7 +5,7 @@
 
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
 
-## WHats it actually do then?
+## Whats it actually do then?
 
 Basically it allows the average joe to have a look at the journal log in a nice easy to read format.
 
