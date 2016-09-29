@@ -98,7 +98,7 @@ function sortaSorter() {
 	global.sharedObj = {prop1: process.htmlFormStripped};
 	global.test = {prop1: process.unique};
 
-	filterWin.loadURL(`file:///filter.html`);
+	filterWin.loadURL(`file:///${__dirname}/filter.html`);
 	getChecked();
 }
 function loadFilter() {
