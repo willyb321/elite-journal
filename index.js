@@ -8,6 +8,7 @@ const {dialog} = require('electron');
 const LineByLineReader = require('line-by-line');
 const _ = require('underscore');
 const GhReleases = require('electron-gh-releases');
+const {Menu} = require('electron');
 
 const app = electron.app;
 if (require('electron-squirrel-startup')) return; // eslint-disable-line curly
@@ -74,7 +75,17 @@ function sortaSorter() {
 	const unique = filterList.filter((elem, index, self) => {
 		return index === self.indexOf(elem);
 	});
-	console.log(unique);
+	for (let i = 0; i < unique.length; i++) {
+		console.log(unique[i]);
+	}
+	require('electron-context-menu')({
+		prepend: params => [{ // eslint-disable-line no-unused-vars
+			label: 'Filtering:'
+		}],
+		append: params => [{ // eslint-disable-line no-unused-vars
+			label: 'in development'
+		}]
+	});
 }
 function loadAlternate() {
 	let html;
@@ -180,8 +191,6 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL('data:text/html,' + css + '<br><h1>Please load a file using the "File" menu</h1>');
 });
-
-const {Menu} = require('electron');
 
 const template = [
 	{
