@@ -1,7 +1,7 @@
 {
   "name": "elite-journal",
   "productName": "Elite Journal",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Parsing the elite dangerous journal and putting it in a cool format!",
   "license": "MIT",
   "repository": "willyb321/elite-journal",
