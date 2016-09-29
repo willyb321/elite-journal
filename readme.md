@@ -5,14 +5,14 @@
 
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
 
+## WHats it actually do then?
+
+Basically it allows the average joe to have a look at the journal log in a nice easy to read format.
+
 ## How to get it?
 Download a [setup .exe](https://github.com/willyb321/elite-journal/releases/latest) from the releases page, and then run it. It will automagically update when you run the application from now on!
 
 ![Example](https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png)
-
-## WHats it actually do then?
-
-Basically it allows the average joe to have a look at the journal log in a nice easy to read format
 
 ## Dev
 
