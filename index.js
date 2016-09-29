@@ -11,6 +11,7 @@ const GhReleases = require('electron-gh-releases');
 const {Menu} = require('electron');
 const s = require('string');
 
+let JSONParsedEvent = [];
 // const filterForm = '<form name="filterForm" onsubmit="return othername()" method="post"><input type="text" name="filterPls" id="userInput"><input type="submit" onclick=""></form>';
 const app = electron.app;
 if (require('electron-squirrel-startup')) return; // eslint-disable-line curly
@@ -78,6 +79,8 @@ function getChecked() {
 	ipcMain.on('asynchronous-message', (event, arg) => {
 		console.log(arg);  // prints "ping"
 		process.filteredEvent = arg;
+		JSONParsedEvent = [];
+		process.filteredHTML = '';
 		loadFilter();
 	});
 }
@@ -101,14 +104,21 @@ function sortaSorter() {
 	filterWin.loadURL(`file:///${__dirname}/filter.html`);
 	getChecked();
 }
-function loadFilter() {
-	function findEvent(events) {
-		return events.event === process.filteredEvent;
+function findEvents() {
+	for (let i = 0; i < JSONParsed.length; i++) {
+		if (JSONParsed[i].event === process.filteredEvent) {
+			JSONParsedEvent.push(JSONParsed[i]);
+	// console.log(JSONParsedEvent)
+		}
 	}
-	let filteredJSON = JSONParsed.find(findEvent); // eslint-disable-line prefer-const
-	let filteredHTML = tableify(filteredJSON); // eslint-disable-line prefer-const
-		// console.log(filteredHTML)
-	win.loadURL('data:text/html,' + css + filteredHTML);
+}
+function loadFilter() {
+	findEvents();
+	for (let i = 0; i < JSONParsedEvent.length; i++) {
+		process.filteredHTML += tableify(JSONParsedEvent[i]) + '<hr>'; // eslint-disable-line prefer-const
+	}
+	process.filteredHTML = process.filteredHTML.replace('undefined', '');
+	win.loadURL('data:text/html,' + css + process.filteredHTML);
 }
 function loadAlternate() {
 	let html;
@@ -129,6 +139,7 @@ function loadAlternate() {
 		if (err) {
 			console.log(err.message);
 		}
+		console.log(JSONParsed);
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + css + process.htmlDone);
@@ -228,7 +239,7 @@ const template = [
 		label: 'Filtering',
 		submenu: [
 
-{label: 'Filter for: (in development)', click: sortaSorter}
+{label: 'Filter for:', click: sortaSorter}
 		]
 	},
 	{
