@@ -11,6 +11,7 @@ const GhReleases = require('electron-gh-releases');
 const {Menu} = require('electron');
 const s = require('string');
 
+const filterForm = '<form name="filterForm" onsubmit="return othername()" method="post"><input type="text" name="filterPls" id="userInput"><input type="submit" onclick=""></form>'
 const app = electron.app;
 if (require('electron-squirrel-startup')) return; // eslint-disable-line curly
 
@@ -73,6 +74,10 @@ function dialogLoad() {
 }
 function sortaSorter() {
 	// let contents = win.webContents;
+	const filterWin = new electron.BrowserWindow({
+		width: 600,
+		height: 400
+	});
 	const filterList = _.pluck(JSONParsed, 'event');
 	process.unique = filterList.filter((elem, index, self) => {
 		return index === self.indexOf(elem);
@@ -82,7 +87,9 @@ function sortaSorter() {
 	}
 	process.htmlFormStripped = s(process.htmlForm).strip('undefined');
 	global.sharedObj = {prop1: process.htmlFormStripped};
-	// win.loadURL(`file:///filter.html`)
+	global.test = {prop1: process.unique};
+	// win.loadURL('data:text/html,' + css + process.htmlDone)
+	filterWin.loadURL(`file:///filter.html`)
 	// console.log(contents.executeJavaScript("validateForm()"));
 }
 function loadAlternate() {
