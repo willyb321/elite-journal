@@ -6,7 +6,7 @@ const electron = require('electron');
 const tableify = require('tableify');
 const {dialog} = require('electron');
 const LineByLineReader = require('line-by-line');
-// const _ = require('underscore');
+const _ = require('underscore');
 const GhReleases = require('electron-gh-releases');
 
 const app = electron.app;
@@ -70,7 +70,11 @@ function dialogLoad() {
 	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}]}, {properties: ['openFile']});
 }
 function sortaSorter() {
-	// const filterList = _.pluck(JSONParsed, 'event');
+	const filterList = _.pluck(JSONParsed, 'event');
+	const unique = filterList.filter((elem, index, self) => {
+		return index === self.indexOf(elem);
+	});
+	console.log(unique);
 }
 function loadAlternate() {
 	let html;
