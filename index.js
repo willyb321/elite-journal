@@ -82,6 +82,7 @@ function getChecked() {
 		JSONParsedEvent = [];
 		process.filteredHTML = '';
 		loadFilter();
+		process.isFiltered = true;
 	});
 }
 function sortaSorter() {
@@ -139,7 +140,6 @@ function loadAlternate() {
 		if (err) {
 			console.log(err.message);
 		}
-		console.log(JSONParsed);
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + css + process.htmlDone);
@@ -183,12 +183,19 @@ function funcSave() {
 			return;
 		}
 // fileName is a string that contains the path and filename created in the save file dialog.
-		fs.writeFile(fileName, css + process.htmlDone, err => {
-			if (err) {
-				console.log(err.message);
-			}
-		});
-	}
+		if (process.isFiltered === true) {
+			fs.writeFile(fileName, css + process.filteredHTML, err => {
+				if (err) {
+					console.log(err.message);
+				}
+			});
+		} else {
+			fs.writeFile(fileName, css + process.htmlDone, err => {
+				if (err) {
+					console.log(err.message);
+				}
+			});
+		}}
 );
 }
 function funcSaveJSON() {
@@ -198,11 +205,20 @@ function funcSaveJSON() {
 			return;
 		}
 		const JSONParsedSave = JSON.stringify(JSONParsed);
-		fs.writeFile(fileName, JSONParsedSave, err => {
-			if (err) {
-				console.log(err.message);
-			}
-		});
+		if (process.isFiltered === true) {
+			const JSONParsedEventSave = JSON.stringify(JSONParsedEvent);
+			fs.writeFile(fileName, JSONParsedEventSave, err => {
+				if (err) {
+					console.log(err.message);
+				}
+			});
+		} else {
+			fs.writeFile(fileName, JSONParsedSave, err => {
+				if (err) {
+					console.log(err.message);
+				}
+			});
+		}
 	});
 }
 app.on('window-all-closed', () => {
