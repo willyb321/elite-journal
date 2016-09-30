@@ -1,0 +1,165 @@
+{ "timestamp":"2016-09-29T10:55:57Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 4)", "build":"r122528/r0 " }
+{ "timestamp":"2016-09-29T10:57:16Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"Asp", "ShipID":124, "GameMode":"Open", "Credits":432895809, "Loan":0 }
+{ "timestamp":"2016-09-29T10:57:16Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-29T10:57:16Z", "event":"Progress", "Combat":25, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Didi Vatermann", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Bill Turner", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Broo Tarquin", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"The Sarge", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Zacariah Nemo", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Liz Ryder", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Hera Tani", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Ram Tah", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Lei Cheung", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Colonel Bris Dekker", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Selene Jean", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Lori Jameson", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:19Z", "event":"EngineerProgress", "Engineer":"Tiana Fortune", "Progress":"Invited" }
+{ "timestamp":"2016-09-29T10:57:47Z", "event":"Location", "Docked":true, "StationName":"Rorschach Horizons", "StationType":"Coriolis", "StarSystem":"Na Chem", "StarPos":[3.344,64.031,76.219], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Body":"Rorschach Horizons", "Faction":"Radio Sidewinder Crew" }
+{ "timestamp":"2016-09-29T10:57:47Z", "event":"Docked", "StationName":"Rorschach Horizons", "StationType":"Coriolis", "StarSystem":"Na Chem", "Faction":"Radio Sidewinder Crew", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-29T10:58:46Z", "event":"RefuelAll", "Cost":95, "Amount":1.890488 }
+{ "timestamp":"2016-09-29T10:59:08Z", "event":"ShipyardSwap", "ShipType":"belugaliner", "ShipID":126, "StoreOldShip":"Asp", "StoreShipID":124 }
+{ "timestamp":"2016-09-29T10:59:27Z", "event":"Docked", "StationName":"Rorschach Horizons", "StationType":"Coriolis", "StarSystem":"Na Chem", "Faction":"Radio Sidewinder Crew", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-29T11:00:02Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:00:05Z", "event":"ModuleSell", "Slot":"Slot03_Size6", "SellItem":"$int_passengercabin_size6_class1_name;", "SellItem_Localised":"EC Passenger Cabin", "SellPrice":6141, "Ship":"belugaliner", "ShipID":126 }
+{ "timestamp":"2016-09-29T11:00:08Z", "event":"ModuleSell", "Slot":"Slot04_Size6", "SellItem":"$int_passengercabin_size6_class3_name;", "SellItem_Localised":"FC Passenger Cabin", "SellPrice":55270, "Ship":"belugaliner", "ShipID":126 }
+{ "timestamp":"2016-09-29T11:00:11Z", "event":"ModuleSell", "Slot":"Slot05_Size5", "SellItem":"$int_cargorack_size5_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":11157, "Ship":"belugaliner", "ShipID":126 }
+{ "timestamp":"2016-09-29T11:00:21Z", "event":"ModuleBuy", "Slot":"Slot01_Size6", "SellItem":"$int_shieldgenerator_size6_class5_name;", "SellItem_Localised":"Shield Generator", "SellPrice":1617953, "BuyItem":"$int_shieldgenerator_size6_class2_name;", "BuyItem_Localised":"Shield Generator", "BuyPrice":59925, "Ship":"belugaliner", "ShipID":126 }
+{ "timestamp":"2016-09-29T11:00:51Z", "event":"Undocked", "StationName":"Rorschach Horizons", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-29T11:02:36Z", "event":"FSDJump", "StarSystem":"GD 175", "StarPos":[9.313,56.531,60.594], "Allegiance":"Federation", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":18.331, "FuelUsed":2.309775, "FuelLevel":29.690224, "Faction":"GD 175 Company", "FactionState":"Boom" }
+{ "timestamp":"2016-09-29T11:05:58Z", "event":"FSDJump", "StarSystem":"LP 798-44", "StarPos":[33.313,42.875,40.813], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":33.967, "FuelUsed":12.539303, "FuelLevel":17.150921, "Faction":"Independents of LP 798-44" }
+{ "timestamp":"2016-09-29T11:06:26Z", "event":"FuelScoop", "Scooped":6.541145, "Total":23.692066 }
+{ "timestamp":"2016-09-29T11:07:01Z", "event":"FSDJump", "StarSystem":"Sak Chelmir", "StarPos":[55.781,40.813,19.781], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Confederacy;", "Government_Localised":"Confederacy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":30.845, "FuelUsed":9.504968, "FuelLevel":14.187099, "Faction":"Workers of Sak Chelmir Partnership" }
+{ "timestamp":"2016-09-29T11:07:21Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:07:29Z", "event":"FuelScoop", "Scooped":7.640401, "Total":21.827499 }
+{ "timestamp":"2016-09-29T11:07:51Z", "event":"FSDJump", "StarSystem":"Puppis Sector ON-T b3-1", "StarPos":[75.281,27.125,3.781], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":28.698, "FuelUsed":7.760196, "FuelLevel":14.067304 }
+{ "timestamp":"2016-09-29T11:07:51Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:08:24Z", "event":"FuelScoop", "Scooped":9.513314, "Total":23.580618 }
+{ "timestamp":"2016-09-29T11:09:03Z", "event":"FSDJump", "StarSystem":"Puppis Sector KH-V b2-3", "StarPos":[91.344,21.625,-20.375], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":29.526, "FuelUsed":8.426591, "FuelLevel":15.154027 }
+{ "timestamp":"2016-09-29T11:09:24Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:09:36Z", "event":"FuelScoop", "Scooped":9.512584, "Total":24.666611 }
+{ "timestamp":"2016-09-29T11:10:04Z", "event":"FSDJump", "StarSystem":"HIP 42214", "StarPos":[116.281,14.375,-37.938], "Allegiance":"Federation", "Economy":"$economy_Extraction;", "Economy_Localised":"Extraction", "Government":"$government_Confederacy;", "Government_Localised":"Confederacy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":31.351, "FuelUsed":9.921524, "FuelLevel":14.745087, "Faction":"HIP 42214 Partnership" }
+{ "timestamp":"2016-09-29T11:10:05Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:10:21Z", "event":"HeatDamage" }
+{ "timestamp":"2016-09-29T11:11:02Z", "event":"FSDJump", "StarSystem":"Deciat", "StarPos":[122.625,-0.813,-47.281], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":18.926, "FuelUsed":2.451705, "FuelLevel":21.497499, "Faction":"Independent Deciat Green Party" }
+{ "timestamp":"2016-09-29T11:11:02Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:11:02Z", "event":"HeatDamage" }
+{ "timestamp":"2016-09-29T11:11:24Z", "event":"FuelScoop", "Scooped":1.131598, "Total":22.629097 }
+{ "timestamp":"2016-09-29T11:14:21Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a" }
+{ "timestamp":"2016-09-29T11:15:21Z", "event":"SupercruiseEntry", "StarSystem":"Deciat" }
+{ "timestamp":"2016-09-29T11:16:25Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a" }
+{ "timestamp":"2016-09-29T11:17:10Z", "event":"DockingRequested", "StationName":"Farseer Inc" }
+{ "timestamp":"2016-09-29T11:17:11Z", "event":"DockingGranted", "LandingPad":3, "StationName":"Farseer Inc" }
+{ "timestamp":"2016-09-29T11:18:04Z", "event":"Docked", "StationName":"Farseer Inc", "StarSystem":"Deciat", "Faction":"Independent Deciat Green Party", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-29T11:18:59Z", "event":"RepairAll", "Cost":8964 }
+{ "timestamp":"2016-09-29T11:18:59Z", "event":"RefuelAll", "Cost":488, "Amount":9.747004 }
+{ "timestamp":"2016-09-29T11:19:23Z", "event":"Undocked", "StationName":"Farseer Inc" }
+{ "timestamp":"2016-09-29T11:19:52Z", "event":"SupercruiseEntry", "StarSystem":"Deciat" }
+{ "timestamp":"2016-09-29T11:24:33Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Garay Terminal" }
+{ "timestamp":"2016-09-29T11:24:47Z", "event":"DockingRequested", "StationName":"Garay Terminal" }
+{ "timestamp":"2016-09-29T11:24:49Z", "event":"DockingGranted", "LandingPad":24, "StationName":"Garay Terminal" }
+{ "timestamp":"2016-09-29T11:25:45Z", "event":"CommitCrime", "CrimeType":"dockingMinorBlockingAirlock", "Faction":"Independent Deciat Green Party", "Fine":400 }
+{ "timestamp":"2016-09-29T11:25:45Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-29T11:26:14Z", "event":"HullDamage", "Health":0.410184 }
+{ "timestamp":"2016-09-29T11:26:14Z", "event":"HullDamage", "Health":0.410184 }
+{ "timestamp":"2016-09-29T11:26:20Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-29T11:26:41Z", "event":"Docked", "StationName":"Garay Terminal", "StationType":"Coriolis", "StarSystem":"Deciat", "Faction":"Independent Deciat Green Party", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-29T11:27:40Z", "event":"ModuleBuy", "Slot":"Slot10_Size3", "SellItem":"$int_stellarbodydiscoveryscanner_advanced_name;", "SellItem_Localised":"D - Scanner", "SellPrice":154500, "BuyItem":"$int_dockingcomputer_standard_name;", "BuyItem_Localised":"Docking Computer", "BuyPrice":450, "Ship":"belugaliner", "ShipID":126 }
+{ "timestamp":"2016-09-29T11:27:46Z", "event":"ModuleBuy", "Slot":"Slot10_Size3", "SellItem":"$int_dockingcomputer_standard_name;", "SellItem_Localised":"Docking Computer", "SellPrice":450, "BuyItem":"$int_stellarbodydiscoveryscanner_advanced_name;", "BuyItem_Localised":"D - Scanner", "BuyPrice":154500, "Ship":"belugaliner", "ShipID":126 }
+{ "timestamp":"2016-09-29T11:27:51Z", "event":"ModuleBuy", "Slot":"Slot08_Size3", "BuyItem":"$int_dockingcomputer_standard_name;", "BuyItem_Localised":"Docking Computer", "BuyPrice":450, "Ship":"belugaliner", "ShipID":126 }
+{ "timestamp":"2016-09-29T11:27:58Z", "event":"ModuleBuy", "Slot":"Slot03_Size6", "BuyItem":"$int_cargorack_size6_class1_name;", "BuyItem_Localised":"Cargo Rack", "BuyPrice":36260, "Ship":"belugaliner", "ShipID":126 }
+{ "timestamp":"2016-09-29T11:28:43Z", "event":"Undocked", "StationName":"Garay Terminal", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-29T11:29:38Z", "event":"SupercruiseEntry", "StarSystem":"Deciat" }
+{ "timestamp":"2016-09-29T11:33:48Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a" }
+{ "timestamp":"2016-09-29T11:34:47Z", "event":"SupercruiseEntry", "StarSystem":"Deciat" }
+{ "timestamp":"2016-09-29T11:35:43Z", "event":"SupercruiseExit", "StarSystem":"Deciat", "Body":"Deciat 6 a" }
+{ "timestamp":"2016-09-29T11:36:11Z", "event":"DockingRequested", "StationName":"Farseer Inc" }
+{ "timestamp":"2016-09-29T11:36:12Z", "event":"DockingGranted", "LandingPad":8, "StationName":"Farseer Inc" }
+{ "timestamp":"2016-09-29T11:36:54Z", "event":"Touchdown", "Latitude":23.780743, "Longitude":153.080902 }
+{ "timestamp":"2016-09-29T11:36:54Z", "event":"Docked", "StationName":"Farseer Inc", "StarSystem":"Deciat", "Faction":"Independent Deciat Green Party", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-29T11:37:06Z", "event":"RepairAll", "Cost":6250 }
+{ "timestamp":"2016-09-29T11:37:07Z", "event":"RefuelAll", "Cost":19, "Amount":0.364810 }
+{ "timestamp":"2016-09-29T11:37:14Z", "event":"MarketBuy", "Type":"fish", "Count":64, "BuyPrice":213, "TotalCost":13632 }
+{ "timestamp":"2016-09-29T11:37:43Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:37:49Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5 }
+{ "timestamp":"2016-09-29T11:37:57Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:01Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:05Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:08Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:11Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:14Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:17Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:20Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:23Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:26Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:30Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5 }
+{ "timestamp":"2016-09-29T11:38:49Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":3, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:56Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":3, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:38:58Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"Engine_Tuned", "Level":3 }
+{ "timestamp":"2016-09-29T11:40:39Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"BelugaLiner", "ShipID":126, "GameMode":"Open", "Credits":434460175, "Loan":0 }
+{ "timestamp":"2016-09-29T11:40:39Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-29T11:40:39Z", "event":"Progress", "Combat":25, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-29T11:41:00Z", "event":"Location", "Docked":true, "StationName":"Farseer Inc", "StationType":"", "StarSystem":"Deciat", "StarPos":[122.625,-0.813,-47.281], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Body":"Deciat 6 a", "Faction":"Independent Deciat Green Party" }
+{ "timestamp":"2016-09-29T11:41:00Z", "event":"Docked", "StationName":"Farseer Inc", "StarSystem":"Deciat", "Faction":"Independent Deciat Green Party", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-29T11:41:23Z", "event":"EngineerCraft", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5, "Ingredients":{"fish":1 } }
+{ "timestamp":"2016-09-29T11:41:28Z", "event":"EngineerApply", "Engineer":"Felicity Farseer", "Blueprint":"FSD_LongRange", "Level":5 }
+{ "timestamp":"2016-09-29T11:41:59Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0113.bmp", "Width":1366, "Height":768, "System":"Deciat", "Body":"Deciat 6 a" }
+{ "timestamp":"2016-09-29T11:43:28Z", "event":"EjectCargo", "Type":"fish", "Count":50, "Abandoned":false }
+{ "timestamp":"2016-09-29T11:44:03Z", "event":"Undocked", "StationName":"Farseer Inc" }
+{ "timestamp":"2016-09-29T11:44:03Z", "event":"Touchdown", "Latitude":23.829935, "Longitude":152.831787 }
+{ "timestamp":"2016-09-29T11:44:05Z", "event":"Liftoff", "Latitude":23.829935, "Longitude":152.831787 }
+{ "timestamp":"2016-09-29T11:44:46Z", "event":"SupercruiseEntry", "StarSystem":"Deciat" }
+{ "timestamp":"2016-09-29T11:44:46Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:44:46Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:46:19Z", "event":"FSDJump", "StarSystem":"Cromovii", "StarPos":[95.969,1.906,-21.719], "Allegiance":"Independent", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Confederacy;", "Government_Localised":"Confederacy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":37.032, "FuelUsed":12.118768, "FuelLevel":19.881233, "Faction":"People's Cromovii Alliance" }
+{ "timestamp":"2016-09-29T11:46:45Z", "event":"FuelScoop", "Scooped":5.834450, "Total":25.715683 }
+{ "timestamp":"2016-09-29T11:47:22Z", "event":"FSDJump", "StarSystem":"Puppis Sector ON-T b3-5", "StarPos":[77.031,20.406,-0.688], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":33.811, "FuelUsed":9.319805, "FuelLevel":16.395878 }
+{ "timestamp":"2016-09-29T11:47:36Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:47:37Z", "event":"FuelScoop", "Scooped":0.003801, "Total":16.399679 }
+{ "timestamp":"2016-09-29T11:48:16Z", "event":"FSDJump", "StarSystem":"Shinrarta Dezhra", "StarPos":[55.719,17.594,27.156], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":35.177, "FuelUsed":10.202386, "FuelLevel":6.197293, "Faction":"The Pilots Federation" }
+{ "timestamp":"2016-09-29T11:48:17Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:50:16Z", "event":"SupercruiseExit", "StarSystem":"Shinrarta Dezhra", "Body":"Jameson Memorial" }
+{ "timestamp":"2016-09-29T11:50:26Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-29T11:50:27Z", "event":"DockingGranted", "LandingPad":24, "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-29T11:51:31Z", "event":"Docked", "StationName":"Jameson Memorial", "StationType":"Orbis", "StarSystem":"Shinrarta Dezhra", "Faction":"The Pilots Federation", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-29T11:51:57Z", "event":"RepairAll", "Cost":2461 }
+{ "timestamp":"2016-09-29T11:51:58Z", "event":"RefuelAll", "Cost":1300, "Amount":25.966539 }
+{ "timestamp":"2016-09-29T11:52:06Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:52:14Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:52:22Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:52:31Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:52:37Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:52:57Z", "event":"ShipyardBuy", "ShipType":"empire_trader", "ShipPrice":2006628, "StoreOldShip":"BelugaLiner", "StoreShipID":126 }
+{ "timestamp":"2016-09-29T11:52:58Z", "event":"ShipyardNew", "ShipType":"empire_trader", "NewShipID":137 }
+{ "timestamp":"2016-09-29T11:53:18Z", "event":"Docked", "StationName":"Jameson Memorial", "StationType":"Orbis", "StarSystem":"Shinrarta Dezhra", "Faction":"The Pilots Federation", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-29T11:54:18Z", "event":"ModuleBuy", "Slot":"MainEngines", "SellItem":"$int_engine_size6_class1_name;", "SellItem_Localised":"Thrusters", "SellPrice":17977, "BuyItem":"$int_engine_size6_class5_name;", "BuyItem_Localised":"Thrusters", "BuyPrice":1456159, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:54:25Z", "event":"ModuleBuy", "Slot":"LifeSupport", "SellItem":"$int_lifesupport_size5_class1_name;", "SellItem_Localised":"Life Support", "SellPrice":2860, "BuyItem":"$int_lifesupport_size5_class2_name;", "BuyItem_Localised":"Life Support", "BuyPrice":7151, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:54:31Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size6_class1_name;", "SellItem_Localised":"Power Distributor", "SellPrice":8008, "BuyItem":"$int_powerdistributor_size6_class5_name;", "BuyItem_Localised":"Power Distributor", "BuyPrice":312813, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:54:36Z", "event":"ModuleBuy", "Slot":"FrameShiftDrive", "SellItem":"$int_hyperdrive_size5_class1_name;", "SellItem_Localised":"FSD", "SellPrice":5671, "BuyItem":"$int_hyperdrive_size5_class5_name;", "BuyItem_Localised":"FSD", "BuyPrice":459357, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:54:40Z", "event":"ModuleBuy", "Slot":"Radar", "SellItem":"$int_sensors_size5_class1_name;", "SellItem_Localised":"Sensors", "SellPrice":2860, "BuyItem":"$int_sensors_size5_class2_name;", "BuyItem_Localised":"Sensors", "BuyPrice":7151, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:54:56Z", "event":"ModuleBuy", "Slot":"LargeHardpoint1", "BuyItem":"$hpt_multicannon_gimbal_large_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":52060, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:55:03Z", "event":"ModuleBuy", "Slot":"LargeHardpoint2", "BuyItem":"$hpt_multicannon_gimbal_large_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":52060, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:55:11Z", "event":"ModuleBuy", "Slot":"MediumHardpoint1", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":198, "BuyItem":"$hpt_pulselaserburst_gimbal_medium_name;", "BuyItem_Localised":"Burst Laser", "BuyPrice":4365, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:55:22Z", "event":"ModuleBuy", "Slot":"MediumHardpoint2", "SellItem":"$hpt_pulselaser_fixed_small_name;", "SellItem_Localised":"Pulse Laser", "SellPrice":198, "BuyItem":"$hpt_pulselaserburst_gimbal_medium_name;", "BuyItem_Localised":"Burst Laser", "BuyPrice":4365, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:55:42Z", "event":"ModuleSell", "Slot":"Slot02_Size6", "SellItem":"$int_shieldgenerator_size6_class1_name;", "SellItem_Localised":"Shield Generator", "SellPrice":17977, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:55:51Z", "event":"ModuleBuy", "Slot":"Slot01_Size7", "SellItem":"$int_cargorack_size6_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":32634, "BuyItem":"$int_shieldgenerator_size7_class5_name;", "BuyItem_Localised":"Shield Generator", "BuyPrice":4616021, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:55:51Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-29T11:55:58Z", "event":"ModuleBuy", "Slot":"Slot02_Size6", "BuyItem":"$int_fuelscoop_size6_class5_name;", "BuyItem_Localised":"Fuel Scoop", "BuyPrice":2588725, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:56:03Z", "event":"ModuleBuy", "Slot":"Slot03_Size4", "SellItem":"$int_cargorack_size3_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":951, "BuyItem":"$int_cargorack_size4_class1_name;", "BuyItem_Localised":"Cargo Rack", "BuyPrice":3090, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:56:08Z", "event":"ModuleBuy", "Slot":"Slot04_Size4", "BuyItem":"$int_cargorack_size4_class1_name;", "BuyItem_Localised":"Cargo Rack", "BuyPrice":3090, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:56:16Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size6_class1_name;", "SellItem_Localised":"Power Plant", "SellPrice":17977, "BuyItem":"$int_powerplant_size6_class5_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":1456159, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:56:17Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-29T11:56:21Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-29T11:56:23Z", "event":"ModuleBuy", "Slot":"Armour", "SellItem":"$empire_trader_armour_grade1_name;", "SellItem_Localised":"Lightweight Alloy", "SellPrice":0, "BuyItem":"$empire_trader_armour_grade3_name;", "BuyItem_Localised":"Military Grade Composite", "BuyPrice":1805966, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:56:35Z", "event":"ModuleBuy", "Slot":"Slot05_Size3", "BuyItem":"$int_shieldcellbank_size3_class5_name;", "BuyItem_Localised":"Shield Cell Bank", "BuyPrice":14251, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:56:41Z", "event":"ModuleBuy", "Slot":"Slot06_Size3", "BuyItem":"$int_shieldcellbank_size3_class5_name;", "BuyItem_Localised":"Shield Cell Bank", "BuyPrice":14251, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:56:47Z", "event":"ModuleBuy", "Slot":"Slot08_Size2", "BuyItem":"$int_dockingcomputer_standard_name;", "BuyItem_Localised":"Docking Computer", "BuyPrice":405, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:56:54Z", "event":"ModuleBuy", "Slot":"TinyHardpoint1", "BuyItem":"$hpt_heatsinklauncher_turret_tiny_name;", "BuyItem_Localised":"Heat Sink", "BuyPrice":315, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:56:59Z", "event":"ModuleBuy", "Slot":"TinyHardpoint3", "BuyItem":"$hpt_chafflauncher_tiny_name;", "BuyItem_Localised":"Chaff", "BuyPrice":765, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:57:08Z", "event":"ModuleBuy", "Slot":"TinyHardpoint2", "BuyItem":"$hpt_plasmapointdefence_turret_tiny_name;", "BuyItem_Localised":"Point Defence", "BuyPrice":1670, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:57:15Z", "event":"ModuleBuy", "Slot":"TinyHardpoint4", "BuyItem":"$hpt_chafflauncher_tiny_name;", "BuyItem_Localised":"Chaff", "BuyPrice":765, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T11:57:24Z", "event":"ModuleBuy", "Slot":"Decal1", "BuyItem":"$decal_onionhead2_name;", "BuyItem_Localised":"Onion Head 2", "BuyPrice":0, "Ship":"empire_trader", "ShipID":137 }
+{ "timestamp":"2016-09-29T12:00:07Z", "event":"Undocked", "StationName":"Jameson Memorial", "StationType":"Orbis" }
+{ "timestamp":"2016-09-29T12:00:32Z", "event":"DockingRequested", "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-29T12:00:32Z", "event":"DockingGranted", "LandingPad":2, "StationName":"Jameson Memorial" }
+{ "timestamp":"2016-09-29T12:01:35Z", "event":"Docked", "StationName":"Jameson Memorial", "StationType":"Orbis", "StarSystem":"Shinrarta Dezhra", "Faction":"The Pilots Federation", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }

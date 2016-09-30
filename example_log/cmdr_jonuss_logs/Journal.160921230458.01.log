@@ -1,0 +1,34 @@
+{ "timestamp":"2016-09-21T22:04:58Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 3)", "build":"r121970/r0 " }
+{ "timestamp":"2016-09-21T22:06:16Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"BelugaLiner", "ShipID":126, "GameMode":"Open", "Credits":375400998, "Loan":0 }
+{ "timestamp":"2016-09-21T22:06:16Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-21T22:06:16Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-21T22:06:47Z", "event":"Location", "Docked":1, "StationName":"Vinci Station", "StationType":"Coriolis", "StarSystem":"Kaukamine", "StarPos":[95.094,4.250,-33.719], "Allegiance":"Federation", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"Kaukamine Vision Industry" }
+{ "timestamp":"2016-09-21T22:06:47Z", "event":"Docked", "StationName":"Vinci Station", "StationType":"Coriolis", "StarSystem":"Kaukamine", "Faction":"Kaukamine Vision Industry", "Allegiance":"Federation", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T22:08:45Z", "event":"MissionAccepted", "Faction":"Nationals of Kaukamine", "Name":"Mission_Sightseeing", "Commodity":"$DomesticAppliances_Name;", "Commodity_Localised":"Domestic Appliances", "Count":2, "Expiry":"2016-09-22T15:46:36Z", "PassengerCount":4, "PassengerVIPs":true, "PassengerWanted":false, "PassengerType":"Tourist", "MissionID":26479127 }
+{ "timestamp":"2016-09-21T22:09:44Z", "event":"Undocked", "StationName":"Vinci Station", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-21T22:10:46Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:11:13Z", "event":"FSDJump", "StarSystem":"He Qiong", "StarPos":[112.469,-16.344,-40.969], "Allegiance":"Federation", "Economy":"$economy_Tourism;", "Economy_Localised":"Tourism", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":27.903, "FuelUsed":8.934260, "FuelLevel":23.065739, "Faction":"He Qiong Republic Party" }
+{ "timestamp":"2016-09-21T22:11:13Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:11:27Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:11:42Z", "event":"FuelScoop", "Scooped":7.342113, "Total":30.407852 }
+{ "timestamp":"2016-09-21T22:14:50Z", "event":"ApproachSettlement", "Name":"He Qiong Visitor Beacon" }
+{ "timestamp":"2016-09-21T22:14:53Z", "event":"SupercruiseExit", "StarSystem":"He Qiong", "Body":"He Qiong 6 a" }
+{ "timestamp":"2016-09-21T22:16:11Z", "event":"DataScanned", "Type":"TouristBeacon" }
+{ "timestamp":"2016-09-21T22:16:23Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0264.bmp", "Width":1366, "Height":768, "System":"He Qiong", "Body":"He Qiong 6 a" }
+{ "timestamp":"2016-09-21T22:16:49Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"BelugaLiner", "ShipID":126, "GameMode":"Open", "Credits":375400998, "Loan":0 }
+{ "timestamp":"2016-09-21T22:16:49Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-21T22:16:49Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-21T22:16:49Z", "event":"ApproachSettlement", "Name":"He Qiong Visitor Beacon" }
+{ "timestamp":"2016-09-21T22:16:53Z", "event":"Location", "StarSystem":"He Qiong", "StarPos":[112.469,-16.344,-40.969], "Allegiance":"Federation", "Economy":"$economy_Tourism;", "Economy_Localised":"Tourism", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "Faction":"He Qiong Republic Party" }
+{ "timestamp":"2016-09-21T22:17:15Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:17:37Z", "event":"HeatDamage" }
+{ "timestamp":"2016-09-21T22:17:58Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"BelugaLiner", "ShipID":126, "GameMode":"Open", "Credits":375400998, "Loan":0 }
+{ "timestamp":"2016-09-21T22:17:58Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-21T22:17:58Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-21T22:17:58Z", "event":"ApproachSettlement", "Name":"He Qiong Visitor Beacon" }
+{ "timestamp":"2016-09-21T22:18:02Z", "event":"Location", "StarSystem":"He Qiong", "StarPos":[112.469,-16.344,-40.969], "Allegiance":"Federation", "Economy":"$economy_Tourism;", "Economy_Localised":"Tourism", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "Faction":"He Qiong Republic Party" }
+{ "timestamp":"2016-09-21T22:18:19Z", "event":"SupercruiseEntry", "StarSystem":"He Qiong" }
+{ "timestamp":"2016-09-21T22:18:19Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:18:19Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:18:28Z", "event":"MissionAbandoned", "Name":"Mission_Sightseeing_name", "MissionID":26479127 }
+{ "timestamp":"2016-09-21T22:19:56Z", "event":"FSDJump", "StarSystem":"Putama", "StarPos":[80.844,-17.000,-45.969], "Allegiance":"Independent", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":32.025, "FuelUsed":13.012073, "FuelLevel":17.395779, "Faction":"Independents of Putama" }

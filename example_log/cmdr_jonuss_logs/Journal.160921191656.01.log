@@ -1,0 +1,4 @@
+{ "timestamp":"2016-09-21T18:16:56Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 3)", "build":"r121970/r0 " }
+{ "timestamp":"2016-09-21T18:20:54Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"BelugaLiner", "ShipID":126, "GameMode":"Open", "Credits":369940166, "Loan":0 }
+{ "timestamp":"2016-09-21T18:20:54Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-21T18:20:54Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }

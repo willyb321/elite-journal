@@ -1,0 +1,7 @@
+{ "timestamp":"2016-09-20T19:15:33Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 2)", "build":"r121783/r0 " }
+{ "timestamp":"2016-09-20T19:17:30Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"Anaconda", "ShipID":61, "GameMode":"Open", "Credits":379323819, "Loan":0 }
+{ "timestamp":"2016-09-20T19:17:30Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-20T19:17:30Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-20T19:20:16Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"Anaconda", "ShipID":61, "GameMode":"Open", "Credits":379323819, "Loan":0 }
+{ "timestamp":"2016-09-20T19:20:16Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-20T19:20:16Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }

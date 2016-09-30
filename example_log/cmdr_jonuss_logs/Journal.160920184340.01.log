@@ -1,0 +1,45 @@
+{ "timestamp":"2016-09-20T17:43:40Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2", "build":"r121645/r0 " }
+{ "timestamp":"2016-09-20T17:45:20Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"TestBuggy", "ShipID":119, "StartLanded":true, "GameMode":"Open", "Credits":349576186, "Loan":0 }
+{ "timestamp":"2016-09-20T17:45:20Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-20T17:45:20Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-20T17:45:20Z", "event":"EngineerProgress", "Progress":"Known" }
+{ "timestamp":"2016-09-20T17:45:47Z", "event":"Location", "StarSystem":"Aedgorn RA-U c17-0", "StarPos":[-983.969,1580.344,4816.281], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security" }
+{ "timestamp":"2016-09-20T17:46:53Z", "event":"SelfDestruct" }
+{ "timestamp":"2016-09-20T17:47:24Z", "event":"Died" }
+{ "timestamp":"2016-09-20T17:47:25Z", "event":"DockSRV" }
+{ "timestamp":"2016-09-20T18:06:18Z", "event":"SelfDestruct" }
+{ "timestamp":"2016-09-20T18:06:18Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-20T18:06:22Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T18:06:27Z", "event":"HeatDamage" }
+{ "timestamp":"2016-09-20T18:06:49Z", "event":"Died" }
+{ "timestamp":"2016-09-20T18:07:02Z", "event":"Resurrect", "Option":"rebuy", "Cost":11928229, "Bankrupt":false }
+{ "timestamp":"2016-09-20T18:07:27Z", "event":"Location", "Docked":1, "StationName":"Ray Gateway", "StationType":"Coriolis", "StarSystem":"Diaguandri", "StarPos":[-41.063,-62.156,-103.250], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"The Brotherhood of the Dark Circle", "FactionState":"Boom" }
+{ "timestamp":"2016-09-20T18:07:27Z", "event":"Docked", "StationName":"Ray Gateway", "StationType":"Coriolis", "StarSystem":"Diaguandri", "Faction":"The Brotherhood of the Dark Circle", "FactionState":"Boom", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-20T18:08:09Z", "event":"RefuelAll", "Cost":1600, "Amount":32.000000 }
+{ "timestamp":"2016-09-20T18:08:57Z", "event":"ShipyardSell", "ShipType":"asp", "SellShipID":111, "ShipPrice":25520857 }
+{ "timestamp":"2016-09-20T18:10:54Z", "event":"ModuleBuy", "Slot":"Slot02_Size6", "SellItem":"$int_repairer_size6_class5_name;", "SellItem_Localised":"AFM Unit", "SellPrice":13009676, "BuyItem":"$int_passengercabin_size6_class2_name;", "BuyItem_Localised":"BC Passenger Cabin", "BuyPrice":15660, "Ship":"anaconda", "ShipID":61 }
+{ "timestamp":"2016-09-20T18:10:58Z", "event":"ModuleSell", "Slot":"Slot03_Size6", "SellItem":"$int_repairer_size5_class5_name;", "SellItem_Localised":"AFM Unit", "SellPrice":7227598, "Ship":"anaconda", "ShipID":61 }
+{ "timestamp":"2016-09-20T18:11:15Z", "event":"ModuleSell", "Slot":"Slot09_Size4", "SellItem":"$int_buggybay_size4_class2_name;", "SellItem_Localised":"Planetary Vehicle Hangar", "SellPrice":74336, "Ship":"anaconda", "ShipID":61 }
+{ "timestamp":"2016-09-20T18:11:31Z", "event":"ModuleBuy", "Slot":"Slot09_Size4", "BuyItem":"$int_buggybay_size2_class2_name;", "BuyItem_Localised":"Planetary Vehicle Hangar", "BuyPrice":1836, "Ship":"anaconda", "ShipID":61 }
+{ "timestamp":"2016-09-20T18:12:03Z", "event":"ModuleBuy", "Slot":"Slot08_Size4", "BuyItem":"$int_passengercabin_size4_class3_name;", "BuyItem_Localised":"FC Passenger Cabin", "BuyPrice":14501, "Ship":"anaconda", "ShipID":61 }
+{ "timestamp":"2016-09-20T18:12:15Z", "event":"ModuleBuy", "Slot":"Slot06_Size5", "BuyItem":"$int_passengercabin_size4_class1_name;", "BuyItem_Localised":"EC Passenger Cabin", "BuyPrice":1611, "Ship":"anaconda", "ShipID":61 }
+{ "timestamp":"2016-09-20T18:12:24Z", "event":"ModuleBuy", "Slot":"Slot03_Size6", "BuyItem":"$int_passengercabin_size6_class2_name;", "BuyItem_Localised":"BC Passenger Cabin", "BuyPrice":15660, "Ship":"anaconda", "ShipID":61 }
+{ "timestamp":"2016-09-20T18:12:39Z", "event":"ModuleBuy", "Slot":"MainEngines", "SellItem":"$int_engine_size5_class2_name;", "SellItem_Localised":"Thrusters", "SellPrice":160680, "BuyItem":"$int_engine_size7_class5_name;", "BuyItem_Localised":"Thrusters", "BuyPrice":4359575, "Ship":"anaconda", "ShipID":61 }
+{ "timestamp":"2016-09-20T18:14:15Z", "event":"MissionAccepted", "Faction":"The Brotherhood of the Dark Circle", "Name":"Mission_PassengerBulk", "DestinationSystem":"HIP 15062", "DestinationStation":"Deb Vision", "Expiry":"2016-09-20T20:20:37Z", "PassengerCount":16, "PassengerVIPs":false, "PassengerWanted":false, "PassengerType":"Tourist", "MissionID":26474728 }
+{ "timestamp":"2016-09-20T18:14:46Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-20T18:15:03Z", "event":"BuyExplorationData", "System":"HIP 15062", "Cost":416 }
+{ "timestamp":"2016-09-20T18:15:51Z", "event":"Undocked", "StationName":"Ray Gateway", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-20T18:17:30Z", "event":"FSDJump", "StarSystem":"HIP 15062", "StarPos":[-28.531,-68.344,-104.063], "Allegiance":"Federation", "Economy":"$economy_Colony;", "Economy_Localised":"Colony", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":13.999, "FuelUsed":0.496669, "FuelLevel":63.503330, "Faction":"Alanaribri Transport Holdings" }
+{ "timestamp":"2016-09-20T18:17:58Z", "event":"FuelScoop", "Scooped":0.496670, "Total":64.000000 }
+{ "timestamp":"2016-09-20T18:22:47Z", "event":"FSDJump", "StarSystem":"Mitnahas", "StarPos":[-46.656,-72.750,-98.438], "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":19.483, "FuelUsed":1.172951, "FuelLevel":62.827049, "Faction":"Mitnahas Company" }
+{ "timestamp":"2016-09-20T18:24:48Z", "event":"SupercruiseExit", "StarSystem":"Mitnahas", "Body":"Burgess Hub" }
+{ "timestamp":"2016-09-20T18:25:07Z", "event":"DockingRequested", "StationName":"Burgess Hub" }
+{ "timestamp":"2016-09-20T18:25:08Z", "event":"DockingGranted", "LandingPad":10, "StationName":"Burgess Hub" }
+{ "timestamp":"2016-09-20T18:25:48Z", "event":"Docked", "StationName":"Burgess Hub", "StationType":"Coriolis", "StarSystem":"Mitnahas", "Faction":"Mitnahas Company", "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security" }
+{ "timestamp":"2016-09-20T18:26:16Z", "event":"RefuelAll", "Cost":72, "Amount":1.430593 }
+{ "timestamp":"2016-09-20T18:26:40Z", "event":"MissionCompleted", "Faction":"Liberals of Mitnahas", "Name":"Mission_PassengerBulk_name", "MissionID":26474728, "DestinationSystem":"HIP 15062", "DestinationStation":"Deb Vision", "Reward":204800 }
+{ "timestamp":"2016-09-20T18:26:40Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"scandatabanks" }
+{ "timestamp":"2016-09-20T18:27:31Z", "event":"SellExplorationData", "Systems":[ "Aedgorn RA-U c17-0" ], "Discovered":[  ], "BaseValue":4218, "Bonus":0 }
+{ "timestamp":"2016-09-20T18:28:49Z", "event":"ModuleBuy", "Slot":"Slot02_Size6", "SellItem":"$int_passengercabin_size6_class2_name;", "SellItem_Localised":"BC Passenger Cabin", "SellPrice":15660, "BuyItem":"$int_fighterbay_size5_class1_name;", "BuyItem_Localised":"Fighter Hangar", "BuyPrice":48930, "Ship":"anaconda", "ShipID":61 }
+{ "timestamp":"2016-09-20T18:31:48Z", "event":"CrewHire", "Name":"Yong Casey", "Faction":"Mitnahas Company", "Cost":90000, "CombatRank":3 }
+{ "timestamp":"2016-09-20T18:32:14Z", "event":"CrewAssign", "Name":"Yong Casey", "Role":"Active" }

@@ -1,0 +1,235 @@
+{ "timestamp":"2016-09-21T22:36:09Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 3)", "build":"r121970/r0 " }
+{ "timestamp":"2016-09-21T22:36:37Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"BelugaLiner", "ShipID":126, "GameMode":"Open", "Credits":375400998, "Loan":0 }
+{ "timestamp":"2016-09-21T22:36:37Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-21T22:36:37Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-21T22:37:02Z", "event":"Location", "StarSystem":"Putama", "StarPos":[80.844,-17.000,-45.969], "Allegiance":"Independent", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "Faction":"Independents of Putama" }
+{ "timestamp":"2016-09-21T22:37:48Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:38:16Z", "event":"FSDJump", "StarSystem":"Trianguli Sector WF-N a7-2", "StarPos":[53.438,-25.719,-46.813], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":28.772, "FuelUsed":9.463109, "FuelLevel":7.932670 }
+{ "timestamp":"2016-09-21T22:38:16Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:39:26Z", "event":"FSDJump", "StarSystem":"Hakili", "StarPos":[39.031,-31.469,-41.156], "Allegiance":"Federation", "Economy":"$economy_Agri;", "Economy_Localised":"Agriculture", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_high;", "Security_Localised":"High Security", "JumpDist":16.510, "FuelUsed":2.018733, "FuelLevel":5.913937, "Faction":"Hakili Federal Group" }
+{ "timestamp":"2016-09-21T22:39:49Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:40:14Z", "event":"FuelScoop", "Scooped":21.763807, "Total":27.677744 }
+{ "timestamp":"2016-09-21T22:40:51Z", "event":"FSDJump", "StarSystem":"LHS 1734", "StarPos":[37.094,-36.281,-47.875], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":8.489, "FuelUsed":0.336025, "FuelLevel":27.341719 }
+{ "timestamp":"2016-09-21T22:41:15Z", "event":"JetConeBoost", "BoostValue":1.250000 }
+{ "timestamp":"2016-09-21T22:43:09Z", "event":"FSDJump", "StarSystem":"LFT 460", "StarPos":[37.094,-18.594,-13.031], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":39.076, "FuelUsed":12.108085, "FuelLevel":15.233634, "BoostUsed":4 }
+{ "timestamp":"2016-09-21T22:43:37Z", "event":"FuelScoop", "Scooped":6.279012, "Total":21.512646 }
+{ "timestamp":"2016-09-21T22:44:11Z", "event":"FSDJump", "StarSystem":"LFT 682", "StarPos":[32.000,3.188,1.469], "Allegiance":"Federation", "Economy":"$economy_Refinery;", "Economy_Localised":"Refinery", "Government":"$government_Confederacy;", "Government_Localised":"Confederacy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":26.657, "FuelUsed":7.729639, "FuelLevel":13.783007, "Faction":"Revolutionary LFT 682 Alliance" }
+{ "timestamp":"2016-09-21T22:44:40Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:44:47Z", "event":"FuelScoop", "Scooped":9.703270, "Total":23.486277 }
+{ "timestamp":"2016-09-21T22:45:17Z", "event":"FSDJump", "StarSystem":"Dethall", "StarPos":[19.625,21.156,17.719], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":27.204, "FuelUsed":8.202322, "FuelLevel":15.283955 }
+{ "timestamp":"2016-09-21T22:45:17Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:45:25Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:46:14Z", "event":"FSDJump", "StarSystem":"LHS 374", "StarPos":[12.469,40.063,36.156], "Allegiance":"Independent", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":27.361, "FuelUsed":8.208430, "FuelLevel":7.075524, "Faction":"LHS 374 Advanced Industries" }
+{ "timestamp":"2016-09-21T22:46:33Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:46:44Z", "event":"FuelScoop", "Scooped":8.186983, "Total":15.262507 }
+{ "timestamp":"2016-09-21T22:47:12Z", "event":"FSDJump", "StarSystem":"Alrai Sector GW-V b2-3", "StarPos":[8.500,56.438,57.125], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":26.899, "FuelUsed":7.821335, "FuelLevel":7.441173 }
+{ "timestamp":"2016-09-21T22:47:12Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:47:25Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:47:28Z", "event":"FuelScoop", "Scooped":0.015362, "Total":7.456535 }
+{ "timestamp":"2016-09-21T22:47:32Z", "event":"HeatDamage" }
+{ "timestamp":"2016-09-21T22:48:07Z", "event":"FSDJump", "StarSystem":"Na Chem", "StarPos":[3.344,64.031,76.219], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":21.185, "FuelUsed":4.003563, "FuelLevel":3.452972, "Faction":"Radio Sidewinder Crew" }
+{ "timestamp":"2016-09-21T22:48:07Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T22:48:07Z", "event":"HeatDamage" }
+{ "timestamp":"2016-09-21T22:50:14Z", "event":"SupercruiseExit", "StarSystem":"Na Chem", "Body":"Rorschach Horizons" }
+{ "timestamp":"2016-09-21T22:50:30Z", "event":"DockingRequested", "StationName":"Rorschach Horizons" }
+{ "timestamp":"2016-09-21T22:50:31Z", "event":"DockingGranted", "LandingPad":39, "StationName":"Rorschach Horizons" }
+{ "timestamp":"2016-09-21T22:51:35Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T22:51:50Z", "event":"HullDamage", "Health":0.779125 }
+{ "timestamp":"2016-09-21T22:52:00Z", "event":"Docked", "StationName":"Rorschach Horizons", "StationType":"Coriolis", "StarSystem":"Na Chem", "Faction":"Radio Sidewinder Crew", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T22:52:02Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T22:52:13Z", "event":"RepairAll", "Cost":7741 }
+{ "timestamp":"2016-09-21T22:52:13Z", "event":"RefuelAll", "Cost":1455, "Amount":29.081293 }
+{ "timestamp":"2016-09-21T22:52:29Z", "event":"ShipyardSwap", "ShipType":"federation_corvette", "ShipID":121, "StoreOldShip":"BelugaLiner", "StoreShipID":126 }
+{ "timestamp":"2016-09-21T22:52:48Z", "event":"Docked", "StationName":"Rorschach Horizons", "StationType":"Coriolis", "StarSystem":"Na Chem", "Faction":"Radio Sidewinder Crew", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T22:53:14Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size8_class1_name;", "SellItem_Localised":"Power Plant", "SellPrice":170615, "BuyItem":"$int_powerplant_size7_class5_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":5128911, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:53:15Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T22:53:20Z", "event":"ModuleBuy", "Slot":"LifeSupport", "SellItem":"$int_lifesupport_size5_class4_name;", "SellItem_Localised":"Life Support", "SellPrice":42206, "BuyItem":"$int_lifesupport_size5_class5_name;", "BuyItem_Localised":"Life Support", "BuyPrice":124132, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:53:25Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T22:53:27Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size8_class4_name;", "SellItem_Localised":"Power Distributor", "SellPrice":926480, "BuyItem":"$int_powerdistributor_size7_class5_name;", "BuyItem_Localised":"Power Distributor", "BuyPrice":973193, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:53:46Z", "event":"ModuleBuy", "Slot":"Slot03_Size7", "BuyItem":"$int_hullreinforcement_size5_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":45000, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:53:53Z", "event":"ModuleBuy", "Slot":"Slot04_Size6", "BuyItem":"$int_hullreinforcement_size5_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":45000, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:53:59Z", "event":"ModuleBuy", "Slot":"Slot06_Size5", "BuyItem":"$int_hullreinforcement_size5_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":45000, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:54:04Z", "event":"ModuleBuy", "Slot":"Slot05_Size6", "BuyItem":"$int_hullreinforcement_size5_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":45000, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:54:09Z", "event":"ModuleBuy", "Slot":"Slot07_Size5", "BuyItem":"$int_hullreinforcement_size5_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":45000, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:54:16Z", "event":"ModuleBuy", "Slot":"Slot09_Size4", "SellItem":"$int_stellarbodydiscoveryscanner_standard_name;", "SellItem_Localised":"D - Scanner", "SellPrice":85, "BuyItem":"$int_hullreinforcement_size4_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":19500, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:54:24Z", "event":"ModuleBuy", "Slot":"Slot08_Size4", "SellItem":"$int_cargorack_size3_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":897, "BuyItem":"$int_hullreinforcement_size4_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":19500, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:54:30Z", "event":"ModuleBuy", "Slot":"Slot10_Size3", "SellItem":"$int_cargorack_size2_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":276, "BuyItem":"$int_hullreinforcement_size3_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":8400, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:55:04Z", "event":"ModuleBuy", "Slot":"TinyHardpoint1", "BuyItem":"$hpt_plasmapointdefence_turret_tiny_name;", "BuyItem_Localised":"Point Defence", "BuyPrice":1855, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:55:11Z", "event":"ModuleBuy", "Slot":"TinyHardpoint2", "BuyItem":"$hpt_plasmapointdefence_turret_tiny_name;", "BuyItem_Localised":"Point Defence", "BuyPrice":1855, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:55:16Z", "event":"ModuleBuy", "Slot":"TinyHardpoint3", "BuyItem":"$hpt_chafflauncher_tiny_name;", "BuyItem_Localised":"Chaff", "BuyPrice":850, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:55:23Z", "event":"ModuleBuy", "Slot":"TinyHardpoint7", "BuyItem":"$hpt_chafflauncher_tiny_name;", "BuyItem_Localised":"Chaff", "BuyPrice":850, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:55:30Z", "event":"ModuleBuy", "Slot":"TinyHardpoint8", "BuyItem":"$hpt_plasmapointdefence_turret_tiny_name;", "BuyItem_Localised":"Point Defence", "BuyPrice":1855, "Ship":"federation_corvette", "ShipID":121 }
+{ "timestamp":"2016-09-21T22:56:02Z", "event":"Undocked", "StationName":"Rorschach Horizons", "StationType":"Coriolis" }
+{ "timestamp":"2016-09-21T22:57:32Z", "event":"FSDJump", "StarSystem":"Alrai Sector GW-V b2-4", "StarPos":[7.188,67.656,66.531], "Allegiance":"", "Economy":"$economy_None;", "Economy_Localised":"None", "Government":"$government_None;", "Government_Localised":"None", "Security":"$SYSTEM_SECURITY_low;", "Security_Localised":"Low Security", "JumpDist":11.035, "FuelUsed":6.571745, "FuelLevel":25.428255 }
+{ "timestamp":"2016-09-21T22:58:25Z", "event":"FSDJump", "StarSystem":"16 Librae", "StarPos":[8.281,62.781,60.719], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":7.665, "FuelUsed":2.524430, "FuelLevel":22.903826, "Faction":"16 Librae Labour" }
+{ "timestamp":"2016-09-21T23:01:23Z", "event":"SupercruiseExit", "StarSystem":"16 Librae", "Body":"Borisenko Station" }
+{ "timestamp":"2016-09-21T23:01:44Z", "event":"DockingRequested", "StationName":"Borisenko Station" }
+{ "timestamp":"2016-09-21T23:01:45Z", "event":"DockingGranted", "LandingPad":24, "StationName":"Borisenko Station" }
+{ "timestamp":"2016-09-21T23:02:35Z", "event":"Docked", "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "Faction":"16 Librae Labour", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T23:03:13Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"Federation_Corvette", "ShipID":121, "GameMode":"Open", "Credits":370026454, "Loan":0 }
+{ "timestamp":"2016-09-21T23:03:13Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-21T23:03:13Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-21T23:03:33Z", "event":"Location", "Docked":1, "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "StarPos":[8.281,62.781,60.719], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"16 Librae Labour" }
+{ "timestamp":"2016-09-21T23:03:33Z", "event":"Docked", "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "Faction":"16 Librae Labour", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T23:04:03Z", "event":"RefuelAll", "Cost":465, "Amount":9.276672 }
+{ "timestamp":"2016-09-21T23:04:14Z", "event":"CrewHire", "Name":"Rae Evans", "Faction":"16 Librae Labour", "Cost":150000, "CombatRank":4 }
+{ "timestamp":"2016-09-21T23:04:20Z", "event":"CrewAssign", "Name":"Rae Evans", "Role":"Active" }
+{ "timestamp":"2016-09-21T23:04:47Z", "event":"Undocked", "StationName":"Borisenko Station", "StationType":"Bernal" }
+{ "timestamp":"2016-09-21T23:05:50Z", "event":"SupercruiseEntry", "StarSystem":"16 Librae" }
+{ "timestamp":"2016-09-21T23:07:32Z", "event":"SupercruiseExit", "StarSystem":"16 Librae", "Body":"16 Librae 1 A Ring" }
+{ "timestamp":"2016-09-21T23:09:07Z", "event":"Bounty", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":39007, "VictimFaction":"16 Librae Jet Family" }
+{ "timestamp":"2016-09-21T23:09:13Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"decodedemissiondata" }
+{ "timestamp":"2016-09-21T23:09:52Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:10:18Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:10:29Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T23:10:37Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:11:12Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:11:20Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:12:00Z", "event":"Bounty", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":75180, "VictimFaction":"16 Librae Jet Family" }
+{ "timestamp":"2016-09-21T23:12:21Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T23:13:06Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T23:13:31Z", "event":"Bounty", "Faction":"16 Librae Labour", "Reward":100500, "VictimFaction":"16 Librae Jet Family" }
+{ "timestamp":"2016-09-21T23:14:51Z", "event":"HullDamage", "Health":0.792774 }
+{ "timestamp":"2016-09-21T23:14:55Z", "event":"LaunchFighter", "Loadout":"zero", "PlayerControlled":false }
+{ "timestamp":"2016-09-21T23:14:59Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T23:15:00Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:15:28Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:15:30Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:15:42Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T23:15:59Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:16:24Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:16:29Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:16:37Z", "event":"Bounty", "Faction":"16 Librae Labour", "Reward":94567, "VictimFaction":"16 Librae Labour" }
+{ "timestamp":"2016-09-21T23:16:37Z", "event":"VehicleSwitch", "To":"Fighter" }
+{ "timestamp":"2016-09-21T23:17:32Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"decodedemissiondata" }
+{ "timestamp":"2016-09-21T23:17:32Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shielddensityreports" }
+{ "timestamp":"2016-09-21T23:17:38Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:17:51Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:18:10Z", "event":"HullDamage", "Health":0.382605 }
+{ "timestamp":"2016-09-21T23:18:10Z", "event":"HullDamage", "Health":0.382605 }
+{ "timestamp":"2016-09-21T23:18:10Z", "event":"HullDamage", "Health":0.382605 }
+{ "timestamp":"2016-09-21T23:18:10Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T23:18:23Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:18:28Z", "event":"HullDamage", "Health":0.159402 }
+{ "timestamp":"2016-09-21T23:18:29Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T23:18:38Z", "event":"Bounty", "Faction":"16 Librae Labour", "Reward":224250, "VictimFaction":"16 Librae Jet Family" }
+{ "timestamp":"2016-09-21T23:18:44Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:19:07Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2016-09-21T23:20:32Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shieldpatternanalysis" }
+{ "timestamp":"2016-09-21T23:20:37Z", "event":"LaunchFighter", "Loadout":"zero", "PlayerControlled":false }
+{ "timestamp":"2016-09-21T23:20:52Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:21:06Z", "event":"Bounty", "Faction":"16 Librae Labour", "Reward":39680, "VictimFaction":"16 Librae Jet Family" }
+{ "timestamp":"2016-09-21T23:21:23Z", "event":"Bounty", "Faction":"16 Librae Labour", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":56479, "VictimFaction":"16 Librae Jet Family" }
+{ "timestamp":"2016-09-21T23:21:55Z", "event":"Bounty", "Faction":"16 Librae Labour", "Reward":72320, "VictimFaction":"16 Librae Jet Family" }
+{ "timestamp":"2016-09-21T23:22:19Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:22:24Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:22:26Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:23:00Z", "event":"Bounty", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":103080, "VictimFaction":"Allied 16 Librae Autocracy" }
+{ "timestamp":"2016-09-21T23:23:07Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:23:18Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:23:25Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:23:35Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:23:44Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:23:50Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:24:01Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shieldcyclerecordings" }
+{ "timestamp":"2016-09-21T23:24:01Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"shieldpatternanalysis" }
+{ "timestamp":"2016-09-21T23:24:28Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T23:25:10Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:25:20Z", "event":"SelfDestruct" }
+{ "timestamp":"2016-09-21T23:25:24Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:25:28Z", "event":"HeatDamage" }
+{ "timestamp":"2016-09-21T23:25:46Z", "event":"HullDamage", "Health":0.597100 }
+{ "timestamp":"2016-09-21T23:25:51Z", "event":"Died" }
+{ "timestamp":"2016-09-21T23:25:58Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-21T23:26:08Z", "event":"Resurrect", "Option":"rebuy", "Cost":1720108, "Bankrupt":false }
+{ "timestamp":"2016-09-21T23:26:34Z", "event":"Location", "Docked":1, "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "StarPos":[8.281,62.781,60.719], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"16 Librae Labour" }
+{ "timestamp":"2016-09-21T23:26:34Z", "event":"Docked", "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "Faction":"16 Librae Labour", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T23:27:17Z", "event":"ShipyardTransfer", "ShipType":"Cutter", "ShipID":124, "System":"Na Chem", "Distance":154356468873691136.000000, "TransferPrice":222701 }
+{ "timestamp":"2016-09-21T23:27:38Z", "event":"CrewHire", "Name":"Wynter Rogers", "Faction":"16 Librae Labour", "Cost":150000, "CombatRank":4 }
+{ "timestamp":"2016-09-21T23:27:40Z", "event":"CrewAssign", "Name":"Wynter Rogers", "Role":"Active" }
+{ "timestamp":"2016-09-21T23:35:14Z", "event":"WingJoin", "Others":[ "MAX_CAPACITY" ] }
+{ "timestamp":"2016-09-21T23:35:14Z", "event":"WingAdd", "Name":"MAX_CAPACITY" }
+{ "timestamp":"2016-09-21T23:35:28Z", "event":"ShipyardSwap", "ShipType":"cutter", "ShipID":124, "StoreOldShip":"Federation_Corvette", "StoreShipID":121 }
+{ "timestamp":"2016-09-21T23:35:41Z", "event":"Docked", "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "Faction":"16 Librae Labour", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T23:36:19Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size8_class1_name;", "SellItem_Localised":"Power Plant", "SellPrice":180651, "BuyItem":"$int_powerplant_size6_class5_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":1617953, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:36:20Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T23:36:25Z", "event":"ModuleBuy", "Slot":"MainEngines", "SellItem":"$int_engine_size8_class4_name;", "SellItem_Localised":"Thrusters", "SellPrice":5419550, "BuyItem":"$int_engine_size8_class5_name;", "BuyItem_Localised":"Thrusters", "BuyPrice":16258649, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:36:29Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T23:36:45Z", "event":"WingLeave" }
+{ "timestamp":"2016-09-21T23:36:51Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"Cutter", "ShipID":124, "GameMode":"Open", "Credits":355506779, "Loan":0 }
+{ "timestamp":"2016-09-21T23:36:51Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-21T23:36:51Z", "event":"Progress", "Combat":25, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-21T23:37:13Z", "event":"Location", "Docked":1, "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "StarPos":[8.281,62.781,60.719], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"16 Librae Labour" }
+{ "timestamp":"2016-09-21T23:37:14Z", "event":"Docked", "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "Faction":"16 Librae Labour", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T23:37:36Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size5_class5_name;", "SellItem_Localised":"Power Distributor", "SellPrice":124132, "BuyItem":"$int_powerdistributor_size7_class5_name;", "BuyItem_Localised":"Power Distributor", "BuyPrice":973193, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:37:48Z", "event":"ModuleBuy", "Slot":"HugeHardpoint1", "BuyItem":"$hpt_multicannon_gimbal_huge_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":637760, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:38:29Z", "event":"ModuleBuy", "Slot":"LargeHardpoint1", "BuyItem":"$hpt_multicannon_gimbal_large_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":57844, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:38:57Z", "event":"ModuleBuy", "Slot":"LargeHardpoint2", "BuyItem":"$hpt_multicannon_gimbal_large_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":57844, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:39:04Z", "event":"ModuleBuy", "Slot":"MediumHardpoint3", "BuyItem":"$hpt_multicannon_gimbal_medium_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":5700, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:39:12Z", "event":"ModuleBuy", "Slot":"MediumHardpoint4", "BuyItem":"$hpt_multicannon_gimbal_medium_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":5700, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:39:18Z", "event":"ModuleBuy", "Slot":"MediumHardpoint1", "BuyItem":"$hpt_multicannon_gimbal_medium_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":5700, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:39:25Z", "event":"ModuleBuy", "Slot":"MediumHardpoint2", "BuyItem":"$hpt_multicannon_gimbal_medium_name;", "BuyItem_Localised":"Multi-Cannon", "BuyPrice":5700, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:39:43Z", "event":"ModuleBuy", "Slot":"Slot01_Size8", "SellItem":"$int_shieldgenerator_size7_class5_name;", "SellItem_Localised":"Shield Generator", "SellPrice":5128911, "BuyItem":"$int_shieldgenerator_size8_class5_name;", "BuyItem_Localised":"Shield Generator", "BuyPrice":16258649, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:39:58Z", "event":"ModuleBuy", "Slot":"PowerPlant", "SellItem":"$int_powerplant_size6_class5_name;", "SellItem_Localised":"Power Plant", "SellPrice":1617953, "BuyItem":"$int_powerplant_size7_class4_name;", "BuyItem_Localised":"Power Plant", "BuyPrice":1709637, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:39:58Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-21T23:40:09Z", "event":"ShieldState", "ShieldsUp":true }
+{ "timestamp":"2016-09-21T23:40:11Z", "event":"ModuleBuy", "Slot":"Slot02_Size8", "SellItem":"$int_cargorack_size7_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":106057, "BuyItem":"$int_fighterbay_size6_class1_name;", "BuyItem_Localised":"Fighter Hangar", "BuyPrice":186934, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:40:37Z", "event":"ModuleSell", "Slot":"Slot08_Size4", "SellItem":"$int_stellarbodydiscoveryscanner_standard_name;", "SellItem_Localised":"D - Scanner", "SellPrice":89, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:40:39Z", "event":"ModuleSell", "Slot":"Slot09_Size3", "SellItem":"$int_cargorack_size2_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":292, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:40:52Z", "event":"ModuleBuy", "Slot":"TinyHardpoint1", "BuyItem":"$hpt_chafflauncher_tiny_name;", "BuyItem_Localised":"Chaff", "BuyPrice":850, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:40:58Z", "event":"ModuleBuy", "Slot":"TinyHardpoint2", "BuyItem":"$hpt_chafflauncher_tiny_name;", "BuyItem_Localised":"Chaff", "BuyPrice":850, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:41:15Z", "event":"ModuleBuy", "Slot":"TinyHardpoint3", "BuyItem":"$hpt_shieldbooster_size0_class3_name;", "BuyItem_Localised":"Shield Booster", "BuyPrice":5300, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:41:44Z", "event":"ModuleBuy", "Slot":"Decal1", "BuyItem":"$decal_trade_tycoon_name;", "BuyItem_Localised":"Trade Tycoon", "BuyPrice":0, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:41:51Z", "event":"ModuleBuy", "Slot":"Decal2", "BuyItem":"$decal_onionhead1_name;", "BuyItem_Localised":"Onion Head 1", "BuyPrice":0, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:41:54Z", "event":"ModuleBuy", "Slot":"Decal2", "SellItem":"$decal_onionhead1_name;", "SellItem_Localised":"Onion Head 1", "SellPrice":0, "BuyItem":"$decal_onionhead3_name;", "BuyItem_Localised":"Onion Head 3", "BuyPrice":0, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:41:59Z", "event":"ModuleBuy", "Slot":"Decal3", "BuyItem":"$decal_onionhead3_name;", "BuyItem_Localised":"Onion Head 3", "BuyPrice":0, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:42:15Z", "event":"CrewAssign", "Name":"Wynter Rogers", "Role":"Active" }
+{ "timestamp":"2016-09-21T23:42:40Z", "event":"Undocked", "StationName":"Borisenko Station", "StationType":"Bernal" }
+{ "timestamp":"2016-09-21T23:43:09Z", "event":"WingJoin", "Others":[ "MAX_CAPACITY" ] }
+{ "timestamp":"2016-09-21T23:43:09Z", "event":"WingAdd", "Name":"MAX_CAPACITY" }
+{ "timestamp":"2016-09-21T23:43:44Z", "event":"DockingRequested", "StationName":"Borisenko Station" }
+{ "timestamp":"2016-09-21T23:43:45Z", "event":"DockingGranted", "LandingPad":9, "StationName":"Borisenko Station" }
+{ "timestamp":"2016-09-21T23:44:57Z", "event":"Docked", "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "Faction":"16 Librae Labour", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-21T23:45:09Z", "event":"RefuelAll", "Cost":10, "Amount":0.065519 }
+{ "timestamp":"2016-09-21T23:45:47Z", "event":"ModuleBuy", "Slot":"Slot03_Size6", "SellItem":"$int_cargorack_size5_class1_name;", "SellItem_Localised":"Cargo Rack", "SellPrice":10041, "BuyItem":"$int_hullreinforcement_size5_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":45000, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:45:54Z", "event":"ModuleBuy", "Slot":"Slot04_Size6", "BuyItem":"$int_hullreinforcement_size5_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":45000, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:45:59Z", "event":"ModuleBuy", "Slot":"Slot05_Size6", "BuyItem":"$int_hullreinforcement_size5_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":45000, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:46:06Z", "event":"ModuleBuy", "Slot":"Slot06_Size5", "BuyItem":"$int_hullreinforcement_size5_class2_name;", "BuyItem_Localised":"Hull Reinforcement", "BuyPrice":45000, "Ship":"cutter", "ShipID":124 }
+{ "timestamp":"2016-09-21T23:46:38Z", "event":"Undocked", "StationName":"Borisenko Station", "StationType":"Bernal" }
+{ "timestamp":"2016-09-21T23:47:08Z", "event":"CommitCrime", "CrimeType":"collidedAtSpeedInNoFireZone", "Faction":"16 Librae Labour", "Fine":100 }
+{ "timestamp":"2016-09-21T23:48:33Z", "event":"SupercruiseEntry", "StarSystem":"16 Librae" }
+{ "timestamp":"2016-09-21T23:49:09Z", "event":"SupercruiseExit", "StarSystem":"16 Librae", "Body":"Borisenko Station" }
+{ "timestamp":"2016-09-21T23:52:56Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0265.bmp", "Width":1366, "Height":768, "System":"16 Librae", "Body":"Borisenko Station" }
+{ "timestamp":"2016-09-21T23:53:22Z", "event":"SupercruiseEntry", "StarSystem":"16 Librae" }
+{ "timestamp":"2016-09-21T23:55:05Z", "event":"SupercruiseExit", "StarSystem":"16 Librae", "Body":"16 Librae 1 A Ring" }
+{ "timestamp":"2016-09-21T23:59:16Z", "event":"LaunchFighter", "Loadout":"two", "PlayerControlled":false }
+{ "timestamp":"2016-09-22T00:00:30Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:00:32Z", "event":"Bounty", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":56325, "VictimFaction":"16 Librae Jet Family", "SharedWithOthers":1 }
+{ "timestamp":"2016-09-22T00:00:38Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:00:44Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:00:51Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:00:55Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:01:00Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:01:06Z", "event":"Bounty", "Faction":"16 Librae Labour", "Reward":37400, "VictimFaction":"16 Librae Jet Family", "SharedWithOthers":1 }
+{ "timestamp":"2016-09-22T00:01:31Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:01:49Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:02:00Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:02:09Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:02:14Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:02:21Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:03:45Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:03:48Z", "event":"HullDamage", "Health":0.779387 }
+{ "timestamp":"2016-09-22T00:03:49Z", "event":"HullDamage", "Health":0.465942 }
+{ "timestamp":"2016-09-22T00:03:50Z", "event":"HullDamage", "Health":0.304940 }
+{ "timestamp":"2016-09-22T00:03:51Z", "event":"HullDamage", "Health":0.164939 }
+{ "timestamp":"2016-09-22T00:03:52Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:03:58Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:04:04Z", "event":"Bounty", "Faction":"16 Librae Labour", "Faction":"$faction_Federation;", "Faction_Localised":"Federation", "Reward":4880, "VictimFaction":"16 Librae Jet Family" }
+{ "timestamp":"2016-09-22T00:04:08Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:04:39Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:04:46Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:04:46Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-22T00:04:47Z", "event":"LaunchFighter", "Loadout":"zero", "PlayerControlled":false }
+{ "timestamp":"2016-09-22T00:04:52Z", "event":"Bounty", "Faction":"16 Librae Labour", "Reward":6280, "VictimFaction":"16 Librae Jet Family", "SharedWithOthers":1 }
+{ "timestamp":"2016-09-22T00:05:50Z", "event":"SelfDestruct" }
+{ "timestamp":"2016-09-22T00:05:50Z", "event":"ShieldState", "ShieldsUp":false }

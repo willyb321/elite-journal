@@ -1,0 +1,25 @@
+{ "timestamp":"2016-09-23T22:51:33Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 3)", "build":"r121970/r0 " }
+{ "timestamp":"2016-09-23T22:52:30Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"Cutter", "ShipID":124, "GameMode":"Open", "Credits":383042089, "Loan":0 }
+{ "timestamp":"2016-09-23T22:52:30Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-23T22:52:30Z", "event":"Progress", "Combat":25, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-23T22:52:58Z", "event":"Location", "StarSystem":"16 Librae", "StarPos":[8.281,62.781,60.719], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"16 Librae Labour" }
+{ "timestamp":"2016-09-23T22:53:34Z", "event":"SelfDestruct" }
+{ "timestamp":"2016-09-23T22:53:34Z", "event":"ShieldState", "ShieldsUp":false }
+{ "timestamp":"2016-09-23T22:53:38Z", "event":"HeatWarning" }
+{ "timestamp":"2016-09-23T22:53:42Z", "event":"HeatDamage" }
+{ "timestamp":"2016-09-23T22:54:05Z", "event":"Died" }
+{ "timestamp":"2016-09-23T22:54:27Z", "event":"Resurrect", "Option":"rebuy", "Cost":2981498, "Bankrupt":false }
+{ "timestamp":"2016-09-23T22:54:49Z", "event":"Location", "Docked":1, "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "StarPos":[8.281,62.781,60.719], "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"16 Librae Labour" }
+{ "timestamp":"2016-09-23T22:54:49Z", "event":"Docked", "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "Faction":"16 Librae Labour", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-23T22:55:28Z", "event":"ShipyardBuy", "ShipType":"asp", "ShipPrice":666115, "SellOldShip":"Cutter", "SellShipID":124, "SellPrice":53665164 }
+{ "timestamp":"2016-09-23T22:55:29Z", "event":"ShipyardNew", "ShipType":"asp", "NewShipID":124 }
+{ "timestamp":"2016-09-23T22:55:48Z", "event":"Docked", "StationName":"Borisenko Station", "StationType":"Bernal", "StarSystem":"16 Librae", "Faction":"16 Librae Labour", "Allegiance":"Federation", "Economy":"$economy_Industrial;", "Economy_Localised":"Industrial", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-23T22:56:11Z", "event":"ModuleBuy", "Slot":"FrameShiftDrive", "SellItem":"$int_hyperdrive_size5_class1_name;", "SellItem_Localised":"FSD", "SellPrice":6301, "BuyItem":"$int_hyperdrive_size5_class4_name;", "BuyItem_Localised":"FSD", "BuyPrice":170132, "Ship":"asp", "ShipID":124 }
+{ "timestamp":"2016-09-23T22:56:38Z", "event":"Undocked", "StationName":"Borisenko Station", "StationType":"Bernal" }
+{ "timestamp":"2016-09-23T22:57:59Z", "event":"FSDJump", "StarSystem":"Na Chem", "StarPos":[3.344,64.031,76.219], "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "JumpDist":16.315, "FuelUsed":1.833638, "FuelLevel":30.166363, "Faction":"Radio Sidewinder Crew" }
+{ "timestamp":"2016-09-23T22:59:41Z", "event":"SupercruiseExit", "StarSystem":"Na Chem", "Body":"Rorschach Horizons" }
+{ "timestamp":"2016-09-23T22:59:50Z", "event":"DockingRequested", "StationName":"Rorschach Horizons" }
+{ "timestamp":"2016-09-23T22:59:51Z", "event":"DockingGranted", "LandingPad":18, "StationName":"Rorschach Horizons" }
+{ "timestamp":"2016-09-23T23:00:49Z", "event":"Docked", "StationName":"Rorschach Horizons", "StationType":"Coriolis", "StarSystem":"Na Chem", "Faction":"Radio Sidewinder Crew", "Allegiance":"Independent", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Democracy;", "Government_Localised":"Democracy", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security" }
+{ "timestamp":"2016-09-23T23:01:03Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0281.bmp", "Width":1366, "Height":768, "System":"Na Chem", "Body":"Rorschach Horizons" }
+{ "timestamp":"2016-09-23T23:01:43Z", "event":"Screenshot", "Filename":"\\ED_Pictures\\Screenshot_0282.bmp", "Width":1366, "Height":768, "System":"Na Chem", "Body":"Rorschach Horizons" }

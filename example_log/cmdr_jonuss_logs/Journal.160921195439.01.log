@@ -1,0 +1,6 @@
+{ "timestamp":"2016-09-21T18:54:39Z", "event":"Fileheader", "part":1, "language":"English\\UK", "gameversion":"2.2 (Beta 3)", "build":"r121970/r0 " }
+{ "timestamp":"2016-09-21T18:56:58Z", "event":"LoadGame", "Commander":"Jonuss", "Ship":"BelugaLiner", "ShipID":126, "GameMode":"Open", "Credits":375451087, "Loan":0 }
+{ "timestamp":"2016-09-21T18:56:58Z", "event":"Rank", "Combat":4, "Trade":7, "Explore":6, "Empire":3, "Federation":5, "CQC":0 }
+{ "timestamp":"2016-09-21T18:56:58Z", "event":"Progress", "Combat":23, "Trade":63, "Explore":86, "Empire":100, "Federation":18, "CQC":0 }
+{ "timestamp":"2016-09-21T18:57:22Z", "event":"Location", "StarSystem":"Kaukamine", "StarPos":[95.094,4.250,-33.719], "Allegiance":"Federation", "Economy":"$economy_HighTech;", "Economy_Localised":"High tech", "Government":"$government_Corporate;", "Government_Localised":"Corporate", "Security":"$SYSTEM_SECURITY_medium;", "Security_Localised":"Medium Security", "Faction":"Kaukamine Vision Industry" }
+{ "timestamp":"2016-09-21T18:57:40Z", "event":"HeatWarning" }
