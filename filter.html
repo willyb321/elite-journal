@@ -1,33 +1,93 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Filter Form</title>
-	<script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>body {padding: 0; margin: 0; } body {background-color: #313943; color: #bbc8d8; font-family: 'Lato'; font-size: 22px; font-weight: 500; line-height: 36px; margin-bottom: 36px; text-align: center; } header {position: absolute; width: 500px; height: 250px; top: 50%; left: 50%; margin-top: -125px; margin-left: -250px; text-align: center; } header h1 {font-size: 60px; font-weight: 100; margin: 0; padding: 0; } #grad {background: -webkit-linear-gradient(left, #5A3F37 , #2C7744); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(right, #5A3F37 , #2C7744); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(right,#5A3F37 , #2C7744); /* For Firefox 3.6 to 15 */ background: linear-gradient(to right, #5A3F37 , #2C7744); /* Standard syntax */ } hr {color: red; }</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">
-</head>
-<body>
-<h1>Select an event from the dropdown</h1><br>
-<p id="events"></p>
-<script type="text/javascript">
-function sendChecked() {
-const {ipcRenderer} = require('electron')
-var e = document.getElementById("selectNumber");
-var value = e.options[e.selectedIndex].value;
-var text = e.options[e.selectedIndex].text;
-ipcRenderer.send('asynchronous-message', text)
-}
-function populate(){
-	var remote = require('electron').remote;
-	var event = remote.getGlobal('test').prop1;
-    for(i=0; i<event.length; i++) {
-        document.write('<option value="' + event[i] +'">' + event[i] + '</option>');
+    <title>Filter Form</title>
+    <script src="https://use.fontawesome.com/a39359b6f9.js"></script>
+    <style>
+    body {
+        padding: 0;
+        margin: 0;
     }
-}
-</script>
-<form id="myForm">
-    <select id="selectNumber" onchange="sendChecked()">
-        <option>Choose an event</option>
-        <script type="text/javascript"> populate();</script>
-    </select>
-</form>
+
+    body {
+        background-color: #313943;
+        color: #bbc8d8;
+        font-family: 'Lato';
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 36px;
+        margin-bottom: 36px;
+        text-align: center;
+    }
+
+    header {
+        position: absolute;
+        width: 500px;
+        height: 250px;
+        top: 50%;
+        left: 50%;
+        margin-top: -125px;
+        margin-left: -250px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 60px;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+    }
+
+    #grad {
+        background: -webkit-linear-gradient(left, #5A3F37, #2C7744);
+        /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(right, #5A3F37, #2C7744);
+        /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(right, #5A3F37, #2C7744);
+        /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to right, #5A3F37, #2C7744);
+        /* Standard syntax */
+    }
+
+    hr {
+        color: red;
+    }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>Select an event from the dropdown</h1>
+    <br>
+    <p id="events"></p>
+    <script type="text/javascript">
+    function sendChecked() {
+        const {
+            ipcRenderer
+        } = require('electron')
+        var e = document.getElementById("selectNumber");
+        var value = e.options[e.selectedIndex].value;
+        var text = e.options[e.selectedIndex].text;
+        ipcRenderer.send('asynchronous-message', text)
+    }
+
+    function populate() {
+        var remote = require('electron').remote;
+        var event = remote.getGlobal('test').prop1;
+        for (i = 0; i < event.length; i++) {
+            document.write('<option value="' + event[i] + '">' + event[i] + '</option>');
+        }
+    }
+    </script>
+    <form id="myForm">
+        <select id="selectNumber" onchange="sendChecked()">
+            <option>Choose an event</option>
+            <script type="text/javascript">
+            populate();
+            </script>
+        </select>
+    </form>
 </body>
+
 </html>
