@@ -43,6 +43,10 @@ $ npm run dist
 
 Builds the app and distributable exe/nupkg for Windows x64, using [electron-builder](https://github.com/electron-userland/electron-builder).
 
+## Contributing
+
+See https://github.com/willyb321/elite-journal/blob/master/CONTRIBUTING.md for guidelines.
+
 ## License
 
 MIT © [willyb321](https://tehsuperwilly.tech)
