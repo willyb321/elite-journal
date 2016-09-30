@@ -10,6 +10,7 @@ const _ = require('underscore');
 const GhReleases = require('electron-gh-releases');
 const {Menu} = require('electron');
 const s = require('string');
+const format = require('json-nice');
 
 let JSONParsedEvent = [];
 // const filterForm = '<form name="filterForm" onsubmit="return othername()" method="post"><input type="text" name="filterPls" id="userInput"><input type="submit" onclick=""></form>';
@@ -60,7 +61,7 @@ function createMainWindow() {
 		width: 600,
 		height: 400
 	});
-
+	process.mainContents = win.webContents;
 	win.on('closed', onClosed);
 
 // menu functions be here
@@ -71,35 +72,45 @@ function onClosed() {
 	mainWindow = null;
 }
 function dialogLoad() {
-	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}]}, {properties: ['openFile']});
+	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}, {name: 'All file', extensions: ['*']}]}, {properties: ['openFile']});
 }
+process.on('uncaughtException', err => {
+	console.log('ERROR! ERROR: ' + err.message);
+});
 function getChecked() {
 	const {ipcMain} = require('electron');
 
 	ipcMain.on('asynchronous-message', (event, arg) => {
-		console.log(arg);  // prints "ping"
-		process.filteredEvent = arg;
-		JSONParsedEvent = [];
-		process.filteredHTML = '';
-		loadFilter();
-		process.isFiltered = true;
+		if (arg === 'All Events') {
+			win.loadURL('data:text/html,' + css + process.htmlDone);
+		} else {
+			console.log(arg);  // prints "ping"
+			process.filteredEvent = arg;
+			JSONParsedEvent = [];
+			process.filteredHTML = '';
+			loadFilter();
+			process.isFiltered = true;
+			event.sender.send('asynchronous-reply', arg);
+		}});
+	ipcMain.on('asynchronous-message-value', (event, arg) => {
+		process.selectedValue = arg;
 	});
 }
 function sortaSorter() {
-	if (process.filterWinPos === undefined) {
-		process.filterWin = new electron.BrowserWindow({
-			width: 600,
-			height: 400
-		});
-	} else {
-		process.filterWin = new electron.BrowserWindow({
-			width: 600,
-			height: 400
-		});
-		process.filterWin.setPosition(process.filterWinPos[0], process.filterWinPos[1]);
-	}
+	// if (process.filterWinPos === undefined) {
+	// 	process.filterWin = new electron.BrowserWindow({
+	// 		width: 600,
+	// 		height: 400
+	// 	});
+	// } else {
+	// 	process.filterWin = new electron.BrowserWindow({
+	// 		width: 600,
+	// 		height: 400
+	// 	});
+	// 	process.filterWin.setPosition(process.filterWinPos[0], process.filterWinPos[1]);
+	// }
 	process.filterOpen = true;
-	process.contents = process.filterWin.webContents;
+	// process.contents = process.filterWin.webContents;
 	const filterList = _.pluck(JSONParsed, 'event');
 	process.unique = filterList.filter((elem, index, self) => {
 		return index === self.indexOf(elem);
@@ -111,8 +122,12 @@ function sortaSorter() {
 	global.sharedObj = {prop1: process.htmlFormStripped};
 	global.test = {prop1: process.unique};
 
-	process.filterWin.loadURL(`file:///${__dirname}/filter.html`);
+	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:640px; height:480px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
 	getChecked();
+	// process.filterWin.on('closed', () => {
+	// 	process.filterWin = null
+	// 	process.filterOpen = false
+	// })
 }
 function findEvents() {
 	for (let i = 0; i < JSONParsed.length; i++) {
@@ -127,7 +142,7 @@ function loadFilter() {
 		process.filteredHTML += tableify(JSONParsedEvent[i]) + '<hr>'; // eslint-disable-line prefer-const
 	}
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + css + process.filteredHTML);
+	win.loadURL('data:text/html,' + `<webview id="foo" name="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:640px; height:480px" nodeintegration="on"></webview>` + `<script type="text/javascript">const webview=document.getElementById('foo');webview.addEventListener('dom-ready', ()=>{foo.document.getElementById("myForm").elements['plswork'].selectedIndex = ${process.selectedEvent}()})</script>` + css + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 function loadAlternate() {
 	let html;
@@ -136,7 +151,7 @@ function loadAlternate() {
 	loadFile = dialogLoad();
 	const lr = new LineByLineReader(loadFile[0]);
 	lr.on('error', err => {
-		return console.log(err);
+		console.log(err);
 	});
 	lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
 		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
@@ -149,9 +164,13 @@ function loadAlternate() {
 			console.log(err.message);
 		}
 		if (process.filterOpen === true) {
-			process.filterWinPos = process.filterWin.getPosition();
-			process.filterWin.close();
-			sortaSorter();
+			if (process.filterWin.isDestroyed() === 1) {
+				sortaSorter();
+			} else {
+				process.filterWinPos = process.filterWin.getPosition();
+				process.filterWin.close();
+				sortaSorter();
+			}
 		}
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
@@ -217,7 +236,7 @@ function funcSaveJSON() {
 			console.log('You didn\'t save the file');
 			return;
 		}
-		const JSONParsedSave = JSON.stringify(JSONParsed);
+		// const JSONParsedSave = JSON.stringify(JSONParsed);
 		if (process.isFiltered === true) {
 			const JSONParsedEventSave = JSON.stringify(JSONParsedEvent);
 			fs.writeFile(fileName, JSONParsedEventSave, err => {
@@ -226,7 +245,7 @@ function funcSaveJSON() {
 				}
 			});
 		} else {
-			fs.writeFile(fileName, JSONParsedSave, err => {
+			fs.writeFile(fileName, format(JSONParsed), err => {
 				if (err) {
 					console.log(err.message);
 				}

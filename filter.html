@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Filter Form</title>
 	<script src="https://use.fontawesome.com/a39359b6f9.js"></script>
 	<style>
@@ -58,20 +59,20 @@
 </head>
 
 <body>
-	<h1>Select an event from the dropdown</h1>
 	<br>
 	<p id="events"></p>
 	<script type="text/javascript">
 	function sendChecked() {
-		const {
-			ipcRenderer
-		} = require('electron')
+		const {ipcRenderer} = require('electron')
 		var e = document.getElementById("selectNumber");
 		var value = e.options[e.selectedIndex].value;
 		var text = e.options[e.selectedIndex].text;
 		ipcRenderer.send('asynchronous-message', text)
+		ipcRenderer.send('asynchronous-message-value', value)
 	}
-
+ipcRenderer.on('asynchronous-reply', (event, arg) => {
+  document.getElementById('selectNumber').selectedIndex = arg
+})
 	function populate() {
 		var remote = require('electron').remote;
 		var event = remote.getGlobal('test').prop1;
@@ -79,10 +80,11 @@
 			document.write('<option value="' + event[i] + '">' + event[i] + '</option>');
 		}
 	}
+
 	</script>
 	<form id="myForm">
-		<select id="selectNumber" onchange="sendChecked()">
-			<option>Choose an event</option>
+		<select id="selectNumber" name="plswork" onchange="sendChecked()">
+			<option>All Events</option>
 			<script type="text/javascript">
 			populate();
 			</script>
