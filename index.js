@@ -86,10 +86,18 @@ function getChecked() {
 	});
 }
 function sortaSorter() {
-	process.filterWin = new electron.BrowserWindow({
-		width: 600,
-		height: 400
-	});
+	if (process.filterWinPos === undefined) {
+		process.filterWin = new electron.BrowserWindow({
+			width: 600,
+			height: 400
+		});
+	} else {
+		process.filterWin = new electron.BrowserWindow({
+			width: 600,
+			height: 400
+		});
+		process.filterWin.setPosition(process.filterWinPos[0], process.filterWinPos[1]);
+	}
 	process.filterOpen = true;
 	process.contents = process.filterWin.webContents;
 	const filterList = _.pluck(JSONParsed, 'event');
@@ -141,6 +149,7 @@ function loadAlternate() {
 			console.log(err.message);
 		}
 		if (process.filterOpen === true) {
+			process.filterWinPos = process.filterWin.getPosition();
 			process.filterWin.close();
 			sortaSorter();
 		}
