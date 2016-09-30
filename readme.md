@@ -45,7 +45,7 @@ Builds the app and distributable exe/nupkg for Windows x64, using [electron-buil
 
 ## Contributing
 
-See https://github.com/willyb321/elite-journal/blob/master/CONTRIBUTING.md for guidelines.
+See [CONTRIBUTING.md](https://github.com/willyb321/elite-journal/blob/master/CONTRIBUTING.md) for guidelines.
 
 ## License
 
