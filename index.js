@@ -86,11 +86,12 @@ function getChecked() {
 	});
 }
 function sortaSorter() {
-	// let contents = win.webContents;
-	const filterWin = new electron.BrowserWindow({
+	process.filterWin = new electron.BrowserWindow({
 		width: 600,
 		height: 400
 	});
+	process.filterOpen = true;
+	process.contents = process.filterWin.webContents;
 	const filterList = _.pluck(JSONParsed, 'event');
 	process.unique = filterList.filter((elem, index, self) => {
 		return index === self.indexOf(elem);
@@ -102,14 +103,13 @@ function sortaSorter() {
 	global.sharedObj = {prop1: process.htmlFormStripped};
 	global.test = {prop1: process.unique};
 
-	filterWin.loadURL(`file:///${__dirname}/filter.html`);
+	process.filterWin.loadURL(`file:///${__dirname}/filter.html`);
 	getChecked();
 }
 function findEvents() {
 	for (let i = 0; i < JSONParsed.length; i++) {
 		if (JSONParsed[i].event === process.filteredEvent) {
 			JSONParsedEvent.push(JSONParsed[i]);
-	// console.log(JSONParsedEvent)
 		}
 	}
 }
@@ -139,6 +139,10 @@ function loadAlternate() {
 	lr.on('end', err => {
 		if (err) {
 			console.log(err.message);
+		}
+		if (process.filterOpen === true) {
+			process.filterWin.close();
+			sortaSorter();
 		}
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
