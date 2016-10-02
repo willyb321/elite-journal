@@ -99,7 +99,7 @@ function getChecked() {
 
 	ipcMain.on('asynchronous-message', (event, arg) => {
 		if (arg === 'All Events') {
-			win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
+			win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + '<hr>' + css + process.htmlDone); // eslint-disable-line no-useless-concat
 		} else {
 			console.log(arg);
 			process.filteredEvent = arg;
