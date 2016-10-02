@@ -54,7 +54,7 @@
 	function sendChecked() {
 		const {ipcRenderer} = require('electron')
 		var e = document.getElementById("selectNumber");
-		var value = e.options[e.selectedIndex].value;
+		var value = e.options[e.selectedIndex].index;
 		var text = e.options[e.selectedIndex].text;
 		ipcRenderer.send('asynchronous-message', text)
 		ipcRenderer.send('asynchronous-message-value', value)

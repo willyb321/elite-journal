@@ -66,8 +66,6 @@ function createMainWindow() {
 	});
 	process.mainContents = win.webContents;
 	win.on('closed', onClosed);
-
-	// menu functions be here
 }
 
 function onClosed() {
@@ -201,7 +199,7 @@ function funcSave() {
 				console.log('You didn\'t save the file');
 				return;
 			}
-		// fileName is a string that contains the path and filename created in the save file dialog.
+			// fileName is a string that contains the path and filename created in the save file dialog.
 			if (process.isFiltered === true) {
 				fs.writeFile(fileName, css + process.filteredHTML, err => {
 					if (err) {
@@ -233,7 +231,7 @@ function funcSaveJSON() {
 				console.log('You didn\'t save the file');
 				return;
 			}
-		// const JSONParsedSave = JSON.stringify(JSONParsed);
+			// const JSONParsedSave = JSON.stringify(JSONParsed);
 			if (process.isFiltered === true) {
 				const JSONParsedEventSave = JSON.stringify(JSONParsedEvent);
 				fs.writeFile(fileName, JSONParsedEventSave, err => {
@@ -283,9 +281,11 @@ const template = [{
 	label: 'File',
 	submenu: [{
 		label: 'Save as HTML',
+		accelerator: 'CmdOrCtrl+S',
 		click: funcSave
 	}, {
 		label: 'Save as JSON',
+		accelerator: 'CmdOrCtrl+Shift+S',
 		click: funcSaveJSON
 	}, {
 		label: 'Load',
