@@ -167,73 +167,93 @@ function loadAlternate() {
 	JSONParsed = [];
 	process.alterateLoad = true;
 	let loadFile = dialogLoad();
-	const lr = new LineByLineReader(loadFile[0]);
-	lr.on('error', err => {
-		console.log(err);
-	});
-	lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
-		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-		JSONParsed.push(lineParse);
-		let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
-		html += htmlTabled;
-	});
-	lr.on('end', err => {
-		if (err) {
-			console.log(err.message);
-		}
-		process.htmlDone = html;
-		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + '<hr>' + process.htmlDone);
-		process.logLoaded = true;
-		loadFile = '';
-	});
+	if (loadFile !== undefined) {
+		const lr = new LineByLineReader(loadFile[0]);
+		lr.on('error', err => {
+			console.log(err);
+		});
+		lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
+			let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
+			JSONParsed.push(lineParse);
+			let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
+			html += htmlTabled;
+		});
+		lr.on('end', err => {
+			if (err) {
+				console.log(err.message);
+			}
+			process.htmlDone = html;
+			process.htmlDone = process.htmlDone.replace('undefined', '');
+			win.loadURL('data:text/html,' + css + '<hr>' + process.htmlDone);
+			process.logLoaded = true;
+			loadFile = '';
+		});
+	}
 }
 
 function funcSave() {
-	dialog.showSaveDialog(fileName => {
-		if (fileName === undefined) {
-			console.log('You didn\'t save the file');
-			return;
-		}
+	if (process.logLoaded === true) {
+		dialog.showSaveDialog(fileName => {
+			if (fileName === undefined) {
+				console.log('You didn\'t save the file');
+				return;
+			}
 		// fileName is a string that contains the path and filename created in the save file dialog.
-		if (process.isFiltered === true) {
-			fs.writeFile(fileName, css + process.filteredHTML, err => {
-				if (err) {
-					console.log(err.message);
-				}
-			});
-		} else {
-			fs.writeFile(fileName, css + process.htmlDone, err => {
-				if (err) {
-					console.log(err.message);
-				}
-			});
-		}
-	});
+			if (process.isFiltered === true) {
+				fs.writeFile(fileName, css + process.filteredHTML, err => {
+					if (err) {
+						console.log(err.message);
+					}
+				});
+			} else {
+				fs.writeFile(fileName, css + process.htmlDone, err => {
+					if (err) {
+						console.log(err.message);
+					}
+				});
+			}
+		});
+	} else {
+		dialog.showMessageBox({
+			type: 'info',
+			buttons: [],
+			title: 'Please load a file first',
+			message: 'Please load a file before attempting to save things that don\'t exist'
+		});
+	}
 }
 
 function funcSaveJSON() {
-	dialog.showSaveDialog(fileName => {
-		if (fileName === undefined) {
-			console.log('You didn\'t save the file');
-			return;
-		}
+	if (process.logLoaded === true) {
+		dialog.showSaveDialog(fileName => {
+			if (fileName === undefined) {
+				console.log('You didn\'t save the file');
+				return;
+			}
 		// const JSONParsedSave = JSON.stringify(JSONParsed);
-		if (process.isFiltered === true) {
-			const JSONParsedEventSave = JSON.stringify(JSONParsedEvent);
-			fs.writeFile(fileName, JSONParsedEventSave, err => {
-				if (err) {
-					console.log(err.message);
-				}
-			});
-		} else {
-			fs.writeFile(fileName, format(JSONParsed), err => {
-				if (err) {
-					console.log(err.message);
-				}
-			});
-		}
-	});
+			if (process.isFiltered === true) {
+				const JSONParsedEventSave = JSON.stringify(JSONParsedEvent);
+				fs.writeFile(fileName, JSONParsedEventSave, err => {
+					if (err) {
+						console.log(err.message);
+					}
+				});
+			} else {
+				fs.writeFile(fileName, format(JSONParsed), err => {
+					if (err) {
+						console.log(err.message);
+					}
+				});
+			}
+		});
+	} else {
+		dialog.showMessageBox({
+			type: 'info',
+			buttons: [],
+			title: 'Please load a file first',
+			message: 'Please load a file before attempting to save things that don\'t exist'
+		});
+	}
 }
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
