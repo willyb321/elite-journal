@@ -280,14 +280,14 @@ const template = [
 		submenu: [
 {label: 'Save as HTML', click: funcSave},
 {label: 'Save as JSON', click: funcSaveJSON},
-{label: 'Load', click: loadAlternate}
+{label: 'Load', accelerator: 'CmdOrCtrl+O', click: loadAlternate}
 		]
 	},
 	{
 		label: 'Filtering',
 		submenu: [
 
-{label: 'Filter for:', click: sortaSorter}
+{label: 'Filter for:', accelerator: 'CmdOrCtrl+F', click: sortaSorter}
 		]
 	},
 	{
