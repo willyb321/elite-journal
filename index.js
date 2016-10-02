@@ -100,7 +100,7 @@ function getChecked() {
 
 	ipcMain.on('asynchronous-message', (event, arg) => {
 		if (arg === 'All Events') {
-			win.loadURL('data:text/html,' + '<hr>' + css + process.htmlDone); // eslint-disable-line no-useless-concat
+			win.loadURL('data:text/html,' + webview + '<hr>' + css + process.htmlDone); // eslint-disable-line no-useless-concat
 		} else {
 			console.log(arg);
 			process.filteredEvent = arg;
@@ -108,11 +108,12 @@ function getChecked() {
 			process.filteredHTML = '';
 			loadFilter();
 			process.isFiltered = true;
-			event.sender.send('asynchronous-reply', arg);
 		}
 	});
 	ipcMain.on('asynchronous-message-value', (event, arg) => {
 		process.selectedValue = arg;
+		console.log(arg);
+		event.sender.send('asynchronous-reply', arg);
 	});
 }
 
@@ -160,7 +161,7 @@ function loadFilter() {
 		process.filteredHTML += tableify(JSONParsedEvent[i]) + '<hr>'; // eslint-disable-line prefer-const
 	}
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + webview + `<script type="text/javascript">const webview=document.getElementById('foo');webview.addEventListener('dom-ready', ()=>{foo.document.getElementById("myForm").elements['plswork'].selectedIndex = ${process.selectedEvent}()})</script>` + css + '<hr>' + process.filteredHTML); // eslint-disable-line no-useless-concat
+	win.loadURL('data:text/html,' + webview + css + '<hr>' + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 
 function loadAlternate() {
