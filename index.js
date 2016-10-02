@@ -95,24 +95,23 @@ function getChecked() {
 }
 function sortaSorter() {
 	if (process.logLoaded === true) {
+		process.filterOpen = true;
+		const filterList = _.pluck(JSONParsed, 'event');
+		process.unique = filterList.filter((elem, index, self) => {
+			return index === self.indexOf(elem);
+		});
+		for (let i = 0; i < process.unique.length; i++) {
+			process.htmlForm += ' ' + process.unique[i] + '<br>';
+		}
+		process.htmlFormStripped = s(process.htmlForm).strip('undefined');
+		global.sharedObj = {prop1: process.htmlFormStripped};
+		global.test = {prop1: process.unique};
 
-	process.filterOpen = true;
-	const filterList = _.pluck(JSONParsed, 'event');
-	process.unique = filterList.filter((elem, index, self) => {
-		return index === self.indexOf(elem);
-	});
-	for (let i = 0; i < process.unique.length; i++) {
-		process.htmlForm += ' ' + process.unique[i] + '<br>';
-	}
-	process.htmlFormStripped = s(process.htmlForm).strip('undefined');
-	global.sharedObj = {prop1: process.htmlFormStripped};
-	global.test = {prop1: process.unique};
-
-	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
-	getChecked();
-} else {
+		win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
+		getChecked();
+	} else {
 		dialog.showMessageBox({type: 'info', buttons: [], title: 'Please load a file first', message: 'Please load a file before attempting to filter things that don\'t exist'});
-}
+	}
 }
 function findEvents() {
 	for (let i = 0; i < JSONParsed.length; i++) {
@@ -160,7 +159,7 @@ function loadAlternate() {
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + css + process.htmlDone);
-		process.logLoaded = true
+		process.logLoaded = true;
 	});
 }
 function funcSave() {
