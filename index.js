@@ -27,15 +27,20 @@ const updater = new GhReleases(options);
 // `status` returns true if there is a new update available
 updater.check((err, status) => {
 	if (!err && status) {
-// Download the update
+		// Download the update
 		updater.download();
 	}
 });
 
 // When an update has been downloaded
 updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
-// Restart the app and install the update
-	dialog.showMessageBox({type: 'info', buttons: [], title: 'Update ready to install', message: 'Press OK to install the update, and the application will do its thing.'});
+	// Restart the app and install the update
+	dialog.showMessageBox({
+		type: 'info',
+		buttons: [],
+		title: 'Update ready to install',
+		message: 'Press OK to install the update, and the application will do its thing.'
+	});
 	updater.install();
 });
 
@@ -52,6 +57,7 @@ const css = '<script src="https://use.fontawesome.com/a39359b6f9.js"></script><s
 require('electron-debug')();
 // prevent window being garbage collected
 let mainWindow;
+
 function createMainWindow() {
 	win = new electron.BrowserWindow({
 		width: 600,
@@ -60,19 +66,34 @@ function createMainWindow() {
 	process.mainContents = win.webContents;
 	win.on('closed', onClosed);
 
-// menu functions be here
+	// menu functions be here
 }
+
 function onClosed() {
-// dereference the window
-// for multiple windows store them in an array
+	// dereference the window
+	// for multiple windows store them in an array
 	mainWindow = null;
 }
+
 function dialogLoad() {
-	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}, {name: 'All files', extensions: ['*']}]}, {properties: ['openFile']});
+	return dialog.showOpenDialog({
+		defaultPath: logPath,
+		buttonLabel: 'Load File',
+		filters: [{
+			name: 'Logs and saved HTML',
+			extensions: ['log', 'html']
+		}, {
+			name: 'All files',
+			extensions: ['*']
+		}]
+	}, {
+		properties: ['openFile']
+	});
 }
 process.on('uncaughtException', err => {
 	console.log('ERROR! ERROR: ' + err.message);
 });
+
 function getChecked() {
 	const {ipcMain} = require('electron');
 
@@ -87,11 +108,13 @@ function getChecked() {
 			loadFilter();
 			process.isFiltered = true;
 			event.sender.send('asynchronous-reply', arg);
-		}});
+		}
+	});
 	ipcMain.on('asynchronous-message-value', (event, arg) => {
 		process.selectedValue = arg;
 	});
 }
+
 function sortaSorter() {
 	if (process.logLoaded === true) {
 		process.filterOpen = true;
@@ -103,15 +126,25 @@ function sortaSorter() {
 			process.htmlForm += ' ' + process.unique[i] + '<br>';
 		}
 		process.htmlFormStripped = s(process.htmlForm).strip('undefined');
-		global.sharedObj = {prop1: process.htmlFormStripped};
-		global.test = {prop1: process.unique};
+		global.sharedObj = {
+			prop1: process.htmlFormStripped
+		};
+		global.test = {
+			prop1: process.unique
+		};
 
 		win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + '<hr>' + process.htmlDone); // eslint-disable-line no-useless-concat
 		getChecked();
 	} else {
-		dialog.showMessageBox({type: 'info', buttons: [], title: 'Please load a file first', message: 'Please load a file before attempting to filter things that don\'t exist'});
+		dialog.showMessageBox({
+			type: 'info',
+			buttons: [],
+			title: 'Please load a file first',
+			message: 'Please load a file before attempting to filter things that don\'t exist'
+		});
 	}
 }
+
 function findEvents() {
 	for (let i = 0; i < JSONParsed.length; i++) {
 		if (JSONParsed[i].event === process.filteredEvent) {
@@ -119,6 +152,7 @@ function findEvents() {
 		}
 	}
 }
+
 function loadFilter() {
 	findEvents();
 	for (let i = 0; i < JSONParsedEvent.length; i++) {
@@ -127,6 +161,7 @@ function loadFilter() {
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
 	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + `<script type="text/javascript">const webview=document.getElementById('foo');webview.addEventListener('dom-ready', ()=>{foo.document.getElementById("myForm").elements['plswork'].selectedIndex = ${process.selectedEvent}()})</script>` + css + '<hr>' + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
+
 function loadAlternate() {
 	let html;
 	JSONParsed = [];
@@ -139,7 +174,7 @@ function loadAlternate() {
 	lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
 		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
 		JSONParsed.push(lineParse);
-		let htmlTabled = tableify(lineParse) + '<hr>';  // eslint-disable-line prefer-const
+		let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
 		html += htmlTabled;
 	});
 	lr.on('end', err => {
@@ -153,13 +188,14 @@ function loadAlternate() {
 		loadFile = '';
 	});
 }
+
 function funcSave() {
 	dialog.showSaveDialog(fileName => {
 		if (fileName === undefined) {
 			console.log('You didn\'t save the file');
 			return;
 		}
-// fileName is a string that contains the path and filename created in the save file dialog.
+		// fileName is a string that contains the path and filename created in the save file dialog.
 		if (process.isFiltered === true) {
 			fs.writeFile(fileName, css + process.filteredHTML, err => {
 				if (err) {
@@ -172,9 +208,10 @@ function funcSave() {
 					console.log(err.message);
 				}
 			});
-		}}
-);
+		}
+	});
 }
+
 function funcSaveJSON() {
 	dialog.showSaveDialog(fileName => {
 		if (fileName === undefined) {
@@ -219,154 +256,124 @@ app.on('ready', () => {
 	win.loadURL('data:text/html,' + css + '<br><h1>Please load a file using the "File" menu</h1>');
 });
 
-const template = [
-	{
-		label: 'File',
-		submenu: [
-{label: 'Save as HTML', click: funcSave},
-{label: 'Save as JSON', click: funcSaveJSON},
-{label: 'Load', accelerator: 'CmdOrCtrl+O', click: loadAlternate}
-		]
-	},
-	{
-		label: 'Filtering',
-		submenu: [
+const template = [{
+	label: 'File',
+	submenu: [{
+		label: 'Save as HTML',
+		click: funcSave
+	}, {
+		label: 'Save as JSON',
+		click: funcSaveJSON
+	}, {
+		label: 'Load',
+		accelerator: 'CmdOrCtrl+O',
+		click: loadAlternate
+	}]
+}, {
+	label: 'Filtering',
+	submenu: [
 
-{label: 'Filter for:', accelerator: 'CmdOrCtrl+F', click: sortaSorter}
-		]
-	},
-	{
-		label: 'Edit',
-		submenu: [
-			{
-				role: 'selectall'
+		{
+			label: 'Filter for:',
+			accelerator: 'CmdOrCtrl+F',
+			click: sortaSorter
+		}
+	]
+}, {
+	label: 'Edit',
+	submenu: [{
+		role: 'selectall'
+	}]
+}, {
+	label: 'View',
+	submenu: [{
+		label: 'Reload',
+		accelerator: 'CmdOrCtrl+R',
+		click(item, focusedWindow) {
+			if (focusedWindow) {
+				focusedWindow.reload();
 			}
-		]
-	},
-	{
-		label: 'View',
-		submenu: [
-			{
-				label: 'Reload',
-				accelerator: 'CmdOrCtrl+R',
-				click(item, focusedWindow) {
-					if (focusedWindow) {
-						focusedWindow.reload();
-					}
-				}
-			},
-			{
-				role: 'togglefullscreen'
-			}
-		]
-	},
-	{
-		role: 'window',
-		submenu: [
-			{
-				role: 'minimize'
-			},
-			{
-				role: 'close'
-			}
-		]
-	},
-	{
-		role: 'help',
-		submenu: [
-			{
-				label: 'Learn More about Electron',
-				click() {
-					require('electron').shell.openExternal('http://electron.atom.io');
-				}
-			},
-			{
-				label: 'The Github Repo',
-				click() {
-					require('electron').shell.openExternal('https://github.com/willy321/elite-journal');
-				}
-			}
-		]
-	}
-];
+		}
+	}, {
+		role: 'togglefullscreen'
+	}]
+}, {
+	role: 'window',
+	submenu: [{
+		role: 'minimize'
+	}, {
+		role: 'close'
+	}]
+}, {
+	role: 'help',
+	submenu: [{
+		label: 'Learn More about Electron',
+		click() {
+			require('electron').shell.openExternal('http://electron.atom.io');
+		}
+	}, {
+		label: 'The Github Repo',
+		click() {
+			require('electron').shell.openExternal('https://github.com/willy321/elite-journal');
+		}
+	}]
+}];
 
 if (process.platform === 'darwin') {
 	const name = require('electron').remote.app.getName();
 
 	template.unshift({
 		label: name,
-		submenu: [
-			{
-				role: 'about'
-			},
-			{
-				type: 'separator'
-			},
-			{
-				role: 'services',
-				submenu: []
-			},
-			{
-				type: 'separator'
-			},
-			{
-				role: 'hide'
-			},
-			{
-				role: 'hideothers'
-			},
-			{
-				role: 'unhide'
-			},
-			{
-				type: 'separator'
-			},
-			{
-				role: 'quit'
-			}
-		]
+		submenu: [{
+			role: 'about'
+		}, {
+			type: 'separator'
+		}, {
+			role: 'services',
+			submenu: []
+		}, {
+			type: 'separator'
+		}, {
+			role: 'hide'
+		}, {
+			role: 'hideothers'
+		}, {
+			role: 'unhide'
+		}, {
+			type: 'separator'
+		}, {
+			role: 'quit'
+		}]
 	});
-// Edit menu.
-	template[1].submenu.push(
-		{
-			type: 'separator'
-		},
-		{
-			label: 'Speech',
-			submenu: [
-				{
-					role: 'startspeaking'
-				},
-				{
-					role: 'stopspeaking'
-				}
-			]
-		}
-);
-// Window menu.
-	template[3].submenu = [
-		{
-			label: 'Close',
-			accelerator: 'CmdOrCtrl+W',
-			role: 'close'
-		},
-		{
-			label: 'Minimize',
-			accelerator: 'CmdOrCtrl+M',
-			role: 'minimize'
-		},
-		{
-			label: 'Zoom',
-			role: 'zoom'
-		},
-		{
-			type: 'separator'
-		},
-		{
-			label: 'Bring All to Front',
-			role: 'front'
-		}
-	];
+	// Edit menu.
+	template[1].submenu.push({
+		type: 'separator'
+	}, {
+		label: 'Speech',
+		submenu: [{
+			role: 'startspeaking'
+		}, {
+			role: 'stopspeaking'
+		}]
+	});
+	// Window menu.
+	template[3].submenu = [{
+		label: 'Close',
+		accelerator: 'CmdOrCtrl+W',
+		role: 'close'
+	}, {
+		label: 'Minimize',
+		accelerator: 'CmdOrCtrl+M',
+		role: 'minimize'
+	}, {
+		label: 'Zoom',
+		role: 'zoom'
+	}, {
+		type: 'separator'
+	}, {
+		label: 'Bring All to Front',
+		role: 'front'
+	}];
 }
 
 const menu = Menu.buildFromTemplate(template);
