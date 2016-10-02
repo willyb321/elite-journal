@@ -13,7 +13,6 @@ const s = require('string');
 const format = require('json-nice');
 
 let JSONParsedEvent = [];
-// const filterForm = '<form name="filterForm" onsubmit="return othername()" method="post"><input type="text" name="filterPls" id="userInput"><input type="submit" onclick=""></form>';
 const app = electron.app;
 if (require('electron-squirrel-startup')) return; // eslint-disable-line curly
 
@@ -44,8 +43,6 @@ updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
 updater.autoUpdater; // eslint-disable-line no-unused-expressions
 
 let JSONParsed = []; // eslint-disable-line prefer-const
-// let master = []; also coming in future
-// let filtered; coming in future!
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
 let loadFile;
 let win; // eslint-disable-line no-var
@@ -84,7 +81,7 @@ function getChecked() {
 		if (arg === 'All Events') {
 			win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
 		} else {
-			console.log(arg);  // prints "ping"
+			console.log(arg);
 			process.filteredEvent = arg;
 			JSONParsedEvent = [];
 			process.filteredHTML = '';
@@ -97,20 +94,9 @@ function getChecked() {
 	});
 }
 function sortaSorter() {
-	// if (process.filterWinPos === undefined) {
-	// 	process.filterWin = new electron.BrowserWindow({
-	// 		width: 600,
-	// 		height: 400
-	// 	});
-	// } else {
-	// 	process.filterWin = new electron.BrowserWindow({
-	// 		width: 600,
-	// 		height: 400
-	// 	});
-	// 	process.filterWin.setPosition(process.filterWinPos[0], process.filterWinPos[1]);
-	// }
+	if (process.logLoaded === true) {
+
 	process.filterOpen = true;
-	// process.contents = process.filterWin.webContents;
 	const filterList = _.pluck(JSONParsed, 'event');
 	process.unique = filterList.filter((elem, index, self) => {
 		return index === self.indexOf(elem);
@@ -124,10 +110,9 @@ function sortaSorter() {
 
 	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
 	getChecked();
-	// process.filterWin.on('closed', () => {
-	// 	process.filterWin = null
-	// 	process.filterOpen = false
-	// })
+} else {
+		dialog.showMessageBox({type: 'info', buttons: [], title: 'Please load a file first', message: 'Please load a file before attempting to filter things that don\'t exist'});
+}
 }
 function findEvents() {
 	for (let i = 0; i < JSONParsed.length; i++) {
@@ -175,39 +160,9 @@ function loadAlternate() {
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + css + process.htmlDone);
+		process.logLoaded = true
 	});
 }
-// function below isn't being used anymore, but is here for historical purposes etc
-// function readLine() {
-// 	const loadPls = loadFile;
-// 	const lr = new LineByLineReader(loadPls[0]);
-
-// 	lr.on('error', err => {
-// 		return console.log(err);
-// 	});
-
-// 	lr.on('line', line => {
-// 		const lineParse = JSON.parse(line);
-// 		JSONParsed.push(lineParse);
-// 		const html = tableify(lineParse) + '<hr>';
-// 		fs.appendFile(`${process.resourcesPath}/index2.html`, html, err => {
-// 			if (err) {
-// 				return console.log(err);
-// 			}
-// 		});
-// 	});
-// 	fs.appendFile(`${process.resourcesPath}/index2.html`, css, err => {
-// 		if (err) {
-// 			return console.log(err);
-// 		}
-// 	});
-// 	lr.on('end', () => {
-// 		console.log('done!');
-// 		console.log('The file was saved!');
-// 		win.loadURL(`file://${process.resourcesPath}/index2.html`);
-// 	});
-// 	return win;
-// }
 function funcSave() {
 	dialog.showSaveDialog(fileName => {
 		if (fileName === undefined) {
