@@ -44,7 +44,6 @@ updater.autoUpdater; // eslint-disable-line no-unused-expressions
 
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
-let loadFile;
 let win; // eslint-disable-line no-var
 let htmlDone; // eslint-disable-line no-unused-vars
 let alternateLoad; // eslint-disable-line no-unused-vars
@@ -132,7 +131,7 @@ function loadAlternate() {
 	let html;
 	JSONParsed = [];
 	process.alterateLoad = true;
-	loadFile = dialogLoad();
+	let loadFile = dialogLoad();
 	const lr = new LineByLineReader(loadFile[0]);
 	lr.on('error', err => {
 		console.log(err);
@@ -147,19 +146,11 @@ function loadAlternate() {
 		if (err) {
 			console.log(err.message);
 		}
-		if (process.filterOpen === true) {
-			if (process.filterWin.isDestroyed() === 1) {
-				sortaSorter();
-			} else {
-				process.filterWinPos = process.filterWin.getPosition();
-				process.filterWin.close();
-				sortaSorter();
-			}
-		}
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + css + process.htmlDone);
 		process.logLoaded = true;
+		loadFile = '';
 	});
 }
 function funcSave() {
@@ -284,9 +275,15 @@ const template = [
 		role: 'help',
 		submenu: [
 			{
-				label: 'Learn More',
+				label: 'Learn More about Electron',
 				click() {
 					require('electron').shell.openExternal('http://electron.atom.io');
+				}
+			},
+			{
+				label: 'The Github Repo',
+				click() {
+					require('electron').shell.openExternal('https://github.com/willy321/elite-journal');
 				}
 			}
 		]
