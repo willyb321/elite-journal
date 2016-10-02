@@ -12,10 +12,12 @@ const {Menu} = require('electron');
 const s = require('string');
 const format = require('json-nice');
 
+const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>`;
 let JSONParsedEvent = [];
 const app = electron.app;
 if (require('electron-squirrel-startup')) return; // eslint-disable-line curly
 
+let loadFile;
 const options = {
 	repo: 'willyb321/elite-journal',
 	currentVersion: app.getVersion()
@@ -51,7 +53,6 @@ let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
 let win; // eslint-disable-line no-var
 let htmlDone; // eslint-disable-line no-unused-vars
-let alternateLoad; // eslint-disable-line no-unused-vars
 const css = '<script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>body {padding: 0; margin: 0; } body {background-color: #313943; color: #bbc8d8; font-family: \'Lato\'; font-size: 22px; font-weight: 500; line-height: 36px; margin-bottom: 36px; text-align: center; } header {position: absolute; width: 500px; height: 250px; top: 50%; left: 50%; margin-top: -125px; margin-left: -250px; text-align: center; } header h1 {font-size: 60px; font-weight: 100; margin: 0; padding: 0; } #grad {background: -webkit-linear-gradient(left, #5A3F37 , #2C7744); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(right, #5A3F37 , #2C7744); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(right,#5A3F37 , #2C7744); /* For Firefox 3.6 to 15 */ background: linear-gradient(to right, #5A3F37 , #2C7744); /* Standard syntax */ } hr {color: red; }</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
@@ -99,7 +100,7 @@ function getChecked() {
 
 	ipcMain.on('asynchronous-message', (event, arg) => {
 		if (arg === 'All Events') {
-			win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + '<hr>' + css + process.htmlDone); // eslint-disable-line no-useless-concat
+			win.loadURL('data:text/html,' + '<hr>' + css + process.htmlDone); // eslint-disable-line no-useless-concat
 		} else {
 			console.log(arg);
 			process.filteredEvent = arg;
@@ -133,7 +134,7 @@ function sortaSorter() {
 			prop1: process.unique
 		};
 
-		win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + '<hr>' + process.htmlDone); // eslint-disable-line no-useless-concat
+		win.loadURL('data:text/html,' + webview + css + '<hr>' + process.htmlDone); // eslint-disable-line no-useless-concat
 		getChecked();
 	} else {
 		dialog.showMessageBox({
@@ -159,14 +160,15 @@ function loadFilter() {
 		process.filteredHTML += tableify(JSONParsedEvent[i]) + '<hr>'; // eslint-disable-line prefer-const
 	}
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + `<script type="text/javascript">const webview=document.getElementById('foo');webview.addEventListener('dom-ready', ()=>{foo.document.getElementById("myForm").elements['plswork'].selectedIndex = ${process.selectedEvent}()})</script>` + css + '<hr>' + process.filteredHTML); // eslint-disable-line no-useless-concat
+	win.loadURL('data:text/html,' + webview + `<script type="text/javascript">const webview=document.getElementById('foo');webview.addEventListener('dom-ready', ()=>{foo.document.getElementById("myForm").elements['plswork'].selectedIndex = ${process.selectedEvent}()})</script>` + css + '<hr>' + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 
 function loadAlternate() {
+	// need to make filtering work if you load a file, then go to load another one but then cancel the load and then try to open the filter if you haven't before in that session
 	let html;
 	JSONParsed = [];
 	process.alterateLoad = true;
-	let loadFile = dialogLoad();
+	loadFile = dialogLoad();
 	if (loadFile !== undefined) {
 		const lr = new LineByLineReader(loadFile[0]);
 		lr.on('error', err => {
