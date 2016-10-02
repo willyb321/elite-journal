@@ -106,7 +106,7 @@ function sortaSorter() {
 		global.sharedObj = {prop1: process.htmlFormStripped};
 		global.test = {prop1: process.unique};
 
-		win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
+		win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + '<hr>' + process.htmlDone); // eslint-disable-line no-useless-concat
 		getChecked();
 	} else {
 		dialog.showMessageBox({type: 'info', buttons: [], title: 'Please load a file first', message: 'Please load a file before attempting to filter things that don\'t exist'});
@@ -125,7 +125,7 @@ function loadFilter() {
 		process.filteredHTML += tableify(JSONParsedEvent[i]) + '<hr>'; // eslint-disable-line prefer-const
 	}
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + `<script type="text/javascript">const webview=document.getElementById('foo');webview.addEventListener('dom-ready', ()=>{foo.document.getElementById("myForm").elements['plswork'].selectedIndex = ${process.selectedEvent}()})</script>` + css + process.filteredHTML); // eslint-disable-line no-useless-concat
+	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + `<script type="text/javascript">const webview=document.getElementById('foo');webview.addEventListener('dom-ready', ()=>{foo.document.getElementById("myForm").elements['plswork'].selectedIndex = ${process.selectedEvent}()})</script>` + css + '<hr>' + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 function loadAlternate() {
 	let html;
@@ -148,7 +148,7 @@ function loadAlternate() {
 		}
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + process.htmlDone);
+		win.loadURL('data:text/html,' + css + '<hr>' + process.htmlDone);
 		process.logLoaded = true;
 		loadFile = '';
 	});
