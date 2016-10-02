@@ -22,8 +22,6 @@
 		text-align: center;
 	}
 
-
-
 	header h1 {
 		font-size: 60px;
 		font-weight: 100;
@@ -61,9 +59,10 @@
 		ipcRenderer.send('asynchronous-message', text)
 		ipcRenderer.send('asynchronous-message-value', value)
 	}
-ipcRenderer.on('asynchronous-reply', (event, arg) => {
-  document.getElementById('selectNumber').selectedIndex = arg
-})
+	ipcRenderer.on('asynchronous-reply', (event, arg) => {
+		document.getElementById('selectNumber').selectedIndex = arg
+	})
+
 	function populate() {
 		var remote = require('electron').remote;
 		var event = remote.getGlobal('test').prop1;
@@ -71,7 +70,6 @@ ipcRenderer.on('asynchronous-reply', (event, arg) => {
 			document.write('<option value="' + event[i] + '">' + event[i] + '</option>');
 		}
 	}
-
 	</script>
 	<form id="myForm">
 		<select id="selectNumber" name="plswork" onchange="sendChecked()">

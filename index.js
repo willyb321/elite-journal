@@ -68,7 +68,7 @@ function onClosed() {
 	mainWindow = null;
 }
 function dialogLoad() {
-	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}, {name: 'All file', extensions: ['*']}]}, {properties: ['openFile']});
+	return dialog.showOpenDialog({defaultPath: logPath, buttonLabel: 'Load File', filters: [{name: 'Logs and saved HTML', extensions: ['log', 'html']}, {name: 'All files', extensions: ['*']}]}, {properties: ['openFile']});
 }
 process.on('uncaughtException', err => {
 	console.log('ERROR! ERROR: ' + err.message);
