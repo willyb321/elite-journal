@@ -22,16 +22,7 @@
 		text-align: center;
 	}
 
-	header {
-		position: absolute;
-		width: 500px;
-		height: 250px;
-		top: 50%;
-		left: 50%;
-		margin-top: -125px;
-		margin-left: -250px;
-		text-align: center;
-	}
+
 
 	header h1 {
 		font-size: 60px;
@@ -84,6 +75,7 @@ ipcRenderer.on('asynchronous-reply', (event, arg) => {
 	</script>
 	<form id="myForm">
 		<select id="selectNumber" name="plswork" onchange="sendChecked()">
+			<option>Select an option</option>
 			<option>All Events</option>
 			<script type="text/javascript">
 			populate();

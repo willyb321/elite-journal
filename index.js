@@ -82,7 +82,7 @@ function getChecked() {
 
 	ipcMain.on('asynchronous-message', (event, arg) => {
 		if (arg === 'All Events') {
-			win.loadURL('data:text/html,' + css + process.htmlDone);
+			win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
 		} else {
 			console.log(arg);  // prints "ping"
 			process.filteredEvent = arg;
@@ -122,7 +122,7 @@ function sortaSorter() {
 	global.sharedObj = {prop1: process.htmlFormStripped};
 	global.test = {prop1: process.unique};
 
-	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:640px; height:480px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
+	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + css + process.htmlDone); // eslint-disable-line no-useless-concat
 	getChecked();
 	// process.filterWin.on('closed', () => {
 	// 	process.filterWin = null
@@ -142,7 +142,7 @@ function loadFilter() {
 		process.filteredHTML += tableify(JSONParsedEvent[i]) + '<hr>'; // eslint-disable-line prefer-const
 	}
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + `<webview id="foo" name="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:640px; height:480px" nodeintegration="on"></webview>` + `<script type="text/javascript">const webview=document.getElementById('foo');webview.addEventListener('dom-ready', ()=>{foo.document.getElementById("myForm").elements['plswork'].selectedIndex = ${process.selectedEvent}()})</script>` + css + process.filteredHTML); // eslint-disable-line no-useless-concat
+	win.loadURL('data:text/html,' + `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>` + `<script type="text/javascript">const webview=document.getElementById('foo');webview.addEventListener('dom-ready', ()=>{foo.document.getElementById("myForm").elements['plswork'].selectedIndex = ${process.selectedEvent}()})</script>` + css + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 function loadAlternate() {
 	let html;
