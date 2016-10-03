@@ -90,7 +90,7 @@ function dialogLoad() {
 	});
 }
 process.on('uncaughtException', err => {
-	console.log('ERROR! ERROR: ' + err.message);
+	console.log('ERROR! The error is: ' + err.message);
 });
 
 function getChecked() {
@@ -164,6 +164,7 @@ function loadFilter() {
 
 function loadAlternate() {
 	// need to make filtering work if you load a file, then go to load another one but then cancel the load and then try to open the filter if you haven't before in that session
+	// theres another bug in this function ive found - load a file, ctrl f, then ctrl o and then cancel out. then, try to filter and it wont work unless you filter for all events
 	let html;
 	JSONParsed = [];
 	process.alterateLoad = true;
