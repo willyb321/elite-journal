@@ -65,7 +65,7 @@
 
 	function populate() {
 		var remote = require('electron').remote;
-		var event = remote.getGlobal('test').prop1;
+		var event = remote.getGlobal('eventsFilter').prop1;
 		for (i = 0; i < event.length; i++) {
 			document.write('<option value="' + event[i] + '">' + event[i] + '</option>');
 		}

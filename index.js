@@ -9,7 +9,6 @@ const LineByLineReader = require('line-by-line');
 const _ = require('underscore');
 const GhReleases = require('electron-gh-releases');
 const {Menu} = require('electron');
-const s = require('string');
 const format = require('json-nice');
 
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>`;
@@ -122,14 +121,7 @@ function sortaSorter() {
 		process.unique = filterList.filter((elem, index, self) => {
 			return index === self.indexOf(elem);
 		});
-		for (let i = 0; i < process.unique.length; i++) {
-			process.htmlForm += ' ' + process.unique[i] + '<br>';
-		}
-		process.htmlFormStripped = s(process.htmlForm).strip('undefined');
-		global.sharedObj = {
-			prop1: process.htmlFormStripped
-		};
-		global.test = {
+		global.eventsFilter = {
 			prop1: process.unique
 		};
 
@@ -261,11 +253,6 @@ app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') {
 		app.quit();
 	}
-	fs.writeFile(`${process.resourcesPath}/index2.html`, '', err => {
-		if (err) {
-			return console.log(err);
-		}
-	});
 });
 app.on('activate', () => {
 	if (!mainWindow) {
