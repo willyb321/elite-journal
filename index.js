@@ -121,6 +121,7 @@ function sortaSorter() {
 		process.unique = filterList.filter((elem, index, self) => {
 			return index === self.indexOf(elem);
 		});
+		process.unique = process.unique.sort()
 		global.eventsFilter = {
 			prop1: process.unique
 		};
