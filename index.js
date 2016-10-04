@@ -326,7 +326,7 @@ const template = [{
 	}, {
 		label: 'The Github Repo',
 		click() {
-			require('electron').shell.openExternal('https://github.com/willy321/elite-journal');
+			require('electron').shell.openExternal('https://github.com/willyb321/elite-journal');
 		}
 	}]
 }];
