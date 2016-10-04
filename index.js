@@ -179,29 +179,29 @@ function loadAlternate() {
 }
 function loadByDrop() {
 	let html;
-		process.alterateLoad = true;
-		JSONParsed = [];
-		const lr = new LineByLineReader(process.logDropPath);
-		lr.on('error', err => {
-			console.log(err);
-		});
-		lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
-			let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-			JSONParsed.push(lineParse);
-			let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
-			html += htmlTabled;
-		});
-		lr.on('end', err => {
-			if (err) {
-				console.log(err.message);
-			}
-			process.htmlDone = html;
-			process.htmlDone = process.htmlDone.replace('undefined', '');
-			win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + process.htmlDone);
-			process.logLoaded = true;
-			loadFile = '';
-			process.logDropped = false
-		});
+	process.alterateLoad = true;
+	JSONParsed = [];
+	const lr = new LineByLineReader(process.logDropPath);
+	lr.on('error', err => {
+		console.log(err);
+	});
+	lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
+		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
+		JSONParsed.push(lineParse);
+		let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
+		html += htmlTabled;
+	});
+	lr.on('end', err => {
+		if (err) {
+			console.log(err.message);
+		}
+		process.htmlDone = html;
+		process.htmlDone = process.htmlDone.replace('undefined', '');
+		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + process.htmlDone);
+		process.logLoaded = true;
+		loadFile = '';
+		process.logDropped = false;
+	});
 }
 function funcSave() {
 	if (process.logLoaded === true) {
@@ -277,11 +277,11 @@ app.on('activate', () => {
 	}
 });
 ipcMain.on('asynchronous-drop', (event, arg) => {
-console.log(arg);
-process.logDropPath = arg
-process.logDropped = true
-loadByDrop();
-})
+	console.log(arg);
+	process.logDropPath = arg;
+	process.logDropped = true;
+	loadByDrop();
+});
 app.on('ready', () => {
 	mainWindow = createMainWindow();
 	// win.loadURL('data:text/html,' + css + '<br><h1>Please load a file using the "File" menu</h1>' + dragndrop);
