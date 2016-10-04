@@ -156,13 +156,11 @@ function loadFilter() {
 }
 
 function loadAlternate() {
-	// need to make filtering work if you load a file, then go to load another one but then cancel the load and then try to open the filter if you haven't before in that session
-	// theres another bug in this function ive found - load a file, ctrl f, then ctrl o and then cancel out. then, try to filter and it wont work unless you filter for all events
 	let html;
-	JSONParsed = [];
 	process.alterateLoad = true;
 	loadFile = dialogLoad();
 	if (loadFile !== undefined) {
+		JSONParsed = [];
 		const lr = new LineByLineReader(loadFile[0]);
 		lr.on('error', err => {
 			console.log(err);
@@ -225,7 +223,6 @@ function funcSaveJSON() {
 				console.log('You didn\'t save the file');
 				return;
 			}
-			// const JSONParsedSave = JSON.stringify(JSONParsed);
 			if (process.isFiltered === true) {
 				const JSONParsedEventSave = JSON.stringify(JSONParsedEvent);
 				fs.writeFile(fileName, JSONParsedEventSave, err => {
