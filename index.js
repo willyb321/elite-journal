@@ -10,7 +10,9 @@ const _ = require('underscore');
 const GhReleases = require('electron-gh-releases');
 const {Menu} = require('electron');
 const format = require('json-nice');
+const {ipcMain} = require('electron');
 
+const dragndrop = `<hr><webview id="bar" src="${__dirname}/drop.html" style="display:inline-flex; width:400px; height:75px" nodeintegration="on"></webview>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>`;
 let JSONParsedEvent = [];
 const app = electron.app;
@@ -21,9 +23,7 @@ const options = {
 	repo: 'willyb321/elite-journal',
 	currentVersion: app.getVersion()
 };
-
 const updater = new GhReleases(options);
-
 // Check for updates
 // `status` returns true if there is a new update available
 updater.check((err, status) => {
@@ -32,7 +32,6 @@ updater.check((err, status) => {
 		updater.download();
 	}
 });
-
 // When an update has been downloaded
 updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
 	// Restart the app and install the update
@@ -44,10 +43,8 @@ updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
 	});
 	updater.install();
 });
-
 // Access electrons autoUpdater
 updater.autoUpdater; // eslint-disable-line no-unused-expressions
-
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
 let win; // eslint-disable-line no-var
@@ -93,8 +90,6 @@ process.on('uncaughtException', err => {
 });
 
 function getChecked() {
-	const {ipcMain} = require('electron');
-
 	ipcMain.on('asynchronous-message', (event, arg) => {
 		if (arg === 'All Events') {
 			win.loadURL('data:text/html,' + webview + '<hr>' + css + process.htmlDone); // eslint-disable-line no-useless-concat
@@ -125,8 +120,7 @@ function sortaSorter() {
 		global.eventsFilter = {
 			prop1: process.unique
 		};
-
-		win.loadURL('data:text/html,' + webview + css + '<hr>' + process.htmlDone); // eslint-disable-line no-useless-concat
+		win.loadURL('data:text/html,' + webview + css + dragndrop + '<hr>' + process.htmlDone); // eslint-disable-line no-useless-concat
 		getChecked();
 	} else {
 		dialog.showMessageBox({
@@ -152,7 +146,7 @@ function loadFilter() {
 		process.filteredHTML += tableify(JSONParsedEvent[i]) + '<hr>'; // eslint-disable-line prefer-const
 	}
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + webview + css + '<hr>' + process.filteredHTML); // eslint-disable-line no-useless-concat
+	win.loadURL('data:text/html,' + webview + css + dragndrop + '<hr>' + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 
 function loadAlternate() {
@@ -177,13 +171,38 @@ function loadAlternate() {
 			}
 			process.htmlDone = html;
 			process.htmlDone = process.htmlDone.replace('undefined', '');
-			win.loadURL('data:text/html,' + css + '<hr>' + process.htmlDone);
+			win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + process.htmlDone);
 			process.logLoaded = true;
 			loadFile = '';
 		});
 	}
 }
-
+function loadByDrop() {
+	let html;
+		process.alterateLoad = true;
+		JSONParsed = [];
+		const lr = new LineByLineReader(process.logDropPath);
+		lr.on('error', err => {
+			console.log(err);
+		});
+		lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
+			let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
+			JSONParsed.push(lineParse);
+			let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
+			html += htmlTabled;
+		});
+		lr.on('end', err => {
+			if (err) {
+				console.log(err.message);
+			}
+			process.htmlDone = html;
+			process.htmlDone = process.htmlDone.replace('undefined', '');
+			win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + process.htmlDone);
+			process.logLoaded = true;
+			loadFile = '';
+			process.logDropped = false
+		});
+}
 function funcSave() {
 	if (process.logLoaded === true) {
 		dialog.showSaveDialog(fileName => {
@@ -257,12 +276,17 @@ app.on('activate', () => {
 		mainWindow = createMainWindow();
 	}
 });
-
+ipcMain.on('asynchronous-drop', (event, arg) => {
+console.log(arg);
+process.logDropPath = arg
+process.logDropped = true
+loadByDrop();
+})
 app.on('ready', () => {
 	mainWindow = createMainWindow();
-	win.loadURL('data:text/html,' + css + '<br><h1>Please load a file using the "File" menu</h1>');
+	// win.loadURL('data:text/html,' + css + '<br><h1>Please load a file using the "File" menu</h1>' + dragndrop);
+	win.loadURL(`file:///${__dirname}/index.html`);
 });
-
 const template = [{
 	label: 'File',
 	submenu: [{
@@ -280,14 +304,11 @@ const template = [{
 	}]
 }, {
 	label: 'Filtering',
-	submenu: [
-
-		{
-			label: 'Filter for:',
-			accelerator: 'CmdOrCtrl+F',
-			click: sortaSorter
-		}
-	]
+	submenu: [{
+		label: 'Filter for:',
+		accelerator: 'CmdOrCtrl+F',
+		click: sortaSorter
+	}]
 }, {
 	label: 'Edit',
 	submenu: [{
