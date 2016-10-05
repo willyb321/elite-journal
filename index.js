@@ -12,7 +12,7 @@ const {Menu} = require('electron');
 const format = require('json-nice');
 const {ipcMain} = require('electron');
 
-const dragndrop = `<hr><webview id="bar" src="${__dirname}/drop.html" style="display:inline-flex; width:400px; height:75px" nodeintegration="on"></webview>`;
+const dragndrop = `<hr><webview id="bar" src="${__dirname}/drop.html" style="display:inline-flex; width:100%; height:75px" nodeintegration="on"></webview>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>`;
 let JSONParsedEvent = [];
 const app = electron.app;
