@@ -6,6 +6,7 @@
 
 **Closed issues:**
 
+- Changelog would be nice. [\#8](https://github.com/willyb321/elite-journal/issues/8)
 - Keyboard shortcuts [\#7](https://github.com/willyb321/elite-journal/issues/7)
 
 ## [v1.4.5](https://github.com/willyb321/elite-journal/tree/v1.4.5) (2016-10-05)
