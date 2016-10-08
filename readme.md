@@ -54,3 +54,8 @@ See [CHANGELOG.md](https://github.com/willyb321/elite-journal/blob/master/CHANGE
 ## License
 
 MIT © [willyb321](https://tehsuperwilly.tech)
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/willyb321/elite-journal/badge.svg?style=beer-square)](https://beerpay.io/willyb321/elite-journal)  [![Beerpay](https://beerpay.io/willyb321/elite-journal/make-wish.svg?style=flat-square)](https://beerpay.io/willyb321/elite-journal?focus=wish)
