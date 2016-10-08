@@ -1,13 +1,16 @@
 # Change Log
 
-## [Unreleased](https://github.com/willyb321/elite-journal/tree/HEAD)
-
-[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.5...HEAD)
+## [v1.4.6](https://github.com/willyb321/elite-journal/tree/v1.4.6) (2016-10-07)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.5...v1.4.6)
 
 **Closed issues:**
 
 - Changelog would be nice. [\#8](https://github.com/willyb321/elite-journal/issues/8)
 - Keyboard shortcuts [\#7](https://github.com/willyb321/elite-journal/issues/7)
+
+**Merged pull requests:**
+
+- Revert "Update all dependencies 🌴" [\#9](https://github.com/willyb321/elite-journal/pull/9) ([willyb321](https://github.com/willyb321))
 
 ## [v1.4.5](https://github.com/willyb321/elite-journal/tree/v1.4.5) (2016-10-05)
 [Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.4...v1.4.5)
