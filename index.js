@@ -92,7 +92,7 @@ process.on('uncaughtException', err => {
 function getChecked() {
 	ipcMain.on('asynchronous-message', (event, arg) => {
 		if (arg === 'All Events') {
-			win.loadURL('data:text/html,' + webview + '<hr>' + css + process.htmlDone); // eslint-disable-line no-useless-concat
+			win.loadURL('data:text/html,' + webview + dragndrop + '<hr>' + css + process.htmlDone); // eslint-disable-line no-useless-concat
 		} else {
 			console.log(arg);
 			process.filteredEvent = arg;

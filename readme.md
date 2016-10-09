@@ -7,7 +7,7 @@
 
 ## Whats it actually do then?
 
-Basically it allows the average joe to have a look at the journal log in a nice easy to read format.
+Basically it allows the average joe to have a look at the journal log for [Elite: Dangerous](https://www.elitedangerous.com/) in a nice easy to read format.
 
 ## How to get it?
 Download a [setup .exe](https://github.com/willyb321/elite-journal/releases/latest) from the releases page, and then run it. It will automagically update when you run the application from now on!
@@ -50,6 +50,15 @@ See [CONTRIBUTING.md](https://github.com/willyb321/elite-journal/blob/master/CON
 ## Changes:
 
 See [CHANGELOG.md](https://github.com/willyb321/elite-journal/blob/master/CHANGELOG.md) for changes.
+
+## Features
+
+- Filtering.
+- Saving as HTML.
+- Saving as JSON.
+- Looking at journal logs in a nice format.
+- Drag and drop logs to load them.
+- Built with [web technologies](http://electron.atom.io/) and [Node.JS](https://nodejs.org/)
 
 ## License
 
