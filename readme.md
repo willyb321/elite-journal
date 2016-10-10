@@ -59,6 +59,7 @@ See [CHANGELOG.md](https://github.com/willyb321/elite-journal/blob/master/CHANGE
 - Looking at journal logs in a nice format.
 - Drag and drop logs to load them.
 - Built with [web technologies](http://electron.atom.io/) and [Node.JS](https://nodejs.org/)
+- Plus more
 
 ## License
 
