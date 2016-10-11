@@ -31,11 +31,11 @@ updater.check((err, status) => {
 		// Download the update
 		updater.download();
 		dialog.showMessageBox({
-		type: 'info',
-		buttons: [],
-		title: 'Update available.',
-		message: 'Press OK to install the update, and the application will download the update and then restart.'
-	});
+			type: 'info',
+			buttons: [],
+			title: 'Update available.',
+			message: 'Press OK to install the update, and the application will download the update and then restart.'
+		});
 	}
 });
 // When an update has been downloaded
