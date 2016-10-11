@@ -1,5 +1,14 @@
 # Change Log
 
+## [v1.4.12](https://github.com/willyb321/elite-journal/tree/v1.4.12) (2016-10-11)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.11...v1.4.12)
+
+## [v1.4.11](https://github.com/willyb321/elite-journal/tree/v1.4.11) (2016-10-11)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.10...v1.4.11)
+
+## [v1.4.10](https://github.com/willyb321/elite-journal/tree/v1.4.10) (2016-10-11)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.9...v1.4.10)
+
 ## [v1.4.9](https://github.com/willyb321/elite-journal/tree/v1.4.9) (2016-10-11)
 [Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.8...v1.4.9)
 
