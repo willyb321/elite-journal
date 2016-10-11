@@ -30,17 +30,17 @@ updater.check((err, status) => {
 	if (!err && status) {
 		// Download the update
 		updater.download();
+		dialog.showMessageBox({
+		type: 'info',
+		buttons: [],
+		title: 'Update available.',
+		message: 'Press OK to install the update, and the application will download the update and then restart.'
+	});
 	}
 });
 // When an update has been downloaded
 updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
 	// Restart the app and install the update
-	dialog.showMessageBox({
-		type: 'info',
-		buttons: [],
-		title: 'Update ready to install',
-		message: 'Press OK to install the update, and the application will do its thing.'
-	});
 	updater.install();
 });
 // Access electrons autoUpdater
