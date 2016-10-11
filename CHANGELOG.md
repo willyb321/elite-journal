@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/willyb321/elite-journal/tree/HEAD)
+
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.8...HEAD)
+
+**Closed issues:**
+
+- test issue [\#10](https://github.com/willyb321/elite-journal/issues/10)
+
 ## [v1.4.8](https://github.com/willyb321/elite-journal/tree/v1.4.8) (2016-10-11)
 [Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.7...v1.4.8)
 
