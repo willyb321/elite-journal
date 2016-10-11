@@ -6,6 +6,7 @@
 
 **Closed issues:**
 
+- another test issue [\#11](https://github.com/willyb321/elite-journal/issues/11)
 - test issue [\#10](https://github.com/willyb321/elite-journal/issues/10)
 
 ## [v1.4.8](https://github.com/willyb321/elite-journal/tree/v1.4.8) (2016-10-11)
