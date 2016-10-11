@@ -30,17 +30,17 @@ updater.check((err, status) => {
 	if (!err && status) {
 		// Download the update
 		updater.download();
-		dialog.showMessageBox({
-			type: 'info',
-			buttons: [],
-			title: 'Update available.',
-			message: 'Press OK to install the update, and the application will download the update and then restart.'
-		});
 	}
 });
 // When an update has been downloaded
 updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
 	// Restart the app and install the update
+	dialog.showMessageBox({
+		type: 'info',
+		buttons: [],
+		title: 'Update available.',
+		message: 'Press OK to install the update, and the application will download the update and then restart.'
+	});
 	updater.install();
 });
 // Access electrons autoUpdater
@@ -58,7 +58,9 @@ let mainWindow;
 function createMainWindow() {
 	win = new electron.BrowserWindow({
 		width: 600,
-		height: 400
+		height: 400,
+		show: false,
+		backgroundColor: '#313943'
 	});
 	process.mainContents = win.webContents;
 	win.on('closed', onClosed);
@@ -286,6 +288,9 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 	// win.loadURL('data:text/html,' + css + '<br><h1>Please load a file using the "File" menu</h1>' + dragndrop);
 	win.loadURL(`file:///${__dirname}/index.html`);
+	win.once('ready-to-show', () => {
+		win.show();
+	});
 });
 const template = [{
 	label: 'File',
