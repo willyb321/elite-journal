@@ -1,22 +1,22 @@
 'use strict';
+const electron = require('electron');
+const {Menu} = require('electron');
+const {dialog} = require('electron');
+const {ipcMain} = require('electron');
 const path = require('path');
 const os = require('os');
 const fs = require('fs.extra');
-const electron = require('electron');
 const tableify = require('tableify');
-const {dialog} = require('electron');
 const LineByLineReader = require('line-by-line');
 const _ = require('underscore');
 const GhReleases = require('electron-gh-releases');
-const {Menu} = require('electron');
 const format = require('json-nice');
-const {ipcMain} = require('electron');
 
 const dragndrop = `<hr><webview id="bar" src="${__dirname}/drop.html" style="display:inline-flex; width:100%; height:75px" nodeintegration="on"></webview>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>`;
 let JSONParsedEvent = [];
 const app = electron.app;
-if (require('electron-squirrel-startup')) return; // eslint-disable-line curly
+if (require('electron-squirrel-startup')) app.quit(); // eslint-disable-line curly
 
 let loadFile;
 const options = {
