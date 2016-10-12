@@ -59,7 +59,6 @@ function createMainWindow() {
 	win = new electron.BrowserWindow({
 		width: 600,
 		height: 400,
-		// show: false,
 		backgroundColor: '#313943'
 	});
 	process.mainContents = win.webContents;
@@ -286,11 +285,7 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 });
 app.on('ready', () => {
 	mainWindow = createMainWindow();
-	// win.loadURL('data:text/html,' + css + '<br><h1>Please load a file using the "File" menu</h1>' + dragndrop);
 	win.loadURL(`file:///${__dirname}/index.html`);
-	win.once('ready-to-show', () => {
-		win.show();
-	});
 });
 const template = [{
 	label: 'File',
