@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.4.16](https://github.com/willyb321/elite-journal/tree/v1.4.16) (2016-10-13)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.15...v1.4.16)
+
+**Merged pull requests:**
+
+- update deps [\#14](https://github.com/willyb321/elite-journal/pull/14) ([willyb321](https://github.com/willyb321))
+
 ## [v1.4.15](https://github.com/willyb321/elite-journal/tree/v1.4.15) (2016-10-13)
 [Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.14...v1.4.15)
 
