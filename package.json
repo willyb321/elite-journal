@@ -26,7 +26,7 @@
     "electron-gh-releases": "^2.0.4",
     "electron-squirrel-startup": "^1.0.0",
     "fs.extra": "^1.3.2",
-    "json-nice": "^1.1.0",
+    "jsonfile": "^2.4.0",
     "line-by-line": "^0.1.5",
     "tableify": "^1.0.0",
     "underscore": "^1.8.3"

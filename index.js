@@ -10,7 +10,7 @@ const tableify = require('tableify');
 const LineByLineReader = require('line-by-line');
 const _ = require('underscore');
 const GhReleases = require('electron-gh-releases');
-const format = require('json-nice');
+const jsonfile = require('jsonfile');
 
 const dragndrop = `<hr><webview id="bar" src="${__dirname}/drop.html" style="display:inline-flex; width:100%; height:75px" nodeintegration="on"></webview>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>`;
@@ -178,6 +178,7 @@ function loadAlternate() {
 		});
 	}
 }
+
 function loadByDrop() {
 	let html;
 	process.alterateLoad = true;
@@ -204,6 +205,7 @@ function loadByDrop() {
 		process.logDropped = false;
 	});
 }
+
 function funcSave() {
 	if (process.logLoaded === true) {
 		dialog.showSaveDialog(fileName => {
@@ -236,6 +238,14 @@ function funcSave() {
 	}
 }
 
+function loadOutput() {
+	const loadFile = dialogLoad();
+	jsonfile.readFile(loadFile[0], {spaces: 2}, (err, obj) => {
+		console.dir(obj);
+		console.log(err);
+	});
+}
+
 function funcSaveJSON() {
 	if (process.logLoaded === true) {
 		dialog.showSaveDialog(fileName => {
@@ -245,16 +255,12 @@ function funcSaveJSON() {
 			}
 			if (process.isFiltered === true) {
 				const JSONParsedEventSave = JSON.stringify(JSONParsedEvent);
-				fs.writeFile(fileName, JSONParsedEventSave, err => {
-					if (err) {
-						console.log(err.message);
-					}
+				jsonfile.writeFile(fileName, JSONParsedEventSave, err => {
+					console.error(err);
 				});
 			} else {
-				fs.writeFile(fileName, format(JSONParsed), err => {
-					if (err) {
-						console.log(err.message);
-					}
+				jsonfile.writeFile(fileName, JSONParsed, err => {
+					console.error(err);
 				});
 			}
 		});
@@ -301,6 +307,10 @@ const template = [{
 		label: 'Load',
 		accelerator: 'CmdOrCtrl+O',
 		click: loadAlternate
+	}, {
+		label: 'Load outputted JSON',
+		accelerator: 'CmdrOrCtrl+Shift+O',
+		click: loadOutput
 	}]
 }, {
 	label: 'Filtering',
@@ -347,6 +357,8 @@ const template = [{
 			require('electron').shell.openExternal('https://github.com/willyb321/elite-journal');
 		}
 	}]
-}];
+}
+];
+
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
