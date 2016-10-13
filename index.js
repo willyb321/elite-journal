@@ -270,8 +270,7 @@ function funcSaveJSON() {
 				return;
 			}
 			if (process.isFiltered === true) {
-				const JSONParsedEventSave = JSON.stringify(JSONParsedEvent);
-				jsonfile.writeFile(fileName, JSONParsedEventSave, err => {
+				jsonfile.writeFile(fileName, JSONParsedEvent, err => {
 					console.error(err);
 				});
 			} else {
