@@ -306,7 +306,6 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
-	loadOutput();
 });
 const template = [{
 	label: 'File',
