@@ -242,20 +242,22 @@ function funcSave() {
 }
 
 function loadOutput() {
+	JSONParsed = [];
 	const loadFile = dialogLoad();
 	process.htmlDone = '';
 	jsonfile.readFile(loadFile[0], (err, obj) => {
 		if (err) {
 			console.log(err.message);
 		}
-		JSONParsed.push(obj);
 		for (const prop in obj) {
 			if (!obj.hasOwnProperty(prop)) { // eslint-disable-line no-prototype-builtins
         // The current property is not a direct property of p
 				continue;
 			}
 			process.htmlDone += tableify(obj[prop]) + '<hr>';
+			JSONParsed.push(obj[prop]);
 		}
+		process.logLoaded = true;
 		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + process.htmlDone);
 	});
 }
