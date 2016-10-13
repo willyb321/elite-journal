@@ -81,10 +81,10 @@ function dialogLoad() {
 		}, {
 			name: 'All files',
 			extensions: ['*']
-		},
+		}, {
 			name: 'Saved JSON',
 			extensions: ['json']
-		]
+		}]
 	}, {
 		properties: ['openFile']
 	});
@@ -243,9 +243,20 @@ function funcSave() {
 
 function loadOutput() {
 	const loadFile = dialogLoad();
-	jsonfile.readFile(loadFile[0], {spaces: 2}, (err, obj) => {
-		console.dir(obj);
-		console.log(err);
+	process.htmlDone = '';
+	jsonfile.readFile(loadFile[0], (err, obj) => {
+		if (err) {
+			console.log(err.message);
+		}
+		JSONParsed.push(obj);
+		for (const prop in obj) {
+			if (!obj.hasOwnProperty(prop)) { // eslint-disable-line no-prototype-builtins
+        // The current property is not a direct property of p
+				continue;
+			}
+			process.htmlDone += tableify(obj[prop]) + '<hr>';
+		}
+		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + process.htmlDone);
 	});
 }
 
@@ -295,6 +306,7 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
+	loadOutput();
 });
 const template = [{
 	label: 'File',
