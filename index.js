@@ -81,7 +81,10 @@ function dialogLoad() {
 		}, {
 			name: 'All files',
 			extensions: ['*']
-		}]
+		},
+			name: 'Saved JSON',
+			extensions: ['json']
+		]
 	}, {
 		properties: ['openFile']
 	});
