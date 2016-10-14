@@ -29,6 +29,14 @@ const updater = new GhReleases(options);
 // `status` returns true if there is a new update available
 updater.check((err, status) => {
 	if (!err && status) {
+		if (status === true) {
+			dialog.showMessageBox({
+				type: 'info',
+				buttons: [],
+				title: 'New update available.',
+				message: 'Press OK to download the update, and the application will download the update and then prompt you to confirm installation.'
+			});
+		}
 		// Download the update
 		updater.download();
 	}
@@ -39,8 +47,8 @@ updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
 	dialog.showMessageBox({
 		type: 'info',
 		buttons: [],
-		title: 'Update available.',
-		message: 'Press OK to install the update, and the application will download the update and then restart.'
+		title: 'Update ready to install.',
+		message: 'Press OK to install the update, and the application will then restart.'
 	});
 	updater.install();
 });
