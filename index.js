@@ -376,11 +376,11 @@ const template = [{
 		label: 'What Version am I on?',
 		click() {
 			dialog.showMessageBox({
-			type: 'info',
-			buttons: [],
-			title: 'Please load a file first',
-			message: 'Current Version: ' + app.getVersion()
-		});
+				type: 'info',
+				buttons: [],
+				title: 'Please load a file first',
+				message: 'Current Version: ' + app.getVersion()
+			});
 		}
 	}
 	]
