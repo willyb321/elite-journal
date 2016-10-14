@@ -14,8 +14,8 @@
     "test": "xo",
     "start": "electron .",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
-    "pack": "build --dir --x64",
-    "dist": "build --x64"
+    "pack": "build --dir",
+    "dist": "build"
   },
   "keywords": [
     "electron-app",
@@ -47,6 +47,7 @@
   },
   "build": {
     "win": {
+      "target": ["nsis"],
       "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true",
       "remoteReleases": true
     }
