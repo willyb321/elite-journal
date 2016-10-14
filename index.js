@@ -372,7 +372,18 @@ const template = [{
 		click() {
 			require('electron').shell.openExternal('https://github.com/willyb321/elite-journal');
 		}
-	}]
+	}, {
+		label: 'What Version am I on?',
+		click() {
+			dialog.showMessageBox({
+			type: 'info',
+			buttons: [],
+			title: 'Please load a file first',
+			message: 'Current Version: ' + app.getVersion()
+		});
+		}
+	}
+	]
 }
 ];
 
