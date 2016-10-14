@@ -166,9 +166,42 @@ function loadAlternate() {
 	let html;
 	process.alterateLoad = true;
 	loadFile = dialogLoad();
-	if (loadFile !== undefined) {
-		JSONParsed = [];
-		const lr = new LineByLineReader(loadFile[0]);
+	if ((/\.(json)$/i).test(loadFile)) {
+		loadOutput();
+	} else if ((/\.(log)$/i).test(loadFile)) {
+		if (loadFile !== undefined) {
+			JSONParsed = [];
+			const lr = new LineByLineReader(loadFile[0]);
+			lr.on('error', err => {
+				console.log(err);
+			});
+			lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
+				let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
+				JSONParsed.push(lineParse);
+				let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
+				html += htmlTabled;
+			});
+			lr.on('end', err => {
+				if (err) {
+					console.log(err.message);
+				}
+				process.htmlDone = html;
+				process.htmlDone = process.htmlDone.replace('undefined', '');
+				win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
+				process.logLoaded = true;
+				loadFile = '';
+			});
+		}
+	}}
+
+function loadByDrop() {
+	let html;
+	process.alterateLoad = true;
+	JSONParsed = [];
+	if ((/\.(json)$/i).test(process.logDropPath)) {
+		loadOutputDropped();
+	} else if ((/\.(log)$/i).test(process.logDropPath)) {
+		const lr = new LineByLineReader(process.logDropPath);
 		lr.on('error', err => {
 			console.log(err);
 		});
@@ -187,36 +220,9 @@ function loadAlternate() {
 			win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
 			process.logLoaded = true;
 			loadFile = '';
+			process.logDropped = false;
 		});
-	}
-}
-
-function loadByDrop() {
-	let html;
-	process.alterateLoad = true;
-	JSONParsed = [];
-	const lr = new LineByLineReader(process.logDropPath);
-	lr.on('error', err => {
-		console.log(err);
-	});
-	lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
-		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-		JSONParsed.push(lineParse);
-		let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
-		html += htmlTabled;
-	});
-	lr.on('end', err => {
-		if (err) {
-			console.log(err.message);
-		}
-		process.htmlDone = html;
-		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
-		process.logLoaded = true;
-		loadFile = '';
-		process.logDropped = false;
-	});
-}
+	}}
 
 function funcSaveHTML() {
 	if (process.logLoaded === true) {
@@ -252,7 +258,6 @@ function funcSaveHTML() {
 
 function loadOutput() {
 	JSONParsed = [];
-	const loadFile = dialogLoad();
 	process.htmlDone = '';
 	jsonfile.readFile(loadFile[0], (err, obj) => {
 		if (err) {
@@ -270,7 +275,25 @@ function loadOutput() {
 		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
 	});
 }
-
+function loadOutputDropped() {
+	JSONParsed = [];
+	process.htmlDone = '';
+	jsonfile.readFile(process.logDropPath, (err, obj) => {
+		if (err) {
+			console.log(err.message);
+		}
+		for (const prop in obj) {
+			if (!obj.hasOwnProperty(prop)) { // eslint-disable-line no-prototype-builtins
+        // The current property is not a direct property of p
+				continue;
+			}
+			process.htmlDone += tableify(obj[prop]) + '<hr>';
+			JSONParsed.push(obj[prop]);
+		}
+		process.logLoaded = true;
+		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
+	});
+}
 function funcSaveJSON() {
 	if (process.logLoaded === true) {
 		dialog.showSaveDialog(fileName => {
@@ -331,10 +354,6 @@ const template = [{
 		label: 'Load',
 		accelerator: 'CmdOrCtrl+O',
 		click: loadAlternate
-	}, {
-		label: 'Load outputted JSON',
-		accelerator: 'CmdrOrCtrl+Shift+O',
-		click: loadOutput
 	}]
 }, {
 	label: 'Filtering',
