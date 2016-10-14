@@ -13,9 +13,11 @@
 	<h1>
 		Please load a file using the "File" menu
 	</h1>
-	<div id="rectangle">Drag your file here</div>
+	<div id="holder">Drag your file here</div>
 </body>
 <script>
+document.addEventListener('dragover', event => event.preventDefault())
+document.addEventListener('drop', event => event.preventDefault())
 	const {ipcRenderer} = require('electron')
 	const holder = document.getElementById('holder')
 	holder.ondragover = () => {

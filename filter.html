@@ -62,6 +62,8 @@
 	ipcRenderer.on('asynchronous-reply', (event, arg) => {
 		document.getElementById('selectNumber').selectedIndex = arg
 	})
+document.addEventListener('dragover', event => event.preventDefault())
+document.addEventListener('drop', event => event.preventDefault())
 
 	function populate() {
 		var remote = require('electron').remote;
