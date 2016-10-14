@@ -10,18 +10,18 @@
 </meta>
 </head>
 <body>
-	<div id="holder" style="width: 100%; height: 100%">
+	<div style="width: 100%; height: 100%">
 		<div id="holder">Drag your file here</div>
 	</div>
 </body>
 <script>
+document.addEventListener('dragover', event => event.preventDefault())
+document.addEventListener('drop', event => event.preventDefault())
 	const {ipcRenderer} = require('electron')
 	const holder = document.getElementById('holder')
 	holder.ondragover = () => {
 		return false;
 	}
-document.addEventListener('dragover', event => event.preventDefault())
-document.addEventListener('drop', event => event.preventDefault())
 	holder.ondragleave = holder.ondragend = () => {
 		return false;
 	}

@@ -12,7 +12,7 @@ const _ = require('underscore');
 const GhReleases = require('electron-gh-releases');
 const jsonfile = require('jsonfile');
 
-const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault())</script>`;
+const stopdrop = ``;
 const dragndrop = `<hr><webview id="bar" src="${__dirname}/drop.html" style="display:inline-flex; width:100%; height:75px" nodeintegration="on"></webview>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>`;
 let JSONParsedEvent = [];
@@ -196,10 +196,10 @@ function loadAlternate() {
 
 function loadByDrop() {
 	let html;
-	process.alterateLoad = true;
 	JSONParsed = [];
 	if ((/\.(json)$/i).test(process.logDropPath)) {
 		loadOutputDropped();
+		process.logDropped = false;
 	} else if ((/\.(log)$/i).test(process.logDropPath)) {
 		const lr = new LineByLineReader(process.logDropPath);
 		lr.on('error', err => {
@@ -331,6 +331,7 @@ app.on('activate', () => {
 	}
 });
 ipcMain.on('asynchronous-drop', (event, arg) => {
+	process.logDropPath = '';
 	console.log(arg);
 	process.logDropPath = arg;
 	process.logDropped = true;
