@@ -1,5 +1,5 @@
 'use strict';
-import {autoUpdater} from 'electron-auto-updater'; // eslint-disable-line no-unused-vars
+const {autoUpdater} = require('electron-auto-updater'); // eslint-disable-line no-unused-vars
 
 const electron = require('electron');
 const {Menu} = require('electron');
