@@ -26,12 +26,12 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 		message: 'Press OK to download the update, and the application will download the update and then prompt you to confirm installation.'
 	});
 });
-autoUpdater.on('update-downloaded', event => { // eslint-disable-line no-unused-vars
+autoUpdater.on('update-downloaded', releaseName => { // eslint-disable-line no-unused-vars
 	dialog.showMessageBox({
 		type: 'info',
 		buttons: [],
 		title: 'Update ready to install.',
-		message: 'Press OK to install the update, and the application will then restart.'
+		message: 'Press OK to install the update, and the application will then restart. The release is: ' + releaseName
 	});
 	autoUpdater.quitAndInstall();
 });
