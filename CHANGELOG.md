@@ -1,5 +1,21 @@
 ## Change Log
 
+### upcoming (2016/10/15 23:25 +00:00)
+- [76452d3](https://github.com/willyb321/elite-journal/commit/76452d323283999fed6cc2c212ee052371e64ba8) update yarn lockfile (@willyb321)
+
+### v1.6.0 (2016/10/15 23:16 +00:00)
+- [f647a29](https://github.com/willyb321/elite-journal/commit/f647a2908cd63e9ea5ca98a5638e9654d2251911) 1.6.0 (@willyb321)
+- [105d564](https://github.com/willyb321/elite-journal/commit/105d5641c9f5d2f7da049bb7dd44306f743ada68) cleaned up unused code, and removed unneeded deps (@willyb321)
+
+### v1.5.10 (2016/10/15 21:10 +00:00)
+- [fb6df05](https://github.com/willyb321/elite-journal/commit/fb6df0550e76bc57129fa602fa97e1f32fc42c3c) testing NSIS (1.5.10) (@willyb321)
+- [93372d9](https://github.com/willyb321/elite-journal/commit/93372d90e919d9a6e3c27fbaed263983b95c9581) potentially (@willyb321)
+
+### v1.5.9 (2016/10/15 21:04 +00:00)
+- [dd9f068](https://github.com/willyb321/elite-journal/commit/dd9f068d408c190a6173aed57b959bda8b4e81b8) 1.5.9 (@willyb321)
+- [098e220](https://github.com/willyb321/elite-journal/commit/098e2201419aca98d2d8c02c23de59fd2b3ec7be) update electron-auto-updater (@willyb321)
+- [232e6be](https://github.com/willyb321/elite-journal/commit/232e6bea2b97c63c31078c195925e167d9d5d4f6) changelog (@willyb321)
+
 ### v1.5.8 (2016/10/15 09:24 +00:00)
 - [2bcbc06](https://github.com/willyb321/elite-journal/commit/2bcbc06868c597bc0b7541acbde03ec9c2e8c9af) 1.5.8 (@willyb321)
 - [529c9e7](https://github.com/willyb321/elite-journal/commit/529c9e76c751e2b2737a542545dae4b26d849c13) no it didnt work apparently (@willyb321)
