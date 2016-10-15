@@ -15,22 +15,25 @@ const jsonfile = require('jsonfile');
 
 const app = electron.app;
 let win;
-autoUpdater.on('update-downloaded', function (event, releaseNotes, releaseName, releaseDate, updateUrl, quitAndUpdate) {
-  var index = dialog.showMessageBox( {
-    type: 'info',
-    buttons: [i18n.__('Restart'), i18n.__('Later')],
-    title: "Update",
-    message: i18n.__('The new version has been downloaded. Please restart the application to apply the updates.'),
-    detail: releaseName + "\n\n" + releaseNotes
-  });
 
-  if (index === 1) {
-    return;
-  }
-  autoUpdater.quitAndInstall();
-})
 // if (require('electron-squirrel-startup')) app.quit(); // eslint-disable-line curly
-
+autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-vars
+	dialog.showMessageBox({
+		type: 'info',
+		buttons: [],
+		title: 'New update available.',
+		message: 'Press OK to download the update, and the application will download the update and then prompt you to confirm installation.'
+	});
+});
+autoUpdater.on('update-downloaded', event => { // eslint-disable-line no-unused-vars
+	dialog.showMessageBox({
+		type: 'info',
+		buttons: [],
+		title: 'Update ready to install.',
+		message: 'Press OK to install the update, and the application will then restart.'
+	});
+	autoUpdater.quitAndInstall();
+});
 // const options = {
 // 	repo: 'willyb321/elite-journal',
 // 	currentVersion: app.getVersion()
