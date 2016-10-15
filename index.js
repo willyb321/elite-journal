@@ -296,7 +296,7 @@ function loadOutputDropped() {
 }
 function funcSaveJSON() {
 	if (process.logLoaded === true) {
-		dialog.showSaveDialog({filters: [{name: 'JSON', extensions: ['json'] }]}, fileName => {
+		dialog.showSaveDialog({filters: [{name: 'JSON', extensions: ['json']}]}, fileName => {
 			if (fileName === undefined) {
 				console.log('You didn\'t save the file');
 				return;
