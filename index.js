@@ -15,7 +15,20 @@ const jsonfile = require('jsonfile');
 
 const app = electron.app;
 let win;
+autoUpdater.on('update-downloaded', function (event, releaseNotes, releaseName, releaseDate, updateUrl, quitAndUpdate) {
+  var index = dialog.showMessageBox( {
+    type: 'info',
+    buttons: [i18n.__('Restart'), i18n.__('Later')],
+    title: "Update",
+    message: i18n.__('The new version has been downloaded. Please restart the application to apply the updates.'),
+    detail: releaseName + "\n\n" + releaseNotes
+  });
 
+  if (index === 1) {
+    return;
+  }
+  autoUpdater.quitAndInstall();
+})
 // if (require('electron-squirrel-startup')) app.quit(); // eslint-disable-line curly
 
 // const options = {
