@@ -1,6 +1,40 @@
 ## Change Log
 
-### upcoming (2016/10/15 02:56 +00:00)
+### v1.5.8 (2016/10/15 09:24 +00:00)
+- [2bcbc06](https://github.com/willyb321/elite-journal/commit/2bcbc06868c597bc0b7541acbde03ec9c2e8c9af) 1.5.8 (@willyb321)
+- [529c9e7](https://github.com/willyb321/elite-journal/commit/529c9e76c751e2b2737a542545dae4b26d849c13) no it didnt work apparently (@willyb321)
+
+### v1.5.7 (2016/10/15 09:12 +00:00)
+- [34bac19](https://github.com/willyb321/elite-journal/commit/34bac19b70601a68fff82721676418480aaea824) 1.5.7 (@willyb321)
+- [dbfce6d](https://github.com/willyb321/elite-journal/commit/dbfce6deff0d7dd33ab73d5e956215507f9047c7) im pretty sure its now working! (@willyb321)
+
+### v1.5.6 (2016/10/15 08:46 +00:00)
+- [419f39d](https://github.com/willyb321/elite-journal/commit/419f39d3dc02fabd17e0550103bc1f4a5ebc9197) 1.5.6 (@willyb321)
+- [b7b886a](https://github.com/willyb321/elite-journal/commit/b7b886a3d50b02885c86145f7ac337847ee40ac9) hopefully might work this time (NSIS) (@willyb321)
+
+### v1.5.5 (2016/10/15 07:04 +00:00)
+- [ae6d83a](https://github.com/willyb321/elite-journal/commit/ae6d83a1657d5e44399eb35d1d19254160494ad4) 1.5.5 (@willyb321)
+- [246ad65](https://github.com/willyb321/elite-journal/commit/246ad65931892019dd04fa2610c379c47d43032a) continuing to test NSIS (@willyb321)
+
+### v1.5.4 (2016/10/15 06:42 +00:00)
+- [8357a31](https://github.com/willyb321/elite-journal/commit/8357a315d5303bcf1664995bfd939d83dee21edf) 1.5.4 (@willyb321)
+- [4af46d7](https://github.com/willyb321/elite-journal/commit/4af46d721045eb6a8e8b133d60dfb942d597b6d9) continuing to test NSIS (@willyb321)
+
+### v1.5.3 (2016/10/15 06:04 +00:00)
+- [1355893](https://github.com/willyb321/elite-journal/commit/135589330d8ddfa460ca14e91770b7de0c8a1e7a) 1.5.3 (@willyb321)
+- [575c1fe](https://github.com/willyb321/elite-journal/commit/575c1fefae8f30a18beb7f1151dc3a4aa6a482c9) oops i cant js apparently (@willyb321)
+
+### v1.5.2 (2016/10/15 06:01 +00:00)
+- [c2a3c89](https://github.com/willyb321/elite-journal/commit/c2a3c8989462c26a44b33499e01e9ec431a4c45a) update to 1.5.2 because testing NSIS (@willyb321)
+- [2d60520](https://github.com/willyb321/elite-journal/commit/2d605200ef89cb3ddd60e76aece02992ec5b8c0a) testing NSIS auto-updating (@willyb321)
+
+### v1.5.1 (2016/10/15 04:02 +00:00)
+- [c2fe522](https://github.com/willyb321/elite-journal/commit/c2fe522e4f3ee5b211d1d8ab9e829934b5af273c) 1.5.1 (@willyb321)
+- [4d3aa84](https://github.com/willyb321/elite-journal/commit/4d3aa84c36a628062f0cf8ad179caa345b8dfc7f) now you can actually load output html but not yet filter it. (@willyb321)
+- [1b02ea4](https://github.com/willyb321/elite-journal/commit/1b02ea4357fe2b3abd5aa49cd714bf8753cf4956) swapped some code to after update check because it'll probably optimise it a bit (@willyb321)
+- [75d57a8](https://github.com/willyb321/elite-journal/commit/75d57a85fbaaa6e3d6b8093a4cea3045eb8fc597) Merge because i forgot to pull. (@willyb321)
+- [8e64a6b](https://github.com/willyb321/elite-journal/commit/8e64a6b962bf43961b8d3adee410f17a0c681b49) update index.html to be more true and add back yarn.lock (@willyb321)
+- [58a1dee](https://github.com/willyb321/elite-journal/commit/58a1deef581adcfa62afd60912d81cdb92d05588) Changelog (automatic commit) (@willyb321)
 - [7cf580b](https://github.com/willyb321/elite-journal/commit/7cf580be2a3377630f6ecc411bfedad10600c332) new changelog format probably better (@willyb321)
 - [e2bb0b9](https://github.com/willyb321/elite-journal/commit/e2bb0b998f23ee0320c601612a03b052fc6030c8) lint (@willyb321)
 - [898ca36](https://github.com/willyb321/elite-journal/commit/898ca362a2dc2f1f8d572e6a47ae5eb3d28fbe6a) forgot a thing (@willyb321)
