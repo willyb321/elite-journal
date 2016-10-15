@@ -10,6 +10,7 @@ const fs = require('fs.extra');
 const tableify = require('tableify');
 const LineByLineReader = require('line-by-line');
 const _ = require('underscore');
+const isDev = require('electron-is-dev');
 // const GhReleases = require('electron-gh-releases');
 const jsonfile = require('jsonfile');
 
@@ -34,6 +35,15 @@ autoUpdater.on('update-downloaded', event => { // eslint-disable-line no-unused-
 	});
 	autoUpdater.quitAndInstall();
 });
+autoUpdater.on('error', error => {
+	dialog.showMessageBox({
+		type: 'info',
+		buttons: [],
+		title: 'Update ready to install.',
+		message: `Sorry, we've had an error. The message is ` + error
+	});
+});
+
 // const options = {
 // 	repo: 'willyb321/elite-journal',
 // 	currentVersion: app.getVersion()
@@ -368,6 +378,9 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
+	if (!isDev) {
+		autoUpdater.checkForUpdates();
+	}
 });
 const template = [{
 	label: 'File',
