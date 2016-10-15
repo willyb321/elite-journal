@@ -11,13 +11,11 @@ const tableify = require('tableify');
 const LineByLineReader = require('line-by-line');
 const _ = require('underscore');
 const isDev = require('electron-is-dev');
-// const GhReleases = require('electron-gh-releases');
 const jsonfile = require('jsonfile');
 
 const app = electron.app;
 let win;
 
-// if (require('electron-squirrel-startup')) app.quit(); // eslint-disable-line curly
 autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-vars
 	dialog.showMessageBox({
 		type: 'info',
@@ -44,43 +42,7 @@ autoUpdater.on('error', error => {
 	});
 });
 
-// const options = {
-// 	repo: 'willyb321/elite-journal',
-// 	currentVersion: app.getVersion()
-// };
-
-// const updater = new GhReleases(options);
-// // Check for updates
-// // `status` returns true if there is a new update available
-// updater.check((err, status) => {
-// 	if (!err && status) {
-// 		if (status === true) {
-// 			dialog.showMessageBox({
-// 				type: 'info',
-// 				buttons: [],
-// 				title: 'New update available.',
-// 				message: 'Press OK to download the update, and the application will download the update and then prompt you to confirm installation.'
-// 			});
-// 		}
-// 		// Download the update
-// 		updater.download();
-// 	}
-// });
-// // When an update has been downloaded
-// updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
-// 	// Restart the app and install the update
-// 	dialog.showMessageBox({
-// 		type: 'info',
-// 		buttons: [],
-// 		title: 'Update ready to install.',
-// 		message: 'Press OK to install the update, and the application will then restart.'
-// 	});
-// 	updater.install();
-// });
-// // Access electrons autoUpdater
-// updater.autoUpdater; // eslint-disable-line no-unused-expressions
 let loadFile;
-
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
 const dragndrop = ``; // <hr><webview id="bar" src="${__dirname}/drop.html" style="display:inline-flex; width:100%; height:75px" nodeintegration="on"></webview>
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; width:400px; height:200px" nodeintegration="on"></webview>`;
@@ -195,29 +157,27 @@ function loadAlternate() {
 	if ((/\.(json)$/i).test(loadFile)) {
 		loadOutput();
 	} else if ((/\.(log)$/i).test(loadFile)) {
-		if (loadFile !== undefined) {
-			JSONParsed = [];
-			const lr = new LineByLineReader(loadFile[0]);
-			lr.on('error', err => {
-				console.log(err);
-			});
-			lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
-				let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-				JSONParsed.push(lineParse);
-				let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
-				html += htmlTabled;
-			});
-			lr.on('end', err => {
-				if (err) {
-					console.log(err.message);
-				}
-				process.htmlDone = html;
-				process.htmlDone = process.htmlDone.replace('undefined', '');
-				win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
-				process.logLoaded = true;
-				loadFile = '';
-			});
-		}
+		JSONParsed = [];
+		const lr = new LineByLineReader(loadFile[0]);
+		lr.on('error', err => {
+			console.log(err);
+		});
+		lr.on('line', line => {
+			let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
+			JSONParsed.push(lineParse);
+			let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
+			html += htmlTabled;
+		});
+		lr.on('end', err => {
+			if (err) {
+				console.log(err.message);
+			}
+			process.htmlDone = html;
+			process.htmlDone = process.htmlDone.replace('undefined', '');
+			win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
+			process.logLoaded = true;
+			loadFile = '';
+		});
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile[0]);
 	}
@@ -234,7 +194,7 @@ function loadByDrop() {
 		lr.on('error', err => {
 			console.log(err);
 		});
-		lr.on('line', function (line) { // eslint-disable-line prefer-arrow-callback
+		lr.on('line', line => {
 			let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
 			JSONParsed.push(lineParse);
 			let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
