@@ -1,6 +1,7 @@
 ## Change Log
 
-### upcoming (2016/10/15 02:51 +00:00)
+### upcoming (2016/10/15 02:56 +00:00)
+- [7cf580b](https://github.com/willyb321/elite-journal/commit/7cf580be2a3377630f6ecc411bfedad10600c332) new changelog format probably better (@willyb321)
 - [e2bb0b9](https://github.com/willyb321/elite-journal/commit/e2bb0b998f23ee0320c601612a03b052fc6030c8) lint (@willyb321)
 - [898ca36](https://github.com/willyb321/elite-journal/commit/898ca362a2dc2f1f8d572e6a47ae5eb3d28fbe6a) forgot a thing (@willyb321)
 - [93da0d0](https://github.com/willyb321/elite-journal/commit/93da0d011d10e0104686e13a6a3b7cad338b0459) drag+drop anywhere, JSON save improvements, and back to squirrel for now (@willyb321)
