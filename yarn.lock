@@ -638,9 +638,9 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
-electron-auto-updater@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-0.0.1.tgz#95dfde450e15542fa9cb2562a9e474023882840d"
+electron-auto-updater@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-0.0.2.tgz#995a130782445beecde998c4fcee1be9f2e214c8"
   dependencies:
     bluebird "^3.4.6"
     fs-extra-p "^1.1.10"
@@ -721,14 +721,7 @@ electron-download@2.1.2:
     path-exists "^1.0.0"
     rc "^1.1.2"
 
-electron-gh-releases@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/electron-gh-releases/-/electron-gh-releases-2.0.4.tgz#198c07a0970fb8e80fcc67bd0b4198a010923dc3"
-  dependencies:
-    got "^5.1.0"
-    semver "^5.1.0"
-
-electron-is-dev@^0.1.0:
+electron-is-dev@^0.1.0, electron-is-dev@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-0.1.2.tgz#8a1043e32b3a1da1c3f553dce28ce764246167e3"
 
@@ -774,12 +767,6 @@ electron-packager@^8.0.0:
     run-series "^1.1.1"
     sanitize-filename "^1.6.0"
     semver "^5.3.0"
-
-electron-squirrel-startup@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/electron-squirrel-startup/-/electron-squirrel-startup-1.0.0.tgz#19b4e55933fa0ef8f556784b9c660f772546a0b8"
-  dependencies:
-    debug "^2.2.0"
 
 electron-zip-packager@^4.0.0:
   version "4.0.0"
@@ -1306,7 +1293,7 @@ globby@^6.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-got@^5.0.0, got@^5.1.0:
+got@^5.0.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/got/-/got-5.6.0.tgz#bb1d7ee163b78082bbc8eb836f3f395004ea6fbf"
   dependencies:
