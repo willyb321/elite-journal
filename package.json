@@ -47,9 +47,6 @@
   },
   "build": {
     "win": {
-      "target": [
-        "nsis"
-      ],
       "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true",
       "remoteReleases": true
     }
