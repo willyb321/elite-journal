@@ -13,7 +13,7 @@ const GhReleases = require('electron-gh-releases');
 const jsonfile = require('jsonfile');
 
 const app = electron.app;
-let win; // eslint-disable-line no-var
+let win;
 
 if (require('electron-squirrel-startup')) app.quit(); // eslint-disable-line curly
 
@@ -66,7 +66,6 @@ const css = '<script src="https://use.fontawesome.com/a39359b6f9.js"></script><s
 require('electron-debug')();
 // prevent window being garbage collected
 let mainWindow;
-
 function createMainWindow() {
 	win = new electron.BrowserWindow({
 		width: 600,
@@ -88,14 +87,11 @@ function dialogLoad() {
 		defaultPath: logPath,
 		buttonLabel: 'Load File',
 		filters: [{
-			name: 'Logs and saved HTML',
-			extensions: ['log', 'html']
+			name: 'Logs and saved HTML/JSON',
+			extensions: ['log', 'html', 'json']
 		}, {
 			name: 'All files',
 			extensions: ['*']
-		}, {
-			name: 'Saved JSON',
-			extensions: ['json']
 		}]
 	}, {
 		properties: ['openFile']
@@ -195,6 +191,8 @@ function loadAlternate() {
 				loadFile = '';
 			});
 		}
+	} else if ((/\.(html)$/i).test(loadFile)) {
+		win.loadURL(loadFile[0]);
 	}
 }
 
