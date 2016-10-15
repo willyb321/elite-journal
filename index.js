@@ -1,12 +1,11 @@
 'use strict';
-const {autoUpdater} = require('electron-auto-updater'); // eslint-disable-line no-unused-vars
-
 const electron = require('electron');
 const {Menu} = require('electron');
 const {dialog} = require('electron');
 const {ipcMain} = require('electron');
 const path = require('path');
 const os = require('os');
+const {autoUpdater} = require('electron-auto-updater'); // eslint-disable-line no-unused-vars
 const fs = require('fs.extra');
 const tableify = require('tableify');
 const LineByLineReader = require('line-by-line');
@@ -17,7 +16,7 @@ const jsonfile = require('jsonfile');
 const app = electron.app;
 let win;
 
-if (require('electron-squirrel-startup')) app.quit(); // eslint-disable-line curly
+// if (require('electron-squirrel-startup')) app.quit(); // eslint-disable-line curly
 
 // const options = {
 // 	repo: 'willyb321/elite-journal',
