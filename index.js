@@ -1,4 +1,6 @@
 'use strict';
+import {autoUpdater} from 'electron-auto-updater'; // eslint-disable-line no-unused-vars
+
 const electron = require('electron');
 const {Menu} = require('electron');
 const {dialog} = require('electron');
@@ -9,7 +11,7 @@ const fs = require('fs.extra');
 const tableify = require('tableify');
 const LineByLineReader = require('line-by-line');
 const _ = require('underscore');
-const GhReleases = require('electron-gh-releases');
+// const GhReleases = require('electron-gh-releases');
 const jsonfile = require('jsonfile');
 
 const app = electron.app;
@@ -17,41 +19,41 @@ let win;
 
 if (require('electron-squirrel-startup')) app.quit(); // eslint-disable-line curly
 
-const options = {
-	repo: 'willyb321/elite-journal',
-	currentVersion: app.getVersion()
-};
+// const options = {
+// 	repo: 'willyb321/elite-journal',
+// 	currentVersion: app.getVersion()
+// };
 
-const updater = new GhReleases(options);
-// Check for updates
-// `status` returns true if there is a new update available
-updater.check((err, status) => {
-	if (!err && status) {
-		if (status === true) {
-			dialog.showMessageBox({
-				type: 'info',
-				buttons: [],
-				title: 'New update available.',
-				message: 'Press OK to download the update, and the application will download the update and then prompt you to confirm installation.'
-			});
-		}
-		// Download the update
-		updater.download();
-	}
-});
-// When an update has been downloaded
-updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
-	// Restart the app and install the update
-	dialog.showMessageBox({
-		type: 'info',
-		buttons: [],
-		title: 'Update ready to install.',
-		message: 'Press OK to install the update, and the application will then restart.'
-	});
-	updater.install();
-});
-// Access electrons autoUpdater
-updater.autoUpdater; // eslint-disable-line no-unused-expressions
+// const updater = new GhReleases(options);
+// // Check for updates
+// // `status` returns true if there is a new update available
+// updater.check((err, status) => {
+// 	if (!err && status) {
+// 		if (status === true) {
+// 			dialog.showMessageBox({
+// 				type: 'info',
+// 				buttons: [],
+// 				title: 'New update available.',
+// 				message: 'Press OK to download the update, and the application will download the update and then prompt you to confirm installation.'
+// 			});
+// 		}
+// 		// Download the update
+// 		updater.download();
+// 	}
+// });
+// // When an update has been downloaded
+// updater.on('update-downloaded', info => { // eslint-disable-line no-unused-vars
+// 	// Restart the app and install the update
+// 	dialog.showMessageBox({
+// 		type: 'info',
+// 		buttons: [],
+// 		title: 'Update ready to install.',
+// 		message: 'Press OK to install the update, and the application will then restart.'
+// 	});
+// 	updater.install();
+// });
+// // Access electrons autoUpdater
+// updater.autoUpdater; // eslint-disable-line no-unused-expressions
 let loadFile;
 
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;

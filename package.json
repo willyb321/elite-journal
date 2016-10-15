@@ -15,13 +15,14 @@
     "start": "electron .",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
     "pack": "build --dir",
-    "dist": "build --x64"
+    "dist": "build"
   },
   "keywords": [
     "electron-app",
     "electron"
   ],
   "dependencies": {
+    "electron-auto-updater": "0.0.1",
     "electron-debug": "^1.0.1",
     "electron-gh-releases": "^2.0.4",
     "electron-squirrel-startup": "^1.0.0",
@@ -47,6 +48,8 @@
   },
   "build": {
     "win": {
+      "target": ["nsis"],
+      "publish": ["bintray", "github"],
       "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true",
       "remoteReleases": true
     }
