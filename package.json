@@ -1,7 +1,7 @@
 {
   "name": "elite-journal",
   "productName": "Elite Journal",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Parsing the elite dangerous journal and putting it in a cool format!",
   "license": "MIT",
   "repository": "willyb321/elite-journal",
@@ -48,8 +48,13 @@
   },
   "build": {
     "win": {
-      "target": ["nsis"],
-      "publish": ["bintray", "github"],
+      "target": [
+        "nsis"
+      ],
+      "publish": [
+        "bintray",
+        "github"
+      ],
       "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true",
       "remoteReleases": true
     }
