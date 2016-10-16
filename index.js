@@ -150,11 +150,20 @@ function loadFilter() {
 	win.loadURL('data:text/html,' + webview + css + dragndrop + '<hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 
+function logorjson(loadFile) {
+	try {
+		JSON.parse(fs.readFileSync(loadFile[0], 'utf8'));
+	} catch (err) {
+		return err instanceof Error;
+	}
+}
+
 function loadAlternate() {
 	let html;
 	process.alterateLoad = true;
 	loadFile = dialogLoad();
-	if ((/\.(json)$/i).test(loadFile)) {
+	const logorJSON = logorjson(loadFile);
+	if ((/\.(json)$/i).test(loadFile) || logorJSON === undefined) {
 		loadOutput();
 	} else if ((/\.(log)$/i).test(loadFile)) {
 		JSONParsed = [];
