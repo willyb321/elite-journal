@@ -10,7 +10,7 @@
 Basically it allows the average joe to have a look at the journal log for [Elite: Dangerous](https://www.elitedangerous.com/) in a nice easy to read format.
 
 ## How to get it?
-Download a [setup .exe](https://github.com/willyb321/elite-journal/releases/latest) from the releases page, and then run it. It will automagically update when you run the application from now on!
+Download a [setup .exe](https://github.com/willyb321/elite-journal/releases/latest) from the releases page, and then run it. It will automagically update when you run the application from now on! You can also download it from [Bintray](https://bintray.com/willyb321/generic/elite-journal/_latestVersion), which is where the updates actually are downloaded from. Its a little bit faster I think, so give it a try. 
 
 ![Example](https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png)
 
