@@ -65,6 +65,7 @@ See [CHANGELOG.md](https://github.com/willyb321/elite-journal/blob/master/CHANGE
 - Easy on the CPU.
 - Easy on the RAM.
 - Easy on basically everything to do with resources.
+- Auto updating.
 - Plus more.
 
 ## License
