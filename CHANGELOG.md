@@ -1,6 +1,7 @@
 ## Change Log
 
-### upcoming (2016/10/15 23:25 +00:00)
+### upcoming (2016/10/16 03:00 +00:00)
+- [f524609](https://github.com/willyb321/elite-journal/commit/f52460978cbe05e953ed7548cee5b5ee426cf6cc) Changelog (automatic commit) (@willyb321)
 - [76452d3](https://github.com/willyb321/elite-journal/commit/76452d323283999fed6cc2c212ee052371e64ba8) update yarn lockfile (@willyb321)
 
 ### v1.6.0 (2016/10/15 23:16 +00:00)
