@@ -4,8 +4,7 @@ machine:
   node:
     version: 6
 dependencies:
-  pre:
-    - sh ./deps.sh
+  cache_directories:
+    - "node_modules" -> package.json
 test:
-  post:
-    - echo "yay"
+  - npm test
