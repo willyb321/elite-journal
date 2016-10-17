@@ -4,6 +4,8 @@ machine:
   node:
     version: node
 dependencies:
+  pre:
+    - sudo apt-get update; sudo apt-get install wine
   override:
     - sh ./deps.sh
   cache_directories:
