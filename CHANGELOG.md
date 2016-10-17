@@ -1,6 +1,19 @@
 ## Change Log
 
-### upcoming (2016/10/16 03:00 +00:00)
+### upcoming (2016/10/17 03:00 +00:00)
+- [9b28ced](https://github.com/willyb321/elite-journal/commit/9b28cedfd17263cc6b33c0c377a41ff78cf811af) fix probably (@willyb321)
+- [0208025](https://github.com/willyb321/elite-journal/commit/02080254fd16efaa0ee3eaa7db22925d974309e5) i dunno what im doing buy hey (@willyb321)
+- [da57b90](https://github.com/willyb321/elite-journal/commit/da57b90769eb39a90d7b8b4eccb81028cdad196e) add appeyor.yml (@willyb321)
+- [4dff667](https://github.com/willyb321/elite-journal/commit/4dff667d0e074f4dd3affed5028f87ea4c4ed842) Update readme to include bintray dl (@willyb321)
+- [#18](https://github.com/willyb321/elite-journal/pull/18) Merge pull request #18 from willyb321/greenkeeper-electron-auto-updater-0.0.3 (@willyb321)
+- [e0e8d4b](https://github.com/willyb321/elite-journal/commit/e0e8d4becb5ea8ab24faa75ed09d3fc8cef3c772) chore(package): update electron-auto-updater to version 0.0.3 (@greenkeeperio-bot)
+
+### v1.6.1 (2016/10/16 06:50 +00:00)
+- [5842a96](https://github.com/willyb321/elite-journal/commit/5842a96771304a8f21816d224d200d8bf3e32d6e) 1.6.1 (@willyb321)
+- [2e16214](https://github.com/willyb321/elite-journal/commit/2e1621420ed44df223c78c5b67f035d8e60d6c94) now if you save a loaded log as .log instead of .json the program will still work proper. (@willyb321)
+- [9d000cb](https://github.com/willyb321/elite-journal/commit/9d000cb2caae992336d02bafe3d4a74366661c35) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
+- [155ed11](https://github.com/willyb321/elite-journal/commit/155ed110721de18e4aeab5dd180cf64d2a9baed9) booya the filter window wont bugger off when you scroll anymore :tada: (@willyb321)
+- [f38f647](https://github.com/willyb321/elite-journal/commit/f38f6474c0dd4a5f825b06840e1d6551de9558a2) Changelog (automatic commit) (@willyb321)
 - [f524609](https://github.com/willyb321/elite-journal/commit/f52460978cbe05e953ed7548cee5b5ee426cf6cc) Changelog (automatic commit) (@willyb321)
 - [76452d3](https://github.com/willyb321/elite-journal/commit/76452d323283999fed6cc2c212ee052371e64ba8) update yarn lockfile (@willyb321)
 
