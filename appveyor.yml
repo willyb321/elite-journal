@@ -1,0 +1,17 @@
+version: 1.0.{build}
+skip_tags: true
+environment:
+  GH_TOKEN:
+    secure: LvLv+k3s0SpH9os6canaYy9hpfCXnowB2/IeX2X/J7Zo4zK88ggsOHxKuZ1vhJsy
+  BT_TOKEN:
+    secure: 4a/+kLKvQgpZqlldPjXcGGY2B8tuv+/hfkg250cg4STsspLG3XO7yZLsZnOEEB8z
+install:
+- cmd: npm install
+cache:
+- node_modules -> package.json
+- '%USERPROFILE%\.electron'
+build_script:
+- cmd: npm run dist
+test_script:
+- cmd: npm test
+deploy: off
