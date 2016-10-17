@@ -16,6 +16,6 @@ general:
     - "page.png"
 deployment:
   production:
-    branch: master
+    tag: /v[0-9]+(\.[0-9]+)*/
     commands:
       - sh ./deploy.sh

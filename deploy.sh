@@ -1,2 +1,2 @@
 #!/bin/bash
-npm run dist
+npm run release
