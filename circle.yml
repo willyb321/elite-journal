@@ -5,6 +5,7 @@ machine:
     version: node
 dependencies:
   pre:
+    - sudo rm -rf /var/cache/apt/archives && sudo ln -s ~/.apt-cache /var/cache/apt/archives && mkdir -p ~/.apt-cache/partial
     - sudo dpkg --add-architecture i386
     - sudo apt-get update
     - echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
@@ -14,6 +15,7 @@ dependencies:
     - sh ./deps.sh
   cache_directories:
     - "node_modules"
+    - "~/.apt-cache"
 test:
   override:
     - sh ./test.sh
