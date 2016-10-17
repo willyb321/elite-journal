@@ -1,7 +1,7 @@
 {
   "name": "elite-journal",
   "productName": "Elite Journal",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Parsing the elite dangerous journal and putting it in a cool format!",
   "license": "MIT",
   "repository": "willyb321/elite-journal",
@@ -47,8 +47,9 @@
       "node",
       "browser"
     ],
-    "ignores":
-    ["test.js"]
+    "ignores": [
+      "test.js"
+    ]
   },
   "build": {
     "appId": "com.willyb321.elite-journal",
