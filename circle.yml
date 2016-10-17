@@ -9,3 +9,6 @@ dependencies:
 test:
   post:
     - npm test
+general:
+  artifacts:
+    - "page.png"

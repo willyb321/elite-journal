@@ -1,9 +1,9 @@
-var Application = require('spectron').Application
-var assert = require('assert')
-var electron = require('electron')
-var args = ['index.js']
-var fs = require('fs')
-var app = new Application({
+const Application = require('spectron').Application
+const assert = require('assert')
+const electron = require('electron')
+const args = ['index.js']
+const fs = require('fs')
+const app = new Application({
 	path: electron,
 	args: ['index.js']
 })
