@@ -11,7 +11,7 @@ cache:
 - node_modules -> package.json
 - '%USERPROFILE%\.electron'
 build_script:
-- cmd: npm run dist
+- cmd: npm run pack
 test_script:
 - cmd: npm test
 deploy: off

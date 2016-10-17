@@ -2,7 +2,7 @@ machine:
   timezone:
     Australia/Sydney
   node:
-    version: 6
+    version: node
 dependencies:
   override:
     - sh ./deps.sh
@@ -14,3 +14,8 @@ test:
 general:
   artifacts:
     - "page.png"
+deployment:
+  production:
+    branch: master
+    commands:
+      - sh ./deploy.sh
