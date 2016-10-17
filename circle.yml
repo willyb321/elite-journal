@@ -7,4 +7,5 @@ dependencies:
   cache_directories:
     - "node_modules"
 test:
-  - npm test
+  post:
+    - npm test
