@@ -4,6 +4,8 @@ machine:
   node:
     version: 6
 dependencies:
+  override:
+    - sh ./deps.sh
   cache_directories:
     - "node_modules"
 test:
