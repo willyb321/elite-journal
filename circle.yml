@@ -7,8 +7,8 @@ dependencies:
   cache_directories:
     - "node_modules"
 test:
-  post:
-    - npm test
+  override:
+    - sh ./test.sh
 general:
   artifacts:
     - "page.png"

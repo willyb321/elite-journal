@@ -1,2 +1,2 @@
 #!/bin/bash
-node ./test.js
+npm test
