@@ -5,8 +5,7 @@ machine:
     version: 6
 dependencies:
   pre:
-    - npm install -g yarn
-    - yarn install
+    - ./deps.sh
 test:
   post:
     - echo "yay"
