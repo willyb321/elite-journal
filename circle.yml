@@ -1,0 +1,12 @@
+machine:
+  timezone:
+    Australia/Sydney
+  node:
+    version: latest
+dependencies:
+  pre:
+    - npm install -g yarn
+    - yarn install
+test:
+  post:
+    - echo "yay"
