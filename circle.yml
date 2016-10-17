@@ -6,7 +6,7 @@ machine:
 dependencies:
   pre:
     - sudo dpkg --add-architecture i386
-    - sudo apt-get update; sudo apt-get install wine
+    - sudo apt-get update; sudo apt-get install -y wine
   override:
     - sh ./deps.sh
   cache_directories:
