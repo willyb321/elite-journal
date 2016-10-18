@@ -12,7 +12,7 @@ install:
 cache:
 - node_modules -> package.json
 - '%USERPROFILE%\.electron'
-- "%LOCALAPPDATA%/Yarn"
+- "%LOCALAPPDATA%\Yarn"
 build_script:
 - cmd: npm run release
 test_script:
