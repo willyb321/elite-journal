@@ -1,6 +1,45 @@
 ## Change Log
 
-### upcoming (2016/10/17 03:00 +00:00)
+### upcoming (2016/10/18 02:02 +00:00)
+- [b5a41dd](https://github.com/willyb321/elite-journal/commit/b5a41dd8374e8b543f55a4ddc858da113769819d) probably working apt cache (@willyb321)
+
+### v1.6.7 (2016/10/17 22:05 +00:00)
+- [d58fdf7](https://github.com/willyb321/elite-journal/commit/d58fdf7c908b2c07d8fa86e39f6f62c6043c9676) 1.6.7 (@willyb321)
+- [0c5508d](https://github.com/willyb321/elite-journal/commit/0c5508df5d1ab0a25294505577c42b417df74277) license (@willyb321)
+
+### v1.6.6 (2016/10/17 21:57 +00:00)
+- [8177646](https://github.com/willyb321/elite-journal/commit/8177646d83ae30b2dc023baa1ad0bd4fd58ab437) 1.6.6 (@willyb321)
+- [b80e582](https://github.com/willyb321/elite-journal/commit/b80e58292d8f24d819e4b778b24496f16e60d472) oops got it stuck (@willyb321)
+
+### v1.6.5 (2016/10/17 21:53 +00:00)
+- [fc3e09b](https://github.com/willyb321/elite-journal/commit/fc3e09b835a65238593636a90cf15da69ba0f548) 1.6.5 (@willyb321)
+- [cf41d2c](https://github.com/willyb321/elite-journal/commit/cf41d2c3e5945af21f36ba960253d0c1838e388c) should work maybe (@willyb321)
+
+### v1.6.4 (2016/10/17 21:50 +00:00)
+- [30287eb](https://github.com/willyb321/elite-journal/commit/30287eb59add1f96d03333337e97081ca0637b29) 1.6.4 (@willyb321)
+- [5e7fa24](https://github.com/willyb321/elite-journal/commit/5e7fa243476f1204dae17aeadf9573db069ba8fc) forgot wine woo (@willyb321)
+
+### v1.6.3 (2016/10/17 21:44 +00:00)
+- [2aa5054](https://github.com/willyb321/elite-journal/commit/2aa5054944d0554c9189eab26b383d0507b29859) 1.6.3 (@willyb321)
+- [65e5197](https://github.com/willyb321/elite-journal/commit/65e51973f6a981fc1c64f6442a0b73d3dec7ed97) maybe this will make it work? (@willyb321)
+
+### v1.6.2 (2016/10/17 21:36 +00:00)
+- [488effe](https://github.com/willyb321/elite-journal/commit/488effe743c90bebf8df8b495207f2aa1808a6e8) 1.6.2 (@willyb321)
+- [ce5bd0e](https://github.com/willyb321/elite-journal/commit/ce5bd0e61231f6ff6b0073e32c6c925bf2c3c235) testing ci deploy on tag (@willyb321)
+- [1bad8a2](https://github.com/willyb321/elite-journal/commit/1bad8a27da4f58aff87de3304385143ad4f4ac70) circle ci will now deploy because it only deploys after running tests. (@willyb321)
+- [a71ed68](https://github.com/willyb321/elite-journal/commit/a71ed686be411bb8c839595745520fc00ec7dfbc) just ci things™ (@willyb321)
+- [7a4e768](https://github.com/willyb321/elite-journal/commit/7a4e768f39337a72294951182a63bd00b2cfd241) deps update (@willyb321)
+- [348578c](https://github.com/willyb321/elite-journal/commit/348578cf2431a4eee98ad9bc851d737b6188b4be) add circleci appveyo (@willyb321)
+- [3f39887](https://github.com/willyb321/elite-journal/commit/3f398874a1516b5be1cbb61d92e2758e92261258) various things (@willyb321)
+- [ce0ba59](https://github.com/willyb321/elite-journal/commit/ce0ba59ca103ac254e3b733263b8918f0943e377) tests and ci (@willyb321)
+- [22c13fd](https://github.com/willyb321/elite-journal/commit/22c13fdc342dafcdc11494f3418d5254bb11df56) more ci things (@willyb321)
+- [3c1149c](https://github.com/willyb321/elite-journal/commit/3c1149cfeaa515448448ac8253ea7cb3fee57d70) more ci things (@willyb321)
+- [92b8a89](https://github.com/willyb321/elite-journal/commit/92b8a89809daff0db27c04de78ad5f8df7bcb69b) more ci things (@willyb321)
+- [ceadb9c](https://github.com/willyb321/elite-journal/commit/ceadb9c11be486b657e345be3a65e6ce6db274a5) just ci things (@willyb321)
+- [e3a0a9f](https://github.com/willyb321/elite-journal/commit/e3a0a9f69909e4a38a22a97705511dafd4734a20) probably fix ci (@willyb321)
+- [adacd8d](https://github.com/willyb321/elite-journal/commit/adacd8d798f8a5b739b6506fd19a22fd7e28dc53) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
+- [0e019ee](https://github.com/willyb321/elite-journal/commit/0e019ee0e009160b8c0df30a6662c8f8016f468f) testing tests (@willyb321)
+- [317f69d](https://github.com/willyb321/elite-journal/commit/317f69d95cfc75db0ec2a04cc6c4ab8f83466e0d) Changelog (automatic commit) (@willyb321)
 - [9b28ced](https://github.com/willyb321/elite-journal/commit/9b28cedfd17263cc6b33c0c377a41ff78cf811af) fix probably (@willyb321)
 - [0208025](https://github.com/willyb321/elite-journal/commit/02080254fd16efaa0ee3eaa7db22925d974309e5) i dunno what im doing buy hey (@willyb321)
 - [da57b90](https://github.com/willyb321/elite-journal/commit/da57b90769eb39a90d7b8b4eccb81028cdad196e) add appeyor.yml (@willyb321)
