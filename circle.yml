@@ -5,9 +5,9 @@ machine:
     version: node
 dependencies:
   pre:
-    - sh ./scripts/yarninstall.sh
+    - sh ./.scripts/yarninstall.sh
   override:
-    - sh ./scripts/deps.sh
+    - sh ./.scripts/deps.sh
   cache_directories:
     - "node_modules"
     - "~/.apt-cache"
