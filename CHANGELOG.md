@@ -1,6 +1,7 @@
 ## Change Log
 
-### upcoming (2016/10/18 02:02 +00:00)
+### upcoming (2016/10/18 03:00 +00:00)
+- [74f59ee](https://github.com/willyb321/elite-journal/commit/74f59eee1be807a70c88a0080b58de76b2711edc) Changelog (automatic commit) (@willyb321)
 - [b5a41dd](https://github.com/willyb321/elite-journal/commit/b5a41dd8374e8b543f55a4ddc858da113769819d) probably working apt cache (@willyb321)
 
 ### v1.6.7 (2016/10/17 22:05 +00:00)
