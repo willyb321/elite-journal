@@ -10,7 +10,7 @@ dependencies:
     - sh ./.scripts/deps.sh
   cache_directories:
     - "node_modules"
-    - "~/.apt-cache"
+    - "~/.yarn-cache"
 test:
   override:
     - sh ./.scripts/test.sh
