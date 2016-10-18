@@ -4,14 +4,16 @@ machine:
   node:
     version: node
 dependencies:
+  pre:
+    - sh ./scripts/yarninstall.sh
   override:
-    - sh ./deps.sh
+    - sh ./scripts/deps.sh
   cache_directories:
     - "node_modules"
     - "~/.apt-cache"
 test:
   override:
-    - sh ./test.sh
+    - sh ./scripts/test.sh
 general:
   artifacts:
     - "page.png"

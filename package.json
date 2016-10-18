@@ -16,7 +16,8 @@
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
     "pack": "build --dir",
     "dist": "build -w --x64",
-    "release": "build -w --x64"
+    "release": "build -w --x64",
+    "tag": "release-it"
   },
   "keywords": [
     "electron-app",
@@ -38,6 +39,7 @@
     "electron": "^1.4.3",
     "electron-builder": "^7.14.1",
     "electron-zip-packager": "^4.0.0",
+    "release-it": "^2.4.3",
     "spectron": "^3.4.0",
     "xo": "^0.17.0"
   },

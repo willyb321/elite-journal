@@ -6,7 +6,8 @@ environment:
   BT_TOKEN:
     secure: 4a/+kLKvQgpZqlldPjXcGGY2B8tuv+/hfkg250cg4STsspLG3XO7yZLsZnOEEB8z
 install:
-- cmd: npm install
+- cmd: choco install yarn
+- cmd: yarn install
 cache:
 - node_modules -> package.json
 - '%USERPROFILE%\.electron'
