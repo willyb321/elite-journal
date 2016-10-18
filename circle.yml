@@ -4,13 +4,6 @@ machine:
   node:
     version: node
 dependencies:
-  pre:
-    - sudo rm -rf /var/cache/apt/archives && sudo ln -s ~/.apt-cache /var/cache/apt/archives && mkdir -p ~/.apt-cache/partial
-    - sudo dpkg --add-architecture i386
-    - sudo apt-get update
-    - echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
-    - sudo apt-get install ttf-mscorefonts-installer
-    - sudo apt-get install -y wine
   override:
     - sh ./deps.sh
   cache_directories:
@@ -22,8 +15,3 @@ test:
 general:
   artifacts:
     - "page.png"
-deployment:
-  master:
-    tag: /v[0-9]+(\.[0-9]+)*/
-    commands:
-      - sh ./deploy.sh
