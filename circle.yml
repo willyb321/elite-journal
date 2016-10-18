@@ -13,7 +13,7 @@ dependencies:
     - "~/.apt-cache"
 test:
   override:
-    - sh ./scripts/test.sh
+    - sh ./.scripts/test.sh
 general:
   artifacts:
     - "page.png"

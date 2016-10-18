@@ -1,2 +1,2 @@
 #!/bin/bash
-npm install -g yarn
+curl -o- -L https://yarnpkg.com/install.sh | bash
