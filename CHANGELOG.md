@@ -1,6 +1,28 @@
 ## Change Log
 
-### upcoming (2016/10/18 03:00 +00:00)
+### upcoming (2016/10/19 03:00 +00:00)
+- [8a42855](https://github.com/willyb321/elite-journal/commit/8a428556fa8700ad34bcda9d09b072f679e9d5e9) woo for escape characters probably (@willyb321)
+- [f743782](https://github.com/willyb321/elite-journal/commit/f743782f58a41c432c1e36b43579096b2e002269) apparently the cache was wrong a bit (@willyb321)
+
+### v1.6.10 (2016/10/18 23:24 +00:00)
+- [62892e2](https://github.com/willyb321/elite-journal/commit/62892e27b7d0cdd99a47dfb439ff129068d0dcf5) v1.6.10 (@willyb321)
+- [32c0254](https://github.com/willyb321/elite-journal/commit/32c02543dc3cee621609edf595a161e42becb44d) damnit will have to use npm to install yarn on appveyor (@willyb321)
+
+### v1.6.9 (2016/10/18 22:49 +00:00)
+- [b962d0e](https://github.com/willyb321/elite-journal/commit/b962d0e8daad25ca6ab8ca0e7790c6b41acfa2c3) v1.6.9 (@willyb321)
+- [35ba451](https://github.com/willyb321/elite-journal/commit/35ba451eee49ba0156eeceaace38dcf2dace54c6) fix up ci (@willyb321)
+
+### v1.6.8 (2016/10/18 22:43 +00:00)
+- [6f8afb6](https://github.com/willyb321/elite-journal/commit/6f8afb6e77cf9eeee9727b181eaca6f6e4672f36) v1.6.8 (@willyb321)
+- [45cb75f](https://github.com/willyb321/elite-journal/commit/45cb75fc7e33f983772f13de532ac35557d56cb6) update yarn lockfile. (@willyb321)
+- [9bf159d](https://github.com/willyb321/elite-journal/commit/9bf159dc16cb82e02d0ca14e2d89262d150734b6) i forgot lots of dots apparently (@willyb321)
+- [b382ae3](https://github.com/willyb321/elite-journal/commit/b382ae34f4a5ec4eea4f4e99f62abe167833740b) i forgot a dot (@willyb321)
+- [19e296f](https://github.com/willyb321/elite-journal/commit/19e296f6adf9a167cba3b66df8a49a5cbae6e20e) so yeah (@willyb321)
+- [f5dce21](https://github.com/willyb321/elite-journal/commit/f5dce210f265551d97b018cb297bfc113739dcab) switch to yarn (@willyb321)
+- [69e7e06](https://github.com/willyb321/elite-journal/commit/69e7e06436057877199ed0388477ccb6e846fd5b) i decided to use appveyor to release and itll only build on tags (@willyb321)
+- [10fe5bb](https://github.com/willyb321/elite-journal/commit/10fe5bb6fe336df6d5584a9c41fe2479f3ffd497) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
+- [327ba54](https://github.com/willyb321/elite-journal/commit/327ba54fad1903e8dc631bf181f47093c085e0ec) add .release.json for release-it (@willyb321)
+- [fde3d4e](https://github.com/willyb321/elite-journal/commit/fde3d4e40bd11918c9149f1a1b28755a765dd633) Changelog (automatic commit) (@willyb321)
 - [74f59ee](https://github.com/willyb321/elite-journal/commit/74f59eee1be807a70c88a0080b58de76b2711edc) Changelog (automatic commit) (@willyb321)
 - [b5a41dd](https://github.com/willyb321/elite-journal/commit/b5a41dd8374e8b543f55a4ddc858da113769819d) probably working apt cache (@willyb321)
 
