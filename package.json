@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "devtron": "^1.4.0",
-    "electron": "^1.4.3",
+    "electron": "^1.4.4",
     "electron-builder": "^7.14.1",
     "electron-zip-packager": "^4.0.0",
     "release-it": "^2.4.3",
