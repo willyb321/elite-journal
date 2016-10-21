@@ -1,6 +1,8 @@
 ## Change Log
 
-### upcoming (2016/10/20 03:00 +00:00)
+### upcoming (2016/10/21 03:00 +00:00)
+- [b56eced](https://github.com/willyb321/elite-journal/commit/b56eced9b83120606f71e9a33d8b1214bfc9f389) update screenshot to reflect new changes (@willyb321)
+- [affb725](https://github.com/willyb321/elite-journal/commit/affb72527bd43cb0136ba147d001b6e1d9538e70) Changelog (automatic commit) (@willyb321)
 - [f47426e](https://github.com/willyb321/elite-journal/commit/f47426e5342a3cd157cfb5339f52bf81e291b161) update electron to 1.4.4 (@willyb321)
 - [5afd529](https://github.com/willyb321/elite-journal/commit/5afd529c8659178a7a904303f5ddc069c9e381d3) Changelog (automatic commit) (@willyb321)
 - [8a42855](https://github.com/willyb321/elite-journal/commit/8a428556fa8700ad34bcda9d09b072f679e9d5e9) woo for escape characters probably (@willyb321)
