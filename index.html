@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Elite-journal by willyb321</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/willyb321/elite-journal">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/willyb321/elite-journal/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/willyb321/elite-journal/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Elite-journal</h1>
+          <p>Parsing the Elite: Dangerous journal and putting it into a cool format.</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/willyb321">willyb321</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <p align="center">
+  <img src="https://github.com/willyb321/elite-journal/blob/master/build/icon.png?raw=true">
+</p>
+
+<h1>
+<a id="elite-journal" class="anchor" href="#elite-journal" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Elite Journal<a href="https://ci.appveyor.com/project/willyb321/elite-journal"><img src="https://img.shields.io/appveyor/ci/willyb321/elite-journal.svg?maxAge=3600" alt="AppVeyor"></a><a href="https://github.com/willyb321/elite-journal/releases/latest"><img src="https://img.shields.io/github/downloads/willyb321/elite-journal/total.svg?maxAge=3600" alt="Github All Releases"></a><a href="https://github.com/willyb321/elite-journal/releases"><img src="https://img.shields.io/github/release/willyb321/elite-journal.svg?maxAge=3600" alt="GitHub release"></a><a href="https://github.com/willyb321/elite-journal/stargazers"><img src="https://img.shields.io/github/stars/willyb321/elite-journal.svg?style=social&amp;label=Star&amp;maxAge=3600" alt="GitHub stars"></a><a href="https://gratipay.com/%7Ewillyb321/"><img src="https://img.shields.io/gratipay/user/willyb321.svg?maxAge=3600" alt="Gratipay User"></a><a href="https://scrutinizer-ci.com/g/willyb321/elite-journal/?branch=master"><img src="https://scrutinizer-ci.com/g/willyb321/elite-journal/badges/quality-score.png?b=master" alt="Scrutinizer Code Quality"></a><a href="https://circleci.com/gh/willyb321/elite-journal"><img src="https://circleci.com/gh/willyb321/elite-journal.svg?style=svg" alt="CircleCI"></a>
+</h1>
+
+<blockquote>
+<p>Parsing the Elite: Dangerous journal and putting it into a cool format.</p>
+</blockquote>
+
+<h2>
+<a id="whats-it-actually-do-then" class="anchor" href="#whats-it-actually-do-then" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Whats it actually do then?</h2>
+
+<p>Basically it allows the average joe to have a look at the journal log for <a href="https://www.elitedangerous.com/">Elite: Dangerous</a> in a nice easy to read format.</p>
+
+<h2>
+<a id="how-to-get-it" class="anchor" href="#how-to-get-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to get it?</h2>
+
+<p>Download a <a href="https://github.com/willyb321/elite-journal/releases/latest">setup .exe</a> from the releases page, and then run it. It will automagically update when you run the application from now on! You can also download it from <a href="https://bintray.com/willyb321/generic/elite-journal/_latestVersion">Bintray</a>, which is where the updates actually are downloaded from. Its a little bit faster I think, so give it a try. </p>
+
+<p><img src="https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png" alt="Example"></p>
+
+<h2>
+<a id="dev" class="anchor" href="#dev" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dev</h2>
+
+<pre><code>$ npm install
+</code></pre>
+
+<h3>
+<a id="run" class="anchor" href="#run" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run</h3>
+
+<pre><code>$ npm start
+</code></pre>
+
+<h3>
+<a id="build" class="anchor" href="#build" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build</h3>
+
+<pre><code>$ npm run pack
+</code></pre>
+
+<p>Builds the app for Windows x64, using <a href="https://github.com/electron-userland/electron-builder">electron-builder</a>.</p>
+
+<h3>
+<a id="build---distribution" class="anchor" href="#build---distribution" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build - Distribution</h3>
+
+<pre><code>$ npm run dist
+</code></pre>
+
+<p>Builds the app and distributable exe/nupkg for Windows x64, using <a href="https://github.com/electron-userland/electron-builder">electron-builder</a>.</p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>See <a href="https://github.com/willyb321/elite-journal/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> for guidelines.</p>
+
+<h2>
+<a id="changes" class="anchor" href="#changes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changes:</h2>
+
+<p>See <a href="https://github.com/willyb321/elite-journal/blob/master/CHANGELOG.md">CHANGELOG.md</a> for changes.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Filtering.</li>
+<li>Saving as HTML.</li>
+<li>Saving as JSON.</li>
+<li>Looking at journal logs in a nice format.</li>
+<li>Drag and drop logs to load them.</li>
+<li>Built with <a href="http://electron.atom.io/">web technologies</a> and <a href="https://nodejs.org/">Node.JS</a>.</li>
+<li>Keyboard shortcuts for various actions.</li>
+<li>Fairly fast.</li>
+<li>Pretty CSS.</li>
+<li>Easy on the CPU.</li>
+<li>Easy on the RAM.</li>
+<li>Easy on basically everything to do with resources.</li>
+<li>Auto updating.</li>
+<li>Plus more.</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT © <a href="https://tehsuperwilly.tech">willyb321</a></p>
+
+<h2>
+<a id="support-on-beerpay" class="anchor" href="#support-on-beerpay" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support on Beerpay</h2>
+
+<p>Hey dude! If you like this thing what ive made, why not chuck a buck my way eh? <g-emoji alias="+1" fallback-src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f44d.png" ios-version="6.0">👍</g-emoji></p>
+
+<p><a href="https://beerpay.io/willyb321/elite-journal"><img src="https://beerpay.io/willyb321/elite-journal/badge.svg?style=beer-square" alt="Beerpay"></a>  <a href="https://beerpay.io/willyb321/elite-journal?focus=wish"><img src="https://beerpay.io/willyb321/elite-journal/make-wish.svg?style=flat-square" alt="Beerpay"></a></p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
