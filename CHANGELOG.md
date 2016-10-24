@@ -1,6 +1,7 @@
 ## Change Log
 
-### upcoming (2016/10/23 03:00 +00:00)
+### upcoming (2016/10/24 03:00 +00:00)
+- [937f9b5](https://github.com/willyb321/elite-journal/commit/937f9b543a6d13db8ac51507333a09d955eafe0f) Changelog (automatic commit) (@willyb321)
 - [a8f2168](https://github.com/willyb321/elite-journal/commit/a8f21687e4e6a0c34f4bc95c0fe1cfa84f948108) apparently i cannot markdown (@willyb321)
 - [e6416a1](https://github.com/willyb321/elite-journal/commit/e6416a19f592c01842abbc9a7221daeeea3fc9b2) update and add new things (@willyb321)
 - [0771579](https://github.com/willyb321/elite-journal/commit/0771579d7bf03cb90f73130b13a9cf712c5ce571) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
