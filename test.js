@@ -30,4 +30,14 @@ describe('application launch', function() {
 			fs.writeFile('page.png', imageBuffer);
 		})
 	})
+	it('has the right text in #main', function() {
+		this.app.client.getText('#main').then(function(mainText) {
+			console.log('#main says: ' + mainText)
+		})
+	})
+	it('has the right text in #holder', function() {
+		this.app.client.getText('#holder').then(function(mainText) {
+			console.log('#holder says: ' + mainText)
+		})
+	})
 })
