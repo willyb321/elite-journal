@@ -11,6 +11,10 @@ dependencies:
   cache_directories:
     - "node_modules"
     - "~/.yarn-cache"
+test:
+  override:
+    - npm run test
+    - if [[ -e test-results.xml ]]; then cp test-results.xml $CIRCLE_TEST_REPORTS/test-results.xml; fi
 general:
   artifacts:
     - "page.png"

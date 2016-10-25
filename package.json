@@ -11,7 +11,7 @@
     "url": "tehsuperwilly.tech"
   },
   "scripts": {
-    "test": "mocha ./test.js && xo",
+    "test": "mocha --reporter mocha-circleci-reporter ./test.js && xo",
     "start": "electron .",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
     "pack": "build --dir",
@@ -40,6 +40,7 @@
     "electron-builder": "^7.14.1",
     "electron-zip-packager": "^4.0.0",
     "mocha": "^3.1.2",
+    "mocha-circleci-reporter": "^0.0.2",
     "release-it": "^2.4.3",
     "spectron": "^3.4.0",
     "xo": "^0.17.0"
