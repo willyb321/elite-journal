@@ -1,6 +1,17 @@
 ## Change Log
 
-### upcoming (2016/10/24 03:00 +00:00)
+### upcoming (2016/10/25 03:00 +00:00)
+- [7373bf9](https://github.com/willyb321/elite-journal/commit/7373bf986a01ca2c5acce1d1b7fd9b5640fd4a40) testing tests (@willyb321)
+- [e549de6](https://github.com/willyb321/elite-journal/commit/e549de6587d2e998d585f828a35da22b0133ee97) testing 12.xx (@willyb321)
+- [dd676d7](https://github.com/willyb321/elite-journal/commit/dd676d788dbca45848088734bd2ae8299b708c7c) maybe pls work (@willyb321)
+- [9b834c3](https://github.com/willyb321/elite-journal/commit/9b834c3e9167e0d662feff2fb3718add572fd934) pls start chromedriver (@willyb321)
+- [4faf734](https://github.com/willyb321/elite-journal/commit/4faf7343adfbe4953b4971aedaa2fa02f8bd07c7) i forgot to add mocha as dependency (@willyb321)
+- [260d61f](https://github.com/willyb321/elite-journal/commit/260d61f8cb9e7f35dad5ca7d503a100dba1888a7) new tests are good (@willyb321)
+- [3747b7a](https://github.com/willyb321/elite-journal/commit/3747b7ac087b3cd3bc2d191028354716b4b25332) trying to fix circle failing test (@willyb321)
+- [48d0bff](https://github.com/willyb321/elite-journal/commit/48d0bff94f585b14adcfda4c83a3a51dcb975563) yarn lock update (@willyb321)
+- [#20](https://github.com/willyb321/elite-journal/pull/20) Merge pull request #20 from willyb321/greenkeeper-electron-auto-updater-0.0.4 (@willyb321)
+- [78ad7ec](https://github.com/willyb321/elite-journal/commit/78ad7ec770665fd2624abf7f6bb478685d5025b6) chore(package): update electron-auto-updater to version 0.0.4 (@greenkeeperio-bot)
+- [f7c02f4](https://github.com/willyb321/elite-journal/commit/f7c02f4531ac3d63efe952e58e0590ccc032905a) Changelog (automatic commit) (@willyb321)
 - [937f9b5](https://github.com/willyb321/elite-journal/commit/937f9b543a6d13db8ac51507333a09d955eafe0f) Changelog (automatic commit) (@willyb321)
 - [a8f2168](https://github.com/willyb321/elite-journal/commit/a8f21687e4e6a0c34f4bc95c0fe1cfa84f948108) apparently i cannot markdown (@willyb321)
 - [e6416a1](https://github.com/willyb321/elite-journal/commit/e6416a19f592c01842abbc9a7221daeeea3fc9b2) update and add new things (@willyb321)
