@@ -11,9 +11,6 @@ dependencies:
   cache_directories:
     - "node_modules"
     - "~/.yarn-cache"
-test:
-  override:
-    - sh ./.scripts/test.sh
 general:
   artifacts:
     - "page.png"
