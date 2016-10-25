@@ -9,7 +9,8 @@ describe('application launch', function() {
 	beforeEach(function() {
 		this.app = new Application({
 			path: electron,
-			args: ['index.js']
+			args: ['index.js'],
+			startTimeout: 15000
 		});
 		return this.app.start()
 	})
