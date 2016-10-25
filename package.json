@@ -11,7 +11,7 @@
     "url": "tehsuperwilly.tech"
   },
   "scripts": {
-    "test": "node ./test.js && xo",
+    "test": "mocha ./test.js && xo",
     "start": "electron .",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
     "pack": "build --dir",
