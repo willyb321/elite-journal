@@ -1,5 +1,16 @@
 ## Change Log
 
+### v1.6.13 (2016/10/26 08:19 +00:00)
+- [00bff68](https://github.com/willyb321/elite-journal/commit/00bff685b1cab31433f590c8cbd75b325c2e9df4) 1.6.13 (@willyb321)
+- [2e7603a](https://github.com/willyb321/elite-journal/commit/2e7603a54dec009760bf2ab4786a8617c30a7708) probably maybe fix updating (@willyb321)
+
+### v1.6.12 (2016/10/26 08:05 +00:00)
+- [2fe67c5](https://github.com/willyb321/elite-journal/commit/2fe67c5478cfbe58fc853e4fa91a45190fc22014) v1.6.12 (@willyb321)
+- [599d5d7](https://github.com/willyb321/elite-journal/commit/599d5d7fdd12e44e8c7692ed504b57d5bd739d1c) fixed the auto updater (@willyb321)
+- [00f2acc](https://github.com/willyb321/elite-journal/commit/00f2acc29e426cd39c1470c792c014b58f74dbd9) less duped code (@willyb321)
+- [20e43ed](https://github.com/willyb321/elite-journal/commit/20e43ed4bd00948154b0383fdf5ea4901b1df6d4) less duped code (@willyb321)
+- [a880820](https://github.com/willyb321/elite-journal/commit/a88082028e89efdae61e22d8575118079fa872ba) Changelog (automatic commit) (@willyb321)
+
 ### v1.6.11 (2016/10/26 04:47 +00:00)
 - [5dc33bb](https://github.com/willyb321/elite-journal/commit/5dc33bb707b544ac7dfea2b91a51b627e027a85b) v1.6.11 (@willyb321)
 - [0aefb69](https://github.com/willyb321/elite-journal/commit/0aefb69215a0eb180b24c50430cac4dc9feeb07b) lots of things (@willyb321)
