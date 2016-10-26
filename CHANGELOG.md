@@ -1,6 +1,13 @@
 ## Change Log
 
-### upcoming (2016/10/25 03:00 +00:00)
+### upcoming (2016/10/26 03:00 +00:00)
+- [7e75043](https://github.com/willyb321/elite-journal/commit/7e750430b7a50b8b05b84d3fb0dcd489bc77c115) updated lockfile (@willyb321)
+- [#21](https://github.com/willyb321/elite-journal/pull/21) Merge pull request #21 from willyb321/greenkeeper-electron-auto-updater-0.1.0 (@willyb321)
+- [6fd8bf8](https://github.com/willyb321/elite-journal/commit/6fd8bf8aae284d602b93a64853dff96cc563a106) chore(package): update electron-auto-updater to version 0.1.0 (@greenkeeperio-bot)
+- [35c9b66](https://github.com/willyb321/elite-journal/commit/35c9b66b6cb1dd2f922f98f043e125a826ab899a) just ci things (@willyb321)
+- [0330df0](https://github.com/willyb321/elite-journal/commit/0330df0e3679557b101b0a48ffe82b833b01e851) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
+- [7963176](https://github.com/willyb321/elite-journal/commit/79631768a113a90b0cef69f4c0fe7ebac6aa8e1c) circleci reporter (@willyb321)
+- [d6ae0be](https://github.com/willyb321/elite-journal/commit/d6ae0bee65f8a973bffe461ee0e5f3b13902b785) Changelog (automatic commit) (@willyb321)
 - [7373bf9](https://github.com/willyb321/elite-journal/commit/7373bf986a01ca2c5acce1d1b7fd9b5640fd4a40) testing tests (@willyb321)
 - [e549de6](https://github.com/willyb321/elite-journal/commit/e549de6587d2e998d585f828a35da22b0133ee97) testing 12.xx (@willyb321)
 - [dd676d7](https://github.com/willyb321/elite-journal/commit/dd676d788dbca45848088734bd2ae8299b708c7c) maybe pls work (@willyb321)
