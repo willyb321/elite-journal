@@ -1,6 +1,9 @@
 ## Change Log
 
-### upcoming (2016/10/26 03:00 +00:00)
+### v1.6.11 (2016/10/26 04:47 +00:00)
+- [5dc33bb](https://github.com/willyb321/elite-journal/commit/5dc33bb707b544ac7dfea2b91a51b627e027a85b) v1.6.11 (@willyb321)
+- [0aefb69](https://github.com/willyb321/elite-journal/commit/0aefb69215a0eb180b24c50430cac4dc9feeb07b) lots of things (@willyb321)
+- [d7e7621](https://github.com/willyb321/elite-journal/commit/d7e7621f1d04ad735d77ccd4b7e54a4327829eeb) Changelog (automatic commit) (@willyb321)
 - [7e75043](https://github.com/willyb321/elite-journal/commit/7e750430b7a50b8b05b84d3fb0dcd489bc77c115) updated lockfile (@willyb321)
 - [#21](https://github.com/willyb321/elite-journal/pull/21) Merge pull request #21 from willyb321/greenkeeper-electron-auto-updater-0.1.0 (@willyb321)
 - [6fd8bf8](https://github.com/willyb321/elite-journal/commit/6fd8bf8aae284d602b93a64853dff96cc563a106) chore(package): update electron-auto-updater to version 0.1.0 (@greenkeeperio-bot)
