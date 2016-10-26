@@ -152,9 +152,11 @@ function loadFilter() {
 
 function logorjson(loadFile) {
 	try {
-		JSON.parse(fs.readFileSync(loadFile[0], 'utf8'));
+		let obj = jsonfile.readFileSync(loadFile[0]); // eslint-disable-line prefer-const
+		JSON.parse(obj);
 	} catch (err) {
-		return err instanceof Error;
+		console.log(err.name);
+		return err.name;
 	}
 }
 
@@ -162,10 +164,13 @@ function loadAlternate() {
 	let html;
 	process.alterateLoad = true;
 	loadFile = dialogLoad();
-	const logorJSON = logorjson(loadFile);
-	if ((/\.(json)$/i).test(loadFile) || logorJSON === undefined) {
+	let logorJSON = logorjson(loadFile);
+	console.log(logorJSON);
+	if ((/\.(json)$/i).test(loadFile)) {
 		loadOutput();
-	} else if ((/\.(log)$/i).test(loadFile)) {
+		loadFile = '';
+		logorJSON = '';
+	} else if ((/\.(log)$/i).test(loadFile) && logorJSON === 'SyntaxError') {
 		JSONParsed = [];
 		const lr = new LineByLineReader(loadFile[0]);
 		lr.on('error', err => {
@@ -186,19 +191,26 @@ function loadAlternate() {
 			win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
 			process.logLoaded = true;
 			loadFile = '';
+			logorJSON = '';
 		});
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile[0]);
+		logorJSON = '';
 	}
 }
 
 function loadByDrop() {
 	let html;
 	JSONParsed = [];
+	loadFile = process.logDropPath;
+	let logorJSON = logorjson(loadFile);
+	console.log(logorJSON);
 	if ((/\.(json)$/i).test(process.logDropPath)) {
 		loadOutputDropped();
+		loadFile = '';
+		logorJSON = '';
 		process.logDropped = false;
-	} else if ((/\.(log)$/i).test(process.logDropPath)) {
+	} else if ((/\.(log)$/i).test(process.logDropPath) && logorJSON === 'SyntaxError') {
 		const lr = new LineByLineReader(process.logDropPath);
 		lr.on('error', err => {
 			console.log(err);
@@ -218,8 +230,13 @@ function loadByDrop() {
 			win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
 			process.logLoaded = true;
 			loadFile = '';
+			logorJSON = '';
 			process.logDropped = false;
 		});
+	} else if ((/\.(html)$/i).test(loadFile)) {
+		win.loadURL(loadFile);
+		loadFile = '';
+		logorJSON = '';
 	}
 }
 
