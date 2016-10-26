@@ -150,6 +150,31 @@ function loadFilter() {
 	win.loadURL('data:text/html,' + webview + css + dragndrop + '<hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 
+function lineReader(loadFile, html, logorJSON) { // eslint-disable-line no-unused-vars
+	JSONParsed = [];
+	const lr = new LineByLineReader(loadFile[0]);
+	lr.on('error', err => {
+		console.log(err);
+	});
+	lr.on('line', line => {
+		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
+		JSONParsed.push(lineParse);
+		let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
+		html += htmlTabled;
+	});
+	lr.on('end', err => {
+		if (err) {
+			console.log(err.message);
+		}
+		process.htmlDone = html;
+		process.htmlDone = process.htmlDone.replace('undefined', '');
+		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
+		process.logLoaded = true;
+		loadFile = '';
+		logorJSON = '';
+	});
+}
+
 function logorjson(loadFile) {
 	try {
 		let obj = jsonfile.readFileSync(loadFile[0]); // eslint-disable-line prefer-const
@@ -159,40 +184,21 @@ function logorjson(loadFile) {
 		return err.name;
 	}
 }
-
-function loadAlternate() {
+function loadInit() {
 	let html;
 	process.alterateLoad = true;
 	loadFile = dialogLoad();
-	let logorJSON = logorjson(loadFile);
+	let logorJSON = logorjson(loadFile); // eslint-disable-line prefer-const
 	console.log(logorJSON);
+	loadAlternate(logorJSON, loadFile, html);
+}
+function loadAlternate(logorJSON, loadFile, html) {
 	if ((/\.(json)$/i).test(loadFile)) {
 		loadOutput();
 		loadFile = '';
 		logorJSON = '';
 	} else if ((/\.(log)$/i).test(loadFile) && logorJSON === 'SyntaxError') {
-		JSONParsed = [];
-		const lr = new LineByLineReader(loadFile[0]);
-		lr.on('error', err => {
-			console.log(err);
-		});
-		lr.on('line', line => {
-			let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-			JSONParsed.push(lineParse);
-			let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
-			html += htmlTabled;
-		});
-		lr.on('end', err => {
-			if (err) {
-				console.log(err.message);
-			}
-			process.htmlDone = html;
-			process.htmlDone = process.htmlDone.replace('undefined', '');
-			win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
-			process.logLoaded = true;
-			loadFile = '';
-			logorJSON = '';
-		});
+		lineReader(loadFile, html, logorJSON);
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile[0]);
 		logorJSON = '';
@@ -202,7 +208,8 @@ function loadAlternate() {
 function loadByDrop() {
 	let html;
 	JSONParsed = [];
-	loadFile = process.logDropPath;
+	loadFile = [];
+	loadFile.push(process.logDropPath);
 	let logorJSON = logorjson(loadFile);
 	console.log(logorJSON);
 	if ((/\.(json)$/i).test(process.logDropPath)) {
@@ -211,28 +218,7 @@ function loadByDrop() {
 		logorJSON = '';
 		process.logDropped = false;
 	} else if ((/\.(log)$/i).test(process.logDropPath) && logorJSON === 'SyntaxError') {
-		const lr = new LineByLineReader(process.logDropPath);
-		lr.on('error', err => {
-			console.log(err);
-		});
-		lr.on('line', line => {
-			let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-			JSONParsed.push(lineParse);
-			let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
-			html += htmlTabled;
-		});
-		lr.on('end', err => {
-			if (err) {
-				console.log(err.message);
-			}
-			process.htmlDone = html;
-			process.htmlDone = process.htmlDone.replace('undefined', '');
-			win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
-			process.logLoaded = true;
-			loadFile = '';
-			logorJSON = '';
-			process.logDropped = false;
-		});
+		lineReader(loadFile, html, logorJSON);
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile);
 		loadFile = '';
@@ -381,7 +367,7 @@ const template = [{
 	}, {
 		label: 'Load',
 		accelerator: 'CmdOrCtrl+O',
-		click: loadAlternate
+		click: loadInit
 	}]
 }, {
 	label: 'Filtering',
