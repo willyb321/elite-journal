@@ -150,7 +150,7 @@ function loadFilter() {
 	win.loadURL('data:text/html,' + webview + css + dragndrop + '<hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 
-function lineReader(loadFile, html, logorJSON) { // eslint-disable-line no-unused-vars
+function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
 	JSONParsed = [];
 	const lr = new LineByLineReader(loadFile[0]);
 	lr.on('error', err => {
@@ -171,7 +171,6 @@ function lineReader(loadFile, html, logorJSON) { // eslint-disable-line no-unuse
 		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
 		process.logLoaded = true;
 		loadFile = '';
-		logorJSON = '';
 	});
 }
 
@@ -198,7 +197,8 @@ function loadAlternate(logorJSON, loadFile, html) {
 		loadFile = '';
 		logorJSON = '';
 	} else if ((/\.(log)$/i).test(loadFile) && logorJSON === 'SyntaxError') {
-		lineReader(loadFile, html, logorJSON);
+		lineReader(loadFile, html);
+		logorJSON = '';
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile[0]);
 		logorJSON = '';
@@ -218,7 +218,8 @@ function loadByDrop() {
 		logorJSON = '';
 		process.logDropped = false;
 	} else if ((/\.(log)$/i).test(process.logDropPath) && logorJSON === 'SyntaxError') {
-		lineReader(loadFile, html, logorJSON);
+		lineReader(loadFile, html);
+		logorJSON = '';
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile);
 		loadFile = '';
