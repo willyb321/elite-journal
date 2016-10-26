@@ -29,7 +29,7 @@ autoUpdater.on('update-downloaded', releaseName => { // eslint-disable-line no-u
 		type: 'info',
 		buttons: [],
 		title: 'Update ready to install.',
-		message: 'Press OK to install the update, and the application will then restart. The release is: ' + releaseName
+		message: 'Press OK to install the update, and the application will then restart.'
 	});
 	autoUpdater.quitAndInstall();
 });
