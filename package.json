@@ -24,6 +24,7 @@
     "electron"
   ],
   "dependencies": {
+    "bugsnag": "^1.8.0",
     "electron-auto-updater": "0.0.3",
     "electron-debug": "^1.0.1",
     "electron-is-dev": "^0.1.2",

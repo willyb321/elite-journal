@@ -12,7 +12,9 @@ const LineByLineReader = require('line-by-line');
 const _ = require('underscore');
 const isDev = require('electron-is-dev');
 const jsonfile = require('jsonfile');
+const bugsnag = require('bugsnag');
 
+bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847');
 const app = electron.app;
 let win;
 
@@ -87,6 +89,9 @@ function dialogLoad() {
 	});
 }
 process.on('uncaughtException', err => {
+	if (!isDev) {
+		bugsnag.notify(err);
+	}
 	console.log('ERROR! The error is: ' + err.message);
 });
 
