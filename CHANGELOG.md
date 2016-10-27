@@ -1,5 +1,9 @@
 ## Change Log
 
+### upcoming (2016/10/27 03:00 +00:00)
+- [a17ff56](https://github.com/willyb321/elite-journal/commit/a17ff56e5d24d9ba0f1154474e3a91f361c57eac) lockfile (@willyb321)
+- [e023721](https://github.com/willyb321/elite-journal/commit/e023721de7c4c77202c816a51346bca13c28c3a9) Changelog (automatic commit) (@willyb321)
+
 ### v1.6.13 (2016/10/26 08:19 +00:00)
 - [00bff68](https://github.com/willyb321/elite-journal/commit/00bff685b1cab31433f590c8cbd75b325c2e9df4) 1.6.13 (@willyb321)
 - [2e7603a](https://github.com/willyb321/elite-journal/commit/2e7603a54dec009760bf2ab4786a8617c30a7708) probably maybe fix updating (@willyb321)
