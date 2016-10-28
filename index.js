@@ -42,6 +42,9 @@ autoUpdater.on('error', error => {
 		title: 'Update ready to install.',
 		message: `Sorry, we've had an error. The message is ` + error
 	});
+	if (!isDev) {
+		bugsnag.notify(error);
+	}
 });
 
 let loadFile;
