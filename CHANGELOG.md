@@ -1,6 +1,12 @@
 ## Change Log
 
-### upcoming (2016/10/27 03:00 +00:00)
+### upcoming (2016/10/28 03:00 +00:00)
+- [e0aedea](https://github.com/willyb321/elite-journal/commit/e0aedea6133aefc8a56a57258c537f784d246c2f) more error handling with bugsnag (@willyb321)
+
+### v1.6.14 (2016/10/27 22:48 +00:00)
+- [f653da7](https://github.com/willyb321/elite-journal/commit/f653da7b12e0cd2564d1f575541e2209bfb692eb) v1.6.14 (@willyb321)
+- [64ad54f](https://github.com/willyb321/elite-journal/commit/64ad54ffb8c2118b751a4fecc7ac69e7b924ceaa) bugsnag is a cool thing (@willyb321)
+- [cd489e2](https://github.com/willyb321/elite-journal/commit/cd489e24052df5c6b5fd40216468ad66e0dba897) Changelog (automatic commit) (@willyb321)
 - [a17ff56](https://github.com/willyb321/elite-journal/commit/a17ff56e5d24d9ba0f1154474e3a91f361c57eac) lockfile (@willyb321)
 - [e023721](https://github.com/willyb321/elite-journal/commit/e023721de7c4c77202c816a51346bca13c28c3a9) Changelog (automatic commit) (@willyb321)
 
