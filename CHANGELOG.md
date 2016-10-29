@@ -1,6 +1,9 @@
 ## Change Log
 
-### upcoming (2016/10/28 03:00 +00:00)
+### v1.6.15 (2016/10/29 02:01 +00:00)
+- [4111ef5](https://github.com/willyb321/elite-journal/commit/4111ef5fb650db00bb2d1fb4019d3a32b7486b0d) 1.6.15 (@willyb321)
+- [97e9595](https://github.com/willyb321/elite-journal/commit/97e95956c602935209cc218c60eec4e7bbbf9ec9) update electron-builder & electron-auto-updater (@willyb321)
+- [bb17aa9](https://github.com/willyb321/elite-journal/commit/bb17aa978a710164e4f906619b579b5dcfb91f6d) Changelog (automatic commit) (@willyb321)
 - [e0aedea](https://github.com/willyb321/elite-journal/commit/e0aedea6133aefc8a56a57258c537f784d246c2f) more error handling with bugsnag (@willyb321)
 
 ### v1.6.14 (2016/10/27 22:48 +00:00)
