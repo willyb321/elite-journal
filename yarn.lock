@@ -874,9 +874,9 @@ ejs@^2.3.1:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.5.2.tgz#21444ba09386f0c65b6eafb96a3d51bcb3be80d1"
 
-electron-auto-updater@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-0.2.0.tgz#e6e107f58733cb0da6f7ff0a466cc92c31451257"
+electron-auto-updater@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-0.3.1.tgz#4a26aa12b1bcd710491cfb046a75647ab4fcb922"
   dependencies:
     bluebird-lst-c "^1.0.2"
     fs-extra-p "^2.0.3"

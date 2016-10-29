@@ -23,7 +23,7 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 		type: 'info',
 		buttons: [],
 		title: 'New update available.',
-		message: 'Press OK to download the update, and the application will download the update and then prompt you to confirm installation.'
+		message: 'Press OK to download the update, and the application will download the update and then tell you when its done.'
 	});
 });
 autoUpdater.on('update-downloaded', releaseName => { // eslint-disable-line no-unused-vars
@@ -31,9 +31,8 @@ autoUpdater.on('update-downloaded', releaseName => { // eslint-disable-line no-u
 		type: 'info',
 		buttons: [],
 		title: 'Update ready to install.',
-		message: 'Press OK to install the update, and the application will then restart.'
+		message: 'The update is downloaded, and will be installed on quit.'
 	});
-	autoUpdater.quitAndInstall();
 });
 autoUpdater.on('error', error => {
 	dialog.showMessageBox({
