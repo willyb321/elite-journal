@@ -1,5 +1,32 @@
 ## Change Log
 
+### upcoming (2016/10/30 03:00 +00:00)
+- [788b231](https://github.com/willyb321/elite-journal/commit/788b231b74c89bfc37be173110f3c5a9580ab41d) oops (@willyb321)
+- [76fabca](https://github.com/willyb321/elite-journal/commit/76fabcac1ab32346f3043600157382db885a1e9b) yarn cache deps (@willyb321)
+
+### v1.6.20 (2016/10/29 22:07 +00:00)
+- [48d3899](https://github.com/willyb321/elite-journal/commit/48d3899e16a97cb0f882b36ac5c49c76d45f54b9) 1.6.20 (@willyb321)
+- [84b8887](https://github.com/willyb321/elite-journal/commit/84b8887e10bb4cb0d2fd3917c79986b319e40fce) pls actually be fixed hey (@willyb321)
+
+### v1.6.19 (2016/10/29 10:28 +00:00)
+- [3c4fef6](https://github.com/willyb321/elite-journal/commit/3c4fef6c312890028a6b1766e9247f6788139aae) 1.6.19 (@willyb321)
+- [#23](https://github.com/willyb321/elite-journal/pull/23) Merge pull request #23 from willyb321/greenkeeper/electron-auto-updater-0.3.0 (@willyb321)
+- [c6b785b](https://github.com/willyb321/elite-journal/commit/c6b785ba56ecb39f76b790a8225d82969151cbd4) fix(package): update electron-auto-updater to version 0.3.0 (@greenkeeper[bot])
+
+### v1.6.18 (2016/10/29 09:33 +00:00)
+- [e047b5e](https://github.com/willyb321/elite-journal/commit/e047b5e93efa90ad770ae9f9bafaef7f7abeb67c) 1.6.18 (@willyb321)
+- [a0da760](https://github.com/willyb321/elite-journal/commit/a0da76009c9fcfeceb199f0575d1222349a67d85) maybe fix pls (@willyb321)
+
+### v1.6.17 (2016/10/29 03:31 +00:00)
+- [13df801](https://github.com/willyb321/elite-journal/commit/13df801690cdbb81186f6f2bc0bfc871a4eebd12) 1.6.17 (@willyb321)
+- [223eac5](https://github.com/willyb321/elite-journal/commit/223eac54c84b9e35edf3c169c890b8e7b9c275a8) fix probably (@willyb321)
+- [095bb89](https://github.com/willyb321/elite-journal/commit/095bb893f9bbfa9286d3d2084cdd6089d4f4467c) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
+
+### v1.6.16 (2016/10/29 03:01 +00:00)
+- [91f573a](https://github.com/willyb321/elite-journal/commit/91f573ac40e431cd0255741f72051a86195630ee) 1.6.16 (@willyb321)
+- [9dacbfb](https://github.com/willyb321/elite-journal/commit/9dacbfb1824af65a5e57d28bb8c8bed301b18e42) probably fix for update loop (@willyb321)
+- [0da458c](https://github.com/willyb321/elite-journal/commit/0da458c979883e55f3cbb702c46c692f5c12c3ae) Changelog (automatic commit) (@willyb321)
+
 ### v1.6.15 (2016/10/29 02:01 +00:00)
 - [4111ef5](https://github.com/willyb321/elite-journal/commit/4111ef5fb650db00bb2d1fb4019d3a32b7486b0d) 1.6.15 (@willyb321)
 - [97e9595](https://github.com/willyb321/elite-journal/commit/97e95956c602935209cc218c60eec4e7bbbf9ec9) update electron-builder & electron-auto-updater (@willyb321)
