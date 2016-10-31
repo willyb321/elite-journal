@@ -185,7 +185,6 @@ function logorjson(loadFile) {
 		let obj = jsonfile.readFileSync(loadFile[0]); // eslint-disable-line prefer-const
 		JSON.parse(obj);
 	} catch (err) {
-		console.log(err.name);
 		return err.name;
 	}
 }
