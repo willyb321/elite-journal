@@ -48,7 +48,6 @@ autoUpdater.on('error', error => {
 
 let loadFile;
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
-const dragndrop = ``; // <hr><webview id="bar" src="${__dirname}/drop.html" style="display:inline-flex; width:100%; height:75px" nodeintegration="on"></webview>
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0%;" nodeintegration="on"></webview>`;
 let JSONParsedEvent = [];
 let JSONParsed = []; // eslint-disable-line prefer-const
@@ -100,7 +99,7 @@ process.on('uncaughtException', err => {
 function getChecked() {
 	ipcMain.on('asynchronous-message', (event, arg) => {
 		if (arg === 'All Events') {
-			win.loadURL('data:text/html,' + webview + dragndrop + '<hr>' + stopdrop + css + process.htmlDone); // eslint-disable-line no-useless-concat
+			win.loadURL('data:text/html,' + webview + '<hr>' + stopdrop + css + process.htmlDone); // eslint-disable-line no-useless-concat
 		} else {
 			console.log(arg);
 			process.filteredEvent = arg;
@@ -128,7 +127,7 @@ function sortaSorter() {
 		global.eventsFilter = {
 			prop1: process.unique
 		};
-		win.loadURL('data:text/html,' + webview + css + dragndrop + '<hr>' + stopdrop + process.htmlDone); // eslint-disable-line no-useless-concat
+		win.loadURL('data:text/html,' + webview + css + '<hr>' + stopdrop + process.htmlDone); // eslint-disable-line no-useless-concat
 		getChecked();
 	} else {
 		dialog.showMessageBox({
@@ -154,7 +153,7 @@ function loadFilter() {
 		process.filteredHTML += tableify(JSONParsedEvent[i]) + '<hr>'; // eslint-disable-line prefer-const
 	}
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + webview + css + dragndrop + '<hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
+	win.loadURL('data:text/html,' + webview + css + '<hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 
 function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
@@ -175,7 +174,7 @@ function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
 		}
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
+		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
 		process.logLoaded = true;
 		loadFile = '';
 	});
@@ -282,7 +281,7 @@ function loadOutput() {
 			JSONParsed.push(obj[prop]);
 		}
 		process.logLoaded = true;
-		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
+		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
 	});
 }
 
@@ -302,7 +301,7 @@ function loadOutputDropped() {
 			JSONParsed.push(obj[prop]);
 		}
 		process.logLoaded = true;
-		win.loadURL('data:text/html,' + css + dragndrop + '<hr>' + stopdrop + process.htmlDone);
+		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
 	});
 }
 
