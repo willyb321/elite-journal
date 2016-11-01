@@ -2619,6 +2619,10 @@ node-uuid@~1.4.0, node-uuid@~1.4.7:
   version "1.4.7"
   resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.7.tgz#6da5a17668c4b3dd59623bda11cf7fa4c1f60a6f"
 
+node-watch@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/node-watch/-/node-watch-0.4.1.tgz#d0947d54a995f91135db4056b68722c6d7c322ad"
+
 noop2@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/noop2/-/noop2-2.0.0.tgz#4b636015e9882b54783c02b412f699d8c5cd0a5b"

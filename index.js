@@ -1,4 +1,3 @@
-'use strict';
 const electron = require('electron');
 const {Menu} = require('electron');
 const {dialog} = require('electron');
@@ -13,6 +12,7 @@ const _ = require('underscore');
 const isDev = require('electron-is-dev');
 const jsonfile = require('jsonfile');
 const bugsnag = require('bugsnag');
+const watch = require('node-watch');
 
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847');
 const app = electron.app;
@@ -45,7 +45,7 @@ autoUpdater.on('error', error => {
 		bugsnag.notify(error);
 	}
 });
-
+let watcher;
 let loadFile;
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0%;" nodeintegration="on"></webview>`;
@@ -74,6 +74,23 @@ function onClosed() {
 	mainWindow = null;
 }
 
+function watchFor() {
+	if (!loadFile) { // eslint-disable-line no-negated-condition
+		watcher = watch(logPath);
+		watcher.on('change', log => {
+			let html;
+			loadFile = [];
+			loadFile[0] = log;
+			lineReader(loadFile, html);
+		});
+		watcher.on('error', err => {
+			bugsnag.notify(err);
+		});
+	} else {
+		watcher.close();
+		loadFile = undefined;
+	}
+}
 function dialogLoad() {
 	return dialog.showOpenDialog({
 		defaultPath: logPath,
@@ -182,7 +199,7 @@ function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
 
 function logorjson(loadFile) {
 	try {
-		let obj = jsonfile.readFileSync(loadFile[0]); // eslint-disable-line prefer-const
+		let obj = jsonfile.readFileSync(loadFile); // eslint-disable-line prefer-const
 		JSON.parse(obj);
 	} catch (err) {
 		return err.name;
@@ -374,6 +391,10 @@ const template = [{
 		label: 'Load',
 		accelerator: 'CmdOrCtrl+O',
 		click: loadInit
+	}, {
+		label: 'Watch logs',
+		accelerator: 'CmdOrCtrl+L',
+		click: watchFor
 	}]
 }, {
 	label: 'Filtering',
