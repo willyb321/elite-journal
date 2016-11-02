@@ -45,6 +45,7 @@ autoUpdater.on('error', error => {
 		bugsnag.notify(error);
 	}
 });
+let watching;
 let watcher;
 let loadFile;
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
@@ -72,24 +73,6 @@ function onClosed() {
 	// dereference the window
 	// for multiple windows store them in an array
 	mainWindow = null;
-}
-
-function watchFor() {
-	if (!loadFile) { // eslint-disable-line no-negated-condition
-		watcher = watch(logPath);
-		watcher.on('change', log => {
-			let html;
-			loadFile = [];
-			loadFile[0] = log;
-			lineReader(loadFile, html);
-		});
-		watcher.on('error', err => {
-			bugsnag.notify(err);
-		});
-	} else {
-		watcher.close();
-		loadFile = undefined;
-	}
 }
 function dialogLoad() {
 	return dialog.showOpenDialog({
@@ -173,7 +156,7 @@ function loadFilter() {
 	win.loadURL('data:text/html,' + webview + css + '<hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 
-function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
+function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused-vars
 	JSONParsed = [];
 	const lr = new LineByLineReader(loadFile[0]);
 	lr.on('error', err => {
@@ -189,14 +172,18 @@ function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
 		if (err) {
 			console.log(err.message);
 		}
-		process.htmlDone = html;
-		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
-		process.logLoaded = true;
-		loadFile = '';
-	});
-}
-
+		if (watching === true) { // eslint-disable-line no-negated-condition
+			process.htmlDone = html;
+			process.htmlDone = process.htmlDone.replace('undefined', '');
+			watchOpen(JSONParsed);
+		} else if (watching === false) {
+			process.htmlDone = html;
+			process.htmlDone = process.htmlDone.replace('undefined', '');
+			win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
+			process.logLoaded = true;
+			loadFile = '';
+		}}
+);}
 function logorjson(loadFile) {
 	try {
 		let obj = jsonfile.readFileSync(loadFile); // eslint-disable-line prefer-const
@@ -214,12 +201,13 @@ function loadInit() {
 	loadAlternate(logorJSON, loadFile, html);
 }
 function loadAlternate(logorJSON, loadFile, html) {
+	watching = false;
 	if ((/\.(json)$/i).test(loadFile)) {
 		loadOutput();
 		loadFile = '';
 		logorJSON = '';
-	} else if ((/\.(log)$/i).test(loadFile) && logorJSON === 'SyntaxError') {
-		lineReader(loadFile, html);
+	} else if ((/\.(log)$/i).test(loadFile)) {
+		lineReader(loadFile, html, watching);
 		logorJSON = '';
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile[0]);
@@ -320,7 +308,30 @@ function loadOutputDropped() {
 		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
 	});
 }
-
+function watchFor(stop) {
+	watching = true;
+	watcher = watch(logPath);
+	watcher.on('change', log => {
+		let html;
+		loadFile = [];
+		loadFile[0] = log;
+		lineReader(loadFile, html, watching);
+	});
+	if (stop) {
+		watcher.close();
+	}
+	watcher.on('error', err => {
+		bugsnag.notify(err);
+	});
+}
+function watchOpen(JSONParsed) {
+	JSONParsed = JSONParsed.reverse();
+	for (let i = 0; i < JSONParsed.length; i++) {
+		process.revHTML += tableify(JSONParsed[i]) + '<hr>'; // eslint-disable-line prefer-const
+	}
+	process.revHTML = process.revHTML.replace('undefined', '');
+	win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.revHTML); // eslint-disable-line no-useless-concat
+}
 function funcSaveJSON() {
 	if (process.logLoaded === true) {
 		dialog.showSaveDialog({
@@ -394,7 +405,17 @@ const template = [{
 	}, {
 		label: 'Watch logs',
 		accelerator: 'CmdOrCtrl+L',
-		click: watchFor
+		type: 'checkbox',
+		id: 'checked',
+		click(checked) {
+			let stop;
+			console.log(checked.checked);
+			if (checked.checked === true) {
+				watchFor();
+			} else if (checked.checked === false) {
+				watchFor(stop);
+			}
+		}
 	}]
 }, {
 	label: 'Filtering',
