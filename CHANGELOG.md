@@ -1,524 +1,298 @@
-## Change Log
-
-### upcoming (2016/10/30 03:00 +00:00)
-- [788b231](https://github.com/willyb321/elite-journal/commit/788b231b74c89bfc37be173110f3c5a9580ab41d) oops (@willyb321)
-- [76fabca](https://github.com/willyb321/elite-journal/commit/76fabcac1ab32346f3043600157382db885a1e9b) yarn cache deps (@willyb321)
-
-### v1.6.20 (2016/10/29 22:07 +00:00)
-- [48d3899](https://github.com/willyb321/elite-journal/commit/48d3899e16a97cb0f882b36ac5c49c76d45f54b9) 1.6.20 (@willyb321)
-- [84b8887](https://github.com/willyb321/elite-journal/commit/84b8887e10bb4cb0d2fd3917c79986b319e40fce) pls actually be fixed hey (@willyb321)
-
-### v1.6.19 (2016/10/29 10:28 +00:00)
-- [3c4fef6](https://github.com/willyb321/elite-journal/commit/3c4fef6c312890028a6b1766e9247f6788139aae) 1.6.19 (@willyb321)
-- [#23](https://github.com/willyb321/elite-journal/pull/23) Merge pull request #23 from willyb321/greenkeeper/electron-auto-updater-0.3.0 (@willyb321)
-- [c6b785b](https://github.com/willyb321/elite-journal/commit/c6b785ba56ecb39f76b790a8225d82969151cbd4) fix(package): update electron-auto-updater to version 0.3.0 (@greenkeeper[bot])
-
-### v1.6.18 (2016/10/29 09:33 +00:00)
-- [e047b5e](https://github.com/willyb321/elite-journal/commit/e047b5e93efa90ad770ae9f9bafaef7f7abeb67c) 1.6.18 (@willyb321)
-- [a0da760](https://github.com/willyb321/elite-journal/commit/a0da76009c9fcfeceb199f0575d1222349a67d85) maybe fix pls (@willyb321)
-
-### v1.6.17 (2016/10/29 03:31 +00:00)
-- [13df801](https://github.com/willyb321/elite-journal/commit/13df801690cdbb81186f6f2bc0bfc871a4eebd12) 1.6.17 (@willyb321)
-- [223eac5](https://github.com/willyb321/elite-journal/commit/223eac54c84b9e35edf3c169c890b8e7b9c275a8) fix probably (@willyb321)
-- [095bb89](https://github.com/willyb321/elite-journal/commit/095bb893f9bbfa9286d3d2084cdd6089d4f4467c) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
-
-### v1.6.16 (2016/10/29 03:01 +00:00)
-- [91f573a](https://github.com/willyb321/elite-journal/commit/91f573ac40e431cd0255741f72051a86195630ee) 1.6.16 (@willyb321)
-- [9dacbfb](https://github.com/willyb321/elite-journal/commit/9dacbfb1824af65a5e57d28bb8c8bed301b18e42) probably fix for update loop (@willyb321)
-- [0da458c](https://github.com/willyb321/elite-journal/commit/0da458c979883e55f3cbb702c46c692f5c12c3ae) Changelog (automatic commit) (@willyb321)
-
-### v1.6.15 (2016/10/29 02:01 +00:00)
-- [4111ef5](https://github.com/willyb321/elite-journal/commit/4111ef5fb650db00bb2d1fb4019d3a32b7486b0d) 1.6.15 (@willyb321)
-- [97e9595](https://github.com/willyb321/elite-journal/commit/97e95956c602935209cc218c60eec4e7bbbf9ec9) update electron-builder & electron-auto-updater (@willyb321)
-- [bb17aa9](https://github.com/willyb321/elite-journal/commit/bb17aa978a710164e4f906619b579b5dcfb91f6d) Changelog (automatic commit) (@willyb321)
-- [e0aedea](https://github.com/willyb321/elite-journal/commit/e0aedea6133aefc8a56a57258c537f784d246c2f) more error handling with bugsnag (@willyb321)
-
-### v1.6.14 (2016/10/27 22:48 +00:00)
-- [f653da7](https://github.com/willyb321/elite-journal/commit/f653da7b12e0cd2564d1f575541e2209bfb692eb) v1.6.14 (@willyb321)
-- [64ad54f](https://github.com/willyb321/elite-journal/commit/64ad54ffb8c2118b751a4fecc7ac69e7b924ceaa) bugsnag is a cool thing (@willyb321)
-- [cd489e2](https://github.com/willyb321/elite-journal/commit/cd489e24052df5c6b5fd40216468ad66e0dba897) Changelog (automatic commit) (@willyb321)
-- [a17ff56](https://github.com/willyb321/elite-journal/commit/a17ff56e5d24d9ba0f1154474e3a91f361c57eac) lockfile (@willyb321)
-- [e023721](https://github.com/willyb321/elite-journal/commit/e023721de7c4c77202c816a51346bca13c28c3a9) Changelog (automatic commit) (@willyb321)
-
-### v1.6.13 (2016/10/26 08:19 +00:00)
-- [00bff68](https://github.com/willyb321/elite-journal/commit/00bff685b1cab31433f590c8cbd75b325c2e9df4) 1.6.13 (@willyb321)
-- [2e7603a](https://github.com/willyb321/elite-journal/commit/2e7603a54dec009760bf2ab4786a8617c30a7708) probably maybe fix updating (@willyb321)
-
-### v1.6.12 (2016/10/26 08:05 +00:00)
-- [2fe67c5](https://github.com/willyb321/elite-journal/commit/2fe67c5478cfbe58fc853e4fa91a45190fc22014) v1.6.12 (@willyb321)
-- [599d5d7](https://github.com/willyb321/elite-journal/commit/599d5d7fdd12e44e8c7692ed504b57d5bd739d1c) fixed the auto updater (@willyb321)
-- [00f2acc](https://github.com/willyb321/elite-journal/commit/00f2acc29e426cd39c1470c792c014b58f74dbd9) less duped code (@willyb321)
-- [20e43ed](https://github.com/willyb321/elite-journal/commit/20e43ed4bd00948154b0383fdf5ea4901b1df6d4) less duped code (@willyb321)
-- [a880820](https://github.com/willyb321/elite-journal/commit/a88082028e89efdae61e22d8575118079fa872ba) Changelog (automatic commit) (@willyb321)
-
-### v1.6.11 (2016/10/26 04:47 +00:00)
-- [5dc33bb](https://github.com/willyb321/elite-journal/commit/5dc33bb707b544ac7dfea2b91a51b627e027a85b) v1.6.11 (@willyb321)
-- [0aefb69](https://github.com/willyb321/elite-journal/commit/0aefb69215a0eb180b24c50430cac4dc9feeb07b) lots of things (@willyb321)
-- [d7e7621](https://github.com/willyb321/elite-journal/commit/d7e7621f1d04ad735d77ccd4b7e54a4327829eeb) Changelog (automatic commit) (@willyb321)
-- [7e75043](https://github.com/willyb321/elite-journal/commit/7e750430b7a50b8b05b84d3fb0dcd489bc77c115) updated lockfile (@willyb321)
-- [#21](https://github.com/willyb321/elite-journal/pull/21) Merge pull request #21 from willyb321/greenkeeper-electron-auto-updater-0.1.0 (@willyb321)
-- [6fd8bf8](https://github.com/willyb321/elite-journal/commit/6fd8bf8aae284d602b93a64853dff96cc563a106) chore(package): update electron-auto-updater to version 0.1.0 (@greenkeeperio-bot)
-- [35c9b66](https://github.com/willyb321/elite-journal/commit/35c9b66b6cb1dd2f922f98f043e125a826ab899a) just ci things (@willyb321)
-- [0330df0](https://github.com/willyb321/elite-journal/commit/0330df0e3679557b101b0a48ffe82b833b01e851) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
-- [7963176](https://github.com/willyb321/elite-journal/commit/79631768a113a90b0cef69f4c0fe7ebac6aa8e1c) circleci reporter (@willyb321)
-- [d6ae0be](https://github.com/willyb321/elite-journal/commit/d6ae0bee65f8a973bffe461ee0e5f3b13902b785) Changelog (automatic commit) (@willyb321)
-- [7373bf9](https://github.com/willyb321/elite-journal/commit/7373bf986a01ca2c5acce1d1b7fd9b5640fd4a40) testing tests (@willyb321)
-- [e549de6](https://github.com/willyb321/elite-journal/commit/e549de6587d2e998d585f828a35da22b0133ee97) testing 12.xx (@willyb321)
-- [dd676d7](https://github.com/willyb321/elite-journal/commit/dd676d788dbca45848088734bd2ae8299b708c7c) maybe pls work (@willyb321)
-- [9b834c3](https://github.com/willyb321/elite-journal/commit/9b834c3e9167e0d662feff2fb3718add572fd934) pls start chromedriver (@willyb321)
-- [4faf734](https://github.com/willyb321/elite-journal/commit/4faf7343adfbe4953b4971aedaa2fa02f8bd07c7) i forgot to add mocha as dependency (@willyb321)
-- [260d61f](https://github.com/willyb321/elite-journal/commit/260d61f8cb9e7f35dad5ca7d503a100dba1888a7) new tests are good (@willyb321)
-- [3747b7a](https://github.com/willyb321/elite-journal/commit/3747b7ac087b3cd3bc2d191028354716b4b25332) trying to fix circle failing test (@willyb321)
-- [48d0bff](https://github.com/willyb321/elite-journal/commit/48d0bff94f585b14adcfda4c83a3a51dcb975563) yarn lock update (@willyb321)
-- [#20](https://github.com/willyb321/elite-journal/pull/20) Merge pull request #20 from willyb321/greenkeeper-electron-auto-updater-0.0.4 (@willyb321)
-- [78ad7ec](https://github.com/willyb321/elite-journal/commit/78ad7ec770665fd2624abf7f6bb478685d5025b6) chore(package): update electron-auto-updater to version 0.0.4 (@greenkeeperio-bot)
-- [f7c02f4](https://github.com/willyb321/elite-journal/commit/f7c02f4531ac3d63efe952e58e0590ccc032905a) Changelog (automatic commit) (@willyb321)
-- [937f9b5](https://github.com/willyb321/elite-journal/commit/937f9b543a6d13db8ac51507333a09d955eafe0f) Changelog (automatic commit) (@willyb321)
-- [a8f2168](https://github.com/willyb321/elite-journal/commit/a8f21687e4e6a0c34f4bc95c0fe1cfa84f948108) apparently i cannot markdown (@willyb321)
-- [e6416a1](https://github.com/willyb321/elite-journal/commit/e6416a19f592c01842abbc9a7221daeeea3fc9b2) update and add new things (@willyb321)
-- [0771579](https://github.com/willyb321/elite-journal/commit/0771579d7bf03cb90f73130b13a9cf712c5ce571) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
-- [211f731](https://github.com/willyb321/elite-journal/commit/211f731fe26d442e2e5df0b4f050a9d5b8c570a1) testing /docs (@willyb321)
-- [e85ec81](https://github.com/willyb321/elite-journal/commit/e85ec81dd85305746d142cee42440c5f31b18f12) Changelog (automatic commit) (@willyb321)
-- [fa30c33](https://github.com/willyb321/elite-journal/commit/fa30c33382c111f873f8987057d6f8d3d8bcac24) Changelog (automatic commit) (@willyb321)
-- [b56eced](https://github.com/willyb321/elite-journal/commit/b56eced9b83120606f71e9a33d8b1214bfc9f389) update screenshot to reflect new changes (@willyb321)
-- [affb725](https://github.com/willyb321/elite-journal/commit/affb72527bd43cb0136ba147d001b6e1d9538e70) Changelog (automatic commit) (@willyb321)
-- [f47426e](https://github.com/willyb321/elite-journal/commit/f47426e5342a3cd157cfb5339f52bf81e291b161) update electron to 1.4.4 (@willyb321)
-- [5afd529](https://github.com/willyb321/elite-journal/commit/5afd529c8659178a7a904303f5ddc069c9e381d3) Changelog (automatic commit) (@willyb321)
-- [8a42855](https://github.com/willyb321/elite-journal/commit/8a428556fa8700ad34bcda9d09b072f679e9d5e9) woo for escape characters probably (@willyb321)
-- [f743782](https://github.com/willyb321/elite-journal/commit/f743782f58a41c432c1e36b43579096b2e002269) apparently the cache was wrong a bit (@willyb321)
-
-### v1.6.10 (2016/10/18 23:24 +00:00)
-- [62892e2](https://github.com/willyb321/elite-journal/commit/62892e27b7d0cdd99a47dfb439ff129068d0dcf5) v1.6.10 (@willyb321)
-- [32c0254](https://github.com/willyb321/elite-journal/commit/32c02543dc3cee621609edf595a161e42becb44d) damnit will have to use npm to install yarn on appveyor (@willyb321)
-
-### v1.6.9 (2016/10/18 22:49 +00:00)
-- [b962d0e](https://github.com/willyb321/elite-journal/commit/b962d0e8daad25ca6ab8ca0e7790c6b41acfa2c3) v1.6.9 (@willyb321)
-- [35ba451](https://github.com/willyb321/elite-journal/commit/35ba451eee49ba0156eeceaace38dcf2dace54c6) fix up ci (@willyb321)
-
-### v1.6.8 (2016/10/18 22:43 +00:00)
-- [6f8afb6](https://github.com/willyb321/elite-journal/commit/6f8afb6e77cf9eeee9727b181eaca6f6e4672f36) v1.6.8 (@willyb321)
-- [45cb75f](https://github.com/willyb321/elite-journal/commit/45cb75fc7e33f983772f13de532ac35557d56cb6) update yarn lockfile. (@willyb321)
-- [9bf159d](https://github.com/willyb321/elite-journal/commit/9bf159dc16cb82e02d0ca14e2d89262d150734b6) i forgot lots of dots apparently (@willyb321)
-- [b382ae3](https://github.com/willyb321/elite-journal/commit/b382ae34f4a5ec4eea4f4e99f62abe167833740b) i forgot a dot (@willyb321)
-- [19e296f](https://github.com/willyb321/elite-journal/commit/19e296f6adf9a167cba3b66df8a49a5cbae6e20e) so yeah (@willyb321)
-- [f5dce21](https://github.com/willyb321/elite-journal/commit/f5dce210f265551d97b018cb297bfc113739dcab) switch to yarn (@willyb321)
-- [69e7e06](https://github.com/willyb321/elite-journal/commit/69e7e06436057877199ed0388477ccb6e846fd5b) i decided to use appveyor to release and itll only build on tags (@willyb321)
-- [10fe5bb](https://github.com/willyb321/elite-journal/commit/10fe5bb6fe336df6d5584a9c41fe2479f3ffd497) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
-- [327ba54](https://github.com/willyb321/elite-journal/commit/327ba54fad1903e8dc631bf181f47093c085e0ec) add .release.json for release-it (@willyb321)
-- [fde3d4e](https://github.com/willyb321/elite-journal/commit/fde3d4e40bd11918c9149f1a1b28755a765dd633) Changelog (automatic commit) (@willyb321)
-- [74f59ee](https://github.com/willyb321/elite-journal/commit/74f59eee1be807a70c88a0080b58de76b2711edc) Changelog (automatic commit) (@willyb321)
-- [b5a41dd](https://github.com/willyb321/elite-journal/commit/b5a41dd8374e8b543f55a4ddc858da113769819d) probably working apt cache (@willyb321)
-
-### v1.6.7 (2016/10/17 22:05 +00:00)
-- [d58fdf7](https://github.com/willyb321/elite-journal/commit/d58fdf7c908b2c07d8fa86e39f6f62c6043c9676) 1.6.7 (@willyb321)
-- [0c5508d](https://github.com/willyb321/elite-journal/commit/0c5508df5d1ab0a25294505577c42b417df74277) license (@willyb321)
-
-### v1.6.6 (2016/10/17 21:57 +00:00)
-- [8177646](https://github.com/willyb321/elite-journal/commit/8177646d83ae30b2dc023baa1ad0bd4fd58ab437) 1.6.6 (@willyb321)
-- [b80e582](https://github.com/willyb321/elite-journal/commit/b80e58292d8f24d819e4b778b24496f16e60d472) oops got it stuck (@willyb321)
-
-### v1.6.5 (2016/10/17 21:53 +00:00)
-- [fc3e09b](https://github.com/willyb321/elite-journal/commit/fc3e09b835a65238593636a90cf15da69ba0f548) 1.6.5 (@willyb321)
-- [cf41d2c](https://github.com/willyb321/elite-journal/commit/cf41d2c3e5945af21f36ba960253d0c1838e388c) should work maybe (@willyb321)
-
-### v1.6.4 (2016/10/17 21:50 +00:00)
-- [30287eb](https://github.com/willyb321/elite-journal/commit/30287eb59add1f96d03333337e97081ca0637b29) 1.6.4 (@willyb321)
-- [5e7fa24](https://github.com/willyb321/elite-journal/commit/5e7fa243476f1204dae17aeadf9573db069ba8fc) forgot wine woo (@willyb321)
-
-### v1.6.3 (2016/10/17 21:44 +00:00)
-- [2aa5054](https://github.com/willyb321/elite-journal/commit/2aa5054944d0554c9189eab26b383d0507b29859) 1.6.3 (@willyb321)
-- [65e5197](https://github.com/willyb321/elite-journal/commit/65e51973f6a981fc1c64f6442a0b73d3dec7ed97) maybe this will make it work? (@willyb321)
-
-### v1.6.2 (2016/10/17 21:36 +00:00)
-- [488effe](https://github.com/willyb321/elite-journal/commit/488effe743c90bebf8df8b495207f2aa1808a6e8) 1.6.2 (@willyb321)
-- [ce5bd0e](https://github.com/willyb321/elite-journal/commit/ce5bd0e61231f6ff6b0073e32c6c925bf2c3c235) testing ci deploy on tag (@willyb321)
-- [1bad8a2](https://github.com/willyb321/elite-journal/commit/1bad8a27da4f58aff87de3304385143ad4f4ac70) circle ci will now deploy because it only deploys after running tests. (@willyb321)
-- [a71ed68](https://github.com/willyb321/elite-journal/commit/a71ed686be411bb8c839595745520fc00ec7dfbc) just ci things™ (@willyb321)
-- [7a4e768](https://github.com/willyb321/elite-journal/commit/7a4e768f39337a72294951182a63bd00b2cfd241) deps update (@willyb321)
-- [348578c](https://github.com/willyb321/elite-journal/commit/348578cf2431a4eee98ad9bc851d737b6188b4be) add circleci appveyo (@willyb321)
-- [3f39887](https://github.com/willyb321/elite-journal/commit/3f398874a1516b5be1cbb61d92e2758e92261258) various things (@willyb321)
-- [ce0ba59](https://github.com/willyb321/elite-journal/commit/ce0ba59ca103ac254e3b733263b8918f0943e377) tests and ci (@willyb321)
-- [22c13fd](https://github.com/willyb321/elite-journal/commit/22c13fdc342dafcdc11494f3418d5254bb11df56) more ci things (@willyb321)
-- [3c1149c](https://github.com/willyb321/elite-journal/commit/3c1149cfeaa515448448ac8253ea7cb3fee57d70) more ci things (@willyb321)
-- [92b8a89](https://github.com/willyb321/elite-journal/commit/92b8a89809daff0db27c04de78ad5f8df7bcb69b) more ci things (@willyb321)
-- [ceadb9c](https://github.com/willyb321/elite-journal/commit/ceadb9c11be486b657e345be3a65e6ce6db274a5) just ci things (@willyb321)
-- [e3a0a9f](https://github.com/willyb321/elite-journal/commit/e3a0a9f69909e4a38a22a97705511dafd4734a20) probably fix ci (@willyb321)
-- [adacd8d](https://github.com/willyb321/elite-journal/commit/adacd8d798f8a5b739b6506fd19a22fd7e28dc53) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
-- [0e019ee](https://github.com/willyb321/elite-journal/commit/0e019ee0e009160b8c0df30a6662c8f8016f468f) testing tests (@willyb321)
-- [317f69d](https://github.com/willyb321/elite-journal/commit/317f69d95cfc75db0ec2a04cc6c4ab8f83466e0d) Changelog (automatic commit) (@willyb321)
-- [9b28ced](https://github.com/willyb321/elite-journal/commit/9b28cedfd17263cc6b33c0c377a41ff78cf811af) fix probably (@willyb321)
-- [0208025](https://github.com/willyb321/elite-journal/commit/02080254fd16efaa0ee3eaa7db22925d974309e5) i dunno what im doing buy hey (@willyb321)
-- [da57b90](https://github.com/willyb321/elite-journal/commit/da57b90769eb39a90d7b8b4eccb81028cdad196e) add appeyor.yml (@willyb321)
-- [4dff667](https://github.com/willyb321/elite-journal/commit/4dff667d0e074f4dd3affed5028f87ea4c4ed842) Update readme to include bintray dl (@willyb321)
-- [#18](https://github.com/willyb321/elite-journal/pull/18) Merge pull request #18 from willyb321/greenkeeper-electron-auto-updater-0.0.3 (@willyb321)
-- [e0e8d4b](https://github.com/willyb321/elite-journal/commit/e0e8d4becb5ea8ab24faa75ed09d3fc8cef3c772) chore(package): update electron-auto-updater to version 0.0.3 (@greenkeeperio-bot)
-
-### v1.6.1 (2016/10/16 06:50 +00:00)
-- [5842a96](https://github.com/willyb321/elite-journal/commit/5842a96771304a8f21816d224d200d8bf3e32d6e) 1.6.1 (@willyb321)
-- [2e16214](https://github.com/willyb321/elite-journal/commit/2e1621420ed44df223c78c5b67f035d8e60d6c94) now if you save a loaded log as .log instead of .json the program will still work proper. (@willyb321)
-- [9d000cb](https://github.com/willyb321/elite-journal/commit/9d000cb2caae992336d02bafe3d4a74366661c35) Merge branch 'master' of github.com:willyb321/elite-journal (@willyb321)
-- [155ed11](https://github.com/willyb321/elite-journal/commit/155ed110721de18e4aeab5dd180cf64d2a9baed9) booya the filter window wont bugger off when you scroll anymore :tada: (@willyb321)
-- [f38f647](https://github.com/willyb321/elite-journal/commit/f38f6474c0dd4a5f825b06840e1d6551de9558a2) Changelog (automatic commit) (@willyb321)
-- [f524609](https://github.com/willyb321/elite-journal/commit/f52460978cbe05e953ed7548cee5b5ee426cf6cc) Changelog (automatic commit) (@willyb321)
-- [76452d3](https://github.com/willyb321/elite-journal/commit/76452d323283999fed6cc2c212ee052371e64ba8) update yarn lockfile (@willyb321)
-
-### v1.6.0 (2016/10/15 23:16 +00:00)
-- [f647a29](https://github.com/willyb321/elite-journal/commit/f647a2908cd63e9ea5ca98a5638e9654d2251911) 1.6.0 (@willyb321)
-- [105d564](https://github.com/willyb321/elite-journal/commit/105d5641c9f5d2f7da049bb7dd44306f743ada68) cleaned up unused code, and removed unneeded deps (@willyb321)
-
-### v1.5.10 (2016/10/15 21:10 +00:00)
-- [fb6df05](https://github.com/willyb321/elite-journal/commit/fb6df0550e76bc57129fa602fa97e1f32fc42c3c) testing NSIS (1.5.10) (@willyb321)
-- [93372d9](https://github.com/willyb321/elite-journal/commit/93372d90e919d9a6e3c27fbaed263983b95c9581) potentially (@willyb321)
-
-### v1.5.9 (2016/10/15 21:04 +00:00)
-- [dd9f068](https://github.com/willyb321/elite-journal/commit/dd9f068d408c190a6173aed57b959bda8b4e81b8) 1.5.9 (@willyb321)
-- [098e220](https://github.com/willyb321/elite-journal/commit/098e2201419aca98d2d8c02c23de59fd2b3ec7be) update electron-auto-updater (@willyb321)
-- [232e6be](https://github.com/willyb321/elite-journal/commit/232e6bea2b97c63c31078c195925e167d9d5d4f6) changelog (@willyb321)
-
-### v1.5.8 (2016/10/15 09:24 +00:00)
-- [2bcbc06](https://github.com/willyb321/elite-journal/commit/2bcbc06868c597bc0b7541acbde03ec9c2e8c9af) 1.5.8 (@willyb321)
-- [529c9e7](https://github.com/willyb321/elite-journal/commit/529c9e76c751e2b2737a542545dae4b26d849c13) no it didnt work apparently (@willyb321)
-
-### v1.5.7 (2016/10/15 09:12 +00:00)
-- [34bac19](https://github.com/willyb321/elite-journal/commit/34bac19b70601a68fff82721676418480aaea824) 1.5.7 (@willyb321)
-- [dbfce6d](https://github.com/willyb321/elite-journal/commit/dbfce6deff0d7dd33ab73d5e956215507f9047c7) im pretty sure its now working! (@willyb321)
-
-### v1.5.6 (2016/10/15 08:46 +00:00)
-- [419f39d](https://github.com/willyb321/elite-journal/commit/419f39d3dc02fabd17e0550103bc1f4a5ebc9197) 1.5.6 (@willyb321)
-- [b7b886a](https://github.com/willyb321/elite-journal/commit/b7b886a3d50b02885c86145f7ac337847ee40ac9) hopefully might work this time (NSIS) (@willyb321)
-
-### v1.5.5 (2016/10/15 07:04 +00:00)
-- [ae6d83a](https://github.com/willyb321/elite-journal/commit/ae6d83a1657d5e44399eb35d1d19254160494ad4) 1.5.5 (@willyb321)
-- [246ad65](https://github.com/willyb321/elite-journal/commit/246ad65931892019dd04fa2610c379c47d43032a) continuing to test NSIS (@willyb321)
-
-### v1.5.4 (2016/10/15 06:42 +00:00)
-- [8357a31](https://github.com/willyb321/elite-journal/commit/8357a315d5303bcf1664995bfd939d83dee21edf) 1.5.4 (@willyb321)
-- [4af46d7](https://github.com/willyb321/elite-journal/commit/4af46d721045eb6a8e8b133d60dfb942d597b6d9) continuing to test NSIS (@willyb321)
-
-### v1.5.3 (2016/10/15 06:04 +00:00)
-- [1355893](https://github.com/willyb321/elite-journal/commit/135589330d8ddfa460ca14e91770b7de0c8a1e7a) 1.5.3 (@willyb321)
-- [575c1fe](https://github.com/willyb321/elite-journal/commit/575c1fefae8f30a18beb7f1151dc3a4aa6a482c9) oops i cant js apparently (@willyb321)
-
-### v1.5.2 (2016/10/15 06:01 +00:00)
-- [c2a3c89](https://github.com/willyb321/elite-journal/commit/c2a3c8989462c26a44b33499e01e9ec431a4c45a) update to 1.5.2 because testing NSIS (@willyb321)
-- [2d60520](https://github.com/willyb321/elite-journal/commit/2d605200ef89cb3ddd60e76aece02992ec5b8c0a) testing NSIS auto-updating (@willyb321)
-
-### v1.5.1 (2016/10/15 04:02 +00:00)
-- [c2fe522](https://github.com/willyb321/elite-journal/commit/c2fe522e4f3ee5b211d1d8ab9e829934b5af273c) 1.5.1 (@willyb321)
-- [4d3aa84](https://github.com/willyb321/elite-journal/commit/4d3aa84c36a628062f0cf8ad179caa345b8dfc7f) now you can actually load output html but not yet filter it. (@willyb321)
-- [1b02ea4](https://github.com/willyb321/elite-journal/commit/1b02ea4357fe2b3abd5aa49cd714bf8753cf4956) swapped some code to after update check because it'll probably optimise it a bit (@willyb321)
-- [75d57a8](https://github.com/willyb321/elite-journal/commit/75d57a85fbaaa6e3d6b8093a4cea3045eb8fc597) Merge because i forgot to pull. (@willyb321)
-- [8e64a6b](https://github.com/willyb321/elite-journal/commit/8e64a6b962bf43961b8d3adee410f17a0c681b49) update index.html to be more true and add back yarn.lock (@willyb321)
-- [58a1dee](https://github.com/willyb321/elite-journal/commit/58a1deef581adcfa62afd60912d81cdb92d05588) Changelog (automatic commit) (@willyb321)
-- [7cf580b](https://github.com/willyb321/elite-journal/commit/7cf580be2a3377630f6ecc411bfedad10600c332) new changelog format probably better (@willyb321)
-- [e2bb0b9](https://github.com/willyb321/elite-journal/commit/e2bb0b998f23ee0320c601612a03b052fc6030c8) lint (@willyb321)
-- [898ca36](https://github.com/willyb321/elite-journal/commit/898ca362a2dc2f1f8d572e6a47ae5eb3d28fbe6a) forgot a thing (@willyb321)
-- [93da0d0](https://github.com/willyb321/elite-journal/commit/93da0d011d10e0104686e13a6a3b7cad338b0459) drag+drop anywhere, JSON save improvements, and back to squirrel for now (@willyb321)
-
-### v1.5.0 (2016/10/14 06:14 +00:00)
-- [a112acc](https://github.com/willyb321/elite-journal/commit/a112accd062816f6fea771c44bfe23fc76634d14) 1.5.0 (@willyb321)
-- [c32f2af](https://github.com/willyb321/elite-journal/commit/c32f2af56262640cc6445ece7b93da890d4b35e1) nsis being used now, will need to redownload probably (@willyb321)
-
-### v1.4.21 (2016/10/14 05:33 +00:00)
-- [89909c8](https://github.com/willyb321/elite-journal/commit/89909c8c2a3e685f62727c43199288461a64fe2f) 1.4.21 (@willyb321)
-- [2b1cf71](https://github.com/willyb321/elite-journal/commit/2b1cf716851fc17f3fa87241c6f7dc5f47e61e53) fix not loading dropped files (@willyb321)
-
-### v1.4.20 (2016/10/14 04:54 +00:00)
-- [07c298a](https://github.com/willyb321/elite-journal/commit/07c298af33a584a9ed1e0aec257855527e050334) 1.4.20 (@willyb321)
-- [3be9a80](https://github.com/willyb321/elite-journal/commit/3be9a80105476eaebf3b35afbf996da64f033fa0) only 1 load button now \o/ (@willyb321)
-
-### v1.4.19 (2016/10/14 04:15 +00:00)
-- [d528a20](https://github.com/willyb321/elite-journal/commit/d528a204c6a8928f10ba9c0109215131939f95b8) 1.4.19 (@willyb321)
-- [3651620](https://github.com/willyb321/elite-journal/commit/3651620343bb1e811ff74c0b00161284302d9f04) will now notify if update is available, probably (@willyb321)
-- [2b4683c](https://github.com/willyb321/elite-journal/commit/2b4683ce6a8592a8f0bf69ab329cf80ab29de542) fix linting issues (@willyb321)
-
-### v1.4.18 (2016/10/14 03:57 +00:00)
-- [cd42a01](https://github.com/willyb321/elite-journal/commit/cd42a01648baa3b83988f14ebcca90abcb4e9dae) 1.4.18 (@willyb321)
-- [6576540](https://github.com/willyb321/elite-journal/commit/6576540504ccd362a866878c38fc5f881d291027) new menu for current version (@willyb321)
-- [4a8d33b](https://github.com/willyb321/elite-journal/commit/4a8d33bd689ef7b4cd99c298e965e3cbe6e35f1f) semi (@willyb321)
-
-### v1.4.17 (2016/10/14 03:06 +00:00)
-- [a08df1d](https://github.com/willyb321/elite-journal/commit/a08df1d21dfcc16872b8280e2f4eed93562a377f) 1.4.17 (@willyb321)
-- [e2226d9](https://github.com/willyb321/elite-journal/commit/e2226d99d3351bf38a1ac18c50adaff8365c2b15) hopeful fix for accidentally dropping things places that broke things (@willyb321)
-- [7a2e271](https://github.com/willyb321/elite-journal/commit/7a2e271db8333a353caa473530a68b6d60e57a96) update electron-builder (@willyb321)
-- [646baa8](https://github.com/willyb321/elite-journal/commit/646baa85aaa3050ce062f085f9836bc0fe558ce6) Changelog (automatic commit) (@willyb321)
-- [00ac91b](https://github.com/willyb321/elite-journal/commit/00ac91b88a5b1677a1443631bd834baf46b0d7fc) fixed loading a saved json file that was filtered not being good (@willyb321)
-
-### v1.4.16 (2016/10/13 05:10 +00:00)
-- [1c67713](https://github.com/willyb321/elite-journal/commit/1c67713650fb6cf03a1ee7e749b8ac9597b52115) 1.4.16 (@willyb321)
-- [57726b7](https://github.com/willyb321/elite-journal/commit/57726b7979b11a1449cf7a030fa9094db80117f2) fixed some issues with loading outputted JSON (@willyb321)
-- [#14](https://github.com/willyb321/elite-journal/pull/14) Merge pull request #14 from willyb321/update-deps (@willyb321)
-- [56744ba](https://github.com/willyb321/elite-journal/commit/56744ba9c579e72fcad35637b46f32f940f2bc62) update deps (@willyb321)
-- [f61f9ae](https://github.com/willyb321/elite-journal/commit/f61f9ae8431fe63c0beab1046178edc27b88fc1e) Changelog (automatic commit) (@willyb321)
-
-### v1.4.15 (2016/10/13 02:49 +00:00)
-- [51afdde](https://github.com/willyb321/elite-journal/commit/51afddef4ad5c1846a41471cd5202919cf6ab221) 1.4.15 (@willyb321)
-
-### v1.4.14 (2016/10/13 02:42 +00:00)
-- [ba1883e](https://github.com/willyb321/elite-journal/commit/ba1883e0c524582ef48f4a0b15d53deeed296b20) 1.4.14 (@willyb321)
-- [df8b219](https://github.com/willyb321/elite-journal/commit/df8b21993d400c089276b83ae89a4d0c9e77b8f7) oops forgot to remove testing code (@willyb321)
-
-### v1.4.13 (2016/10/13 01:33 +00:00)
-- [4df5694](https://github.com/willyb321/elite-journal/commit/4df56941431623e05b50dece812883726cb04827) loading ouput sort of works, filtering might not though. (@willyb321)
-- [3ef1f94](https://github.com/willyb321/elite-journal/commit/3ef1f94e09dcc6506c01666c69867f1f919b113a) forgot a thing (@willyb321)
-- [ecca5d0](https://github.com/willyb321/elite-journal/commit/ecca5d092e0611dcf865d9386c2eb2d6f0fd4593) 1.4.13 (@willyb321)
-- [3d52255](https://github.com/willyb321/elite-journal/commit/3d52255a88ad25a2f18e50f6a277dd9dc069751b) you can now load the json that you have saved yay (@willyb321)
-- [253448a](https://github.com/willyb321/elite-journal/commit/253448ab47ffc334999c1716c4e22fb07272ec9a) yeah apparently it doesnt work right now so eh (@willyb321)
-- [7ab7b58](https://github.com/willyb321/elite-journal/commit/7ab7b5856d121c901a3ac910f3d0e94a32786399) if you want to use yarn, you can now (for development) yarnpkg.com is the site (@willyb321)
-- [a900799](https://github.com/willyb321/elite-journal/commit/a900799fde62bbfe8e9207cf4731e19f80dc8e79) removed not used code (@willyb321)
-- [ba7ceea](https://github.com/willyb321/elite-journal/commit/ba7ceeaf10c596ec0d0c6ca87639cb56bf3cfe86) updated xo, fixed new errors that weren't there before (@willyb321)
-- [bfc1aff](https://github.com/willyb321/elite-journal/commit/bfc1aff2b371e4305b2d3d7adff8e4ebeded08b8) Changelog (automatic commit) (@willyb321)
-
-### v1.4.12 (2016/10/11 07:49 +00:00)
-- [48c3571](https://github.com/willyb321/elite-journal/commit/48c357128acc9e8c16b5ebd2deb528ef36bbb481) 1.4.12 (@willyb321)
-- [440507d](https://github.com/willyb321/elite-journal/commit/440507d12f00f00c7f74635b4e94604d07beefd5) fade in ui and other things (@willyb321)
-
-### v1.4.11 (2016/10/11 06:51 +00:00)
-- [065f6cb](https://github.com/willyb321/elite-journal/commit/065f6cb65c92f224ef975ed52b28e03352e5936e) 1.4.11 (@willyb321)
-- [dc20cf1](https://github.com/willyb321/elite-journal/commit/dc20cf14d0aa7dc2a3ea4f1776186139172abda8) moved update notificaton back because it didnt work and set ready-to-show (@willyb321)
-
-### v1.4.10 (2016/10/11 06:28 +00:00)
-- [73c0422](https://github.com/willyb321/elite-journal/commit/73c0422e9259404a73a53c7594e95f571ac1414e) 1.4.10 (@willyb321)
-- [2b9848c](https://github.com/willyb321/elite-journal/commit/2b9848cba8f09887ab809d719f0a3efb00fef56e) update changelog (@willyb321)
-
-### v1.4.9 (2016/10/11 06:08 +00:00)
-- [0730f33](https://github.com/willyb321/elite-journal/commit/0730f3335da81db9ac9be3cc2cd7fd373759e57f) 1.4.9 (@willyb321)
-- [af0e3bc](https://github.com/willyb321/elite-journal/commit/af0e3bc94cb3d297e028cff0c0938ead72c172dc) fixed linting issues (@willyb321)
-- [ac0b0b3](https://github.com/willyb321/elite-journal/commit/ac0b0b377bcc4d7127c019c94efe8d8e2cf7e787) fixed inconsistency (@willyb321)
-- [5d76375](https://github.com/willyb321/elite-journal/commit/5d763754774680f609fc5a1dd5826ae83c194841) oops boilerplate text and also made update probably more clear (@willyb321)
-- [b9d5821](https://github.com/willyb321/elite-journal/commit/b9d58218130175b692b2d18b8c3cc4454ea5e55b) Changelog (automatic commit) (@willyb321)
-- [cf37754](https://github.com/willyb321/elite-journal/commit/cf37754d32bbbe24741a46dc0e669735862aa18a) Changelog (automatic commit) (@willyb321)
-- [c90b772](https://github.com/willyb321/elite-journal/commit/c90b7722630d8c640efdffe247bf8cb9aad3278b) Changelog (automatic commit) (@willyb321)
-
-### v1.4.8 (2016/10/11 04:21 +00:00)
-- [dc0936a](https://github.com/willyb321/elite-journal/commit/dc0936ab80c7745e77976e60d9edae7e53ac6b35) 1.4.8 (@willyb321)
-- [30087b3](https://github.com/willyb321/elite-journal/commit/30087b34efb1954a09ca4ed116a3bc0e203a0d08) removed unused deps (@willyb321)
-- [1ed2179](https://github.com/willyb321/elite-journal/commit/1ed217937412a1f0791b092f52aefe3f8f703615) update readme (@willyb321)
-- [48656ed](https://github.com/willyb321/elite-journal/commit/48656ed99bc0e843daaff5a81c2eaebf91cc3180) added code quality (@willyb321)
-- [a2a9400](https://github.com/willyb321/elite-journal/commit/a2a94004bdf54b4dfa3e5ab56b4446bc32746ea8) add more features to list and fix punctuation (@willyb321)
-- [685f170](https://github.com/willyb321/elite-journal/commit/685f170f881a49a10e890cefda951228c3014549) Update readme.md (@willyb321)
-- [cdc15f1](https://github.com/willyb321/elite-journal/commit/cdc15f173fd107402f19feedc85659c39618602a) Changelog (automatic commit) (@willyb321)
-
-### v1.4.7 (2016/10/09 03:36 +00:00)
-- [05b39cd](https://github.com/willyb321/elite-journal/commit/05b39cd8e8aacf3185c9c50be18cd045c672a63d) 1.4.7 (@willyb321)
-- [ddc008a](https://github.com/willyb321/elite-journal/commit/ddc008adb777af819b7e36cff756230523b7749f) fixed bug and also updated readme (@willyb321)
-- [62b7100](https://github.com/willyb321/elite-journal/commit/62b7100b5f0df8d1c3c2a36e2043853ae0747936) Update readme.md (@willyb321)
-- [5b1e362](https://github.com/willyb321/elite-journal/commit/5b1e3624c645479596b0b04258ae006c4bf650a9) Add Beerpay's badge (@willyb321)
-- [386475d](https://github.com/willyb321/elite-journal/commit/386475d5dbce9482f03e1d30d851750a0a42b568) update dependencies because greenkeeper doesnt want to (@willyb321)
-- [5cf1a3e](https://github.com/willyb321/elite-journal/commit/5cf1a3ef2cef4c1eba39614660d8c343d9d1f4cc) Changelog (automatic commit) (@willyb321)
-- [700c170](https://github.com/willyb321/elite-journal/commit/700c170a3d0f04ddabb3892c7d831f3272e04e58) Merge branch 'master' of https://github.com/willyb321/elite-journal (@willyb321)
-
-### v1.4.6 (2016/10/07 09:49 +00:00)
-- [65ec612](https://github.com/willyb321/elite-journal/commit/65ec6123ea746ade698266ffef123cf675972947) 1.4.6 (@willyb321)
-- [d17e31d](https://github.com/willyb321/elite-journal/commit/d17e31d6560061521865ffa05e75d39d038ee4f3) updates deps (@willyb321)
-- [#9](https://github.com/willyb321/elite-journal/pull/9) Merge pull request #9 from willyb321/revert-1-greenkeeper-update-all (@willyb321)
-- [d561cb0](https://github.com/willyb321/elite-journal/commit/d561cb09670f126a5549ecc76cca2361883b688f) Revert "Update all dependencies 🌴" (@willyb321)
-- [251615d](https://github.com/willyb321/elite-journal/commit/251615d88a7108040d81349c7fac4dff04dd7a07) update changelog (@willyb321)
-- [5bb4e05](https://github.com/willyb321/elite-journal/commit/5bb4e0572343ca75718e517e761c6a5815b7dda4) changelog ho (@willyb321)
-- [93001f5](https://github.com/willyb321/elite-journal/commit/93001f553a635cc1a4e09ae47afc1d869586b7d8) stuff (@willyb321)
-
-### v1.4.5 (2016/10/05 02:57 +00:00)
-- [ffc0319](https://github.com/willyb321/elite-journal/commit/ffc031995f3a0a5f48c06a3391e65d350e786a4b) 1.4.5 (@willyb321)
-- [ce03495](https://github.com/willyb321/elite-journal/commit/ce034952290d155cf1c1ad4a798598b683c2c65b) added a box to know where to do the dropping (@willyb321)
-- [64a1e8d](https://github.com/willyb321/elite-journal/commit/64a1e8d0025a520b15ae933ea8157bd8a9f83573) linting (@willyb321)
-
-### v1.4.4 (2016/10/04 05:18 +00:00)
-- [fcd85bf](https://github.com/willyb321/elite-journal/commit/fcd85bfa14c62914a353479b9989e982e79990ce) 1.4.4 (@willyb321)
-- [00bcf56](https://github.com/willyb321/elite-journal/commit/00bcf564e24289ad9a1c33408ab11ce353e38b67) now you can drag/drop to load files \o/ (@willyb321)
-- [2408e32](https://github.com/willyb321/elite-journal/commit/2408e328eff0e84efed67fa6d4f7d80facfcc3b2) Update LICENSE (@willyb321)
-- [ccd8836](https://github.com/willyb321/elite-journal/commit/ccd8836e33c76da2500001e5d33a6045effc27f6) Rename license to LICENSE (@willyb321)
-
-### v1.4.3 (2016/10/04 02:27 +00:00)
-- [41f2f49](https://github.com/willyb321/elite-journal/commit/41f2f49d5dc021f34b28c3266490559c3f30bb59) 1.4.3 (@willyb321)
-- [d2a2cf6](https://github.com/willyb321/elite-journal/commit/d2a2cf635916e1bd82b59b4833c6f0791255c83d) BUGS DEMOLISHED by moving a thing a couple lines (@willyb321)
-- [945574b](https://github.com/willyb321/elite-journal/commit/945574b8ff2ccbddc10c48f506fa6c1fc736b46d) whoops typo (@willyb321)
-- [cc96495](https://github.com/willyb321/elite-journal/commit/cc96495b9c10affe80ee939e08971ec274136174) removed darwin bits from the menu because it didnt work anyway so hey (@willyb321)
-- [19ef99e](https://github.com/willyb321/elite-journal/commit/19ef99e48176f6a0a6062bfed24b69b6fd408319) 1 semicolon added... (@willyb321)
-
-### v1.4.2 (2016/10/03 04:27 +00:00)
-- [f44598e](https://github.com/willyb321/elite-journal/commit/f44598e00a26e3c4f885136bdb116154b46c6067) 1.4.2 (@willyb321)
-- [971cb5c](https://github.com/willyb321/elite-journal/commit/971cb5c00385d19a22b29afd3e0f127ee1754090) filter dropdown is now sorted (@willyb321)
-
-### v1.4.1 (2016/10/03 02:26 +00:00)
-- [f69de32](https://github.com/willyb321/elite-journal/commit/f69de32349218a12d64d4bf9c4c4226b1f0ea8f6) 1.4.1 (@willyb321)
-- [db53039](https://github.com/willyb321/elite-journal/commit/db530392781096e31250136c6d74773e8a0921af) removed probably completely useless code and changed placeholder var (@willyb321)
-- [5b264cc](https://github.com/willyb321/elite-journal/commit/5b264cc9813da7ff723e8b2322d62aafa366460c) dependencies update (@willyb321)
-- [f492788](https://github.com/willyb321/elite-journal/commit/f492788678697d875a0fcd25e10f2bc232d9276f) todo's (@willyb321)
-- [0dec483](https://github.com/willyb321/elite-journal/commit/0dec4837de36139753917da7afdcb646bbc6bf93) added ctrl s to save as html and ctrl shift s to save as JSON (@willyb321)
-
-### v1.4.0 (2016/10/02 08:10 +00:00)
-- [92f565d](https://github.com/willyb321/elite-journal/commit/92f565dfa88e403a6ad79d2769f1ccd1bc512dcd) 1.4.0 (@willyb321)
-- [b5d6f6c](https://github.com/willyb321/elite-journal/commit/b5d6f6c2dca095ae242ffe9619d739ba56b84971) removed useless script and fixed filtering back to all events (@willyb321)
-- [7b48035](https://github.com/willyb321/elite-journal/commit/7b480354bf18585ccbba7f993516629320a85946) shortened win.loadURL()'s and also changed loadfile to be a global (@willyb321)
-- [6f123b7](https://github.com/willyb321/elite-journal/commit/6f123b765e2c4568655a646ed93c0618cf46365c) added some error handling for various events (@willyb321)
-
-### v1.3.9 (2016/10/02 04:33 +00:00)
-- [8a7a4bf](https://github.com/willyb321/elite-journal/commit/8a7a4bfa76e5fb1f6d1ef5c83005db706cdb000f) 1.3.9 (@willyb321)
-- [3df8147](https://github.com/willyb321/elite-journal/commit/3df81474afb53ea6a75680e56ba3e65ab3db495d) updated readme screenshot to reflect changes in UI (@willyb321)
-- [bb25b1a](https://github.com/willyb321/elite-journal/commit/bb25b1a9fa780c4a713a5b00a43428d2cb3e5753) fixed selecting all events not being consistent with <hr>s (@willyb321)
-- [44c25e0](https://github.com/willyb321/elite-journal/commit/44c25e0606f1397063df54933de7bb8a6a967424) pretty code looks nice doesnt it? (@willyb321)
-- [46e9f48](https://github.com/willyb321/elite-journal/commit/46e9f48ee6a55ce901ae705bc7ca33d91b481d61) prettify filter.html and also fix grammar error (@willyb321)
-
-### v1.3.8 (2016/10/02 03:30 +00:00)
-- [d7a310b](https://github.com/willyb321/elite-journal/commit/d7a310b5945c149c867cd1be8fd96a8e7a8fd395) 1.3.8 (@willyb321)
-- [2c99913](https://github.com/willyb321/elite-journal/commit/2c999135b8065e61034960e2971a2961994e8ef9) added a <hr> after the webview for reasons (@willyb321)
-- [3736b63](https://github.com/willyb321/elite-journal/commit/3736b630211c40b054ce96f70a9f1101ae2eace9) fixed opening a file, filtering, then trying to open another file not opening the file (@willyb321)
-
-### v1.3.7 (2016/10/02 02:35 +00:00)
-- [ea7362a](https://github.com/willyb321/elite-journal/commit/ea7362afa6a5cd525b9acfe73e09f776ed6014e2) 1.3.7 (@willyb321)
-- [98be44a](https://github.com/willyb321/elite-journal/commit/98be44a344364a0c58ddd409bb630b55a6d90c71) linting issues. (@willyb321)
-- [38ad0e6](https://github.com/willyb321/elite-journal/commit/38ad0e6ebc5300150e721b104fcf9ebc35f041fa) added failsafe for filtering without log open and removed useless code (@willyb321)
-
-### v1.3.6 (2016/10/02 02:17 +00:00)
-- [ea3ea24](https://github.com/willyb321/elite-journal/commit/ea3ea24f5ddcdaa1520d164425800cc14a0177ef) 1.3.6 (@willyb321)
-- [c8a573e](https://github.com/willyb321/elite-journal/commit/c8a573ead7daa9ce6c333d073fb07a1e82c2353f) added ctrl-o for open and ctrl-f for filter (@willyb321)
-
-### v1.3.5 (2016/10/02 01:15 +00:00)
-- [d2dcbb7](https://github.com/willyb321/elite-journal/commit/d2dcbb735f84bc8adcc40ca5833843f8f7d8debc) 1.3.5 (@willyb321)
-- [70415c7](https://github.com/willyb321/elite-journal/commit/70415c7924e9d6e6401b8baa7a69c03edcbfdd62) fixed scaling of window, fixed (sort of) filters, plus more probably (@willyb321)
-- [ff95fd9](https://github.com/willyb321/elite-journal/commit/ff95fd968607b3e1f3da138804f2c4c40b856a87) stuff (@willyb321)
-
-### v1.3.4 (2016/09/30 10:18 +00:00)
-- [5a66653](https://github.com/willyb321/elite-journal/commit/5a666531a9ed657c544083279ac003288c6a32e2) 1.3.4 (@willyb321)
-- [c86b754](https://github.com/willyb321/elite-journal/commit/c86b754cf97d6eee8e3e5761d07f8d4d8e80b2f8) aaaaah did a bunch of stuff that works a bit sorta will fix it tomorrow probably (@willyb321)
-- [091917a](https://github.com/willyb321/elite-journal/commit/091917a9ec02320d5151a44eb757bf9f03becfc7) fixed filter.html using spaces (@willyb321)
-- [3eb658d](https://github.com/willyb321/elite-journal/commit/3eb658df36db917947564b13c9644ce00c50d302) link fixed (@willyb321)
-- [9251b6f](https://github.com/willyb321/elite-journal/commit/9251b6fe2c6347b48e24844ed5c25eb1ffe8a55b) added contributing guidelines (@willyb321)
-- [c0ce37c](https://github.com/willyb321/elite-journal/commit/c0ce37cad0bcbf20afc55206924297f5901fd6fb) prettified html (@willyb321)
-- [1045d9b](https://github.com/willyb321/elite-journal/commit/1045d9b67f690fbec8e51b7be0eb5461111d9be7) 1.3.3 (@willyb321)
-- [06a8474](https://github.com/willyb321/elite-journal/commit/06a8474089411725f5a27f5330e3008a6cc73e22) filter window will save position when you load a new log in the main (@willyb321)
-- [5f780c2](https://github.com/willyb321/elite-journal/commit/5f780c2709907b1a9e68e04ce5b6610f46c01f5d) better npm version (@willyb321)
-- [1c6e6fb](https://github.com/willyb321/elite-journal/commit/1c6e6fb27f6dd4ac0b5d43f6693045733f19e06a) fixed version (@willyb321)
-
-### v1.3.3 (2016/09/30 05:38 +00:00)
-- [6ce13a1](https://github.com/willyb321/elite-journal/commit/6ce13a1c66193b329060ae0da2ebcd8c32348d7d) 1.3.3 (@willyb321)
-- [6d7b47d](https://github.com/willyb321/elite-journal/commit/6d7b47d822f2d2de3ff4bbe5f8e8880d7a64cdca) log dump from cmdr jonuss (@willyb321)
-
-### v1.3.2 (2016/09/30 04:08 +00:00)
-- [62b117e](https://github.com/willyb321/elite-journal/commit/62b117e2620300bb0c08806102695da2672ab008) 1.3.2 (@willyb321)
-- [bc089e3](https://github.com/willyb321/elite-journal/commit/bc089e352c8046971f14f2211cd62b7e8db95d36) fix loading multiple logs and then filtering (@willyb321)
-- [055ebe1](https://github.com/willyb321/elite-journal/commit/055ebe1090dd2643fccc4cb6288a97685b8bd64e) Update readme.md (@willyb321)
-
-### v1.3.1 (2016/09/30 01:57 +00:00)
-- [5f1f706](https://github.com/willyb321/elite-journal/commit/5f1f7065b98fa9d95b904ddee825e1a046687886) 1.3.1 (@willyb321)
-- [4c00a26](https://github.com/willyb321/elite-journal/commit/4c00a260e9dc50d03527c3b9ad2a643d9a9ceb4c) saving filtered works now (@willyb321)
-- [81eb67c](https://github.com/willyb321/elite-journal/commit/81eb67c016eca55ebf4f950a819061a88b5ca124) updated readme image (@willyb321)
-- [6dd8f43](https://github.com/willyb321/elite-journal/commit/6dd8f43f3c69af09fbca6a130293534ea0a9162a) H (@willyb321)
-- [c36900e](https://github.com/willyb321/elite-journal/commit/c36900e65db88cfb574448dcba64052e5003e0f6) readme even better (@willyb321)
-- [083a260](https://github.com/willyb321/elite-journal/commit/083a260b393c86c280e9171663b430f5e03f95d8) readme better (@willyb321)
-
-### v1.3.0 (2016/09/29 10:29 +00:00)
-- [9262ede](https://github.com/willyb321/elite-journal/commit/9262ede9da102d2ef94157d25cbcebfc319a11c7) 1.3.0 (@willyb321)
-- [0993fe5](https://github.com/willyb321/elite-journal/commit/0993fe59b63bc9490a8fa3b25bfed47f552e0909) Sorting works properly now! (@willyb321)
-
-### v1.2.1 (2016/09/29 07:45 +00:00)
-- [bb76b38](https://github.com/willyb321/elite-journal/commit/bb76b38defb46deb987ce922efdc0eb12a8c1d79) 1.2.1 (@willyb321)
-- [d7bc2ad](https://github.com/willyb321/elite-journal/commit/d7bc2adf3973065564efef57f95dde5872e02be4) probably fixed not loading filter) (@willyb321)
-
-### v1.2.0 (2016/09/29 07:24 +00:00)
-- [e6928c5](https://github.com/willyb321/elite-journal/commit/e6928c5008d8e94673cd8f37fbf288b3504afe6f) 1.2.0 (@willyb321)
-- [24a1ad5](https://github.com/willyb321/elite-journal/commit/24a1ad50b3492d4020550596bbd57985419ca5ec) FILTERING (sort of - only does first event atm) (@willyb321)
-- [8cccc94](https://github.com/willyb321/elite-journal/commit/8cccc9438fd1daeb5d73badc930b1db4df2a5d25) aaaaaaaaaaah linting (@willyb321)
-- [8f63996](https://github.com/willyb321/elite-journal/commit/8f639968cb219e938e2f626204e5ec5b2196bd1b) aaaaaaaaaah (@willyb321)
-- [a679970](https://github.com/willyb321/elite-journal/commit/a679970a9834974691681fef7077e0bc56d5511e) more progress towards filtering (@willyb321)
-- [d023416](https://github.com/willyb321/elite-journal/commit/d02341630da397df81eb16904c316eec86d4b1d8) didnt work (@willyb321)
-- [ea88430](https://github.com/willyb321/elite-journal/commit/ea884302172abc038842ab6ec57f21bd01953c5e) testing /docs (@willyb321)
-- [7366c48](https://github.com/willyb321/elite-journal/commit/7366c48890509f16d35d1ea79290a926b3da1253) layed groundwork for filtering (again) (@willyb321)
-- [d60bb9a](https://github.com/willyb321/elite-journal/commit/d60bb9a632d64e8045e21c9880421cdeeb68022b) made more progress on filtering (@willyb321)
-
-### v1.1.9 (2016/09/28 23:21 +00:00)
-- [f5258b7](https://github.com/willyb321/elite-journal/commit/f5258b76cd9b75f9bb70a6be97b62ce6e3767be1) 1.1.9 (@willyb321)
-- [505b258](https://github.com/willyb321/elite-journal/commit/505b25899bfa70388397b5c03233a5d85abc2aeb) made some progress towards filtering (@willyb321)
-- [79adccb](https://github.com/willyb321/elite-journal/commit/79adccb50fe5f42e77f625b422d3ac2a9c1b4cdc) fixed error on the readme (@willyb321)
-- [381afc4](https://github.com/willyb321/elite-journal/commit/381afc41e54ce948be6f20df66380d91f95224ca) added some badges because why not (@willyb321)
-- [1345f18](https://github.com/willyb321/elite-journal/commit/1345f185db17e87ec5648c1e573f97a18dbe919d) using shields.io for build status (@willyb321)
-- [109326b](https://github.com/willyb321/elite-journal/commit/109326b38d3a6acc4bf5220b004e6843ef425ca8) testing readme things (@willyb321)
-
-### v1.1.8 (2016/09/28 08:59 +00:00)
-- [4ee865c](https://github.com/willyb321/elite-journal/commit/4ee865ca4e4c99470fd6c0b8867e2b85c1311baa) 1.1.8 (@willyb321)
-- [1213e7e](https://github.com/willyb321/elite-journal/commit/1213e7e7574b96bdf2091c1fcdb20af5d24ab78b) added icons! (@willyb321)
-
-### v1.1.7 (2016/09/28 08:20 +00:00)
-- [d054d5a](https://github.com/willyb321/elite-journal/commit/d054d5abee0fe2cf6d7bbb69ce59536e306af66b) 1.1.7 (@willyb321)
-- [9c33c1c](https://github.com/willyb321/elite-journal/commit/9c33c1cb4f6b7bfc1ce2a8e4d7205e218bd9de35) fixed update notification (@willyb321)
-
-### v1.1.6 (2016/09/28 08:07 +00:00)
-- [74f1548](https://github.com/willyb321/elite-journal/commit/74f154826dd0b5e7ad74290b09fe66cf1a0c25cb) 1.1.6 (@willyb321)
-- [2cc7ceb](https://github.com/willyb321/elite-journal/commit/2cc7ceb34f348b271efe40e7d17f97149d204eca) x64 from now on. (@willyb321)
-- [3072659](https://github.com/willyb321/elite-journal/commit/3072659a63e62fa3a47c23cfa7fab8dda58df67c) updated readme a bit (@willyb321)
-- [62bd04c](https://github.com/willyb321/elite-journal/commit/62bd04cbc82a9df4dd90db10e94287910276b077) added deploy how to because reasons (@willyb321)
-
-### v1.1.5 (2016/09/28 07:12 +00:00)
-- [bbe08b1](https://github.com/willyb321/elite-journal/commit/bbe08b15827641878cca576400c1d80eacfbd0a1) linting issues fixed (@willyb321)
-- [b8047da](https://github.com/willyb321/elite-journal/commit/b8047dab7099a5859ccf89c308b33b5084dbf97e) 1.1.5 (@willyb321)
-- [3d905a6](https://github.com/willyb321/elite-journal/commit/3d905a693ca48a314203f649602bb073c4abac8c) added message to let users know when updates are happening (@willyb321)
-- [8ef6929](https://github.com/willyb321/elite-journal/commit/8ef69298ed2636cc563bacb7dc6c361efe9ff07d) updated readme (@willyb321)
-
-### v1.1.4 (2016/09/28 06:47 +00:00)
-- [424d1d1](https://github.com/willyb321/elite-journal/commit/424d1d1549e01c8cb5ddeca7e1501d9e2f8ece59) 1.1.4 (@willyb321)
-
-### v1.1.3 (2016/09/28 06:42 +00:00)
-- [1d8429e](https://github.com/willyb321/elite-journal/commit/1d8429e68418d78ec5baaa4884fcca2ece2a3e13) 1.1.3 (@willyb321)
-- [a83c40a](https://github.com/willyb321/elite-journal/commit/a83c40a204d505051372085db5a506f434f2870b) fixed deps (@willyb321)
-- [f7d520d](https://github.com/willyb321/elite-journal/commit/f7d520d19f17e20d70b53fcb724ddadde07f7069) fixed: (@willyb321)
-
-### v1.1.2 (2016/09/28 06:26 +00:00)
-- [f082515](https://github.com/willyb321/elite-journal/commit/f0825151121d79c406006848c131d3560c9364fe) 1.1.2 (@willyb321)
-- [2c8050b](https://github.com/willyb321/elite-journal/commit/2c8050b277cb2b6d10fc4269a00eda233560b36f) testing things (@willyb321)
-
-### v1.1.1 (2016/09/28 06:22 +00:00)
-- [9b19079](https://github.com/willyb321/elite-journal/commit/9b19079bde246a4ee010a8421738c2b018cabbbb) 1.1.1 (@willyb321)
-
-### v1.1.0 (2016/09/28 06:00 +00:00)
-- [6f14045](https://github.com/willyb321/elite-journal/commit/6f1404570a54df13e9f54866f356311a7bda5b8c) 1.1.0 (@willyb321)
-- [b078016](https://github.com/willyb321/elite-journal/commit/b078016430e70afbe643feffee22444a52266aa5) testing auto updating etc (@willyb321)
-- [5451f21](https://github.com/willyb321/elite-journal/commit/5451f21ef5204cf02ce1b19460489cadb86dfcfd) added a gif for when things happen (@willyb321)
-- [16d8907](https://github.com/willyb321/elite-journal/commit/16d8907409ffe8cf148e9959a230535a2d8fc922) layed more groundwork (@willyb321)
-- [84a7edc](https://github.com/willyb321/elite-journal/commit/84a7edc02df2282054277fb2dd862f60c8d9c24a) made it probably better (@willyb321)
-- [8228194](https://github.com/willyb321/elite-journal/commit/82281944fa1e21a599279142a3c93a86d6fe1824) layed groundwork for future things (@willyb321)
-- [7e59683](https://github.com/willyb321/elite-journal/commit/7e596831045d145475599af67882d5ac35699a50) people now may actually know what to do :tada: (@willyb321)
-- [a2ad77d](https://github.com/willyb321/elite-journal/commit/a2ad77d166ad7dd7c97c140421cd70921d6fb43b) changed around menu, made some optimisations etc etc (@willyb321)
-- [dbc3eea](https://github.com/willyb321/elite-journal/commit/dbc3eea866002e9c3c556a9924a56b5d9e5e8056) linting pls (@willyb321)
-- [ec3354a](https://github.com/willyb321/elite-journal/commit/ec3354a43a59424561e474d5103c54e810cf3a31) fixed saving html from alternate log load (@willyb321)
-- [bde6302](https://github.com/willyb321/elite-journal/commit/bde63021bc71a04091f8f7cc11d98f51399b00b9) added readme in example_log/ (@willyb321)
-- [d92ee03](https://github.com/willyb321/elite-journal/commit/d92ee03751ddeded0bdbd1d56fddc90a21be93fc) fixed undefined with the alternate log load (@willyb321)
-- [3af96f0](https://github.com/willyb321/elite-journal/commit/3af96f02e92f8ad4f7089c1b4f2474c979e1f1fa) probably optimisations (@willyb321)
-- [065b43f](https://github.com/willyb321/elite-journal/commit/065b43fed5093da3edea800051513f10f0e6f15c) fleshed out the load function a wee bit (@willyb321)
-- [d3e6bde](https://github.com/willyb321/elite-journal/commit/d3e6bdec3d4ee5e6d3c58aa757ca9a0480c77a92) literally all the things have been done, check out the actual commit for what happened (@willyb321)
-- [664f906](https://github.com/willyb321/elite-journal/commit/664f906204f0bd0a1541f5ff5254c9e7a5551521) updated readme image (@willyb321)
-- [625f600](https://github.com/willyb321/elite-journal/commit/625f600bed475ce3cbfb58bad481989aaa0f624a) whoops linting (@willyb321)
-- [ee958ce](https://github.com/willyb321/elite-journal/commit/ee958cec4eadc1778085d8bc30d725c000d9693e) made loading multiple files without closing in-between work properly (@willyb321)
-- [8c0d471](https://github.com/willyb321/elite-journal/commit/8c0d471d751489bf68b9a983fc80d836a5784b1f) made it a bunch better (@willyb321)
-- [01043bf](https://github.com/willyb321/elite-journal/commit/01043bf410d5cfd3f1333fda9993cb0fce4fac4f) added save as json as a function on the menu (@willyb321)
-- [d88e01c](https://github.com/willyb321/elite-journal/commit/d88e01cad45cded8a01cb9e7564a26288923097a) renamed open to load, using my fork of the packager (@willyb321)
-- [ef3febf](https://github.com/willyb321/elite-journal/commit/ef3febf90c121e5c6e5963b754ace4b4ef33b859) added menu, save/load, fixed css in dev, plus probably more (@willyb321)
-- [29baea0](https://github.com/willyb321/elite-journal/commit/29baea0f9a80edeb8849bffc20a967e9fed984bb) updated deps (@willyb321)
-- [e4fd4d6](https://github.com/willyb321/elite-journal/commit/e4fd4d6f4eb0b639754ca5d302f931b382ce69f3) updated readme image (@willyb321)
-- [5919fdb](https://github.com/willyb321/elite-journal/commit/5919fdbed7a8f301b2d76bf7fbc3587ea28cfd91) implemented an array for the parsed json, to allow for bigger things (@willyb321)
-- [3766349](https://github.com/willyb321/elite-journal/commit/37663493e7e218b79ddeae23efc71c76c37d191a) fixed the random <hr>'s issue' (@willyb321)
-- [ea6c7d3](https://github.com/willyb321/elite-journal/commit/ea6c7d3d3384e345a40307c231f06e49eca5b9f7) added an image to the readme (@willyb321)
-- [48a0434](https://github.com/willyb321/elite-journal/commit/48a0434b60d7a30220114e37e51c32e009b04fa3) made the app work with asar!! :tada: (@willyb321)
-- [92fdfdb](https://github.com/willyb321/elite-journal/commit/92fdfdb92f82f495ba783f4ab4d81c92ecd6f66a) fixed indentation on index.css (@willyb321)
-- [8939ff2](https://github.com/willyb321/elite-journal/commit/8939ff28233b558393ec83ca291349b812db9378) added css, fixed console spam, changed var name (@willyb321)
-- [bec123e](https://github.com/willyb321/elite-journal/commit/bec123e3388bf3bede439c179cf08cf15294af8a) added a <hr> in-between events (@willyb321)
-- [7f1cc9d](https://github.com/willyb321/elite-journal/commit/7f1cc9d62ed633e53317f7f641ab8c18dfedceca) Merge branch 'master' of https://github.com/willyb321/elite-journal (@willyb321)
-- [688e4f1](https://github.com/willyb321/elite-journal/commit/688e4f1d9fc5e92e25a3ade530c0d05aaef17e9e) more logs (@willyb321)
-- [cbd6bf9](https://github.com/willyb321/elite-journal/commit/cbd6bf9ba23af41c34049901ae0a30d39a1c9f81) made the download badge link to the releases page (@willyb321)
-- [c97d39d](https://github.com/willyb321/elite-journal/commit/c97d39dcfe11dd1c3d525dcaacf30e82f703ee0c) Merge branch 'master' of https://github.com/willyb321/elite-journal (@willyb321)
-- [3adfcec](https://github.com/willyb321/elite-journal/commit/3adfcec93c48e67ec06db784544ee21f744c0dfb) updated readme to be better :tada: (@willyb321)
-- [#1](https://github.com/willyb321/elite-journal/pull/1) Merge pull request #1 from willyb321/greenkeeper-update-all (@willyb321)
-- [0985611](https://github.com/willyb321/elite-journal/commit/0985611bdb7a96d953082d566e78025802dc719c) chore(package): update dependencies (@greenkeeperio-bot)
-- [f429c86](https://github.com/willyb321/elite-journal/commit/f429c8606d6f1262b03a3c088ec6c3c6e13f84ee) added some more example logs from CMDR Faydes (@willyb321)
-- [f14c3d5](https://github.com/willyb321/elite-journal/commit/f14c3d591754e775ada976a6f5b8dfe00ed023fc) more readme things (@willyb321)
-- [b9b8c62](https://github.com/willyb321/elite-journal/commit/b9b8c6249a6282b415b718dffd6179241f3080c8) readme things (@willyb321)
-- [49fd9c3](https://github.com/willyb321/elite-journal/commit/49fd9c3587308fd2c7049780ec86e2519524efd2) prune on build (@willyb321)
-- [bca6d33](https://github.com/willyb321/elite-journal/commit/bca6d334f974b3342c19c4ceada36e023ca1f25a) testing auto release (@willyb321)
-
-### v1.0.0 (2016/09/21 10:17 +00:00)
-- [a611d6d](https://github.com/willyb321/elite-journal/commit/a611d6d472b95ef2563b2551a0cef7e28b856f8b) 1.0.0 (@willyb321)
-- [06433a7](https://github.com/willyb321/elite-journal/commit/06433a7de95731534f25c4befe5bd834cc5737f1) cool stuff and things (@willyb321)
-- [bc4130b](https://github.com/willyb321/elite-journal/commit/bc4130b58288ecde5d49efbf227d523bc31ef75b) fixed issues (@willyb321)
-- [3a9860b](https://github.com/willyb321/elite-journal/commit/3a9860b25d984711a9d9420ed24f391b48a2929a) added example logs (@willyb321)
-- [0e5a836](https://github.com/willyb321/elite-journal/commit/0e5a8368133c1417c28bfe359d55ce94d7ffc24f) proper file selection ho! (@willyb321)
-- [94bd8a5](https://github.com/willyb321/elite-journal/commit/94bd8a5e4283db2c2f30df09b973a9c6b660d58a) updated gitignore (@willyb321)
-- [dcec914](https://github.com/willyb321/elite-journal/commit/dcec9140cd8ab8db5bff5431a67fd2df49c47d90) initial (@willyb321)
+# Change Log
+
+## [v1.6.22](https://github.com/willyb321/elite-journal/tree/v1.6.22) (2016-11-02)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.21...v1.6.22)
+
+## [v1.6.21](https://github.com/willyb321/elite-journal/tree/v1.6.21) (2016-11-01)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.20...v1.6.21)
+
+## [v1.6.20](https://github.com/willyb321/elite-journal/tree/v1.6.20) (2016-10-29)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.19...v1.6.20)
+
+## [v1.6.19](https://github.com/willyb321/elite-journal/tree/v1.6.19) (2016-10-29)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.18...v1.6.19)
+
+**Merged pull requests:**
+
+- Update electron-auto-updater to the latest version 🚀 [\#23](https://github.com/willyb321/elite-journal/pull/23) ([greenkeeper[bot]](https://github.com/integration/greenkeeper))
+
+## [v1.6.18](https://github.com/willyb321/elite-journal/tree/v1.6.18) (2016-10-29)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.17...v1.6.18)
+
+## [v1.6.17](https://github.com/willyb321/elite-journal/tree/v1.6.17) (2016-10-29)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.16...v1.6.17)
+
+## [v1.6.16](https://github.com/willyb321/elite-journal/tree/v1.6.16) (2016-10-29)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.15...v1.6.16)
+
+## [v1.6.15](https://github.com/willyb321/elite-journal/tree/v1.6.15) (2016-10-29)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.14...v1.6.15)
+
+## [v1.6.14](https://github.com/willyb321/elite-journal/tree/v1.6.14) (2016-10-27)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.13...v1.6.14)
+
+## [v1.6.13](https://github.com/willyb321/elite-journal/tree/v1.6.13) (2016-10-26)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.12...v1.6.13)
+
+## [v1.6.12](https://github.com/willyb321/elite-journal/tree/v1.6.12) (2016-10-26)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.11...v1.6.12)
+
+## [v1.6.11](https://github.com/willyb321/elite-journal/tree/v1.6.11) (2016-10-26)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.10...v1.6.11)
+
+**Merged pull requests:**
+
+- Update electron-auto-updater to version 0.1.0 🚀 [\#21](https://github.com/willyb321/elite-journal/pull/21) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+- Update electron-auto-updater to version 0.0.4 🚀 [\#20](https://github.com/willyb321/elite-journal/pull/20) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
+## [v1.6.10](https://github.com/willyb321/elite-journal/tree/v1.6.10) (2016-10-18)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.9...v1.6.10)
+
+## [v1.6.9](https://github.com/willyb321/elite-journal/tree/v1.6.9) (2016-10-18)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.8...v1.6.9)
+
+## [v1.6.8](https://github.com/willyb321/elite-journal/tree/v1.6.8) (2016-10-18)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.7...v1.6.8)
+
+**Closed issues:**
+
+- Switch to yarn [\#19](https://github.com/willyb321/elite-journal/issues/19)
+
+## [v1.6.7](https://github.com/willyb321/elite-journal/tree/v1.6.7) (2016-10-17)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.6...v1.6.7)
+
+## [v1.6.6](https://github.com/willyb321/elite-journal/tree/v1.6.6) (2016-10-17)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.5...v1.6.6)
+
+## [v1.6.5](https://github.com/willyb321/elite-journal/tree/v1.6.5) (2016-10-17)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.4...v1.6.5)
+
+## [v1.6.4](https://github.com/willyb321/elite-journal/tree/v1.6.4) (2016-10-17)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.3...v1.6.4)
+
+## [v1.6.3](https://github.com/willyb321/elite-journal/tree/v1.6.3) (2016-10-17)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.2...v1.6.3)
+
+## [v1.6.2](https://github.com/willyb321/elite-journal/tree/v1.6.2) (2016-10-17)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.1...v1.6.2)
+
+**Merged pull requests:**
+
+- Update electron-auto-updater to version 0.0.3 🚀 [\#18](https://github.com/willyb321/elite-journal/pull/18) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
+## [v1.6.1](https://github.com/willyb321/elite-journal/tree/v1.6.1) (2016-10-16)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.6.0...v1.6.1)
+
+## [v1.6.0](https://github.com/willyb321/elite-journal/tree/v1.6.0) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.10...v1.6.0)
+
+**Closed issues:**
+
+- Using NSIS [\#17](https://github.com/willyb321/elite-journal/issues/17)
+
+## [v1.5.10](https://github.com/willyb321/elite-journal/tree/v1.5.10) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.9...v1.5.10)
+
+## [v1.5.9](https://github.com/willyb321/elite-journal/tree/v1.5.9) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.8...v1.5.9)
+
+## [v1.5.8](https://github.com/willyb321/elite-journal/tree/v1.5.8) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.7...v1.5.8)
+
+## [v1.5.7](https://github.com/willyb321/elite-journal/tree/v1.5.7) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.6...v1.5.7)
+
+## [v1.5.6](https://github.com/willyb321/elite-journal/tree/v1.5.6) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.5...v1.5.6)
+
+## [v1.5.5](https://github.com/willyb321/elite-journal/tree/v1.5.5) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.4...v1.5.5)
+
+## [v1.5.4](https://github.com/willyb321/elite-journal/tree/v1.5.4) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.3...v1.5.4)
+
+## [v1.5.3](https://github.com/willyb321/elite-journal/tree/v1.5.3) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.2...v1.5.3)
+
+## [v1.5.2](https://github.com/willyb321/elite-journal/tree/v1.5.2) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.1...v1.5.2)
+
+## [v1.5.1](https://github.com/willyb321/elite-journal/tree/v1.5.1) (2016-10-15)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.5.0...v1.5.1)
+
+## [v1.5.0](https://github.com/willyb321/elite-journal/tree/v1.5.0) (2016-10-14)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.21...v1.5.0)
+
+## [v1.4.21](https://github.com/willyb321/elite-journal/tree/v1.4.21) (2016-10-14)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.20...v1.4.21)
+
+## [v1.4.20](https://github.com/willyb321/elite-journal/tree/v1.4.20) (2016-10-14)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.19...v1.4.20)
+
+## [v1.4.19](https://github.com/willyb321/elite-journal/tree/v1.4.19) (2016-10-14)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.18...v1.4.19)
+
+## [v1.4.18](https://github.com/willyb321/elite-journal/tree/v1.4.18) (2016-10-14)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.17...v1.4.18)
+
+## [v1.4.17](https://github.com/willyb321/elite-journal/tree/v1.4.17) (2016-10-14)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.16...v1.4.17)
+
+## [v1.4.16](https://github.com/willyb321/elite-journal/tree/v1.4.16) (2016-10-13)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.15...v1.4.16)
+
+**Merged pull requests:**
+
+- update deps [\#14](https://github.com/willyb321/elite-journal/pull/14) ([willyb321](https://github.com/willyb321))
+
+## [v1.4.15](https://github.com/willyb321/elite-journal/tree/v1.4.15) (2016-10-13)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.14...v1.4.15)
+
+## [v1.4.14](https://github.com/willyb321/elite-journal/tree/v1.4.14) (2016-10-13)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.13...v1.4.14)
+
+**Closed issues:**
+
+- Load outputted json back into the program. [\#13](https://github.com/willyb321/elite-journal/issues/13)
+
+## [v1.4.13](https://github.com/willyb321/elite-journal/tree/v1.4.13) (2016-10-13)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.12...v1.4.13)
+
+## [v1.4.12](https://github.com/willyb321/elite-journal/tree/v1.4.12) (2016-10-11)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.11...v1.4.12)
+
+## [v1.4.11](https://github.com/willyb321/elite-journal/tree/v1.4.11) (2016-10-11)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.10...v1.4.11)
+
+## [v1.4.10](https://github.com/willyb321/elite-journal/tree/v1.4.10) (2016-10-11)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.9...v1.4.10)
+
+## [v1.4.9](https://github.com/willyb321/elite-journal/tree/v1.4.9) (2016-10-11)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.8...v1.4.9)
+
+**Closed issues:**
+
+- another test issue [\#11](https://github.com/willyb321/elite-journal/issues/11)
+- test issue [\#10](https://github.com/willyb321/elite-journal/issues/10)
+
+## [v1.4.8](https://github.com/willyb321/elite-journal/tree/v1.4.8) (2016-10-11)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.7...v1.4.8)
+
+## [v1.4.7](https://github.com/willyb321/elite-journal/tree/v1.4.7) (2016-10-09)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.6...v1.4.7)
+
+## [v1.4.6](https://github.com/willyb321/elite-journal/tree/v1.4.6) (2016-10-07)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.5...v1.4.6)
+
+**Closed issues:**
+
+- Changelog would be nice. [\#8](https://github.com/willyb321/elite-journal/issues/8)
+- Keyboard shortcuts [\#7](https://github.com/willyb321/elite-journal/issues/7)
+
+**Merged pull requests:**
+
+- Revert "Update all dependencies 🌴" [\#9](https://github.com/willyb321/elite-journal/pull/9) ([willyb321](https://github.com/willyb321))
+
+## [v1.4.5](https://github.com/willyb321/elite-journal/tree/v1.4.5) (2016-10-05)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.4...v1.4.5)
+
+**Closed issues:**
+
+- Drag and drop to load [\#6](https://github.com/willyb321/elite-journal/issues/6)
+
+## [v1.4.4](https://github.com/willyb321/elite-journal/tree/v1.4.4) (2016-10-04)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.3...v1.4.4)
+
+## [v1.4.3](https://github.com/willyb321/elite-journal/tree/v1.4.3) (2016-10-04)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.2...v1.4.3)
+
+## [v1.4.2](https://github.com/willyb321/elite-journal/tree/v1.4.2) (2016-10-03)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.1...v1.4.2)
+
+## [v1.4.1](https://github.com/willyb321/elite-journal/tree/v1.4.1) (2016-10-03)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.4.0...v1.4.1)
+
+## [v1.4.0](https://github.com/willyb321/elite-journal/tree/v1.4.0) (2016-10-02)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.9...v1.4.0)
+
+## [v1.3.9](https://github.com/willyb321/elite-journal/tree/v1.3.9) (2016-10-02)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.8...v1.3.9)
+
+## [v1.3.8](https://github.com/willyb321/elite-journal/tree/v1.3.8) (2016-10-02)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.7...v1.3.8)
+
+## [v1.3.7](https://github.com/willyb321/elite-journal/tree/v1.3.7) (2016-10-02)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.6...v1.3.7)
+
+## [v1.3.6](https://github.com/willyb321/elite-journal/tree/v1.3.6) (2016-10-02)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.5...v1.3.6)
+
+## [v1.3.5](https://github.com/willyb321/elite-journal/tree/v1.3.5) (2016-10-02)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.4...v1.3.5)
+
+## [v1.3.4](https://github.com/willyb321/elite-journal/tree/v1.3.4) (2016-09-30)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.3...v1.3.4)
+
+**Closed issues:**
+
+- Auto updating [\#5](https://github.com/willyb321/elite-journal/issues/5)
+- Add support for saving logs to file. [\#4](https://github.com/willyb321/elite-journal/issues/4)
+- Add filtering [\#3](https://github.com/willyb321/elite-journal/issues/3)
+- Suggestions [\#2](https://github.com/willyb321/elite-journal/issues/2)
+
+## [v1.3.3](https://github.com/willyb321/elite-journal/tree/v1.3.3) (2016-09-30)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.2...v1.3.3)
+
+## [v1.3.2](https://github.com/willyb321/elite-journal/tree/v1.3.2) (2016-09-30)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.1...v1.3.2)
+
+## [v1.3.1](https://github.com/willyb321/elite-journal/tree/v1.3.1) (2016-09-30)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.3.0...v1.3.1)
+
+## [v1.3.0](https://github.com/willyb321/elite-journal/tree/v1.3.0) (2016-09-29)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.2.1...v1.3.0)
+
+## [v1.2.1](https://github.com/willyb321/elite-journal/tree/v1.2.1) (2016-09-29)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.2.0...v1.2.1)
+
+## [v1.2.0](https://github.com/willyb321/elite-journal/tree/v1.2.0) (2016-09-29)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.9...v1.2.0)
+
+## [v1.1.9](https://github.com/willyb321/elite-journal/tree/v1.1.9) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.8...v1.1.9)
+
+## [v1.1.8](https://github.com/willyb321/elite-journal/tree/v1.1.8) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.7...v1.1.8)
+
+## [v1.1.7](https://github.com/willyb321/elite-journal/tree/v1.1.7) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.6...v1.1.7)
+
+## [v1.1.6](https://github.com/willyb321/elite-journal/tree/v1.1.6) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.5...v1.1.6)
+
+## [v1.1.5](https://github.com/willyb321/elite-journal/tree/v1.1.5) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.4...v1.1.5)
+
+## [v1.1.4](https://github.com/willyb321/elite-journal/tree/v1.1.4) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.3...v1.1.4)
+
+## [v1.1.3](https://github.com/willyb321/elite-journal/tree/v1.1.3) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.2...v1.1.3)
+
+## [v1.1.2](https://github.com/willyb321/elite-journal/tree/v1.1.2) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.1...v1.1.2)
+
+## [v1.1.1](https://github.com/willyb321/elite-journal/tree/v1.1.1) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.1.0...v1.1.1)
+
+## [v1.1.0](https://github.com/willyb321/elite-journal/tree/v1.1.0) (2016-09-28)
+[Full Changelog](https://github.com/willyb321/elite-journal/compare/v1.0.0...v1.1.0)
+
+**Merged pull requests:**
+
+- Update all dependencies 🌴 [\#1](https://github.com/willyb321/elite-journal/pull/1) ([greenkeeperio-bot](https://github.com/greenkeeperio-bot))
+
+## [v1.0.0](https://github.com/willyb321/elite-journal/tree/v1.0.0) (2016-09-21)
+
+
+\* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
