@@ -39,7 +39,7 @@
   "devDependencies": {
     "devtron": "^1.4.0",
     "electron": "^1.4.5",
-    "electron-builder": "^7.15.2",
+    "electron-builder": "^7.18.1",
     "electron-zip-packager": "^4.0.0",
     "mocha": "^3.1.2",
     "mocha-circleci-reporter": "^0.0.2",
