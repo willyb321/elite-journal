@@ -11,12 +11,12 @@
     "url": "tehsuperwilly.tech"
   },
   "scripts": {
-    "test": "mocha --reporter mocha-circleci-reporter ./test.js && xo",
+    "test": "jake test",
     "start": "electron .",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
-    "pack": "build --dir",
-    "dist": "build -w --x64",
-    "release": "build -w --x64",
+    "pack": "jake pack",
+    "dist": "jake build",
+    "release": "jake release",
     "tag": "release-it"
   },
   "keywords": [
@@ -45,7 +45,8 @@
     "mocha-circleci-reporter": "^0.0.2",
     "release-it": "^2.4.3",
     "spectron": "^3.4.0",
-    "xo": "^0.17.0"
+    "xo": "^0.17.0",
+    "jake": "latest"
   },
   "xo": {
     "esnext": true,
@@ -54,6 +55,7 @@
       "browser"
     ],
     "ignores": [
+      "tests/*",
       "test.js"
     ]
   },
