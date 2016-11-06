@@ -10,5 +10,7 @@ function setup
 	check
 	wget https://raw.githubusercontent.com/willyb321/elite-journal/master/Jakefile -O $HOME/EliteJakefile
 	jake -f $HOME/EliteJakefile setup
+	rm $HOME/EliteJakefile
+	echo "All done. You can find the repo in $HOME/elite-journal"
 }
 setup
