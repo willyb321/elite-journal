@@ -8,7 +8,7 @@ hash jake 2>/dev/null || { echo >&2 "I require jake but it's not installed. Abor
 function setup
 {
 	check
-	wget https://raw.githubusercontent.com/willyb321/elite-journal/master/Jakefile -o $HOME/EliteJakefile
+	wget https://raw.githubusercontent.com/willyb321/elite-journal/master/Jakefile -O $HOME/EliteJakefile
 	jake -f $HOME/EliteJakefile setup
 }
 setup

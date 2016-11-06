@@ -44,7 +44,7 @@ $ npm run dist
 ### Quick Development setup.
 
 ```
-wget https://raw.githubusercontent.com/willyb321/elite-journal/master/.scripts/get.sh | bash
+curl -o- -L https://raw.githubusercontent.com/willyb321/elite-journal/master/.scripts/get.sh | bash
 ```
 
 Builds the app and distributable exe/nupkg for Windows x64, using [electron-builder](https://github.com/electron-userland/electron-builder).
