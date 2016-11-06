@@ -1,2 +1,2 @@
 #!/bin/bash
-yarn install --pure-lockfile
+jake deps
