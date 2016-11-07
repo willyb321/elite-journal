@@ -13,6 +13,7 @@ const isDev = require('electron-is-dev');
 const jsonfile = require('jsonfile');
 const bugsnag = require('bugsnag');
 const watch = require('node-watch');
+const openAboutWindow = require('about-window').default;
 
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847');
 const app = electron.app;
@@ -471,7 +472,15 @@ const template = [{
 				message: 'Current Version: ' + app.getVersion()
 			});
 		}
-	}]
+	}, {
+		label: 'About',
+		click: () => openAboutWindow({
+			icon_path: path.join(__dirname, 'build', 'icon.png'),
+			bug_report_url: 'https://github.com/willyb321/elite-journal/issues',
+			homepage: 'https://github.com/willyb321/elite-journal'
+		})
+	}
+	]
 }];
 
 const menu = Menu.buildFromTemplate(template);
