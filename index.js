@@ -64,7 +64,6 @@ require('electron-debug')();
 let mainWindow;
 /**
  * @description Makes the main window
- * @constructor
  */
 function createMainWindow() {
 	win = new electron.BrowserWindow({

@@ -12,7 +12,9 @@ Basically it allows the average joe to have a look at the journal log for [Elite
 ## How to get it?
 Download a [setup .exe](https://github.com/willyb321/elite-journal/releases/latest) from the releases page, and then run it. It will automagically update when you run the application from now on! You can also download it from [Bintray](https://bintray.com/willyb321/generic/elite-journal/_latestVersion), which is where the updates actually are downloaded from. Its a little bit faster I think, so give it a try.
 
-![Example](https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png)
+<p style="width: 100%" align="center">
+  <img style="width: 100%"src="https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png"/>
+</p>
 
 ## Dev
 
@@ -41,13 +43,13 @@ Builds the app for Windows x64, using [electron-builder](https://github.com/elec
 $ npm run dist
 ```
 
+Builds the app and distributable setup exe for Windows x64, using [electron-builder](https://github.com/electron-userland/electron-builder).
+
 ### Quick Development setup.
 
 ```
 curl -o- -L https://raw.githubusercontent.com/willyb321/elite-journal/master/.scripts/get.sh | bash
 ```
-
-Builds the app and distributable exe/nupkg for Windows x64, using [electron-builder](https://github.com/electron-userland/electron-builder).
 
 ## Contributing
 
