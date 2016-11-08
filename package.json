@@ -17,7 +17,8 @@
     "pack": "jake pack",
     "dist": "jake build",
     "release": "jake release",
-    "tag": "release-it"
+    "tag": "release-it",
+    "lint": "xo"
   },
   "keywords": [
     "electron-app",
@@ -57,7 +58,9 @@
     ],
     "ignores": [
       "tests/*",
-      "test.js"
+      "test.js",
+      "docs/scripts/*",
+      "docs/scripts/prettify/*"
     ]
   },
   "build": {

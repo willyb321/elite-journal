@@ -1,4 +1,32 @@
-const electron = require('electron');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: index.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: index.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const electron = require('electron');
 const {Menu} = require('electron');
 const {dialog} = require('electron');
 const {ipcMain} = require('electron');
@@ -51,13 +79,13 @@ autoUpdater.on('error', error => {
 let watching;
 let watcher;
 let loadFile;
-const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
-const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0%;" nodeintegration="on"></webview>`;
+const stopdrop = `&lt;script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});&lt;/script>`;
+const webview = `&lt;webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0%;" nodeintegration="on">&lt;/webview>`;
 let JSONParsedEvent = [];
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
 let htmlDone; // eslint-disable-line no-unused-vars
-const css = '<script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{color: red;}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
+const css = '&lt;script src="https://use.fontawesome.com/a39359b6f9.js">&lt;/script>&lt;style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{color: red;}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}&lt;/style>&lt;link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
 // prevent window being garbage collected
@@ -116,7 +144,7 @@ process.on('uncaughtException', err => {
 function getChecked() {
 	ipcMain.on('asynchronous-message', (event, arg) => {
 		if (arg === 'All Events') {
-			win.loadURL('data:text/html,' + webview + '<hr>' + stopdrop + css + process.htmlDone); // eslint-disable-line no-useless-concat
+			win.loadURL('data:text/html,' + webview + '&lt;hr>' + stopdrop + css + process.htmlDone); // eslint-disable-line no-useless-concat
 		} else {
 			console.log(arg);
 			process.filteredEvent = arg;
@@ -146,7 +174,7 @@ function sortaSorter() {
 		global.eventsFilter = {
 			prop1: process.unique
 		};
-		win.loadURL('data:text/html,' + webview + css + '<hr>' + stopdrop + process.htmlDone); // eslint-disable-line no-useless-concat
+		win.loadURL('data:text/html,' + webview + css + '&lt;hr>' + stopdrop + process.htmlDone); // eslint-disable-line no-useless-concat
 		getChecked();
 	} else {
 		dialog.showMessageBox({
@@ -161,7 +189,7 @@ function sortaSorter() {
  * Used to populate the JSONParsedEvent array, which is used to load filtered logs.
  */
 function findEvents() {
-	for (let i = 0; i < JSONParsed.length; i++) {
+	for (let i = 0; i &lt; JSONParsed.length; i++) {
 		if (JSONParsed[i].event === process.filteredEvent) {
 			JSONParsedEvent.push(JSONParsed[i]);
 		}
@@ -172,11 +200,11 @@ function findEvents() {
  */
 function loadFilter() {
 	findEvents();
-	for (let i = 0; i < JSONParsedEvent.length; i++) {
-		process.filteredHTML += tableify(JSONParsedEvent[i]) + '<hr>'; // eslint-disable-line prefer-const
+	for (let i = 0; i &lt; JSONParsedEvent.length; i++) {
+		process.filteredHTML += tableify(JSONParsedEvent[i]) + '&lt;hr>'; // eslint-disable-line prefer-const
 	}
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + webview + css + '<hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
+	win.loadURL('data:text/html,' + webview + css + '&lt;hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
 /**
  * @param  {Array} loadFile - Array with path to loaded file.
@@ -193,7 +221,7 @@ function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused
 	lr.on('line', line => {
 		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
 		JSONParsed.push(lineParse);
-		let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
+		let htmlTabled = tableify(lineParse) + '&lt;hr>'; // eslint-disable-line prefer-const
 		html += htmlTabled;
 	});
 	lr.on('end', err => {
@@ -207,7 +235,7 @@ function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused
 		} else if (watching === false) {
 			process.htmlDone = html;
 			process.htmlDone = process.htmlDone.replace('undefined', '');
-			win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
+			win.loadURL('data:text/html,' + css + '&lt;hr>' + stopdrop + process.htmlDone);
 			process.logLoaded = true;
 			loadFile = '';
 		}}
@@ -271,7 +299,7 @@ function loadByDrop() {
 		loadFile = '';
 		logorJSON = '';
 		process.logDropped = false;
-	} else if ((/\.(log)$/i).test(process.logDropPath) && logorJSON === 'SyntaxError') {
+	} else if ((/\.(log)$/i).test(process.logDropPath) &amp;&amp; logorJSON === 'SyntaxError') {
 		lineReader(loadFile, html);
 		logorJSON = '';
 	} else if ((/\.(html)$/i).test(loadFile)) {
@@ -329,11 +357,11 @@ function loadOutput() {
 				// The current property is not a direct property of p
 				continue;
 			}
-			process.htmlDone += tableify(obj[prop]) + '<hr>';
+			process.htmlDone += tableify(obj[prop]) + '&lt;hr>';
 			JSONParsed.push(obj[prop]);
 		}
 		process.logLoaded = true;
-		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
+		win.loadURL('data:text/html,' + css + '&lt;hr>' + stopdrop + process.htmlDone);
 	});
 }
 /**
@@ -351,11 +379,11 @@ function loadOutputDropped() {
 				// The current property is not a direct property of p
 				continue;
 			}
-			process.htmlDone += tableify(obj[prop]) + '<hr>';
+			process.htmlDone += tableify(obj[prop]) + '&lt;hr>';
 			JSONParsed.push(obj[prop]);
 		}
 		process.logLoaded = true;
-		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
+		win.loadURL('data:text/html,' + css + '&lt;hr>' + stopdrop + process.htmlDone);
 	});
 }
 /**
@@ -384,11 +412,11 @@ function watchFor(stop) {
  */
 function watchOpen(JSONParsed) {
 	JSONParsed = JSONParsed.reverse();
-	for (let i = 0; i < JSONParsed.length; i++) {
-		process.revHTML += tableify(JSONParsed[i]) + '<hr>'; // eslint-disable-line prefer-const
+	for (let i = 0; i &lt; JSONParsed.length; i++) {
+		process.revHTML += tableify(JSONParsed[i]) + '&lt;hr>'; // eslint-disable-line prefer-const
 	}
 	process.revHTML = process.revHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.revHTML); // eslint-disable-line no-useless-concat
+	win.loadURL('data:text/html,' + css + '&lt;hr>' + stopdrop + process.revHTML); // eslint-disable-line no-useless-concat
 }
 /**
  * Used to save loaded file as JSON.
@@ -561,3 +589,26 @@ const template = [{
 
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="createMainWindow.html">createMainWindow</a></li></ul><h3>Global</h3><ul><li><a href="global.html#dialogLoad">dialogLoad</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#funcSaveHTML">funcSaveHTML</a></li><li><a href="global.html#funcSaveJSON">funcSaveJSON</a></li><li><a href="global.html#getChecked">getChecked</a></li><li><a href="global.html#lineReader">lineReader</a></li><li><a href="global.html#loadAlternate">loadAlternate</a></li><li><a href="global.html#loadByDrop">loadByDrop</a></li><li><a href="global.html#loadFilter">loadFilter</a></li><li><a href="global.html#loadInit">loadInit</a></li><li><a href="global.html#loadOutput">loadOutput</a></li><li><a href="global.html#loadOutputDropped">loadOutputDropped</a></li><li><a href="global.html#logorjson">logorjson</a></li><li><a href="global.html#onClosed">onClosed</a></li><li><a href="global.html#sortaSorter">sortaSorter</a></li><li><a href="global.html#template">template</a></li><li><a href="global.html#watchFor">watchFor</a></li><li><a href="global.html#watchOpen">watchOpen</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.2</a> on Tue Nov 08 2016 17:03:06 GMT+1100 (AUS Eastern Daylight Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
