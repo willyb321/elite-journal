@@ -101,7 +101,7 @@ archiver-utils@^1.0.0, archiver-utils@^1.3.0:
     normalize-path "^2.0.0"
     readable-stream "^2.0.0"
 
-archiver@^1.1.0:
+archiver@^1.1.0, archiver@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/archiver/-/archiver-1.2.0.tgz#fb5c6af5443b3fa6a426344753bad2a7b444aadd"
   dependencies:
@@ -310,6 +310,12 @@ bluebird-lst-c@^1.0.2:
   dependencies:
     bluebird "^3.4.6"
 
+bluebird-lst-c@^1.0.3, bluebird-lst-c@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/bluebird-lst-c/-/bluebird-lst-c-1.0.4.tgz#1278210da5b0750959c3d15971154ff08e07ad93"
+  dependencies:
+    bluebird "^3.4.6"
+
 bluebird@^2.9.30:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-2.11.0.tgz#534b9033c022c9579c56ba3b3e5a5caafbb650e1"
@@ -382,9 +388,9 @@ buffers@~0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/buffers/-/buffers-0.1.1.tgz#b24579c3bed4d6d396aeee6d9a8ae7f5482ab7bb"
 
-bugsnag@^1.8.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/bugsnag/-/bugsnag-1.8.0.tgz#e4129d9ba29ac5141200d186ff8c0afef74337c7"
+bugsnag@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/bugsnag/-/bugsnag-1.9.0.tgz#28726902feb00a497c3c41ba9374b7972ae8048d"
   dependencies:
     promise "7.x"
     request "2.x"
@@ -909,16 +915,16 @@ electron-auto-updater@^0.5.0:
     source-map-support "^0.4.6"
     tunnel-agent "^0.4.3"
 
-electron-builder@^7.23.1:
-  version "7.23.1"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-7.23.1.tgz#27d6c6d072848e24e864f8da3bccb29df60f6bec"
+electron-builder@^7.26.0:
+  version "7.26.0"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-7.26.0.tgz#af0b4d97c3cdf29ad00ccfcd05ccc3792fd8a2ab"
   dependencies:
     "7zip-bin" "^2.0.4"
     ansi-escapes "^1.4.0"
-    archiver "^1.1.0"
+    archiver "^1.2.0"
     archiver-utils "^1.3.0"
     asar-electron-builder "^0.13.5"
-    bluebird-lst-c "^1.0.2"
+    bluebird-lst-c "^1.0.4"
     chalk "^1.1.3"
     chromium-pickle-js "^0.2.0"
     cli-cursor "^1.0.2"
@@ -926,7 +932,7 @@ electron-builder@^7.23.1:
     debug "^2.2.0"
     electron-download "2.1.2"
     electron-osx-sign-tf "~1.1.0"
-    fs-extra-p "^2.0.3"
+    fs-extra-p "^2.0.6"
     hosted-git-info "^2.1.5"
     ini "^1.3.4"
     isbinaryfile "^3.0.1"
@@ -1048,9 +1054,16 @@ electron-zip-packager@^4.0.0:
     electron-packager "^8.0.0"
     minimist "^1.2.0"
 
-electron@^1.3.1, electron@^1.4.5:
+electron@^1.3.1:
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/electron/-/electron-1.4.5.tgz#829c4884d641d88398805a7f94a37ec432a00bf3"
+  dependencies:
+    electron-download "^3.0.1"
+    extract-zip "^1.0.3"
+
+electron@^1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.4.6.tgz#7e8ea042f03ff3f14f48afa132f7fdecc29b3df5"
   dependencies:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
@@ -1514,6 +1527,13 @@ fs-extra-p@^2.0.3:
   resolved "https://registry.yarnpkg.com/fs-extra-p/-/fs-extra-p-2.0.3.tgz#570072384028c95193a158b4ff080be0200fd007"
   dependencies:
     bluebird "^3.4.6"
+    fs-extra-tf "^0.30.4"
+
+fs-extra-p@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/fs-extra-p/-/fs-extra-p-2.0.6.tgz#d6d83d9e517fc1d8b7557df78593a6258e1f381f"
+  dependencies:
+    bluebird-lst-c "^1.0.3"
     fs-extra-tf "^0.30.4"
 
 fs-extra-tf@^0.30.4:
