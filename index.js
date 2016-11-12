@@ -209,8 +209,10 @@ function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused
 			win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
 			process.logLoaded = true;
 			loadFile = '';
-		}}
-);}
+		}
+	}) // eslint-disable-line semi
+}
+
 /**
  * @param  {Array}
  * @return {String}
