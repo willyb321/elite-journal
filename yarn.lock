@@ -312,6 +312,12 @@ bluebird-lst-c@^1.0.3, bluebird-lst-c@^1.0.4:
   dependencies:
     bluebird "^3.4.6"
 
+bluebird-lst-c@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/bluebird-lst-c/-/bluebird-lst-c-1.0.5.tgz#50da657dcde337a0e29d9e080ba714c5a52016e2"
+  dependencies:
+    bluebird "^3.4.6"
+
 bluebird@^2.9.30:
   version "2.11.0"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-2.11.0.tgz#534b9033c022c9579c56ba3b3e5a5caafbb650e1"
@@ -690,17 +696,17 @@ debug@0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-0.7.4.tgz#06e1ea8082c2cb14e39806e22e2f6f757f92af39"
 
-debug@2, debug@^2.1.1, debug@^2.1.3, debug@^2.2.0, debug@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-2.3.2.tgz#94cb466ef7d6d2c7e5245cdd6e4104f2d0d70d30"
-  dependencies:
-    ms "0.7.2"
-
-debug@2.2.0:
+debug@2, debug@2.2.0, debug@^2.1.1, debug@^2.1.3, debug@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
     ms "0.7.1"
+
+debug@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.3.2.tgz#94cb466ef7d6d2c7e5245cdd6e4104f2d0d70d30"
+  dependencies:
+    ms "0.7.2"
 
 debuglog@^1.0.1:
   version "1.0.1"
@@ -887,9 +893,9 @@ ejs@^2.3.1:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.5.2.tgz#21444ba09386f0c65b6eafb96a3d51bcb3be80d1"
 
-electron-auto-updater:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-0.5.2.tgz#ca971831c2689fca4adc83e3225a5ef5e3e7a30c"
+electron-auto-updater@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-0.5.3.tgz#a2158c3c77f0159f770e2f0e49943772943ac2a5"
   dependencies:
     bluebird-lst-c "^1.0.4"
     debug "^2.3.2"
@@ -900,16 +906,16 @@ electron-auto-updater:
     source-map-support "^0.4.6"
     tunnel-agent "^0.4.3"
 
-electron-builder@^8.5.3:
-  version "8.5.3"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-8.5.3.tgz#edf61dbf32e2ebd8d0fe0633bc95302659ec27ef"
+electron-builder@^8.6.0:
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-8.6.0.tgz#5578453e31ea7b488b269bcee8e5cd3a47257dc6"
   dependencies:
     "7zip-bin" "^2.0.4"
     ansi-escapes "^1.4.0"
     archiver "^1.2.0"
     archiver-utils "^1.3.0"
     asar-electron-builder "^0.13.5"
-    bluebird-lst-c "^1.0.4"
+    bluebird-lst-c "^1.0.5"
     chalk "^1.1.3"
     chromium-pickle-js "^0.2.0"
     cli-cursor "^1.0.2"
@@ -917,7 +923,7 @@ electron-builder@^8.5.3:
     debug "^2.3.2"
     electron-download "2.1.2"
     electron-macos-sign "1.0.1"
-    fs-extra-p "^2.0.6"
+    fs-extra-p "^2.0.7"
     hosted-git-info "^2.1.5"
     ini "^1.3.4"
     isbinaryfile "^3.0.1"
@@ -939,7 +945,7 @@ electron-builder@^8.5.3:
     tunnel-agent "^0.4.3"
     update-notifier "^1.0.2"
     uuid-1345 "^0.99.6"
-    yargs "^6.3.0"
+    yargs "^6.4.0"
 
 electron-chromedriver@~1.4.0:
   version "1.4.0"
@@ -1039,9 +1045,16 @@ electron-zip-packager@^4.0.0:
     electron-packager "^8.0.0"
     minimist "^1.2.0"
 
-electron@^1.3.1, electron@^1.4.6:
+electron@^1.3.1:
   version "1.4.6"
   resolved "https://registry.yarnpkg.com/electron/-/electron-1.4.6.tgz#7e8ea042f03ff3f14f48afa132f7fdecc29b3df5"
+  dependencies:
+    electron-download "^3.0.1"
+    extract-zip "^1.0.3"
+
+electron@^1.4.7:
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.4.7.tgz#a63cffda5502929511523ef14c15c3113e6e29b9"
   dependencies:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
@@ -1507,6 +1520,13 @@ fs-extra-p@^2.0.6:
     bluebird-lst-c "^1.0.3"
     fs-extra-tf "^0.30.4"
 
+fs-extra-p@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/fs-extra-p/-/fs-extra-p-2.0.7.tgz#525a86ee1250510210defe1ea39f473c23ecfa96"
+  dependencies:
+    bluebird-lst-c "^1.0.4"
+    fs-extra-tf "^1.0.0"
+
 fs-extra-tf@^0.30.4:
   version "0.30.4"
   resolved "https://registry.yarnpkg.com/fs-extra-tf/-/fs-extra-tf-0.30.4.tgz#c31e0c83a92201bd948e788563e1c02f35583e8f"
@@ -1516,6 +1536,14 @@ fs-extra-tf@^0.30.4:
     klaw "^1.3.1"
     path-is-absolute "^1.0.1"
     rimraf "^2.5.4"
+
+fs-extra-tf@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra-tf/-/fs-extra-tf-1.0.0.tgz#77d3d7dc2199fbc618a42fe5ea81137db95eeb2e"
+  dependencies:
+    graceful-fs "^4.1.10"
+    jsonfile "^2.4.0"
+    klaw "^1.3.1"
 
 fs-extra@0.26.7:
   version "0.26.7"
@@ -1651,7 +1679,7 @@ glob-stream@^5.3.2:
     to-absolute-glob "^0.1.1"
     unique-stream "^2.0.2"
 
-glob@7.0.5, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
+glob@7.0.5:
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.0.5.tgz#b4202a69099bbb4d292a7c1b95b6682b67ebdc95"
   dependencies:
@@ -1662,7 +1690,7 @@ glob@7.0.5, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@7.1.1:
+glob@7.1.1, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
   dependencies:
@@ -1738,7 +1766,7 @@ got@^5.0.0:
     unzip-response "^1.0.2"
     url-parse-lax "^1.0.0"
 
-graceful-fs@4.1.10, graceful-fs@^4.0.0, graceful-fs@^4.1.0, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
+graceful-fs@4.1.10, graceful-fs@^4.0.0, graceful-fs@^4.1.0, graceful-fs@^4.1.10, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9:
   version "4.1.10"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.10.tgz#f2d720c22092f743228775c75e3612632501f131"
 
@@ -3450,15 +3478,15 @@ rgb2hex@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/rgb2hex/-/rgb2hex-0.1.0.tgz#ccd55f860ae0c5c4ea37504b958e442d8d12325b"
 
-rimraf@^2.2.8, rimraf@^2.5.4:
+rimraf@^2.2.8, rimraf@~2.2.0:
+  version "2.2.8"
+  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
+
+rimraf@^2.5.4:
   version "2.5.4"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.5.4.tgz#96800093cbf1a0c86bd95b4625467535c29dfa04"
   dependencies:
     glob "^7.0.5"
-
-rimraf@~2.2.0:
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
 
 rimraf@~2.4.0:
   version "2.4.5"
@@ -4281,15 +4309,15 @@ yallist@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.0.0.tgz#306c543835f09ee1a4cb23b7bce9ab341c91cdd4"
 
-yargs-parser@^4.0.2:
+yargs-parser@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-4.1.0.tgz#313df030f20124124aeae8fbab2da53ec28c56d7"
   dependencies:
     camelcase "^3.0.0"
 
-yargs@^6.3.0:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-6.3.0.tgz#19c6dbb768744d571eb6ebae0c174cf2f71b188d"
+yargs@^6.4.0:
+  version "6.4.0"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-6.4.0.tgz#816e1a866d5598ccf34e5596ddce22d92da490d4"
   dependencies:
     camelcase "^3.0.0"
     cliui "^3.2.0"
@@ -4304,7 +4332,7 @@ yargs@^6.3.0:
     which-module "^1.0.0"
     window-size "^0.2.0"
     y18n "^3.2.1"
-    yargs-parser "^4.0.2"
+    yargs-parser "^4.1.0"
 
 yauzl@2.4.1, yauzl@^2.2.1:
   version "2.4.1"
