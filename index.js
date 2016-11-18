@@ -14,6 +14,7 @@ const jsonfile = require('jsonfile');
 const bugsnag = require('bugsnag');
 const watch = require('node-watch');
 const openAboutWindow = require('about-window').default;
+const LogWatcher = require('./lib/log-watcher.js').LogWatcher
 
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847');
 const app = electron.app;
@@ -48,6 +49,7 @@ autoUpdater.on('error', error => {
 		bugsnag.notify(error);
 	}
 });
+let watchTest = []
 let watching;
 let watcher;
 let loadFile;
@@ -425,6 +427,25 @@ function funcSaveJSON() {
 		});
 	}
 }
+function watchGood() {
+	const watcher = new LogWatcher(logPath);
+	watcher.on('error', err => {
+		console.error(err.stack || err);
+		process.exit(1); // eslint-disable-line unicorn/no-process-exit
+	});
+	watcher.on('data', obs => {
+		obs.forEach(ob => {
+			const {timestamp, event} = ob;
+			console.log('\n' + timestamp, event);
+			delete ob.timestamp;
+			delete ob.event;
+			Object.keys(ob).sort().forEach(k => {
+				console.log('\t' + k, ob[k]);
+			});
+		});
+	});
+}
+
 /**
  * Called when all windows are closed.
  */
@@ -458,6 +479,7 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
+	// watchGood();
 	if (!isDev) {
 		autoUpdater.checkForUpdates();
 	}
