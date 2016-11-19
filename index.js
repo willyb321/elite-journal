@@ -14,7 +14,7 @@ const jsonfile = require('jsonfile');
 const bugsnag = require('bugsnag');
 const watch = require('node-watch');
 const openAboutWindow = require('about-window').default;
-const LogWatcher = require('./lib/log-watcher.js').LogWatcher
+const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
 
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847');
 const app = electron.app;
@@ -49,7 +49,7 @@ autoUpdater.on('error', error => {
 		bugsnag.notify(error);
 	}
 });
-let watchTest = []
+const watchTest = [];
 let watching;
 let watcher;
 let loadFile;
@@ -365,7 +365,7 @@ function loadOutputDropped() {
  * @param  {Boolean} stop - whether or not to stop watching logs.
  * @description Temporary, used to watch logs. A better solution is being developed.
  */
-function watchFor(stop) {
+function watchFor(stop) { // eslint-disable-line no-unused-vars
 	watching = true;
 	watcher = watch(logPath);
 	watcher.on('change', log => {
@@ -427,23 +427,34 @@ function funcSaveJSON() {
 		});
 	}
 }
-function watchGood() {
-	const watcher = new LogWatcher(logPath);
-	watcher.on('error', err => {
-		console.error(err.stack || err);
-		process.exit(1); // eslint-disable-line unicorn/no-process-exit
-	});
-	watcher.on('data', obs => {
-		obs.forEach(ob => {
-			const {timestamp, event} = ob;
-			console.log('\n' + timestamp, event);
-			delete ob.timestamp;
-			delete ob.event;
-			Object.keys(ob).sort().forEach(k => {
-				console.log('\t' + k, ob[k]);
+function watchGood(stop) {
+	if (!stop) {
+		const watcher = new LogWatcher();
+		watcher.on('error', err => {
+			console.error(err.stack || err);
+			process.exit(1); // eslint-disable-line unicorn/no-process-exit
+		});
+		watcher.on('finished', () => {
+			console.log('it stopped');
+			let watchTestRev = watchTest.reverse();
+			win.loadURL('data:text/html,' + css + tableify(watchTestRev));
+			watchTestRev = [];
+		// watchTest = [];
+		});
+		watcher.on('data', obs => {
+			obs.forEach(ob => {
+				const {timestamp, event} = ob;
+				watchTest.push('\n' + '<hr>' + timestamp, event); // eslint-disable-line no-useless-concat
+				console.log('\n' + timestamp, event);
+				delete ob.timestamp;
+				delete ob.event;
+				Object.keys(ob).sort().forEach(k => {
+					console.log('\t' + k, ob[k]);
+					watchTest.push('\t' + k + ': ' + ob[k]);
+				});
 			});
 		});
-	});
+	}
 }
 
 /**
@@ -511,9 +522,9 @@ const template = [{
 			let stop;
 			console.log(checked.checked);
 			if (checked.checked === true) {
-				watchFor();
+				watchGood();
 			} else if (checked.checked === false) {
-				watchFor(stop);
+				watchGood(stop);
 			}
 		}
 	}]
