@@ -437,20 +437,23 @@ function watchGood(stop) {
 		watcher.on('finished', () => {
 			console.log('it stopped');
 			let watchTestRev = watchTest.reverse();
-			win.loadURL('data:text/html,' + css + tableify(watchTestRev));
+			let watchTestRevTable = tableify(watchTestRev);
+			win.loadURL('data:text/html,' + css + watchTestRevTable);
 			watchTestRev = [];
-		// watchTest = [];
+			watchTestRevTable = [];
+			// watchTest = [];
 		});
 		watcher.on('data', obs => {
 			obs.forEach(ob => {
 				const {timestamp, event} = ob;
-				watchTest.push('\n' + '<hr>' + timestamp, event); // eslint-disable-line no-useless-concat
+				watchTest.push('<hr>');
+				watchTest.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
 				console.log('\n' + timestamp, event);
 				delete ob.timestamp;
 				delete ob.event;
 				Object.keys(ob).sort().forEach(k => {
 					console.log('\t' + k, ob[k]);
-					watchTest.push('\t' + k + ': ' + ob[k]);
+					watchTest.push(k + ': ' + ob[k]);
 				});
 			});
 		});
