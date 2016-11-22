@@ -428,35 +428,39 @@ function funcSaveJSON() {
 	}
 }
 function watchGood(stop) {
-	if (!stop) {
-		const watcher = new LogWatcher();
-		watcher.on('error', err => {
-			console.error(err.stack || err);
-			process.exit(1); // eslint-disable-line unicorn/no-process-exit
-		});
-		watcher.on('finished', () => {
-			console.log('it stopped');
-			let watchTestRev = watchTest.reverse();
-			let watchTestRevTable = tableify(watchTestRev);
-			win.loadURL('data:text/html,' + css + watchTestRevTable);
-			watchTestRev = [];
-			watchTestRevTable = [];
+	const watcher = new LogWatcher();
+	watcher.on('error', err => {
+		console.error(err.stack || err);
+		process.exit(1); // eslint-disable-line unicorn/no-process-exit
+	});
+	watcher.on('finished', () => {
+		console.log('it stopped');
+		let watchTestRev = watchTest.reverse();
+		let watchTestRevTable = tableify(watchTestRev);
+		win.loadURL('data:text/html,' + css + watchTestRevTable);
+		watchTestRev = [];
+		watchTestRevTable = [];
 			// watchTest = [];
-		});
-		watcher.on('data', obs => {
-			obs.forEach(ob => {
-				const {timestamp, event} = ob;
-				watchTest.push('<hr>');
-				watchTest.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
-				console.log('\n' + timestamp, event);
-				delete ob.timestamp;
-				delete ob.event;
-				Object.keys(ob).sort().forEach(k => {
-					console.log('\t' + k, ob[k]);
-					watchTest.push(k + ': ' + ob[k]);
-				});
+	});
+	watcher.on('stopped', () => {
+		console.log('nah its stopped');
+	});
+	watcher.on('data', obs => {
+		obs.forEach(ob => {
+			const {timestamp, event} = ob;
+			watchTest.push('<hr>');
+			watchTest.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
+				// console.log('\n' + timestamp, event);
+			delete ob.timestamp;
+			delete ob.event;
+			Object.keys(ob).sort().forEach(k => {
+					// console.log('\t' + k, ob[k]);
+				watchTest.push(k + ': ' + ob[k]);
 			});
 		});
+	});
+	if (stop === 1) {
+		watcher.stop();
 	}
 }
 
@@ -522,7 +526,7 @@ const template = [{
 		type: 'checkbox',
 		id: 'checked',
 		click(checked) {
-			let stop;
+			const stop = 1;
 			console.log(checked.checked);
 			if (checked.checked === true) {
 				watchGood();
