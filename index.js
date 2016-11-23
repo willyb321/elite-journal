@@ -452,9 +452,15 @@ function watchGood(stop) {
 			delete ob.timestamp;
 			delete ob.event;
 			Object.keys(ob).sort().forEach(k => {
-				process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
-				console.log('\t' + k, ob[k]);
-				JSONParsed.push(k + ': ' + ob[k]);
+				if (k === 'StarPos') {
+					console.log('test');
+					console.log('test' + ob[k]);
+					process.htmlDone += '(x / y / z) <br>' + tableify(ob[k].join('<br>')) + '<br>';
+				} else {
+					process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
+					console.log('\t' + k, ob[k]);
+					JSONParsed.push(k + ': ' + ob[k]);
+				}
 			});
 		});
 	});
