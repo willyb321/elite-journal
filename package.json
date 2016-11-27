@@ -26,7 +26,7 @@
     "electron"
   ],
   "dependencies": {
-    "about-window": "^1.6.0",
+    "about-window": "^1.6.1",
     "bugsnag": "^1.9.0",
     "debug": "^2.3.3",
     "electron-auto-updater": "^0.6.0",
@@ -42,12 +42,12 @@
   },
   "devDependencies": {
     "devtron": "^1.4.0",
-    "electron": "^1.4.7",
+    "electron": "^1.4.8",
     "electron-builder": "^8.7.0",
     "electron-zip-packager": "^4.0.0",
     "jake": "latest",
     "jsdoc": "^3.4.3",
-    "mocha": "^3.1.2",
+    "mocha": "^3.2.0",
     "mocha-circleci-reporter": "^0.0.2",
     "release-it": "^2.5.1",
     "spectron": "^3.4.0",
