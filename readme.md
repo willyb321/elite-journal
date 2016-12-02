@@ -16,19 +16,34 @@ Download a [setup .exe](https://github.com/willyb321/elite-journal/releases/late
   <img style="width: 100%"src="https://raw.githubusercontent.com/willyb321/elite-journal/master/screenshot.png"/>
 </p>
 
+<!-- MarkdownTOC -->
+
+- [Dev](#dev)
+- [Run](#run)
+- [Build](#build)
+- [Quick Development setup](#quick-development-setup)
+- [Contributing](#contributing)
+- [Changes](#changes)
+- [Features](#features)
+- [License](#license)
+- [Support on Beerpay](#support-on-beerpay)
+
+<!-- /MarkdownTOC -->
+
+
 ## Dev
 
 ```
 $ npm install
 ```
 
-### Run
+## Run
 
 ```
 $ npm start
 ```
 
-### Build
+## Build
 
 ```
 $ npm run pack
@@ -45,7 +60,7 @@ $ npm run dist
 
 Builds the app and distributable setup exe for Windows x64, using [electron-builder](https://github.com/electron-userland/electron-builder).
 
-### Quick Development setup.
+## Quick Development setup
 
 ```
 curl -o- -L https://raw.githubusercontent.com/willyb321/elite-journal/master/.scripts/get.sh | bash
@@ -55,7 +70,7 @@ curl -o- -L https://raw.githubusercontent.com/willyb321/elite-journal/master/.sc
 
 See [CONTRIBUTING.md](https://github.com/willyb321/elite-journal/blob/master/CONTRIBUTING.md) for guidelines.
 
-## Changes:
+## Changes
 
 See [CHANGELOG.md](https://github.com/willyb321/elite-journal/blob/master/CHANGELOG.md) for changes.
 
