@@ -191,8 +191,10 @@ function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused
 		console.log(err);
 	});
 	lr.on('line', line => {
+		//noinspection NodeModulesDependencies,NodeModulesDependencies,ES6ModulesDependencies,ES6ModulesDependencies
 		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
 		JSONParsed.push(lineParse);
+		//noinspection UnnecessaryLocalVariableJS
 		let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
 		html += htmlTabled;
 	});
