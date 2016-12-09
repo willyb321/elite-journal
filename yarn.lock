@@ -891,22 +891,22 @@ ejs@^2.3.1:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.5.2.tgz#21444ba09386f0c65b6eafb96a3d51bcb3be80d1"
 
-electron-auto-updater@^0.6.2:
-  version "0.6.2"
-  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-0.6.2.tgz#a58eecc1c291cd56ea58344a3aad3c5ca825de38"
+electron-auto-updater@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-0.7.0.tgz#13cd72f86d2585f61427253be757c32ddbee39f2"
   dependencies:
     bluebird-lst-c "^1.0.5"
     debug "^2.3.3"
-    fs-extra-p "^3.0.2"
+    fs-extra-p "^3.0.3"
     ini "^1.3.4"
     js-yaml "^3.7.0"
     semver "^5.3.0"
     source-map-support "^0.4.6"
     tunnel-agent "^0.4.3"
 
-electron-builder@^10.4.3:
-  version "10.4.3"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-10.4.3.tgz#f7441390e8e5ca65ebad30602745f3e9f7a95e3e"
+electron-builder@^10.6.1:
+  version "10.6.1"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-10.6.1.tgz#fc1a1a3d47d9d38aacf1203133c8ab236e370916"
   dependencies:
     "7zip-bin" "^2.0.4"
     ansi-escapes "^1.4.0"
@@ -930,7 +930,7 @@ electron-builder@^10.4.3:
     lodash.template "^4.4.0"
     mime "^1.3.4"
     minimatch "^3.0.3"
-    node-emoji "^1.4.1"
+    node-emoji "^1.4.3"
     normalize-package-data "^2.3.5"
     parse-color "^1.0.0"
     plist "^2.0.1"
@@ -943,9 +943,9 @@ electron-builder@^10.4.3:
     source-map-support "^0.4.6"
     stat-mode "^0.2.2"
     tunnel-agent "^0.4.3"
-    update-notifier "^1.0.2"
+    update-notifier "^1.0.3"
     uuid-1345 "^0.99.6"
-    yargs "^6.4.0"
+    yargs "^6.5.0"
 
 electron-chromedriver@~1.4.0:
   version "1.4.0"
@@ -1051,9 +1051,9 @@ electron@^1.3.1:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
 
-electron@^1.4.10:
-  version "1.4.10"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-1.4.10.tgz#11492d82eb1d92fa36006c2376404d13a790f393"
+electron@^1.4.11:
+  version "1.4.11"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-1.4.11.tgz#368e8a85c2bf3076f62bc4840132f022c9cfb0ec"
   dependencies:
     electron-download "^3.0.1"
     extract-zip "^1.0.3"
@@ -1512,7 +1512,7 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
-fs-extra-p@^3.0.2, fs-extra-p@^3.0.3:
+fs-extra-p@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/fs-extra-p/-/fs-extra-p-3.0.3.tgz#2e48b1e6c196feb75ac6f0c6419760ce8b847f33"
   dependencies:
@@ -2697,9 +2697,9 @@ ncp@~0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/ncp/-/ncp-0.4.2.tgz#abcc6cbd3ec2ed2a729ff6e7c1fa8f01784a8574"
 
-node-emoji@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.4.1.tgz#c9fa0cf91094335bcb967a6f42b2305c15af2ebc"
+node-emoji@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/node-emoji/-/node-emoji-1.4.3.tgz#5272f70b823c4df6d7c39f84fd8203f35b3e5d36"
   dependencies:
     string.prototype.codepointat "^0.2.0"
 
@@ -3926,9 +3926,22 @@ unzip-response@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/unzip-response/-/unzip-response-1.0.2.tgz#b984f0877fc0a89c2c773cc1ef7b5b232b5b06fe"
 
-update-notifier@^1.0.0, update-notifier@^1.0.2:
+update-notifier@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-1.0.2.tgz#27c90519196dc15015be02a34ea52986feab8877"
+  dependencies:
+    boxen "^0.6.0"
+    chalk "^1.0.0"
+    configstore "^2.0.0"
+    is-npm "^1.0.0"
+    latest-version "^2.0.0"
+    lazy-req "^1.1.0"
+    semver-diff "^2.0.0"
+    xdg-basedir "^2.0.0"
+
+update-notifier@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/update-notifier/-/update-notifier-1.0.3.tgz#8f92c515482bd6831b7c93013e70f87552c7cf5a"
   dependencies:
     boxen "^0.6.0"
     chalk "^1.0.0"
@@ -4246,15 +4259,15 @@ yallist@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-2.0.0.tgz#306c543835f09ee1a4cb23b7bce9ab341c91cdd4"
 
-yargs-parser@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-4.1.0.tgz#313df030f20124124aeae8fbab2da53ec28c56d7"
+yargs-parser@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-4.2.0.tgz#6ced869cd05a3dca6a1eaee38b68aeed4b0b4101"
   dependencies:
     camelcase "^3.0.0"
 
-yargs@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-6.4.0.tgz#816e1a866d5598ccf34e5596ddce22d92da490d4"
+yargs@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-6.5.0.tgz#a902e23a1f0fe912b2a03f6131b7ed740c9718ff"
   dependencies:
     camelcase "^3.0.0"
     cliui "^3.2.0"
@@ -4269,7 +4282,7 @@ yargs@^6.4.0:
     which-module "^1.0.0"
     window-size "^0.2.0"
     y18n "^3.2.1"
-    yargs-parser "^4.1.0"
+    yargs-parser "^4.2.0"
 
 yauzl@2.4.1, yauzl@^2.2.1:
   version "2.4.1"
