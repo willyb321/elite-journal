@@ -42,7 +42,7 @@
   "devDependencies": {
     "devtron": "^1.4.0",
     "electron": "^1.4.7",
-    "electron-builder": "^8.6.0",
+    "electron-builder": "^10.7.0",
     "electron-zip-packager": "^4.0.0",
     "jake": "latest",
     "jsdoc": "^3.4.3",
