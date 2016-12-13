@@ -430,8 +430,7 @@ function watchGood(stop) {
 	process.logLoaded = true;
 	const watcher = new LogWatcher();
 	watcher.on('error', err => {
-		console.error(err.stack || err);
-		process.exit(1); // eslint-disable-line unicorn/no-process-exit
+		bugsnag.notify(err);
 	});
 	watcher.on('finished', () => {
 		console.log('it stopped');
