@@ -239,10 +239,10 @@ function loadInit() {
 	loadAlternate(logorJSON, loadFile, html);
 }
 /**
- * @param  {String}
- * @param  {Array}
- * @param  {String}
  * Figures out how to load the file that was selected in loadInit()
+ * @param logorJSON
+ * @param loadFile
+ * @param html
  */
 function loadAlternate(logorJSON, loadFile, html) {
 	watching = false;
