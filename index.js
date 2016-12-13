@@ -14,6 +14,7 @@ const jsonfile = require('jsonfile');
 const bugsnag = require('bugsnag');
 const watch = require('node-watch');
 const openAboutWindow = require('about-window').default;
+const storage = require('electron-json-storage');
 const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
 
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847');
@@ -104,11 +105,30 @@ function dialogLoad() {
 /**
  * On any uncaught exception notifys bugsnag and console logs the error.
  */
-process.on('uncaughtException', err => {
+function uncaughtErr(err) {
 	if (!isDev) {
-		bugsnag.notify(err);
+		const out = storage.get('optOut', (error, data) => {
+			if (data) {
+				console.log(data);
+				return data;
+			}
+			if (error) {
+				console.log(error);
+			}
+		});
+		if (out === {out: false} || out === {}) {
+			bugsnag.notify(err);
+			return 'notout';
+		} else if (out === {out: true}) {
+			dialog.showErrorBox('Error!', 'Please report the following: \n' + err);
+			return 'out';
+		}
 	}
 	console.log('ERROR! The error is: ' + err.message);
+}
+
+process.on('uncaughtException', err => {
+	uncaughtErr(err);
 });
 /**
  * This is used for filtering.
@@ -157,6 +177,23 @@ function sortaSorter() {
 		});
 	}
 }
+function optOut(yes) {
+	if (yes === 1) {
+		storage.set('optOut', {out: true}, err => {
+			if (err) {
+				console.log(err);
+			}
+		});
+	}
+	if (!yes) {
+		storage.set('optOut', {out: false}, err => {
+			if (err) {
+				console.log(err);
+			}
+		});
+	}
+}
+
 /**
  * Used to populate the JSONParsedEvent array, which is used to load filtered logs.
  */
@@ -503,6 +540,7 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
 	// watchGood();
+	optOut();
 	if (!isDev) {
 		autoUpdater.checkForUpdates();
 	}
@@ -601,6 +639,33 @@ const template = [{
 			bug_report_url: 'https://github.com/willyb321/elite-journal/issues', // eslint-disable-line camelcase
 			homepage: 'https://github.com/willyb321/elite-journal'
 		})
+	}, {
+		label: 'Opt-out of auto crash reporting.',
+		type: 'checkbox',
+		id: 'optout',
+		checked: () => {
+			storage.get('optOut', (err, data) => {
+				if (data === true) {
+					console.log('true');
+					return true;
+				} else if (data === false) {
+					console.log('false');
+					return false;
+				}
+				if (err) {
+					console.log(err);
+				}
+			});
+		},
+		click(optout) {
+			const yes = 1;
+			console.log(optout.checked);
+			if (optout.checked === true) {
+				optOut();
+			} else if (optout.checked === false) {
+				optOut(yes);
+			}
+		}
 	}
 	]
 }];
