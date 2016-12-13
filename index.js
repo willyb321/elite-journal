@@ -46,7 +46,7 @@ autoUpdater.on('error', error => {
 		title: 'Update ready to install.',
 		message: `Sorry, we've had an error. The message is ` + error
 	});
-	if (!isDev) {
+	if (!isDev && uncaughtErr(error) !== {out: true}) {
 		bugsnag.notify(error);
 	}
 });
@@ -106,24 +106,22 @@ function dialogLoad() {
  * On any uncaught exception notifys bugsnag and console logs the error.
  */
 function uncaughtErr(err) {
-	if (!isDev) {
-		const out = storage.get('optOut', (error, data) => {
-			if (data) {
-				console.log(data);
-				return data;
+	// if (!isDev) {
+	storage.get('optOut', (error, data) => {
+		if (data) {
+			console.log(data);
+			if (data === {out: false} || data === {}) {
+				bugsnag.notify(err);
+			} else {
+				dialog.showErrorBox('Error!', 'Please report the following: \n' + err);
 			}
-			if (error) {
-				console.log(error);
-			}
-		});
-		if (out === {out: false} || out === {}) {
-			bugsnag.notify(err);
-			return 'notout';
-		} else if (out === {out: true}) {
-			dialog.showErrorBox('Error!', 'Please report the following: \n' + err);
-			return 'out';
+			return data;
 		}
-	}
+		if (error) {
+			console.log(error);
+		}
+	});
+	// }
 	console.log('ERROR! The error is: ' + err.message);
 }
 
@@ -178,18 +176,49 @@ function sortaSorter() {
 	}
 }
 function optOut(yes) {
+	storage.get('optOut', (error, data) => {
+		if (data) {
+			console.log(data);
+			if (data.out === false) {
+				console.log('in');
+			} else if (data.out === true) {
+				console.log('out');
+			}
+		}
+		if (error) {
+			console.log(error);
+		}
+	});
 	if (yes === 1) {
 		storage.set('optOut', {out: true}, err => {
 			if (err) {
 				console.log(err);
 			}
+			dialog.showMessageBox({
+				type: 'info',
+				buttons: [],
+				title: 'Opted back into diagnostics',
+				message: 'You have opted out of auto crash/error reporting.'
+			});
+			yes = undefined;
 		});
 	}
 	if (!yes) {
+		storage.remove('optOut', err => {
+			if (err) {
+				console.log(err);
+			}
+		});
 		storage.set('optOut', {out: false}, err => {
 			if (err) {
 				console.log(err);
 			}
+			dialog.showMessageBox({
+				type: 'info',
+				buttons: [],
+				title: 'Opted back into diagnostics',
+				message: 'You have opted into auto crash/error reporting.'
+			});
 		});
 	}
 }
@@ -540,7 +569,7 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
 	// watchGood();
-	optOut();
+
 	if (!isDev) {
 		autoUpdater.checkForUpdates();
 	}
@@ -643,26 +672,11 @@ const template = [{
 		label: 'Opt-out of auto crash reporting.',
 		type: 'checkbox',
 		id: 'optout',
-		checked: () => {
-			storage.get('optOut', (err, data) => {
-				if (data === true) {
-					console.log('true');
-					return true;
-				} else if (data === false) {
-					console.log('false');
-					return false;
-				}
-				if (err) {
-					console.log(err);
-				}
-			});
-		},
-		click(optout) {
+		click: optout => {
 			const yes = 1;
-			console.log(optout.checked);
-			if (optout.checked === true) {
+			if (optout.checked === false) {
 				optOut();
-			} else if (optout.checked === false) {
+			} else if (optout.checked === true) {
 				optOut(yes);
 			}
 		}
