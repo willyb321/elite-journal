@@ -18,7 +18,7 @@ const storage = require('electron-json-storage');
 const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
 
 const app = electron.app;
-bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', { appVersion: app.getVersion(), sendCode: true });
+bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
 let win;
 /** Autoupdater on update available */
 autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-vars
@@ -93,7 +93,7 @@ function opted() {
 			uncaughtErr(err);
 		}
 	});
-};
+}
 
 /**
  * Used by various functions to show a dialog for loading files into the program
@@ -117,7 +117,7 @@ function dialogLoad() {
  * On any uncaught exception notifys bugsnag and console logs the error.
  */
 function uncaughtErr(err) {
-	storage.get('optOut', function(error, data) {
+	storage.get('optOut', (error, data) => {
 		if (data) {
 			console.log(data);
 			if (data.out === false) {
