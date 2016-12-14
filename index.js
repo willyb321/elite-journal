@@ -504,16 +504,17 @@ function watchGood(stop) {
 	watcher.on('finished', () => {
 		console.log('it stopped');
 		JSONParsed = JSONParsed.reverse();
-		win.loadURL('data:text/html,' + css + stopdrop + process.htmlDone);
-		JSONParsed = [];
-		process.htmlDone = '';
+		process.htmlDone = process.htmlDone.replace('undefined', '');
+		win.loadURL('data:text/html,' + css + stopdrop + `<script>function scroll() {window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);} window.onload = scroll;</script>` + process.htmlDone);
+		// JSONParsed = [];
+		// process.htmlDone = '';
 	});
 
 	watcher.on('stopped', () => {
 		console.log('nah its stopped');
 	});
 	watcher.on('data', obs => {
-		obs = obs.reverse();
+		// obs = obs.reverse();
 		obs.forEach(ob => {
 			const {timestamp, event} = ob;
 			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
