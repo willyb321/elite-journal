@@ -84,6 +84,17 @@ function onClosed() {
 	// for multiple windows store them in an array
 	mainWindow = null;
 }
+const opted = function () {
+	storage.get('optOut', (err, data) => {
+		if (data === {out: false} || data === {}) {
+			return false;
+		}
+		if (err) {
+			uncaughtErr(err);
+		}
+	});
+};
+
 /**
  * Used by various functions to show a dialog for loading files into the program
  */
@@ -505,10 +516,12 @@ function watchGood(stop) {
 		JSONParsed = [];
 		process.htmlDone = '';
 	});
+
 	watcher.on('stopped', () => {
 		console.log('nah its stopped');
 	});
 	watcher.on('data', obs => {
+		obs = obs.reverse();
 		obs.forEach(ob => {
 			const {timestamp, event} = ob;
 			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
@@ -516,10 +529,8 @@ function watchGood(stop) {
 			console.log('\n' + timestamp, event);
 			delete ob.timestamp;
 			delete ob.event;
-			Object.keys(ob).sort().forEach(k => {
+			Object.keys(ob).forEach(k => {
 				if (k === 'StarPos') {
-					console.log('test');
-					console.log('test' + ob[k]);
 					process.htmlDone += '(x / y / z) <br>' + tableify(ob[k].join('<br>')) + '<br>';
 				} else {
 					process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
@@ -569,7 +580,6 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
 	// watchGood();
-
 	if (!isDev) {
 		autoUpdater.checkForUpdates();
 	}
@@ -672,6 +682,7 @@ const template = [{
 		label: 'Opt-out of auto crash reporting.',
 		type: 'checkbox',
 		id: 'optout',
+		checked: opted,
 		click: optout => {
 			const yes = 1;
 			if (optout.checked === false) {
@@ -683,6 +694,5 @@ const template = [{
 	}
 	]
 }];
-
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
