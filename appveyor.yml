@@ -6,7 +6,7 @@ environment:
   BT_TOKEN:
     secure: 4a/+kLKvQgpZqlldPjXcGGY2B8tuv+/hfkg250cg4STsspLG3XO7yZLsZnOEEB8z
 install:
-- cmd: npm install -g yarn
+- cmd: choco install yarn
 - cmd: refreshenv
 - cmd: yarn install
 cache:
