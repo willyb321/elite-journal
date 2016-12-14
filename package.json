@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "jake test",
-    "start": "electron .",
+    "start": "set NODE_ENV=development && electron .",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
     "pack": "jake pack",
     "dist": "jake build",

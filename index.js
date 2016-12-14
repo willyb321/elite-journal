@@ -30,7 +30,7 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 	});
 });
 /** Autoupdater on downloaded */
-autoUpdater.on('update-downloaded', releaseName => { // eslint-disable-line no-unused-vars
+autoUpdater.on('update-downloaded', () => { // eslint-disable-line no-unused-vars
 	dialog.showMessageBox({
 		type: 'info',
 		buttons: [],
@@ -86,8 +86,10 @@ function onClosed() {
 }
 function opted() {
 	storage.get('optOut', (err, data) => {
-		if (data === {out: false} || data === {}) {
+		if (data.out === false || data.out === undefined) {
 			return false;
+		} else {
+			return true
 		}
 		if (err) {
 			uncaughtErr(err);
