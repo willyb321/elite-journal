@@ -17,8 +17,8 @@ const openAboutWindow = require('about-window').default;
 const storage = require('electron-json-storage');
 const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
 
-bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847');
 const app = electron.app;
+bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', { appVersion: app.getVersion(), sendCode: true });
 let win;
 /** Autoupdater on update available */
 autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-vars
@@ -84,7 +84,7 @@ function onClosed() {
 	// for multiple windows store them in an array
 	mainWindow = null;
 }
-const opted = function () {
+function opted() {
 	storage.get('optOut', (err, data) => {
 		if (data === {out: false} || data === {}) {
 			return false;
@@ -117,22 +117,21 @@ function dialogLoad() {
  * On any uncaught exception notifys bugsnag and console logs the error.
  */
 function uncaughtErr(err) {
-	// if (!isDev) {
-	storage.get('optOut', (error, data) => {
+	storage.get('optOut', function(error, data) {
 		if (data) {
 			console.log(data);
-			if (data === {out: false} || data === {}) {
+			if (data.out === false) {
 				bugsnag.notify(err);
-			} else {
+				return data;
+			} else if (data.out === true) {
 				dialog.showErrorBox('Error!', 'Please report the following: \n' + err);
+				return data;
 			}
-			return data;
 		}
 		if (error) {
 			console.log(error);
 		}
 	});
-	// }
 	console.log('ERROR! The error is: ' + err.message);
 }
 
@@ -577,6 +576,7 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
  * Called when app is ready, and checks for updates.
  */
 app.on('ready', () => {
+	opted();
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
 	// watchGood();
