@@ -86,14 +86,10 @@ function onClosed() {
 }
 function opted() {
 	storage.get('optOut', (err, data) => {
-		if (data.out === false || data.out === undefined) {
-			return false;
-		} else {
-			return true
-		}
 		if (err) {
 			uncaughtErr(err);
 		}
+		return !(data.out === false || data.out === undefined);
 	});
 }
 
@@ -214,16 +210,11 @@ function optOut(yes) {
 			});
 			yes = undefined;
 		});
-	}
-	if (!yes) {
-		storage.remove('optOut', err => {
-			if (err) {
-				console.log(err);
-			}
-		});
+	} else if (yes === 0) {
 		storage.set('optOut', {out: false}, err => {
 			if (err) {
 				console.log(err);
+				bugsnag.notify(new Error(err));
 			}
 			dialog.showMessageBox({
 				type: 'info',
@@ -289,7 +280,7 @@ function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused
 			process.logLoaded = true;
 			loadFile = '';
 		}
-	}) // eslint-disable-line semi
+	}); // eslint-disable-line semi
 }
 
 /**
@@ -686,10 +677,12 @@ const template = [{
 		id: 'optout',
 		checked: opted,
 		click: optout => {
-			const yes = 1;
+			let yes;
 			if (optout.checked === false) {
-				optOut();
+				yes = 0;
+				optOut(yes);
 			} else if (optout.checked === true) {
+				yes = 1;
 				optOut(yes);
 			}
 		}
