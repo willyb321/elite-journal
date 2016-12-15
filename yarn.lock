@@ -116,7 +116,7 @@ archiver@1.0.0:
     tar-stream "^1.5.0"
     zip-stream "^1.0.0"
 
-archiver@^1.1.0, archiver@^1.2.0:
+archiver@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/archiver/-/archiver-1.2.0.tgz#fb5c6af5443b3fa6a426344753bad2a7b444aadd"
   dependencies:
@@ -127,6 +127,20 @@ archiver@^1.1.0, archiver@^1.2.0:
     lodash "^4.8.0"
     readable-stream "^2.0.0"
     tar-stream "^1.5.0"
+    zip-stream "^1.1.0"
+
+archiver@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/archiver/-/archiver-1.3.0.tgz#4f2194d6d8f99df3f531e6881f14f15d55faaf22"
+  dependencies:
+    archiver-utils "^1.3.0"
+    async "^2.0.0"
+    buffer-crc32 "^0.2.1"
+    glob "^7.0.0"
+    lodash "^4.8.0"
+    readable-stream "^2.0.0"
+    tar-stream "^1.5.0"
+    walkdir "^0.0.11"
     zip-stream "^1.1.0"
 
 argparse@^1.0.7:
@@ -694,9 +708,9 @@ debug@0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-0.7.4.tgz#06e1ea8082c2cb14e39806e22e2f6f757f92af39"
 
-debug@2, debug@^2.1.1, debug@^2.1.3, debug@^2.2.0, debug@^2.3.2, debug@^2.3.3:
-  version "2.3.3"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-2.3.3.tgz#40c453e67e6e13c901ddec317af8986cda9eff8c"
+debug@2, debug@^2.3.2, debug@^2.4.4:
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.4.4.tgz#c04d17a654e9202464803f096153f70a6f31f4be"
   dependencies:
     ms "0.7.2"
 
@@ -705,6 +719,12 @@ debug@2.2.0:
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.2.0.tgz#f87057e995b1a1f6ae6a4960664137bc56f039da"
   dependencies:
     ms "0.7.1"
+
+debug@2.3.3, debug@^2.1.1, debug@^2.1.3, debug@^2.2.0, debug@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.3.3.tgz#40c453e67e6e13c901ddec317af8986cda9eff8c"
+  dependencies:
+    ms "0.7.2"
 
 debuglog@^1.0.1:
   version "1.0.1"
@@ -904,13 +924,13 @@ electron-auto-updater@^0.7.1:
     source-map-support "^0.4.6"
     tunnel-agent "^0.4.3"
 
-electron-builder@^10.7.0:
-  version "10.7.0"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-10.7.0.tgz#b4566332c6ac33b0fd63164a88b061e73745591f"
+electron-builder@^10.8.0:
+  version "10.8.0"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-10.8.0.tgz#8c7df3a61c577e38cd1f203e5ed2c8076708d8b9"
   dependencies:
     "7zip-bin" "^2.0.4"
     ansi-escapes "^1.4.0"
-    archiver "^1.2.0"
+    archiver "^1.3.0"
     archiver-utils "^1.3.0"
     asar-electron-builder "^0.13.5"
     bluebird-lst-c "^1.0.5"
@@ -918,7 +938,7 @@ electron-builder@^10.7.0:
     chromium-pickle-js "^0.2.0"
     cli-cursor "^1.0.2"
     cuint "^0.2.2"
-    debug "^2.3.3"
+    debug "2.3.3"
     electron-download-tf "3.1.0"
     electron-macos-sign "^1.3.4"
     fs-extra-p "^3.0.3"
@@ -1667,7 +1687,7 @@ glob-stream@^5.3.2:
     to-absolute-glob "^0.1.1"
     unique-stream "^2.0.2"
 
-glob@7.0.5:
+glob@7.0.5, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.0.5.tgz#b4202a69099bbb4d292a7c1b95b6682b67ebdc95"
   dependencies:
@@ -1678,7 +1698,7 @@ glob@7.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@7.1.1, glob@^7.0.0, glob@^7.0.3, glob@^7.0.5:
+glob@7.1.1:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
   dependencies:
@@ -3281,9 +3301,9 @@ registry-url@^3.0.3:
   dependencies:
     rc "^1.0.1"
 
-release-it@^2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/release-it/-/release-it-2.5.1.tgz#65e3edf3974ab180176c5a182302cca57cf3582e"
+release-it@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/release-it/-/release-it-2.5.2.tgz#79e47ef488e419a43b4cf76d85e99128e8c889b1"
   dependencies:
     chalk "1.1.3"
     github "6.0.4"
@@ -4078,6 +4098,10 @@ walk@^2.3.9:
   resolved "https://registry.yarnpkg.com/walk/-/walk-2.3.9.tgz#31b4db6678f2ae01c39ea9fb8725a9031e558a7b"
   dependencies:
     foreachasync "^3.0.0"
+
+walkdir@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/walkdir/-/walkdir-0.0.11.tgz#a16d025eb931bd03b52f308caed0f40fcebe9532"
 
 wdio-dot-reporter@^0.0.6:
   version "0.0.6"
