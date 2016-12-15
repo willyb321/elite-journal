@@ -1,3 +1,7 @@
+/**
+ * @file The main file. Controls most things
+ * @author willyb321
+ */
 const electron = require('electron');
 const {Menu} = require('electron');
 const {dialog} = require('electron');
@@ -84,6 +88,9 @@ function onClosed() {
 	// for multiple windows store them in an array
 	mainWindow = null;
 }
+/**
+ * @description Checks whether user is opted in our out
+ */
 function opted() {
 	storage.get('optOut', (err, data) => {
 		if (err) {
@@ -113,6 +120,7 @@ function dialogLoad() {
 }
 /**
  * On any uncaught exception notifys bugsnag and console logs the error.
+ * @param err - The error.
  */
 function uncaughtErr(err) {
 	storage.get('optOut', (error, data) => {
@@ -130,9 +138,12 @@ function uncaughtErr(err) {
 			console.log(error);
 		}
 	});
-	console.log('ERROR! The error is: ' + err.message);
+	console.log('ERROR! The error is: ' + err || err.stack);
 }
-
+/**
+ * @description catches uncaught errors.
+ * @param err - The error.
+ */
 process.on('uncaughtException', err => {
 	uncaughtErr(err);
 });
@@ -183,6 +194,10 @@ function sortaSorter() {
 		});
 	}
 }
+/**
+ * @description Allows one to opt-out of bugsnag reports.
+ * @param yes - if yes === 0 then opt in, if === 1 opt out.
+ */
 function optOut(yes) {
 	storage.get('optOut', (error, data) => {
 		if (data) {
@@ -431,7 +446,7 @@ function loadOutputDropped() {
 }
 /**
  * @param  {Boolean} stop - whether or not to stop watching logs.
- * @description Temporary, used to watch logs. A better solution is being developed.
+ * @description Temporary, used to watch logs. A better solution is implemented.
  */
 function watchFor(stop) { // eslint-disable-line no-unused-vars
 	watching = true;
@@ -495,6 +510,10 @@ function funcSaveJSON() {
 		});
 	}
 }
+/**
+ * @description New watching code. See lib/log-watcher.js for the info.
+ * @param stop - if the watching should be stopped.
+ */
 function watchGood(stop) {
 	process.logLoaded = true;
 	const watcher = new LogWatcher();

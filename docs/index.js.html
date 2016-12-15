@@ -26,7 +26,11 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>const electron = require('electron');
+            <pre class="prettyprint source linenums"><code>/**
+ * @file The main file. Controls most things
+ * @author willyb321
+ */
+const electron = require('electron');
 const {Menu} = require('electron');
 const {dialog} = require('electron');
 const {ipcMain} = require('electron');
@@ -42,10 +46,11 @@ const jsonfile = require('jsonfile');
 const bugsnag = require('bugsnag');
 const watch = require('node-watch');
 const openAboutWindow = require('about-window').default;
+const storage = require('electron-json-storage');
 const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
 
-bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847');
 const app = electron.app;
+bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
 let win;
 /** Autoupdater on update available */
 autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-vars
@@ -57,7 +62,7 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 	});
 });
 /** Autoupdater on downloaded */
-autoUpdater.on('update-downloaded', releaseName => { // eslint-disable-line no-unused-vars
+autoUpdater.on('update-downloaded', () => { // eslint-disable-line no-unused-vars
 	dialog.showMessageBox({
 		type: 'info',
 		buttons: [],
@@ -73,7 +78,7 @@ autoUpdater.on('error', error => {
 		title: 'Update ready to install.',
 		message: `Sorry, we've had an error. The message is ` + error
 	});
-	if (!isDev) {
+	if (!isDev &amp;&amp; uncaughtErr(error) !== {out: true}) {
 		bugsnag.notify(error);
 	}
 });
@@ -86,7 +91,7 @@ let JSONParsedEvent = [];
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
 let htmlDone; // eslint-disable-line no-unused-vars
-const css = '&lt;script src="https://use.fontawesome.com/a39359b6f9.js">&lt;/script>&lt;style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}&lt;/style>&lt;link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
+const css = '&lt;link rel="stylesheet" href="./node_modules/izitoast/dist/css/iziToast.min.css">&lt;script src="https://use.fontawesome.com/a39359b6f9.js">&lt;/script>&lt;style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}&lt;/style>&lt;link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
 // prevent window being garbage collected
@@ -112,6 +117,18 @@ function onClosed() {
 	mainWindow = null;
 }
 /**
+ * @description Checks whether user is opted in our out
+ */
+function opted() {
+	storage.get('optOut', (err, data) => {
+		if (err) {
+			uncaughtErr(err);
+		}
+		return !(data.out === false || data.out === undefined);
+	});
+}
+
+/**
  * Used by various functions to show a dialog for loading files into the program
  */
 function dialogLoad() {
@@ -131,12 +148,32 @@ function dialogLoad() {
 }
 /**
  * On any uncaught exception notifys bugsnag and console logs the error.
+ * @param err - The error.
+ */
+function uncaughtErr(err) {
+	storage.get('optOut', (error, data) => {
+		if (data) {
+			console.log(data);
+			if (data.out === false) {
+				bugsnag.notify(err);
+				return data;
+			} else if (data.out === true) {
+				dialog.showErrorBox('Error!', 'Please report the following: \n' + err);
+				return data;
+			}
+		}
+		if (error) {
+			console.log(error);
+		}
+	});
+	console.log('ERROR! The error is: ' + err || err.stack);
+}
+/**
+ * @description catches uncaught errors.
+ * @param err - The error.
  */
 process.on('uncaughtException', err => {
-	if (!isDev) {
-		bugsnag.notify(err);
-	}
-	console.log('ERROR! The error is: ' + err.message);
+	uncaughtErr(err);
 });
 /**
  * This is used for filtering.
@@ -185,6 +222,53 @@ function sortaSorter() {
 		});
 	}
 }
+/**
+ * @description Allows one to opt-out of bugsnag reports.
+ * @param yes - if yes === 0 then opt in, if === 1 opt out.
+ */
+function optOut(yes) {
+	storage.get('optOut', (error, data) => {
+		if (data) {
+			console.log(data);
+			if (data.out === false) {
+				console.log('in');
+			} else if (data.out === true) {
+				console.log('out');
+			}
+		}
+		if (error) {
+			console.log(error);
+		}
+	});
+	if (yes === 1) {
+		storage.set('optOut', {out: true}, err => {
+			if (err) {
+				console.log(err);
+			}
+			dialog.showMessageBox({
+				type: 'info',
+				buttons: [],
+				title: 'Opted back into diagnostics',
+				message: 'You have opted out of auto crash/error reporting.'
+			});
+			yes = undefined;
+		});
+	} else if (yes === 0) {
+		storage.set('optOut', {out: false}, err => {
+			if (err) {
+				console.log(err);
+				bugsnag.notify(new Error(err));
+			}
+			dialog.showMessageBox({
+				type: 'info',
+				buttons: [],
+				title: 'Opted back into diagnostics',
+				message: 'You have opted into auto crash/error reporting.'
+			});
+		});
+	}
+}
+
 /**
  * Used to populate the JSONParsedEvent array, which is used to load filtered logs.
  */
@@ -239,7 +323,7 @@ function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused
 			process.logLoaded = true;
 			loadFile = '';
 		}
-	}) // eslint-disable-line semi
+	}); // eslint-disable-line semi
 }
 
 /**
@@ -390,7 +474,7 @@ function loadOutputDropped() {
 }
 /**
  * @param  {Boolean} stop - whether or not to stop watching logs.
- * @description Temporary, used to watch logs. A better solution is being developed.
+ * @description Temporary, used to watch logs. A better solution is implemented.
  */
 function watchFor(stop) { // eslint-disable-line no-unused-vars
 	watching = true;
@@ -454,24 +538,31 @@ function funcSaveJSON() {
 		});
 	}
 }
+/**
+ * @description New watching code. See lib/log-watcher.js for the info.
+ * @param stop - if the watching should be stopped.
+ */
 function watchGood(stop) {
 	process.logLoaded = true;
 	const watcher = new LogWatcher();
+	process.mainContents.executeJavaScript(`const iziToast = require('izitoast'); iziToast.show({title: 'Loading!', message: 'Please wait!', position: 'bottomCenter', image: 'icon.png', timeout: '10000'})`);
 	watcher.on('error', err => {
-		console.error(err.stack || err);
-		process.exit(1); // eslint-disable-line unicorn/no-process-exit
+		bugsnag.notify(err);
 	});
 	watcher.on('finished', () => {
 		console.log('it stopped');
 		JSONParsed = JSONParsed.reverse();
-		win.loadURL('data:text/html,' + css + stopdrop + process.htmlDone);
-		JSONParsed = [];
-		process.htmlDone = '';
+		process.htmlDone = process.htmlDone.replace('undefined', '');
+		win.loadURL('data:text/html,' + css + stopdrop + `&lt;script>function scroll() {window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);} window.onload = scroll;&lt;/script>` + process.htmlDone);
+		// JSONParsed = [];
+		// process.htmlDone = '';
 	});
+
 	watcher.on('stopped', () => {
 		console.log('nah its stopped');
 	});
 	watcher.on('data', obs => {
+		// obs = obs.reverse();
 		obs.forEach(ob => {
 			const {timestamp, event} = ob;
 			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
@@ -479,11 +570,14 @@ function watchGood(stop) {
 			console.log('\n' + timestamp, event);
 			delete ob.timestamp;
 			delete ob.event;
-			Object.keys(ob).sort().forEach(k => {
+			Object.keys(ob).forEach(k => {
 				if (k === 'StarPos') {
-					console.log('test');
-					console.log('test' + ob[k]);
 					process.htmlDone += '(x / y / z) &lt;br>' + tableify(ob[k].join('&lt;br>')) + '&lt;br>';
+				} else if (k === 'Systems') {
+					process.htmlDone += '&lt;br>Systems Sold: &lt;br>' + tableify(ob[k].join('&lt;br>')) + '&lt;br>';
+				} else if (typeof ob[k] === 'object') {
+					let objtoarr = _.allKeys(ob[k]); // eslint-disable-line prefer-const
+					process.htmlDone += '&lt;br>' + k + tableify(objtoarr.join('&lt;br>')) + '&lt;br>';
 				} else {
 					process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '&lt;br>';
 					console.log('\t' + k, ob[k]);
@@ -529,6 +623,7 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
  * Called when app is ready, and checks for updates.
  */
 app.on('ready', () => {
+	opted();
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
 	// watchGood();
@@ -630,10 +725,24 @@ const template = [{
 			bug_report_url: 'https://github.com/willyb321/elite-journal/issues', // eslint-disable-line camelcase
 			homepage: 'https://github.com/willyb321/elite-journal'
 		})
+	}, {
+		label: 'Opt-out of auto crash reporting.',
+		type: 'checkbox',
+		id: 'optout',
+		checked: opted,
+		click: optout => {
+			let yes;
+			if (optout.checked === false) {
+				yes = 0;
+				optOut(yes);
+			} else if (optout.checked === true) {
+				yes = 1;
+				optOut(yes);
+			}
+		}
 	}
 	]
 }];
-
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
 </code></pre>
@@ -646,13 +755,13 @@ Menu.setApplicationMenu(menu);
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#createMainWindow">createMainWindow</a></li><li><a href="global.html#dialogLoad">dialogLoad</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#funcSaveHTML">funcSaveHTML</a></li><li><a href="global.html#funcSaveJSON">funcSaveJSON</a></li><li><a href="global.html#getChecked">getChecked</a></li><li><a href="global.html#lineReader">lineReader</a></li><li><a href="global.html#loadAlternate">loadAlternate</a></li><li><a href="global.html#loadByDrop">loadByDrop</a></li><li><a href="global.html#loadFilter">loadFilter</a></li><li><a href="global.html#loadInit">loadInit</a></li><li><a href="global.html#loadOutput">loadOutput</a></li><li><a href="global.html#loadOutputDropped">loadOutputDropped</a></li><li><a href="global.html#logorjson">logorjson</a></li><li><a href="global.html#onClosed">onClosed</a></li><li><a href="global.html#sortaSorter">sortaSorter</a></li><li><a href="global.html#template">template</a></li><li><a href="global.html#watchFor">watchFor</a></li><li><a href="global.html#watchOpen">watchOpen</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#createMainWindow">createMainWindow</a></li><li><a href="global.html#dialogLoad">dialogLoad</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#funcSaveHTML">funcSaveHTML</a></li><li><a href="global.html#funcSaveJSON">funcSaveJSON</a></li><li><a href="global.html#getChecked">getChecked</a></li><li><a href="global.html#lineReader">lineReader</a></li><li><a href="global.html#loadAlternate">loadAlternate</a></li><li><a href="global.html#loadByDrop">loadByDrop</a></li><li><a href="global.html#loadFilter">loadFilter</a></li><li><a href="global.html#loadInit">loadInit</a></li><li><a href="global.html#loadOutput">loadOutput</a></li><li><a href="global.html#loadOutputDropped">loadOutputDropped</a></li><li><a href="global.html#logorjson">logorjson</a></li><li><a href="global.html#onClosed">onClosed</a></li><li><a href="global.html#opted">opted</a></li><li><a href="global.html#optOut">optOut</a></li><li><a href="global.html#sortaSorter">sortaSorter</a></li><li><a href="global.html#template">template</a></li><li><a href="global.html#uncaughtErr">uncaughtErr</a></li><li><a href="global.html#watchFor">watchFor</a></li><li><a href="global.html#watchGood">watchGood</a></li><li><a href="global.html#watchOpen">watchOpen</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Tue Dec 13 2016 12:26:03 GMT+1100 (AEDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Thu Dec 15 2016 14:00:50 GMT+1100 (AUS Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

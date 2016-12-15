@@ -19,7 +19,7 @@
     "release": "jake release",
     "tag": "release-it",
     "lint": "xo",
-    "docs": "jsdoc -d docs index.js"
+    "docs": "jsdoc -d docs index.js lib/log-watcher.js"
   },
   "keywords": [
     "electron-app",
