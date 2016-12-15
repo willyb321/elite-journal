@@ -42,6 +42,7 @@ const jsonfile = require('jsonfile');
 const bugsnag = require('bugsnag');
 const watch = require('node-watch');
 const openAboutWindow = require('about-window').default;
+const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
 
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847');
 const app = electron.app;
@@ -85,7 +86,7 @@ let JSONParsedEvent = [];
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
 let htmlDone; // eslint-disable-line no-unused-vars
-const css = '&lt;script src="https://use.fontawesome.com/a39359b6f9.js">&lt;/script>&lt;style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{color: red;}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}&lt;/style>&lt;link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
+const css = '&lt;script src="https://use.fontawesome.com/a39359b6f9.js">&lt;/script>&lt;style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}&lt;/style>&lt;link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
 // prevent window being garbage collected
@@ -237,8 +238,10 @@ function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused
 			win.loadURL('data:text/html,' + css + '&lt;hr>' + stopdrop + process.htmlDone);
 			process.logLoaded = true;
 			loadFile = '';
-		}}
-);}
+		}
+	}) // eslint-disable-line semi
+}
+
 /**
  * @param  {Array}
  * @return {String}
@@ -264,10 +267,10 @@ function loadInit() {
 	loadAlternate(logorJSON, loadFile, html);
 }
 /**
- * @param  {String}
- * @param  {Array}
- * @param  {String}
  * Figures out how to load the file that was selected in loadInit()
+ * @param logorJSON
+ * @param loadFile
+ * @param html
  */
 function loadAlternate(logorJSON, loadFile, html) {
 	watching = false;
@@ -389,7 +392,7 @@ function loadOutputDropped() {
  * @param  {Boolean} stop - whether or not to stop watching logs.
  * @description Temporary, used to watch logs. A better solution is being developed.
  */
-function watchFor(stop) {
+function watchFor(stop) { // eslint-disable-line no-unused-vars
 	watching = true;
 	watcher = watch(logPath);
 	watcher.on('change', log => {
@@ -451,6 +454,50 @@ function funcSaveJSON() {
 		});
 	}
 }
+function watchGood(stop) {
+	process.logLoaded = true;
+	const watcher = new LogWatcher();
+	watcher.on('error', err => {
+		console.error(err.stack || err);
+		process.exit(1); // eslint-disable-line unicorn/no-process-exit
+	});
+	watcher.on('finished', () => {
+		console.log('it stopped');
+		JSONParsed = JSONParsed.reverse();
+		win.loadURL('data:text/html,' + css + stopdrop + process.htmlDone);
+		JSONParsed = [];
+		process.htmlDone = '';
+	});
+	watcher.on('stopped', () => {
+		console.log('nah its stopped');
+	});
+	watcher.on('data', obs => {
+		obs.forEach(ob => {
+			const {timestamp, event} = ob;
+			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
+			process.htmlDone += '&lt;hr>' + tableify(event, timestamp);
+			console.log('\n' + timestamp, event);
+			delete ob.timestamp;
+			delete ob.event;
+			Object.keys(ob).sort().forEach(k => {
+				if (k === 'StarPos') {
+					console.log('test');
+					console.log('test' + ob[k]);
+					process.htmlDone += '(x / y / z) &lt;br>' + tableify(ob[k].join('&lt;br>')) + '&lt;br>';
+				} else {
+					process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '&lt;br>';
+					console.log('\t' + k, ob[k]);
+					JSONParsed.push(k + ': ' + ob[k]);
+				}
+			});
+		});
+	});
+	if (stop === 1) {
+		watcher.stop();
+		process.logLoaded = false;
+	}
+}
+
 /**
  * Called when all windows are closed.
  */
@@ -484,6 +531,7 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
+	// watchGood();
 	if (!isDev) {
 		autoUpdater.checkForUpdates();
 	}
@@ -512,12 +560,12 @@ const template = [{
 		type: 'checkbox',
 		id: 'checked',
 		click(checked) {
-			let stop;
+			const stop = 1;
 			console.log(checked.checked);
 			if (checked.checked === true) {
-				watchFor();
+				watchGood();
 			} else if (checked.checked === false) {
-				watchFor(stop);
+				watchGood(stop);
 			}
 		}
 	}]
@@ -578,7 +626,7 @@ const template = [{
 	}, {
 		label: 'About',
 		click: () => openAboutWindow({
-			icon_path: path.join(__dirname, 'build', 'icon.png'), // eslint-disable-line camelcase
+			icon_path: path.join(__dirname, 'icon.png'), // eslint-disable-line camelcase
 			bug_report_url: 'https://github.com/willyb321/elite-journal/issues', // eslint-disable-line camelcase
 			homepage: 'https://github.com/willyb321/elite-journal'
 		})
@@ -604,7 +652,7 @@ Menu.setApplicationMenu(menu);
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.2</a> on Wed Nov 09 2016 08:27:19 GMT+1100 (AEDT)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Tue Dec 13 2016 12:26:03 GMT+1100 (AEDT)
 </footer>
 
 <script> prettyPrint(); </script>

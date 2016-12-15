@@ -8,9 +8,6 @@ dependencies:
     - sh ./.scripts/yarninstall.sh
   override:
     - sh ./.scripts/deps.sh
-  cache_directories:
-    - "node_modules"
-    - "~/.yarn-cache"
 test:
   post:
     - if [[ -e test-results.xml ]]; then cp test-results.xml $CIRCLE_TEST_REPORTS/test-results.xml; fi
