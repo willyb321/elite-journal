@@ -2,6 +2,7 @@ desc('This installs dependencies.');
 task('deps', function (params) {
   console.log('Installing dependencies');
   const cmds = [
+  'rm -rf node_modules/',
   'yarn install --pure-lockfile'
   ]
   jake.exec(cmds, {printStdout: false}, function () {
