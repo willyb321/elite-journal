@@ -1,6 +1,17 @@
 ## Change Log
 
-### upcoming (2016/12/15 03:13 +00:00)
+### v1.9.2 (2016/12/16 03:15 +00:00)
+- [4a87808](https://github.com/willyb321/elite-journal/commit/4a8780808ab66b6cfb85ed1cc16a499197b913fe) Merged release/1.9.2 into master (@willyb321)
+- [fd03ee2](https://github.com/willyb321/elite-journal/commit/fd03ee21ea7122453fccd6b9aad734cf4cd60609) fix order. (@willyb321)
+- [7e90d6c](https://github.com/willyb321/elite-journal/commit/7e90d6cad8f21e54d4bf7794a54cf885f0c466e2) Merged release/1.9.1 into master (@willyb321)
+- [27fb9a7](https://github.com/willyb321/elite-journal/commit/27fb9a796071095afd14be496ceebfda7a99a866) 1.9.1 (@willyb321)
+- [9c4d794](https://github.com/willyb321/elite-journal/commit/9c4d794523f71b2cfd42519b9a90271c0c0cc1e7) fix: read latest 3 files. (@willyb321)
+
+### v1.9.1 (2016/12/15 05:51 +00:00)
+- [b92aa27](https://github.com/willyb321/elite-journal/commit/b92aa279115fa3d559f94be1de6d41ed6404c476) maybe fix circleci being a pain. (@willyb321)
+- [c83777b](https://github.com/willyb321/elite-journal/commit/c83777b1c6f72d6da009edbfa9a4800e3c6c46d8) appveyor only build on release/* branch. (@willyb321)
+- [c277962](https://github.com/willyb321/elite-journal/commit/c2779626ecbf0e4819bdf46174a8bd0a697a22a1) update deps. (@willyb321)
+- [6f41311](https://github.com/willyb321/elite-journal/commit/6f41311cc1909e0d66077f73cace0508b4c76ff1) update changelog (@willyb321)
 - [6129eea](https://github.com/willyb321/elite-journal/commit/6129eea0b84c1382dccf3b5eda72fb89a0e51c83) docs update. (@willyb321)
 
 ### v1.9.0 (2016/12/15 01:02 +00:00)
