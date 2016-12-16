@@ -516,7 +516,7 @@ function funcSaveJSON() {
  */
 function watchGood(stop) {
 	process.logLoaded = true;
-	const watcher = new LogWatcher();
+	const watcher = new LogWatcher(logPath);
 	process.mainContents.executeJavaScript(`const iziToast = require('izitoast'); iziToast.show({title: 'Loading!', message: 'Please wait!', position: 'bottomCenter', image: 'icon.png', timeout: '10000'})`);
 	watcher.on('error', err => {
 		bugsnag.notify(err);
