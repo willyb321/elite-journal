@@ -14,10 +14,7 @@ task('deps', function (params) {
 desc('Runs tests');
 task('test', {async: true}, function () {
   var cmds = [
-    'mocha ./tests/test1.js'
-  , 'mocha ./tests/test2.js'
-  , 'mocha ./tests/test3.js'
-  , 'mocha ./tests/test4.js'
+    'mocha --reporter mocha-circleci-reporter ./tests/*.js'
   , 'xo'
   ];
   jake.exec(cmds, {printStdout: true}, function () {

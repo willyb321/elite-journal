@@ -1,7 +1,6 @@
 version: 1.0.{build}
-branches:
-    only:
-      - /release\/.*/
+only_commits:
+  message: /\[build\]/
 environment:
   GH_TOKEN:
     secure: LvLv+k3s0SpH9os6canaYy9hpfCXnowB2/IeX2X/J7Zo4zK88ggsOHxKuZ1vhJsy
