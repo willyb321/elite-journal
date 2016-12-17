@@ -130,8 +130,7 @@ function uncaughtErr(err) {
 				dialog.showErrorBox('Error!', 'Please report the following: \n' + err);
 				return data;
 			}
-		}
-		if (error) {
+		} else {
 			console.err(error.stack || error);
 			return err;
 		}
