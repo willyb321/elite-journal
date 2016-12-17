@@ -289,7 +289,7 @@ function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
  * Code thats used to reduce duplication in loading.
  */
 function loadInit() {
-	let html = '';
+	let html = ''; // eslint-disable-line prefer-const
 	process.alterateLoad = true;
 	loadFile = dialogLoad();
 	loadAlternate(loadFile, html);
