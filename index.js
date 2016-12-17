@@ -281,20 +281,14 @@ function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused
 	});
 	lr.on('end', err => {
 		if (err) {
-			console.log(err.message);
+			uncaughtErr(err);
 		}
-		if (watching === true) { // eslint-disable-line no-negated-condition
-			process.htmlDone = html;
-			process.htmlDone = process.htmlDone.replace('undefined', '');
-			watchOpen(JSONParsed);
-		} else if (watching === false) {
-			process.htmlDone = html;
-			process.htmlDone = process.htmlDone.replace('undefined', '');
-			win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
-			process.logLoaded = true;
-			loadFile = '';
-		}
-	}); // eslint-disable-line semi
+		process.htmlDone = html;
+		process.htmlDone = process.htmlDone.replace('undefined', '');
+		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
+		process.logLoaded = true;
+		loadFile = '';
+	});
 }
 
 /**
