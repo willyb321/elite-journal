@@ -53,7 +53,6 @@ autoUpdater.on('error', error => {
 		bugsnag.notify(error);
 	}
 });
-let watching;
 let loadFile;
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0%;" nodeintegration="on"></webview>`;
@@ -122,7 +121,7 @@ function dialogLoad() {
  */
 function uncaughtErr(err) {
 	storage.get('optOut', (error, data) => {
-		if (data) {
+		if (data && !error) {
 			console.log(data);
 			if (data.out === false) {
 				bugsnag.notify(err);
@@ -134,7 +133,6 @@ function uncaughtErr(err) {
 		}
 		if (error) {
 			console.log(error);
-			return;
 		}
 	});
 	console.log('ERROR! The error is: ' + err || err.stack);
@@ -267,7 +265,7 @@ function loadFilter() {
  * @param  {Boolean} watching - Whether or not logs are being watched.
  * @description Reads a loaded log line by line and generates JSONParsed.
  */
-function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused-vars
+function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
 	JSONParsed = [];
 	const lr = new LineByLineReader(loadFile[0]);
 	lr.on('error', err => {
@@ -322,13 +320,12 @@ function loadInit() {
  * @param html
  */
 function loadAlternate(logorJSON, loadFile, html) {
-	watching = false;
 	if ((/\.(json)$/i).test(loadFile)) {
 		loadOutput();
 		loadFile = '';
 		logorJSON = '';
 	} else if ((/\.(log)$/i).test(loadFile)) {
-		lineReader(loadFile, html, watching);
+		lineReader(loadFile, html);
 		logorJSON = '';
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile[0]);
