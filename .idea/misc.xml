@@ -41,4 +41,7 @@
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
+  <component name="UnicodeBrowser">
+    <option name="fontName" value="Source Code Pro" />
+  </component>
 </project>

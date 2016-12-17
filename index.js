@@ -8,7 +8,7 @@ const {dialog} = require('electron');
 const {ipcMain} = require('electron');
 const path = require('path');
 const os = require('os');
-const {autoUpdater} = require('electron-auto-updater'); // eslint-disable-line no-unused-vars
+const {autoUpdater} = require('electron-auto-updater');
 const fs = require('fs-extra');
 const tableify = require('tableify');
 const LineByLineReader = require('line-by-line');
@@ -55,11 +55,10 @@ autoUpdater.on('error', error => {
 });
 let loadFile;
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
-const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0%;" nodeintegration="on"></webview>`;
+const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0;" nodeintegration="on"></webview>`;
 let JSONParsedEvent = [];
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
-let htmlDone; // eslint-disable-line no-unused-vars
 const css = '<link rel="stylesheet" href="./node_modules/izitoast/dist/css/iziToast.min.css"><script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
@@ -131,7 +130,7 @@ function uncaughtErr(err) {
 				return data;
 			}
 		} else {
-			console.err(error.stack || error);
+			console.error(error.stack || error);
 			return err;
 		}
 	});
@@ -273,8 +272,7 @@ function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
 	lr.on('line', line => {
 		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
 		JSONParsed.push(lineParse);
-		let htmlTabled = tableify(lineParse) + '<hr>'; // eslint-disable-line prefer-const
-		html += htmlTabled;
+		html += tableify(lineParse) + '<hr>';
 	});
 	lr.on('end', err => {
 		if (err) {
@@ -284,22 +282,8 @@ function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
 		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
 		process.logLoaded = true;
-		loadFile = '';
+		loadFile = [];
 	});
-}
-
-/**
- * @param  {Array}
- * @return {String}
- * Not really very good, but it was used to check if a loaded log was line delimited or not.
- */
-function logorjson(loadFile) {
-	try {
-		let obj = jsonfile.readFileSync(loadFile); // eslint-disable-line prefer-const
-		JSON.parse(obj);
-	} catch (err) {
-		return err.name;
-	}
 }
 /**
  * Code thats used to reduce duplication in loading.
@@ -308,27 +292,21 @@ function loadInit() {
 	let html;
 	process.alterateLoad = true;
 	loadFile = dialogLoad();
-	let logorJSON = logorjson(loadFile); // eslint-disable-line prefer-const
-	console.log(logorJSON);
-	loadAlternate(logorJSON, loadFile, html);
+	loadAlternate(loadFile, html);
 }
 /**
- * Figures out how to load the file that was selected in loadInit()
- * @param logorJSON
+ * @description Figures out how to load the file that was selected in loadInit()
  * @param loadFile
  * @param html
  */
-function loadAlternate(logorJSON, loadFile, html) {
+function loadAlternate(loadFile, html) {
 	if ((/\.(json)$/i).test(loadFile)) {
 		loadOutput();
 		loadFile = '';
-		logorJSON = '';
 	} else if ((/\.(log)$/i).test(loadFile)) {
 		lineReader(loadFile, html);
-		logorJSON = '';
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile[0]);
-		logorJSON = '';
 	}
 }
 /**
@@ -339,20 +317,15 @@ function loadByDrop() {
 	JSONParsed = [];
 	loadFile = [];
 	loadFile.push(process.logDropPath);
-	let logorJSON = logorjson(loadFile);
-	console.log(logorJSON);
 	if ((/\.(json)$/i).test(process.logDropPath)) {
 		loadOutputDropped();
 		loadFile = '';
-		logorJSON = '';
 		process.logDropped = false;
-	} else if ((/\.(log)$/i).test(process.logDropPath) && logorJSON === 'SyntaxError') {
+	} else if ((/\.(log)$/i).test(process.logDropPath)) {
 		lineReader(loadFile, html);
-		logorJSON = '';
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile);
 		loadFile = '';
-		logorJSON = '';
 	}
 }
 /**
@@ -610,7 +583,7 @@ const template = [{
 	submenu: [{
 		label: 'Reload',
 		accelerator: 'CmdOrCtrl+R',
-		click(item, focusedWindow) {
+		click(focusedWindow) {
 			if (focusedWindow) {
 				focusedWindow.reload();
 			}

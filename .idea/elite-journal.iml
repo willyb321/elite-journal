@@ -9,5 +9,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="a39359b6f9" level="application" />
+    <orderEntry type="library" name="github-electron" level="project" />
+    <orderEntry type="library" name="electron-DefinitelyTyped" level="application" />
   </component>
 </module>
