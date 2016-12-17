@@ -1,5 +1,13 @@
 ## Change Log
 
+### v1.9.3 (2016/12/16 23:11 +00:00)
+- [eb8be8a](https://github.com/willyb321/elite-journal/commit/eb8be8a8cf41ef357d695787a0e0308df6884a19) Merged hotfix/1.9.3 into master (@willyb321)
+- [a0977c2](https://github.com/willyb321/elite-journal/commit/a0977c2823484576abdbf86013ec1dcfad09f638) probably fix the watching breaking (@willyb321)
+- [9d9e07d](https://github.com/willyb321/elite-journal/commit/9d9e07dfadc3770898260686f2f1077038fd4549) fixes things. (@willyb321)
+- [7e3c531](https://github.com/willyb321/elite-journal/commit/7e3c5314b805f3943316e73f92113bd6a3ef5bdd) better test also appveyor release on message. (@willyb321)
+- [55fb305](https://github.com/willyb321/elite-journal/commit/55fb305d493104c50c0b88a8c977883b4048c682) update docs. (@willyb321)
+- [7d3cea0](https://github.com/willyb321/elite-journal/commit/7d3cea0efe784481f44b9b50b1b34478284f7935) update changelog. (@willyb321)
+
 ### v1.9.2 (2016/12/16 03:15 +00:00)
 - [4a87808](https://github.com/willyb321/elite-journal/commit/4a8780808ab66b6cfb85ed1cc16a499197b913fe) Merged release/1.9.2 into master (@willyb321)
 - [fd03ee2](https://github.com/willyb321/elite-journal/commit/fd03ee21ea7122453fccd6b9aad734cf4cd60609) fix order. (@willyb321)

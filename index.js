@@ -445,38 +445,6 @@ function loadOutputDropped() {
 	});
 }
 /**
- * @param  {Boolean} stop - whether or not to stop watching logs.
- * @description Temporary, used to watch logs. A better solution is implemented.
- */
-function watchFor(stop) { // eslint-disable-line no-unused-vars
-	watching = true;
-	watcher = watch(logPath);
-	watcher.on('change', log => {
-		let html;
-		loadFile = [];
-		loadFile[0] = log;
-		lineReader(loadFile, html, watching);
-	});
-	if (stop) {
-		watcher.close();
-	}
-	watcher.on('error', err => {
-		bugsnag.notify(err);
-	});
-}
-/**
- * @param  {Array} JSONParsed - The JSON that was parsed in lineReader()
- * @description Reverses the log being watched, and loads it.
- */
-function watchOpen(JSONParsed) {
-	JSONParsed = JSONParsed.reverse();
-	for (let i = 0; i < JSONParsed.length; i++) {
-		process.revHTML += tableify(JSONParsed[i]) + '<hr>'; // eslint-disable-line prefer-const
-	}
-	process.revHTML = process.revHTML.replace('undefined', '');
-	win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.revHTML); // eslint-disable-line no-useless-concat
-}
-/**
  * Used to save loaded file as JSON.
  */
 function funcSaveJSON() {

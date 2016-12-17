@@ -39,9 +39,6 @@ const debug = require('debug')('wotch');
 
 const POLL_INTERVAL = 1000;
 
-const MAX_FILES = 3;
-let CURRENT_FILE = 0;
-
 const DEFAULT_SAVE_DIR = path.join(
 	os.homedir(),
 	'Saved Games',
@@ -50,12 +47,12 @@ const DEFAULT_SAVE_DIR = path.join(
 );
 
 class LogWatcher extends events.EventEmitter {
-	constructor(dirpath, filter) {
+	constructor(dirpath, maxfiles) {
 		super();
 
 		this._dirpath = dirpath || DEFAULT_SAVE_DIR;
-		this._filter = filter || isCommanderLog;
-
+		this._filter = isCommanderLog;
+		this._maxfiles = maxfiles || 3;
 		this._logDetailMap = {};
 		this._ops = [];
 		this._op = null;
@@ -130,15 +127,12 @@ class LogWatcher extends events.EventEmitter {
 			if (err) {
 				callback(err);
 			} else {
-				const files = filenames.slice(filenames.length - MAX_FILES, filenames.length);
+				const files = filenames.slice(filenames.length - this._maxfiles, filenames.length);
 				files.forEach(filename => {
 					filename = path.join(this._dirpath, filename);
 					if (this._filter(filename)) {
 						delete unseen[filename];
-						if (CURRENT_FILE &lt; MAX_FILES) {
-							this._ops.push(cb => this._statfile(filename, cb));
-							CURRENT_FILE++;
-						}
+						this._ops.push(cb => this._statfile(filename, cb));
 					}
 				});
 
@@ -171,10 +165,11 @@ class LogWatcher extends events.EventEmitter {
 
 	_process(filename, stats, callback) {
 		debug('_process', {filename, stats});
+		let CURRENT_FILE = 0;
 		setImmediate(callback, null);
 		const info = this._logDetailMap[filename];
 
-		if (info === undefined) {
+		if (info === undefined &amp;&amp; CURRENT_FILE &lt; this._maxfiles) {
 			this._logDetailMap[filename] = {
 				ino: stats.ino,
 				mtime: stats.mtime,
@@ -182,6 +177,7 @@ class LogWatcher extends events.EventEmitter {
 				watermark: 0,
 				tombstoned: false
 			};
+			CURRENT_FILE++;
 			this._ops.push(cb => this._read(filename, cb));
 			return;
 		}
@@ -194,6 +190,7 @@ class LogWatcher extends events.EventEmitter {
 				// file replaced... can't trust it any more
 				// if the client API supported replay from scratch, we could do that
 				// but we can't yet, so:
+			CURRENT_FILE = 0;
 			this.bury(filename);
 		} else if (stats.size > info.size) {
 				// file not replaced; got longer... assume append
@@ -297,13 +294,13 @@ if (!module.parent) {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#createMainWindow">createMainWindow</a></li><li><a href="global.html#dialogLoad">dialogLoad</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#funcSaveHTML">funcSaveHTML</a></li><li><a href="global.html#funcSaveJSON">funcSaveJSON</a></li><li><a href="global.html#getChecked">getChecked</a></li><li><a href="global.html#lineReader">lineReader</a></li><li><a href="global.html#loadAlternate">loadAlternate</a></li><li><a href="global.html#loadByDrop">loadByDrop</a></li><li><a href="global.html#loadFilter">loadFilter</a></li><li><a href="global.html#loadInit">loadInit</a></li><li><a href="global.html#loadOutput">loadOutput</a></li><li><a href="global.html#loadOutputDropped">loadOutputDropped</a></li><li><a href="global.html#logorjson">logorjson</a></li><li><a href="global.html#onClosed">onClosed</a></li><li><a href="global.html#opted">opted</a></li><li><a href="global.html#optOut">optOut</a></li><li><a href="global.html#sortaSorter">sortaSorter</a></li><li><a href="global.html#template">template</a></li><li><a href="global.html#uncaughtErr">uncaughtErr</a></li><li><a href="global.html#watchFor">watchFor</a></li><li><a href="global.html#watchGood">watchGood</a></li><li><a href="global.html#watchOpen">watchOpen</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#createMainWindow">createMainWindow</a></li><li><a href="global.html#dialogLoad">dialogLoad</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#funcSaveHTML">funcSaveHTML</a></li><li><a href="global.html#funcSaveJSON">funcSaveJSON</a></li><li><a href="global.html#getChecked">getChecked</a></li><li><a href="global.html#lineReader">lineReader</a></li><li><a href="global.html#loadAlternate">loadAlternate</a></li><li><a href="global.html#loadByDrop">loadByDrop</a></li><li><a href="global.html#loadFilter">loadFilter</a></li><li><a href="global.html#loadInit">loadInit</a></li><li><a href="global.html#loadOutput">loadOutput</a></li><li><a href="global.html#loadOutputDropped">loadOutputDropped</a></li><li><a href="global.html#logorjson">logorjson</a></li><li><a href="global.html#onClosed">onClosed</a></li><li><a href="global.html#opted">opted</a></li><li><a href="global.html#optOut">optOut</a></li><li><a href="global.html#sortaSorter">sortaSorter</a></li><li><a href="global.html#template">template</a></li><li><a href="global.html#uncaughtErr">uncaughtErr</a></li><li><a href="global.html#watchGood">watchGood</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Fri Dec 16 2016 15:19:45 GMT+1100 (AUS Eastern Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat Dec 17 2016 13:31:21 GMT+1100 (AUS Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
