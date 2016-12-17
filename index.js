@@ -16,7 +16,6 @@ const _ = require('underscore');
 const isDev = require('electron-is-dev');
 const jsonfile = require('jsonfile');
 const bugsnag = require('bugsnag');
-const watch = require('node-watch');
 const openAboutWindow = require('about-window').default;
 const storage = require('electron-json-storage');
 const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
@@ -55,7 +54,6 @@ autoUpdater.on('error', error => {
 	}
 });
 let watching;
-let watcher;
 let loadFile;
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0%;" nodeintegration="on"></webview>`;
@@ -136,6 +134,7 @@ function uncaughtErr(err) {
 		}
 		if (error) {
 			console.log(error);
+			return;
 		}
 	});
 	console.log('ERROR! The error is: ' + err || err.stack);
