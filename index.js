@@ -132,7 +132,8 @@ function uncaughtErr(err) {
 			}
 		}
 		if (error) {
-			console.log(error);
+			console.err(error.stack || error);
+			return err;
 		}
 	});
 	console.log('ERROR! The error is: ' + err || err.stack);
@@ -262,7 +263,6 @@ function loadFilter() {
 /**
  * @param  {Array} loadFile - Array with path to loaded file.
  * @param  {String} html - HTML that was generated.
- * @param  {Boolean} watching - Whether or not logs are being watched.
  * @description Reads a loaded log line by line and generates JSONParsed.
  */
 function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
