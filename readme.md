@@ -26,7 +26,6 @@ Download a [setup .exe](https://github.com/willyb321/elite-journal/releases/late
 - [Changes](#changes)
 - [Features](#features)
 - [License](#license)
-- [Support on Beerpay](#support-on-beerpay)
 
 <!-- /MarkdownTOC -->
 
@@ -94,8 +93,3 @@ See [CHANGELOG.md](https://github.com/willyb321/elite-journal/blob/master/CHANGE
 ## License
 
 MIT © [willyb321](https://tehsuperwilly.tech)
-
-## Support on Beerpay
-Hey dude! If you like this thing what ive made, why not chuck a buck my way eh? :+1:
-
-[![Beerpay](https://beerpay.io/willyb321/elite-journal/badge.svg?style=beer-square)](https://beerpay.io/willyb321/elite-journal)  [![Beerpay](https://beerpay.io/willyb321/elite-journal/make-wish.svg?style=flat-square)](https://beerpay.io/willyb321/elite-journal?focus=wish)
