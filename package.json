@@ -28,8 +28,8 @@
   "dependencies": {
     "about-window": "^1.6.1",
     "bugsnag": "^1.9.0",
-    "debug": "^2.4.5",
-    "electron-auto-updater": "^0.7.2",
+    "debug": "^2.5.1",
+    "electron-auto-updater": "^0.8.2",
     "electron-debug": "^1.1.0",
     "electron-is-dev": "^0.1.2",
     "electron-json-storage": "^2.1.0",
@@ -38,15 +38,14 @@
     "jsonfile": "^2.4.0",
     "line-by-line": "^0.1.5",
     "node-watch": "^0.4.1",
-    "source-map-support": "^0.4.6",
+    "source-map-support": "^0.4.7",
     "tableify": "^1.0.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
     "devtron": "^1.4.0",
     "electron": "^1.4.13",
-    "electron-builder": "^10.9.2",
-    "electron-zip-packager": "^4.0.0",
+    "electron-builder": "^10.9.3",
     "jake": "latest",
     "jsdoc": "^3.4.3",
     "mocha": "^3.2.0",
