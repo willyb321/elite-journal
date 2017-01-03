@@ -13,15 +13,15 @@ describe('application launch', function () {
 			startTimeout: 10000
 		});
 		return this.app.start()
-	})
+	});
 	afterEach(function () {
 		if (this.app && this.app.isRunning()) {
 			return this.app.stop()
 		}
-	})
+	});
 	it('takes a screenshot', function () {
 		return this.app.browserWindow.capturePage().then(function (imageBuffer) {
 			fs.writeFileSync('page.png', imageBuffer);
 		})
 	})
-})
+});
