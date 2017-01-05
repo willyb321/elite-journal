@@ -29,7 +29,7 @@
     "about-window": "^1.6.1",
     "bugsnag": "^1.9.0",
     "debug": "^2.5.1",
-    "electron-auto-updater": "^0.8.3",
+    "electron-auto-updater": "^0.10.0",
     "electron-debug": "^1.1.0",
     "electron-is-dev": "^0.1.2",
     "electron-json-storage": "^2.1.0",
