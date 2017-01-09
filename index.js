@@ -59,7 +59,7 @@ const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display
 let JSONParsedEvent = [];
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
-const css = '<link rel="stylesheet" href="./node_modules/izitoast/dist/css/iziToast.min.css"><script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
+const css = '<link rel="stylesheet" href="./node_modules/izitoast/dist/css/iziToast.css"><script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
 // prevent window being garbage collected
@@ -442,12 +442,12 @@ function funcSaveJSON() {
 }
 /**
  * @description New watching code. See lib/log-watcher.js for the info.
- * @param stop - if the watching should be stopped.
+	 * @param stop - if the watching should be stopped.
  */
 function watchGood(stop) {
 	process.logLoaded = true;
 	const watcher = new LogWatcher(logPath);
-	process.mainContents.executeJavaScript(`const iziToast = require('izitoast'); iziToast.show({title: 'Loading!', message: 'Please wait!', position: 'bottomCenter', image: 'icon.png', timeout: '10000'})`);
+	process.mainContents.executeJavaScript(`const iziToast = require('./node_modules/izitoast/dist/js/iziToast.js'); iziToast.show({title: 'Loading!', message: 'Please wait!', position: 'bottomCenter', image: 'icon.png', timeout: '10000'})`);
 	watcher.on('error', err => {
 		bugsnag.notify(err);
 	});
@@ -481,9 +481,9 @@ function watchGood(stop) {
 					let objtoarr = _.allKeys(ob[k]); // eslint-disable-line prefer-const
 					process.htmlDone += '<br>' + k + tableify(objtoarr.join('<br>')) + '<br>';
 				} else {
-					process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
+					process.htmlDone += tableify(k) + ':<br>' + tableify(ob[k])	;
 					console.log('\t' + k, ob[k]);
-					JSONParsed.push(k + ': ' + ob[k]);
+					JSONParsed.push(k + ':<br>' + ob[k]);
 				}
 			});
 		});

@@ -1,4 +1,4 @@
-const Application = require('spectron').Application
+const Application = require('spectron').Application;
 const assert = require('assert');
 const electron = require('electron');
 const fs = require('fs');
