@@ -482,7 +482,7 @@ function watchGood(stop) {
 					let objtoarr = _.allKeys(ob[k]); // eslint-disable-line prefer-const
 					process.htmlDone += '<br>' + k + tableify(objtoarr.join('<br>')) + '<br>';
 				} else {
-					process.htmlDone += tableify(k) + ':<br>' + tableify(ob[k])	;
+					process.htmlDone += tableify(k) + ':<br>' + tableify(ob[k]);
 					console.log('\t' + k, ob[k]);
 					JSONParsed.push(k + ':<br>' + ob[k]);
 				}
