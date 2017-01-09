@@ -1,6 +1,7 @@
 /**
  * @file The main file. Controls most things
  * @author willyb321
+ * @copyright MIT
  */
 const electron = require('electron');
 const {Menu} = require('electron');
