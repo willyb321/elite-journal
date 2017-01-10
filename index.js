@@ -475,18 +475,19 @@ function watchGood(stop) {
 			delete ob.event;
 			Object.keys(ob).forEach(k => {
 				if (k.endsWith('_Localised') || !ob[k].toString().startsWith('$')) {
-				if (k === 'StarPos') {
-					process.htmlDone += '(x / y / z) <br>' + tableify(ob[k].join('<br>')) + '<br>';
-				} else if (k === 'Systems') {
-					process.htmlDone += '<br>Systems Sold: <br>' + tableify(ob[k].join('<br>')) + '<br>';
-				} else if (typeof ob[k] === 'object') {
-					let objtoarr = _.allKeys(ob[k]); // eslint-disable-line prefer-const
-					process.htmlDone += '<br>' + k + tableify(objtoarr.join('<br>')) + '<br>';
-				} else {
-					process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
-					console.log('\t' + k, ob[k]);
-					JSONParsed.push(k + ':<br>' + ob[k]);
-				}}
+					if (k === 'StarPos') {
+						process.htmlDone += '(x / y / z) <br>' + tableify(ob[k].join('<br>')) + '<br>';
+					} else if (k === 'Systems') {
+						process.htmlDone += '<br>Systems Sold: <br>' + tableify(ob[k].join('<br>')) + '<br>';
+					} else if (typeof ob[k] === 'object') {
+						let objtoarr = _.allKeys(ob[k]); // eslint-disable-line prefer-const
+						process.htmlDone += '<br>' + k + tableify(objtoarr.join('<br>')) + '<br>';
+					} else {
+						process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
+						console.log('\t' + k, ob[k]);
+						JSONParsed.push(k + ':<br>' + ob[k]);
+					}
+				}
 			});
 		});
 	});
