@@ -54,14 +54,3 @@ gulp.task('build:dist', () => {
 gulp.task('clean', () => {
 	return del(['dist']);
 });
-gulp.task('watch', () => {
-	// Start browser process
-	electron.start();
-
-	// Restart browser process
-	gulp.watch('index.js', electron.restart);
-
-	// Reload renderer process
-	// gulp.watch(['index.js', 'index.html'], electron.reload);
-});
-
