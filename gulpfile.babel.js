@@ -3,7 +3,6 @@ import gulp from 'gulp';
 import del from 'del';
 
 const builder = require('electron-builder');
-const electron = require('electron-connect').server.create();
 // const Platform = builder.Platform;
 gulp.task('default', () => {
 
