@@ -21,7 +21,11 @@ const openAboutWindow = require('about-window').default;
 const storage = require('electron-json-storage');
 const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
 
+let client;
 const app = electron.app;
+if (isDev) {
+	client = require('electron-connect').client;
+}
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
 let win;
 /** Autoupdater on update available */
@@ -523,6 +527,7 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 	process.logDropped = true;
 	loadByDrop();
 	process.logDropped = false;
+	console.log('waddup');
 });
 /**
  * Called when app is ready, and checks for updates.
@@ -532,6 +537,9 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
 	// watchGood();
+	if (isDev) {
+		client.create(mainWindow);
+	}
 	if (!isDev) {
 		autoUpdater.checkForUpdates();
 	}
