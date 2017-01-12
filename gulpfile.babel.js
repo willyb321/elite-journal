@@ -7,6 +7,12 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const builder = require('electron-builder');
+const Mocha = require('mocha');
+const fs = require('fs');
+const path = require('path');
+
+const mocha = new Mocha();
+const testDir  = 'tests/';
 
 gulp.task('default', () => {
 	return gulp.src('src/**/*.js')
@@ -75,4 +81,24 @@ gulp.task('index', () => {
 	gulp.src('./src/**/*.html')
 		.pipe(inject(gulp.src(['./src/*.css', './src/node_modules/izitoast/dist/css/iziToast.min.css'], {read: false}), {relative: true}))
 		.pipe(gulp.dest('./src'));
+});
+
+gulp.task('test', () => {
+	mocha.reporter('mocha-circleci-reporter');
+	fs.readdirSync(testDir).filter(function(file){
+		// Only keep the .js files
+		return file.substr(-3) === '.js';
+
+	}).forEach(function(file){
+		mocha.addFile(
+			path.join(testDir, file)
+		);
+	});
+
+// Run the tests.
+	mocha.run(function(failures){
+		process.on('exit', function () {
+			process.exit(failures);  // exit with non-zero status if there were failures
+		});
+	});
 });

@@ -11,7 +11,7 @@
     "url": "tehsuperwilly.tech"
   },
   "scripts": {
-    "test": "jake test",
+    "test": "gulp test",
     "start": "set NODE_ENV=development && electron src",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
     "pack": "gulp index && gulp build:pack",
