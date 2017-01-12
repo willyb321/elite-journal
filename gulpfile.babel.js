@@ -10,18 +10,9 @@ const builder = require('electron-builder');
 const Mocha = require('mocha');
 const fs = require('fs');
 const path = require('path');
-const gulpif = require('gulp-if');
 
 const mocha = new Mocha();
 const testDir  = 'tests/';
-const condition = function () {
-	if (process.platform === 'win32') {
-		return true;
-	} else if (process.platform === 'linux') {
-		return false;
-	}
-};
-
 
 gulp.task('default', () => {
 	return gulp.src('src/**/*.js')
@@ -37,6 +28,7 @@ gulp.task('default', () => {
 gulp.task('build:pack', (cb) => {
 	builder.build({
 		platform: process.platform,
+		arch: "x64",
 		config: {
 			directories: {
 				app: 'src'
@@ -61,6 +53,7 @@ gulp.task('build:pack', (cb) => {
 gulp.task('build:dist', (cb) => {
 	builder.build({
 		platform: process.platform,
+		arch: "x64",
 		config: {
 			win: {
 				target: [
@@ -97,6 +90,7 @@ gulp.task('index', () => {
 gulp.task('build:packCI', (cb) => {
 	builder.build({
 		platform: process.platform,
+		arch: "x64",
 		config: {
 			directories: {
 				app: 'src'
