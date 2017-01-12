@@ -3,7 +3,8 @@ task('deps', function (params) {
   console.log('Installing dependencies');
   const cmds = [
   'rm -rf node_modules/',
-  'yarn install --pure-lockfile'
+  'rm -rf src/node_modules/'
+  'npm install'
   ]
   jake.exec(cmds, {printStdout: false}, function () {
   	console.log('Dependencies installed');
