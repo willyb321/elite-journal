@@ -1,7 +1,7 @@
 {
   "name": "elite-journal",
   "productName": "Elite Journal",
-  "version": "1.9.4",
+  "version": "1.10.0",
   "description": "Parsing the elite dangerous journal and putting it in a cool format!",
   "license": "MIT",
   "repository": "willyb321/elite-journal",
@@ -58,7 +58,7 @@
     "ignores": [
       "tests/*",
       "test.js",
-		"gulpfile.babel.js",
+      "gulpfile.babel.js",
       "docs/scripts/*",
       "docs/scripts/prettify/*"
     ]
