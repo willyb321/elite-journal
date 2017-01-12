@@ -3,7 +3,7 @@ task('deps', function (params) {
   console.log('Installing dependencies');
   const cmds = [
   'rm -rf node_modules/',
-  'rm -rf src/node_modules/'
+  'rm -rf src/node_modules/',
   'npm install'
   ]
   jake.exec(cmds, {printStdout: false}, function () {
