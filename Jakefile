@@ -4,7 +4,7 @@ task('deps', function (params) {
   const cmds = [
   'rm -rf node_modules/',
   'rm -rf src/node_modules/',
-  'npm install'
+  'yarn install'
   ]
   jake.exec(cmds, {printStdout: false}, function () {
   	console.log('Dependencies installed');
