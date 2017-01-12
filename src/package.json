@@ -23,5 +23,6 @@
 		"source-map-support": "^0.4.8",
 		"tableify": "^1.0.0",
 		"underscore": "^1.8.3"
-	}
+	},
+	"xo": false
 }

@@ -534,7 +534,7 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
 	// watchGood();
-	if (!isDev) {
+	if (!isDev && process.env.NODE_ENV !== 'test') {
 		autoUpdater.checkForUpdates();
 	}
 });

@@ -10,9 +10,18 @@ const builder = require('electron-builder');
 const Mocha = require('mocha');
 const fs = require('fs');
 const path = require('path');
+const gulpif = require('gulp-if');
 
 const mocha = new Mocha();
 const testDir  = 'tests/';
+const condition = function () {
+	if (process.platform === 'win32') {
+		return true;
+	} else if (process.platform === 'linux') {
+		return false;
+	}
+};
+
 
 gulp.task('default', () => {
 	return gulp.src('src/**/*.js')
@@ -27,7 +36,7 @@ gulp.task('default', () => {
 
 gulp.task('build:pack', (cb) => {
 	builder.build({
-		platform: builder.Platform.WIN,
+		platform: process.platform,
 		config: {
 			directories: {
 				app: 'src'
@@ -51,7 +60,7 @@ gulp.task('build:pack', (cb) => {
 });
 gulp.task('build:dist', (cb) => {
 	builder.build({
-		platform: builder.Platform.WIN,
+		platform: process.platform,
 		config: {
 			win: {
 				target: [
@@ -87,7 +96,7 @@ gulp.task('index', () => {
 
 gulp.task('build:packCI', (cb) => {
 	builder.build({
-		platform: builder.Platform.LINUX,
+		platform: process.platform,
 		config: {
 			directories: {
 				app: 'src'
@@ -97,14 +106,12 @@ gulp.task('build:packCI', (cb) => {
 					'dir'
 				]
 			},
-			win: {
-				directories: {
-					app: 'src'
-				},
 				win: {
 					target: [
 						'dir'
-					]
+					],
+					directories: {
+						app: 'src'
 			}}
 		}
 	})
@@ -117,21 +124,26 @@ gulp.task('build:packCI', (cb) => {
 		});
 });
 
-gulp.task('test', ['build:packCI'], () => {
+gulp.task('test', ['build:packCI'], (cb) => {
 	mocha.reporter('mocha-circleci-reporter');
-	fs.readdirSync(testDir).filter(function(file){
+	fs.readdirSync(testDir).filter(file => {
 		// Only keep the .js files
 		return file.substr(-3) === '.js';
 
-	}).forEach(function(file){
+	}).forEach(file => {
 		mocha.addFile(
 			path.join(testDir, file)
 		);
 	});
 
 // Run the tests.
-	return mocha.run(function(failures){
-		process.on('exit', function () {
+	return mocha.run( failures => {
+		if (!failures) {
+			cb();
+			process.exit(0);
+		}
+		process.on('exit', () => {
+			cb(failures);
 			process.exit(failures);  // exit with non-zero status if there were failures
 		});
 	});

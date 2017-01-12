@@ -20,7 +20,7 @@
     "tag": "release-it",
     "lint": "xo",
     "docs": "jsdoc -c ./conf.json",
-    "postinstall": "install-app-deps"
+    "postinstall": "(cd src && yarn install)"
   },
   "keywords": [
     "electron-app",
@@ -36,8 +36,10 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
+    "gulp-if": "^2.0.2",
     "gulp-inject": "^4.2.0",
     "gulp-sourcemaps": "^2.3.1",
+    "gulp-xo": "^0.14.0",
     "jake": "latest",
     "jsdoc": "^3.4.3",
     "mocha": "^3.2.0",
@@ -52,9 +54,11 @@
       "node",
       "browser"
     ],
+    "reporter": "mocha-circleci-reporter",
     "ignores": [
       "tests/*",
       "test.js",
+		"gulpfile.babel.js",
       "docs/scripts/*",
       "docs/scripts/prettify/*"
     ]
