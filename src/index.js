@@ -61,7 +61,7 @@ const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display
 let JSONParsedEvent = [];
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
-const css = '<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="./node_modules/izitoast/dist/css/iziToast.css"><script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
+const css = '<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/node_modules/izitoast/dist/css/iziToast.css"><script src="https://use.fontawesome.com/a39359b6f9.js"></script><style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}body::-webkit-scrollbar{width: 1em;}body::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);}body::-webkit-scrollbar-thumb{background-color: darkgrey;outline: 1px solid slategrey;}</style><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
 // prevent window being garbage collected
@@ -479,13 +479,13 @@ function watchGood(stop) {
 					if (k === 'StarPos') {
 						process.htmlDone += '(x / y / z) <br>' + tableify(ob[k].join('<br>')) + '<br>';
 					} else if (k === 'Systems') {
-						process.htmlDone += '<br>Systems Sold: <br>' + tableify(ob[k].join('<br>')) + '<br>';
+						process.htmlDone += 'Systems Sold: <br>' + tableify(ob[k].join('<br>')) + '<br>';
 					} else if (typeof ob[k] === 'object') {
 						let objtoarr = _.allKeys(ob[k]); // eslint-disable-line prefer-const
-						process.htmlDone += '<br>' + k + tableify(objtoarr.join('<br>')) + '<br>';
+						process.htmlDone += k + ':<br>' + tableify(objtoarr.join('<br>')) + '<br>';
 					} else {
 						process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
-						console.log('\t' + k, ob[k]);
+						// console.log('\t' + k, ob[k]);
 						JSONParsed.push(k + ':<br>' + ob[k]);
 					}
 				}

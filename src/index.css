@@ -10,9 +10,8 @@ html, body {
 }
 
 body {
-	background-color: #313943;
 	color: #bbc8d8;
-	font-family: 'Lato';
+	font-family: 'Lato', serif;
 	font-size: 22px;
 	font-weight: 500;
 	line-height: 36px;
@@ -54,7 +53,18 @@ header h1 {
 	background: linear-gradient(to right, #5A3F37, #2C7744);
 	/* Standard syntax */
 }
+body::-webkit-scrollbar {
+	width: 1em;
+}
 
+body::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: darkgrey;
+	outline: 1px solid slategrey;
+}
 hr {
 	color: red;
 }

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" href="./node_modules/izitoast/dist/css/iziToast.min.css">
 	<meta charset="utf-8">
 	<title>
 		Elite Journal
 	</title>
-	<link href="index.css" rel="stylesheet">
-</link>
-</meta>
+	<!-- inject:css -->
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="node_modules/izitoast/dist/css/iziToast.min.css">
+	<!-- endinject -->
 </head>
 <body>
 	<h1 id="main">
@@ -17,18 +17,18 @@
 	<div id="holder">Or, Drag your file somewhere on this page.</div>
 </body>
 <script>
-document.addEventListener('dragover', event => event.preventDefault())
-document.addEventListener('drop', event => event.preventDefault())
-	const {ipcRenderer} = require('electron')
-	const holder = document.getElementById('holder')
+document.addEventListener('dragover', event => event.preventDefault());
+document.addEventListener('drop', event => event.preventDefault());
+	const {ipcRenderer} = require('electron');
+	const holder = document.getElementById('holder');
 	holder.ondragover = () => {
 		return false;
-	}
+	};
 	holder.ondragleave = holder.ondragend = () => {
 		return false;
-	}
+	};
 	document.ondrop = (e) => {
-		e.preventDefault()
+		e.preventDefault();
 		for (let f of e.dataTransfer.files) {
 			ipcRenderer.send('asynchronous-drop', f.path)
 		}

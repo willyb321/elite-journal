@@ -1,0 +1,27 @@
+{
+	"author": {
+		"name": "willyb321",
+		"email": "wbwilliam7@gmail.com",
+		"url": "tehsuperwilly.tech"
+	},
+  "name": "elite-journal",
+	"productName": "Elite Journal",
+	"description": "Parsing the elite dangerous journal and putting it in a cool format!",
+  "version": "1.9.4",
+	"dependencies": {
+		"about-window": "^1.6.1",
+		"bugsnag": "^1.9.0",
+		"debug": "^2.6.0",
+		"electron-auto-updater": "^0.10.1",
+		"electron-debug": "^1.1.0",
+		"electron-is-dev": "^0.1.2",
+		"electron-json-storage": "^3.0.0",
+		"fs-extra": "^1.0.0",
+		"izitoast": "^1.0.2-c",
+		"jsonfile": "^2.4.0",
+		"line-by-line": "^0.1.5",
+		"source-map-support": "^0.4.8",
+		"tableify": "^1.0.0",
+		"underscore": "^1.8.3"
+	}
+}

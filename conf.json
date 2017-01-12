@@ -4,7 +4,7 @@
 		"dictionaries": ["jsdoc","closure"]
 	},
 	"source": {
-		"include": ["index.js", "lib/log-watcher.js"]
+		"include": ["src/index.js", "src/lib/log-watcher.js"]
 	},
 	"plugins": [
 		"plugins/markdown",

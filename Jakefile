@@ -61,7 +61,7 @@ task('setup', function (params) {
 	console.log('Cloning and installing dependencies');
 	const cmds = [
 	'git clone https://github.com/willyb321/elite-journal.git'
-	, 'cd ./elite-journal && yarn install'
+	, '(cd ./elite-journal && yarn install)'
 	]
 	jake.exec(cmds, function () {
 		console.log('Project cloned and dependencies installed.');
