@@ -4,12 +4,11 @@ const electron = require('electron');
 const fs = require('fs');
 
 describe('application launch', function () {
-	this.timeout(10000)
+	this.timeout(10000);
 
 	beforeEach(function () {
 		this.app = new Application({
-			path: require('electron'),
-			args: ['./src/index.js'],
+			path: './dist/linux-unpacked/elite-journal',
 			startTimeout: 10000
 		});
 		return this.app.start()

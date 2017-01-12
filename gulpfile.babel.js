@@ -25,9 +25,9 @@ gulp.task('default', () => {
 		.pipe(gulp.dest('src'));
 });
 
-gulp.task('build:pack', () => {
+gulp.task('build:pack', (cb) => {
 	builder.build({
-		targets: builder.Platform.win32,
+		platform: builder.Platform.WIN,
 		config: {
 			directories: {
 				app: 'src'
@@ -43,14 +43,15 @@ gulp.task('build:pack', () => {
 	})
 		.then(() => {
 			console.log('Built the app in dist/');
+			cb()
 		})
 		.catch(err => {
 			console.error(err);
 		});
 });
-gulp.task('build:dist', () => {
+gulp.task('build:dist', (cb) => {
 	builder.build({
-		targets: builder.Platform.win32,
+		platform: builder.Platform.WIN,
 		config: {
 			win: {
 				target: [
@@ -69,6 +70,7 @@ gulp.task('build:dist', () => {
 	})
 		.then(() => {
 			console.log('Built an NSIS installer in dist/');
+			cb();
 		})
 		.catch(err => {
 			console.error(err);
@@ -83,7 +85,39 @@ gulp.task('index', () => {
 		.pipe(gulp.dest('./src'));
 });
 
-gulp.task('test', () => {
+gulp.task('build:packCI', (cb) => {
+	builder.build({
+		platform: builder.Platform.LINUX,
+		config: {
+			directories: {
+				app: 'src'
+			},
+			linux: {
+				target: [
+					'dir'
+				]
+			},
+			win: {
+				directories: {
+					app: 'src'
+				},
+				win: {
+					target: [
+						'dir'
+					]
+			}}
+		}
+	})
+		.then(() => {
+			console.log('Built the app in dist/');
+			cb()
+		})
+		.catch(err => {
+			console.error(err);
+		});
+});
+
+gulp.task('test', ['build:packCI'], () => {
 	mocha.reporter('mocha-circleci-reporter');
 	fs.readdirSync(testDir).filter(function(file){
 		// Only keep the .js files
@@ -96,7 +130,7 @@ gulp.task('test', () => {
 	});
 
 // Run the tests.
-	mocha.run(function(failures){
+	return mocha.run(function(failures){
 		process.on('exit', function () {
 			process.exit(failures);  // exit with non-zero status if there were failures
 		});

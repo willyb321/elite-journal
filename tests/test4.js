@@ -8,8 +8,7 @@ describe('application launch', function () {
 
 	beforeEach(function () {
 		this.app = new Application({
-			path: require('electron'),
-			args: ['./src/index.js'],
+			path: './dist/linux-unpacked/elite-journal',
 			startTimeout: 10000
 		});
 		return this.app.start()
