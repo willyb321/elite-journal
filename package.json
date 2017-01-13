@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "gulp test",
-	  "prestart": "gulp && gulp index",
+    "prestart": "gulp && gulp index",
     "start": "set NODE_ENV=development && electron src/indexbuild.js",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
     "pack": "gulp index && gulp build:pack",
@@ -28,6 +28,7 @@
     "electron"
   ],
   "devDependencies": {
+    "ava": "^0.17.0",
     "babel-core": "^6.21.0",
     "babel-preset-latest": "^6.16.0",
     "del": "^2.2.2",
@@ -35,6 +36,7 @@
     "electron": "^1.4.14",
     "electron-builder": "^11.2.4",
     "gulp": "^3.9.1",
+    "gulp-ava": "^0.15.0",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
@@ -51,6 +53,9 @@
     "spectron": "^3.4.1",
     "xo": "^0.17.1"
   },
+	"ava": {
+
+	},
   "xo": {
     "esnext": true,
     "envs": [
@@ -62,7 +67,7 @@
       "tests/*",
       "test.js",
       "gulpfile.babel.js",
-		"src/indexbuild.*",
+      "src/indexbuild.*",
       "docs/scripts/*",
       "docs/scripts/prettify/*"
     ]

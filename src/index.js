@@ -458,7 +458,17 @@ function watchGood(stop) {
 		console.log('it stopped');
 		// JSONParsed = JSONParsed.reverse();
 		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + stopdrop + `<script>function scroll() {window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);} window.onload = scroll;</script>` + process.htmlDone);
+		win.loadURL('data:text/html,' + stopdrop + `<script></script>` + process.htmlDone);
+		process.mainContents.on('did-finish-load', () => {
+			fs.readFile(path.join(__dirname, 'index.css'), 'utf-8', (error, data) => {
+				if (!error) {
+					const formattedData = data.replace(/\s{2,10}/g, ' ').trim();
+					process.mainContents.insertCSS(formattedData);
+					process.mainContents.executeJavaScript(`function scroll() {window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);} scroll()`);
+				}
+			});
+		});
+
 		// JSONParsed = [];
 		// process.htmlDone = '';
 	});

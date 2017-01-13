@@ -1,43 +1,92 @@
-const Application = require('spectron').Application
-const assert = require('assert');
-const electron = require('electron');
-const fs = require('fs');
+import test from 'ava';
+import {Application} from 'spectron';
+import fs from "fs";
 
-describe('application launch', function() {
-	this.timeout(10000)
-
-	beforeEach(function() {
-		this.app = new Application({
-			path: electron,
-			args: ['./index.js'],
+test.beforeEach(async t => {
+	if (process.platform === 'linux') {
+		t.context.app = new Application({
+			path: './dist/linux-unpacked/elite-journal',
+			env: {NODE_ENV: 'test'},
 			startTimeout: 10000
 		});
-		return this.app.start()
+	} else if (process.platform === 'win32') {
+		t.context.app = new Application({
+			path: './dist/win-unpacked/Elite Journal.exe',
+			env: {NODE_ENV: 'test'},
+			startTimeout: 10000
+		});
+	}
+	await t.context.app.start();
+});
+
+test.afterEach.always(async t => {
+	await t.context.app.stop();
+});
+
+test.serial('Initial Window', async t => {
+	const app = t.context.app;
+	await app.client.waitUntilWindowLoaded();
+
+	const win = app.browserWindow;
+	await win.focus();
+	t.is(await app.client.getWindowCount(), 1);
+	t.false(await win.isMinimized());
+	t.false(await win.isDevToolsOpened());
+	t.true(await win.isVisible());
+	t.true(await win.isFocused());
+
+	const {width, height} = await win.getBounds();
+	t.true(width > 0);
+	t.true(height > 0);
+});
+
+test.serial('Screenshot', async t => {
+	const app = t.context.app;
+	await app.client.waitUntilWindowLoaded();
+
+	const win = app.browserWindow;
+	await win.focus();
+	t.is(await app.client.getWindowCount(), 1);
+	await app.client.waitUntilWindowLoaded(10000);
+	await app.browserWindow.capturePage().then(imageBuffer => {
+		fs.writeFileSync('page.png', imageBuffer)
+	});
+});
+
+test.serial('#main div test', async t => {
+	const app = t.context.app;
+	await app.client.waitUntilWindowLoaded();
+
+	const win = app.browserWindow;
+	await win.focus();
+	app.client.getText('#main').then(mainText =>{
+		console.log('#main says: ' + mainText);
+		t.is(mainText, 'Please load a file using the "File" menu')
 	})
-	afterEach(function() {
-		if (this.app && this.app.isRunning()) {
-			return this.app.stop()
+});
+
+test.serial('#holder div test', async t => {
+	const app = t.context.app;
+	await app.client.waitUntilWindowLoaded();
+
+	const win = app.browserWindow;
+	await win.focus();
+	await app.client.getText('#holder').then(mainText =>{
+		console.log('#holder says: ' + mainText);
+		t.is(mainText, 'Or, Drag your file somewhere on this page.')
+	})
+});
+
+test.serial('Accessibility test', async t => {
+	const app = t.context.app;
+	await app.client.waitUntilWindowLoaded();
+
+	const win = app.browserWindow;
+	await win.focus();
+
+	await app.client.auditAccessibility().then(function (audit) {
+		if (audit.failed) {
+			console.error(audit.message);
 		}
 	})
-
-	it('shows an initial window', function() {
-		return this.app.client.getWindowCount().then(function(count) {
-			assert.equal(count, 1)
-		})
-	})
-	it('takes a screenshot', function() {
-		this.app.browserWindow.capturePage().then(function(imageBuffer) {
-			fs.writeFile('page.png', imageBuffer);
-		})
-	})
-	it('has the right text in #main', function() {
-		this.app.client.getText('#main').then(function(mainText) {
-			console.log('#main says: ' + mainText)
-		})
-	})
-	it('has the right text in #holder', function() {
-		this.app.client.getText('#holder').then(function(mainText) {
-			console.log('#holder says: ' + mainText)
-		})
-	})
-})
+});

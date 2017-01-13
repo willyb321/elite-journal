@@ -9,9 +9,9 @@ import Mocha from "mocha";
 import fs from "fs";
 import path from "path";
 import rimraf from "rimraf";
+import ava from "gulp-ava";
 
 const builder = require('electron-builder');
-
 const mocha = new Mocha();
 const testDir  = 'tests/';
 
@@ -131,26 +131,7 @@ gulp.task('build:packCI', (cb) => {
 });
 
 gulp.task('test', ['default', 'build:packCI'], (cb) => {
-	mocha.reporter('mocha-circleci-reporter');
-	fs.readdirSync(testDir).filter(file => {
-		// Only keep the .js files
-		return file.substr(-3) === '.js';
-
-	}).forEach(file => {
-		mocha.addFile(
-			path.join(testDir, file)
-		);
-	});
-
-// Run the tests.
-	return mocha.run( failures => {
-		if (!failures) {
-			cb();
-			process.exit(0);
-		}
-		process.on('exit', () => {
-			cb(failures);
-			process.exit(failures);  // exit with non-zero status if there were failures
-		});
-	});
+	gulp.src('test.js')
+		.pipe(ava({verbose: true}));
+	cb()
 });
