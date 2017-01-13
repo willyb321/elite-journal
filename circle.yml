@@ -13,8 +13,8 @@ dependencies:
   cache_directories:
     - ~/.cache/yarn
   override:
-  	- rm -rf node_modules
-  	- rm -rf src/node_modules
+    - rm -rf node_modules
+    - rm -rf src/node_modules
     - yarn install
 test:
   post:
