@@ -4,7 +4,9 @@
 		"email": "wbwilliam7@gmail.com",
 		"url": "tehsuperwilly.tech"
 	},
+	"license": "MIT",
   "name": "elite-journal",
+	"main": "indexbuild.js",
 	"productName": "Elite Journal",
 	"description": "Parsing the elite dangerous journal and putting it in a cool format!",
   "version": "1.10.1",

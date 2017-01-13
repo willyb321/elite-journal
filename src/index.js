@@ -3,24 +3,20 @@
  * @author willyb321
  * @copyright MIT
  */
-
-const electron = require('electron');
-const {Menu} = require('electron');
-const {dialog} = require('electron');
-const {ipcMain} = require('electron');
-const path = require('path');
-const os = require('os');
-const {autoUpdater} = require('electron-auto-updater');
-const fs = require('fs-extra');
-const tableify = require('tableify');
-const LineByLineReader = require('line-by-line');
-const _ = require('underscore');
-const isDev = require('electron-is-dev');
-const jsonfile = require('jsonfile');
-const bugsnag = require('bugsnag');
-const openAboutWindow = require('about-window').default;
-const storage = require('electron-json-storage');
-const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
+import electron, {Menu, dialog, ipcMain} from 'electron';
+import path from 'path';
+import os from 'os';
+import {autoUpdater} from 'electron-auto-updater';
+import fs from 'fs-extra';
+import tableify from 'tableify';
+import LineByLineReader from 'line-by-line';
+import _ from 'underscore';
+import isDev from 'electron-is-dev';
+import jsonfile from 'jsonfile';
+import bugsnag from 'bugsnag';
+import openAboutWindow from 'about-window';
+import storage from 'electron-json-storage';
+import {LogWatcher} from './lib/log-watcher';
 
 const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
@@ -335,7 +331,12 @@ function loadByDrop() {
  */
 function funcSaveHTML() {
 	if (process.logLoaded === true) {
-		dialog.showSaveDialog(fileName => {
+		dialog.showSaveDialog({
+			filters: [{
+				name: 'HTML',
+				extensions: ['html']
+			}]
+		}, fileName => {
 			if (fileName === undefined) {
 				console.log('You didn\'t save the file');
 				return;
@@ -409,7 +410,7 @@ function loadOutputDropped() {
 	});
 }
 /**
- * Used to save loaded file as JSON.
+ * @description Used to save loaded file as JSON.
  */
 function funcSaveJSON() {
 	if (process.logLoaded === true) {
@@ -486,7 +487,7 @@ function watchGood(stop) {
 					} else {
 						process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
 						// console.log('\t' + k, ob[k]);
-						JSONParsed.push(k + ':<br>' + ob[k]);
+						JSONParsed.push(k + '\n' + ob[k]);
 					}
 				}
 			});

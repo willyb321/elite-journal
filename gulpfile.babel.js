@@ -2,27 +2,39 @@
 import gulp from 'gulp';
 import del from 'del';
 import inject from 'gulp-inject';
+import sourcemaps from "gulp-sourcemaps";
+import babel from "gulp-babel";
+import concat from "gulp-concat";
+import Mocha from "mocha";
+import fs from "fs";
+import path from "path";
+import rimraf from "rimraf";
 
-const sourcemaps = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
 const builder = require('electron-builder');
-const Mocha = require('mocha');
-const fs = require('fs');
-const path = require('path');
 
 const mocha = new Mocha();
 const testDir  = 'tests/';
 
 gulp.task('default', () => {
-	return gulp.src('src/**/*.js')
-		.pipe(sourcemaps.init())
-		.pipe(babel({
-			presets: ['es2015']
-		}))
-		.pipe(concat('all.js'))
-		.pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('src'));
+	rimraf('src/indexbuild.js*', err => {
+		if (err && err.code !== 'ENOENT') {
+			console.log(err.codeFrame);
+			return err;
+		} else {
+			return gulp.src([ '!node_modules',
+				'!node_modules/**',
+				'!dist',
+				'!dist/**', 'src/*.js'])
+				.pipe(sourcemaps.init())
+				.pipe(babel({
+					presets: ['latest'],
+					ignore: 'node_modules/**/*'
+				}))
+				.pipe(concat('indexbuild.js'))
+				.pipe(sourcemaps.write('.'))
+				.pipe(gulp.dest('src'));
+		}
+	});
 });
 
 gulp.task('build:pack', (cb) => {
@@ -79,7 +91,7 @@ gulp.task('build:dist', (cb) => {
 		});
 });
 gulp.task('clean', () => {
-	return del(['dist']);
+	return del(['dist/**/*']);
 });
 gulp.task('index', () => {
 	gulp.src('./src/**/*.html')
@@ -118,7 +130,7 @@ gulp.task('build:packCI', (cb) => {
 		});
 });
 
-gulp.task('test', ['build:packCI'], (cb) => {
+gulp.task('test', ['default', 'build:packCI'], (cb) => {
 	mocha.reporter('mocha-circleci-reporter');
 	fs.readdirSync(testDir).filter(file => {
 		// Only keep the .js files
