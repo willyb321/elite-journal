@@ -2,7 +2,7 @@ const Application = require('spectron').Application;
 const assert = require('assert');
 const fs = require('fs');
 
-describe('Screenshot', function () {
+describe('Accessibility Audit', function () {
 	this.timeout(10000);
 
 	beforeEach(function () {
@@ -26,10 +26,12 @@ describe('Screenshot', function () {
 			return this.app.stop()
 		}
 	});
-	it('takes a screenshot', function () {
-		this.app.client.waitUntilWindowLoaded(10000);
-		return this.app.browserWindow.capturePage().then(function (imageBuffer) {
-			fs.writeFileSync('page.png', imageBuffer)
+
+	it('Does alright in the accessibility audit', function () {
+		this.app.client.auditAccessibility().then(function (audit) {
+			if (audit.failed) {
+				console.error(audit.message)
+			}
 		})
 	})
 });
