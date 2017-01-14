@@ -4,7 +4,6 @@
  * @copyright MIT
  */
 'use strict';
-
 const events = require('events');
 const os = require('os');
 const path = require('path');

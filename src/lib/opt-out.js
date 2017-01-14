@@ -5,10 +5,10 @@
  */
 
 /** global: stopdrop */
-
+import {dialog} from 'electron';
 import bugsnag from 'bugsnag';
 import storage from 'electron-json-storage';
-import {dialog} from 'electron';
+
 /**
  * @description Allows one to opt-out of bugsnag reports.
  * @param yes - if yes === 0 then opt in, if === 1 opt out.

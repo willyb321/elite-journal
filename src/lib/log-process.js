@@ -3,6 +3,7 @@
  * @author willyb321
  * @copyright MIT
  */
+/* eslint-disable no-undef */
 /** global: JSONParsed */
 /** global: uncaughtErr */
 /** global: stopdrop */

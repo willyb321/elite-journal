@@ -3,6 +3,7 @@
  * @author willyb321
  * @copyright MIT
  */
+/* eslint-disable no-undef */
 /** global: LogWatcher */
 import electron, {Menu, dialog, ipcMain} from 'electron';
 import path from 'path';
@@ -188,7 +189,6 @@ function sortaSorter() {
 	}
 }
 
-
 /**
  * Used to populate the JSONParsedEvent array, which is used to load filtered logs.
  */
@@ -226,7 +226,7 @@ function loadInit() {
  * @returns {string} the extension of the file.
  */
 function whatLoading(fname) {
-	return fname.substr((~-fname.lastIndexOf(".") >>> 0) + 2);
+	return fname.substr((~-fname.lastIndexOf('.') >>> 0) + 2);
 }
 
 /**
@@ -235,9 +235,9 @@ function whatLoading(fname) {
  * @param html
  */
 function loadAlternate(loadFile, html) {
-	let loadIt = whatLoading(loadFile[0]);
+	const loadIt = whatLoading(loadFile[0]);
 	console.log(loadIt);
-	switch(loadIt) {
+	switch (loadIt) {
 		case 'json':
 			loadOutput();
 			loadFile = '';
@@ -247,6 +247,14 @@ function loadAlternate(loadFile, html) {
 			break;
 		case 'html':
 			win.loadURL(loadFile[0]);
+			break;
+		default:
+			dialog.showMessageBox({
+				type: 'info',
+				buttons: [],
+				title: 'Please load a file first',
+				message: 'Please load a file before attempting to save things that don\'t exist'
+			});
 	}
 }
 /**
