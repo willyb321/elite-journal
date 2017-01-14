@@ -3,6 +3,11 @@
  * @author willyb321
  * @copyright MIT
  */
+/** global: JSONParsed */
+/** global: uncaughtErr */
+/** global: stopdrop */
+/** global: css */
+/** global: win */
 import LineByLineReader from 'line-by-line';
 import tableify from 'tableify';
 
