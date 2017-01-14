@@ -91,7 +91,7 @@ gulp.task('build:dist', (cb) => {
 		});
 });
 gulp.task('clean', () => {
-	return del(['dist/**/*']);
+	return del(['dist/**/*', 'node_modules/', 'src/node_modules/']);
 });
 gulp.task('index', () => {
 	gulp.src('./src/**/*.html')

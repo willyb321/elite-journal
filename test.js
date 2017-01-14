@@ -79,7 +79,7 @@ test.serial('#holder div test', async t => {
 
 test.serial('Accessibility test', async t => {
 	const app = t.context.app;
-	await app.client.waitUntilWindowLoaded();
+	await app.client.waitUntilWindowLoaded(10000);
 
 	const win = app.browserWindow;
 	await win.focus();

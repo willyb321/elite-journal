@@ -41,7 +41,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
     "gulp-inject": "^4.2.0",
-    "gulp-sourcemaps": "^2.3.1",
+    "gulp-sourcemaps": "^2.4.0",
     "gulp-uglify": "^2.0.0",
     "gulp-xo": "^0.14.0",
     "jake": "latest",
@@ -53,9 +53,7 @@
     "spectron": "^3.4.1",
     "xo": "^0.17.1"
   },
-	"ava": {
-
-	},
+  "ava": {},
   "xo": {
     "esnext": true,
     "envs": [
