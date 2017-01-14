@@ -84,7 +84,7 @@ test.serial('Accessibility test', async t => {
 	const win = app.browserWindow;
 	await win.focus();
 
-	await app.client.auditAccessibility().then(function (audit) {
+	await app.client.auditAccessibility().then(audit =>{
 		if (audit.failed) {
 			console.error(audit.message);
 		}

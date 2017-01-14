@@ -9,14 +9,12 @@ import os from 'os';
 import {autoUpdater} from 'electron-auto-updater';
 import fs from 'fs-extra';
 import tableify from 'tableify';
-import LineByLineReader from 'line-by-line';
 import _ from 'underscore';
 import isDev from 'electron-is-dev';
 import jsonfile from 'jsonfile';
 import bugsnag from 'bugsnag';
 import openAboutWindow from 'about-window';
 import storage from 'electron-json-storage';
-import {LogWatcher} from './lib/log-watcher';
 
 const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
@@ -188,52 +186,7 @@ function sortaSorter() {
 		});
 	}
 }
-/**
- * @description Allows one to opt-out of bugsnag reports.
- * @param yes - if yes === 0 then opt in, if === 1 opt out.
- */
-function optOut(yes) {
-	storage.get('optOut', (error, data) => {
-		if (data) {
-			console.log(data);
-			if (data.out === false) {
-				console.log('in');
-			} else if (data.out === true) {
-				console.log('out');
-			}
-		}
-		if (error) {
-			console.log(error);
-		}
-	});
-	if (yes === 1) {
-		storage.set('optOut', {out: true}, err => {
-			if (err) {
-				console.log(err);
-			}
-			dialog.showMessageBox({
-				type: 'info',
-				buttons: [],
-				title: 'Opted back into diagnostics',
-				message: 'You have opted out of auto crash/error reporting.'
-			});
-			yes = undefined;
-		});
-	} else if (yes === 0) {
-		storage.set('optOut', {out: false}, err => {
-			if (err) {
-				console.log(err);
-				bugsnag.notify(new Error(err));
-			}
-			dialog.showMessageBox({
-				type: 'info',
-				buttons: [],
-				title: 'Opted back into diagnostics',
-				message: 'You have opted into auto crash/error reporting.'
-			});
-		});
-	}
-}
+
 
 /**
  * Used to populate the JSONParsedEvent array, which is used to load filtered logs.
@@ -256,33 +209,7 @@ function loadFilter() {
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
 	win.loadURL('data:text/html,' + webview + css + '<hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
-/**
- * @param  {Array} loadFile - Array with path to loaded file.
- * @param  {String} html - HTML that was generated.
- * @description Reads a loaded log line by line and generates JSONParsed.
- */
-function lineReader(loadFile, html) { // eslint-disable-line no-unused-vars
-	JSONParsed = [];
-	const lr = new LineByLineReader(loadFile[0]);
-	lr.on('error', err => {
-		console.log(err);
-	});
-	lr.on('line', line => {
-		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-		JSONParsed.push(lineParse);
-		html += tableify(lineParse) + '<hr>';
-	});
-	lr.on('end', err => {
-		if (err) {
-			uncaughtErr(err);
-		}
-		process.htmlDone = html;
-		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
-		process.logLoaded = true;
-		loadFile = [];
-	});
-}
+
 /**
  * Code thats used to reduce duplication in loading.
  */
@@ -460,11 +387,13 @@ function watchGood(stop) {
 		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + stopdrop + `<script></script>` + process.htmlDone);
 		process.mainContents.on('did-finish-load', () => {
-			fs.readFile(path.join(__dirname, 'index.css'), 'utf-8', (error, data) => {
-				if (!error) {
+			fs.readFile(path.join(__dirname, 'index.css'), 'utf-8', (err, data) => {
+				if (!err) {
 					const formattedData = data.replace(/\s{2,10}/g, ' ').trim();
 					process.mainContents.insertCSS(formattedData);
 					process.mainContents.executeJavaScript(`function scroll() {window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);} scroll()`);
+				} else if (err) {
+					uncaughtErr(err);
 				}
 			});
 		});
@@ -661,5 +590,6 @@ const template = [{
 	}
 	]
 }];
+
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);

@@ -16,10 +16,10 @@ gulp.task('default', () => {
 			console.log(err.codeFrame);
 			return err;
 		} else {
-			return gulp.src([ '!node_modules',
+			return gulp.src(['src/*.js', 'src/lib/*.js', '!node_modules',
 				'!node_modules/**',
 				'!dist',
-				'!dist/**', 'src/*.js'])
+				'!dist/**'])
 				.pipe(sourcemaps.init())
 				.pipe(babel({
 					presets: ['latest'],
@@ -32,7 +32,7 @@ gulp.task('default', () => {
 	});
 });
 
-gulp.task('build:pack', (cb) => {
+gulp.task('build:pack', ['default'], (cb) => {
 	builder.build({
 		platform: process.platform,
 		arch: "x64",
@@ -57,7 +57,7 @@ gulp.task('build:pack', (cb) => {
 			console.error(err);
 		});
 });
-gulp.task('build:dist', (cb) => {
+gulp.task('build:dist', ['default'], (cb) => {
 	builder.build({
 		platform: process.platform,
 		arch: "x64",
@@ -126,7 +126,13 @@ gulp.task('build:packCI', (cb) => {
 });
 
 gulp.task('test', ['default', 'build:packCI'], (cb) => {
-	gulp.src('test.js')
-		.pipe(ava({verbose: true}));
-	cb()
+	return gulp.src('test.js')
+		.pipe(ava({verbose: true}))
+});
+
+gulp.task('watch', (cb) => {
+	let watcher = gulp.watch('src/index.js', ['default']);
+	watcher.on('change', function(event) {
+		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+	});
 });
