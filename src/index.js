@@ -3,6 +3,7 @@
  * @author willyb321
  * @copyright MIT
  */
+/** global: LogWatcher */
 import electron, {Menu, dialog, ipcMain} from 'electron';
 import path from 'path';
 import os from 'os';
