@@ -5,15 +5,10 @@ import inject from 'gulp-inject';
 import sourcemaps from "gulp-sourcemaps";
 import babel from "gulp-babel";
 import concat from "gulp-concat";
-import Mocha from "mocha";
-import fs from "fs";
-import path from "path";
 import rimraf from "rimraf";
 import ava from "gulp-ava";
 
 const builder = require('electron-builder');
-const mocha = new Mocha();
-const testDir  = 'tests/';
 
 gulp.task('default', () => {
 	rimraf('src/indexbuild.js*', err => {

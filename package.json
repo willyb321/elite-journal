@@ -46,8 +46,6 @@
     "gulp-xo": "^0.14.0",
     "jake": "latest",
     "jsdoc": "^3.4.3",
-    "mocha": "^3.2.0",
-    "mocha-circleci-reporter": "^0.0.2",
     "release-it": "^2.5.3",
     "rimraf": "^2.5.4",
     "spectron": "^3.4.1",
