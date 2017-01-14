@@ -3,9 +3,10 @@
  * @author willyb321
  * @licence MIT
  */
-/** global: bugsnag */
+
 /** global: stopdrop */
 
+import bugsnag from 'bugsnag';
 import storage from 'electron-json-storage';
 import {dialog} from 'electron';
 /**

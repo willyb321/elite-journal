@@ -221,18 +221,32 @@ function loadInit() {
 	loadAlternate(loadFile, html);
 }
 /**
+ * @description Used in loading files to get the extension more efficiently.
+ * @param fname the filename to process.
+ * @returns {string} the extension of the file.
+ */
+function whatLoading(fname) {
+	return fname.substr((~-fname.lastIndexOf(".") >>> 0) + 2);
+}
+
+/**
  * @description Figures out how to load the file that was selected in loadInit()
- * @param loadFile
+ * @param loadFile an array with the full path of the file being loaded.
  * @param html
  */
 function loadAlternate(loadFile, html) {
-	if ((/\.(json)$/i).test(loadFile)) {
-		loadOutput();
-		loadFile = '';
-	} else if ((/\.(log)$/i).test(loadFile)) {
-		lineReader(loadFile, html);
-	} else if ((/\.(html)$/i).test(loadFile)) {
-		win.loadURL(loadFile[0]);
+	let loadIt = whatLoading(loadFile[0]);
+	console.log(loadIt);
+	switch(loadIt) {
+		case 'json':
+			loadOutput();
+			loadFile = '';
+			break;
+		case 'log':
+			lineReader(loadFile, html);
+			break;
+		case 'html':
+			win.loadURL(loadFile[0]);
 	}
 }
 /**
@@ -294,7 +308,7 @@ function funcSaveHTML() {
 	}
 }
 /**
- * Loads the JSON that the program outputted.
+ * @description Loads the JSON that the program outputted.
  */
 function loadOutput() {
 	JSONParsed = [];
@@ -316,7 +330,7 @@ function loadOutput() {
 	});
 }
 /**
- * Loads the JSON outputted by the program if it was dropped.
+ * @description Loads the JSON outputted by the program if it was dropped.
  */
 function loadOutputDropped() {
 	JSONParsed = [];
@@ -373,7 +387,7 @@ function funcSaveJSON() {
 }
 /**
  * @description New watching code. See lib/log-watcher.js for the info.
-	 * @param stop - if the watching should be stopped.
+ * @param stop - if the watching should be stopped.
  */
 function watchGood(stop) {
 	process.logLoaded = true;
@@ -384,7 +398,6 @@ function watchGood(stop) {
 	});
 	watcher.on('finished', () => {
 		console.log('it stopped');
-		// JSONParsed = JSONParsed.reverse();
 		process.htmlDone = process.htmlDone.replace('undefined', '');
 		win.loadURL('data:text/html,' + stopdrop + `<script></script>` + process.htmlDone);
 		process.mainContents.on('did-finish-load', () => {
@@ -398,16 +411,12 @@ function watchGood(stop) {
 				}
 			});
 		});
-
-		// JSONParsed = [];
-		// process.htmlDone = '';
 	});
 
 	watcher.on('stopped', () => {
 		console.log('nah its stopped');
 	});
 	watcher.on('data', obs => {
-		// obs = obs.reverse();
 		obs.forEach(ob => {
 			const {timestamp, event} = ob;
 			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
