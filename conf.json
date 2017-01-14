@@ -4,7 +4,7 @@
 		"dictionaries": ["jsdoc","closure"]
 	},
 	"source": {
-		"include": ["src/index.js", "src/lib/*.js"]
+		"include": ["src/index.js", "src/lib"]
 	},
 	"plugins": [
 		"plugins/markdown",
