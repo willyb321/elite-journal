@@ -548,7 +548,7 @@ const template = [{
 		accelerator: 'CmdOrCtrl+R',
 		click(focusedWindow) {
 			if (focusedWindow) {
-				focusedWindow.reload();
+				win.reload()
 			}
 		}
 	}, {
