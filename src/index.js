@@ -51,6 +51,10 @@ autoUpdater.on('error', error => {
 		bugsnag.notify(error);
 	}
 });
+
+autoUpdater.on('download-progress', percent => {
+	win.setProgressBar(percent, {mode: 'normal'})
+})
 let loadFile;
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0;" nodeintegration="on"></webview>`;
