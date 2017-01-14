@@ -28,9 +28,10 @@
         <article>
             <pre class="prettyprint source linenums"><code>/**
  * @file The file that does the log watching.
+ * @author willyb321
+ * @copyright MIT
  */
 'use strict';
-
 const events = require('events');
 const os = require('os');
 const path = require('path');
@@ -45,8 +46,15 @@ const DEFAULT_SAVE_DIR = path.join(
 	'Frontier Developments',
 	'Elite Dangerous'
 );
-
+/**
+ * @class
+ */
 class LogWatcher extends events.EventEmitter {
+	/**
+	 * Construct the log watcher.
+	 * @param dirpath
+	 * @param maxfiles
+	 */
 	constructor(dirpath, maxfiles) {
 		super();
 
@@ -62,11 +70,18 @@ class LogWatcher extends events.EventEmitter {
 		this._loop();
 	}
 
+	/**
+	 * Bury a file
+	 * @param filename
+	 */
 	bury(filename) {
 		debug('bury', {filename});
 		this._logDetailMap[filename].tombstoned = true;
 	}
 
+	/**
+	 * Stop running
+	 */
 	stop() {
 		debug('stop');
 
@@ -79,6 +94,9 @@ class LogWatcher extends events.EventEmitter {
 		}
 	}
 
+	/**
+	 * The main loop
+	 */
 	_loop() {
 		debug('_loop', {opcount: this._ops.length});
 
@@ -113,6 +131,10 @@ class LogWatcher extends events.EventEmitter {
 		}
 	}
 
+	/**
+	 * Poll the logs directory for new/updated files.
+	 * @param callback
+	 */
 	_poll(callback) {
 		debug('_poll');
 
@@ -145,6 +167,11 @@ class LogWatcher extends events.EventEmitter {
 		});
 	}
 
+	/**
+	 * Stat the new/updated files in log directory
+	 * @param filename
+	 * @param callback
+	 */
 	_statfile(filename, callback) {
 		debug('_statfile', {filename});
 
@@ -163,6 +190,12 @@ class LogWatcher extends events.EventEmitter {
 		});
 	}
 
+	/**
+	 * Process the files
+	 * @param filename
+	 * @param stats
+	 * @param callback
+	 */
 	_process(filename, stats, callback) {
 		debug('_process', {filename, stats});
 		let CURRENT_FILE = 0;
@@ -205,6 +238,11 @@ class LogWatcher extends events.EventEmitter {
 		info.size = stats.size;
 	}
 
+	/**
+	 * Read the files
+	 * @param filename
+	 * @param callback
+	 */
 	_read(filename, callback) {
 		const {watermark, size} = this._logDetailMap[filename];
 		debug('_read', {filename, watermark, size});
@@ -251,6 +289,11 @@ class LogWatcher extends events.EventEmitter {
 		});
 	}
 	}
+/**
+ * Get the path of the logs.
+ * @param fpath
+ * @returns {boolean}
+ */
 function isCommanderLog(fpath) {
 	const base = path.basename(fpath);
 	return base.indexOf('Journal.') === 0 &amp;&amp; path.extname(fpath) === '.log';
@@ -264,13 +307,13 @@ module.exports = {
 if (!module.parent) {
 	process.on('uncaughtException', err => {
 		console.error(err.stack || err);
-		process.exit(1);
+		throw new Error(err.stack || err);
 	});
 
 	const watcher = new LogWatcher(DEFAULT_SAVE_DIR);
 	watcher.on('error', err => {
 		console.error(err.stack || err);
-		process.exit(1); // eslint-disable-line unicorn/no-process-exit
+		throw new Error(err.stack || err);
 	});
 	watcher.on('data', obs => {
 		obs.forEach(ob => {
@@ -294,13 +337,13 @@ if (!module.parent) {
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#createMainWindow">createMainWindow</a></li><li><a href="global.html#dialogLoad">dialogLoad</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#funcSaveHTML">funcSaveHTML</a></li><li><a href="global.html#funcSaveJSON">funcSaveJSON</a></li><li><a href="global.html#getChecked">getChecked</a></li><li><a href="global.html#lineReader">lineReader</a></li><li><a href="global.html#loadAlternate">loadAlternate</a></li><li><a href="global.html#loadByDrop">loadByDrop</a></li><li><a href="global.html#loadFilter">loadFilter</a></li><li><a href="global.html#loadInit">loadInit</a></li><li><a href="global.html#loadOutput">loadOutput</a></li><li><a href="global.html#loadOutputDropped">loadOutputDropped</a></li><li><a href="global.html#logorjson">logorjson</a></li><li><a href="global.html#onClosed">onClosed</a></li><li><a href="global.html#opted">opted</a></li><li><a href="global.html#optOut">optOut</a></li><li><a href="global.html#sortaSorter">sortaSorter</a></li><li><a href="global.html#template">template</a></li><li><a href="global.html#uncaughtErr">uncaughtErr</a></li><li><a href="global.html#watchGood">watchGood</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-lib_log-process.html">lib/log-process</a></li><li><a href="module-lib_opt-out.html">lib/opt-out</a></li></ul><h3>Classes</h3><ul><li><a href="LogWatcher.html">LogWatcher</a></li></ul><h3>Global</h3><ul><li><a href="global.html#createMainWindow">createMainWindow</a></li><li><a href="global.html#dialogLoad">dialogLoad</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#funcSaveHTML">funcSaveHTML</a></li><li><a href="global.html#funcSaveJSON">funcSaveJSON</a></li><li><a href="global.html#getChecked">getChecked</a></li><li><a href="global.html#isCommanderLog">isCommanderLog</a></li><li><a href="global.html#loadAlternate">loadAlternate</a></li><li><a href="global.html#loadByDrop">loadByDrop</a></li><li><a href="global.html#loadFilter">loadFilter</a></li><li><a href="global.html#loadInit">loadInit</a></li><li><a href="global.html#loadOutput">loadOutput</a></li><li><a href="global.html#loadOutputDropped">loadOutputDropped</a></li><li><a href="global.html#onClosed">onClosed</a></li><li><a href="global.html#opted">opted</a></li><li><a href="global.html#sortaSorter">sortaSorter</a></li><li><a href="global.html#template">template</a></li><li><a href="global.html#uncaughtErr">uncaughtErr</a></li><li><a href="global.html#watchGood">watchGood</a></li><li><a href="global.html#whatLoading">whatLoading</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat Dec 17 2016 13:31:21 GMT+1100 (AUS Eastern Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat Jan 14 2017 18:44:08 GMT+1100 (AUS Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

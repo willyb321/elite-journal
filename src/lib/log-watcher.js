@@ -18,8 +18,15 @@ const DEFAULT_SAVE_DIR = path.join(
 	'Frontier Developments',
 	'Elite Dangerous'
 );
-
+/**
+ * @class
+ */
 class LogWatcher extends events.EventEmitter {
+	/**
+	 * Construct the log watcher.
+	 * @param dirpath
+	 * @param maxfiles
+	 */
 	constructor(dirpath, maxfiles) {
 		super();
 
@@ -35,11 +42,18 @@ class LogWatcher extends events.EventEmitter {
 		this._loop();
 	}
 
+	/**
+	 * Bury a file
+	 * @param filename
+	 */
 	bury(filename) {
 		debug('bury', {filename});
 		this._logDetailMap[filename].tombstoned = true;
 	}
 
+	/**
+	 * Stop running
+	 */
 	stop() {
 		debug('stop');
 
@@ -52,6 +66,9 @@ class LogWatcher extends events.EventEmitter {
 		}
 	}
 
+	/**
+	 * The main loop
+	 */
 	_loop() {
 		debug('_loop', {opcount: this._ops.length});
 
@@ -86,6 +103,10 @@ class LogWatcher extends events.EventEmitter {
 		}
 	}
 
+	/**
+	 * Poll the logs directory for new/updated files.
+	 * @param callback
+	 */
 	_poll(callback) {
 		debug('_poll');
 
@@ -118,6 +139,11 @@ class LogWatcher extends events.EventEmitter {
 		});
 	}
 
+	/**
+	 * Stat the new/updated files in log directory
+	 * @param filename
+	 * @param callback
+	 */
 	_statfile(filename, callback) {
 		debug('_statfile', {filename});
 
@@ -136,6 +162,12 @@ class LogWatcher extends events.EventEmitter {
 		});
 	}
 
+	/**
+	 * Process the files
+	 * @param filename
+	 * @param stats
+	 * @param callback
+	 */
 	_process(filename, stats, callback) {
 		debug('_process', {filename, stats});
 		let CURRENT_FILE = 0;
@@ -178,6 +210,11 @@ class LogWatcher extends events.EventEmitter {
 		info.size = stats.size;
 	}
 
+	/**
+	 * Read the files
+	 * @param filename
+	 * @param callback
+	 */
 	_read(filename, callback) {
 		const {watermark, size} = this._logDetailMap[filename];
 		debug('_read', {filename, watermark, size});
@@ -224,6 +261,11 @@ class LogWatcher extends events.EventEmitter {
 		});
 	}
 	}
+/**
+ * Get the path of the logs.
+ * @param fpath
+ * @returns {boolean}
+ */
 function isCommanderLog(fpath) {
 	const base = path.basename(fpath);
 	return base.indexOf('Journal.') === 0 && path.extname(fpath) === '.log';

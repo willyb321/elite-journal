@@ -7,8 +7,7 @@
 		"include": ["src/index.js", "src/lib"]
 	},
 	"plugins": [
-		"plugins/markdown",
-		"plugins/summarize"
+		"plugins/markdown"
 	],
 	"templates": {
 		"cleverLinks": false,

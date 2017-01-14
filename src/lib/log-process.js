@@ -11,7 +11,9 @@
 /** global: win */
 import LineByLineReader from 'line-by-line';
 import tableify from 'tableify';
-
+/**
+ * @module
+ */
 /**
  * @param  {Array} loadFile - Array with path to loaded file.
  * @param  {String} html - HTML that was generated.

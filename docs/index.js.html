@@ -29,25 +29,22 @@
             <pre class="prettyprint source linenums"><code>/**
  * @file The main file. Controls most things
  * @author willyb321
+ * @copyright MIT
  */
-const electron = require('electron');
-const {Menu} = require('electron');
-const {dialog} = require('electron');
-const {ipcMain} = require('electron');
-const path = require('path');
-const os = require('os');
-const {autoUpdater} = require('electron-auto-updater'); // eslint-disable-line no-unused-vars
-const fs = require('fs-extra');
-const tableify = require('tableify');
-const LineByLineReader = require('line-by-line');
-const _ = require('underscore');
-const isDev = require('electron-is-dev');
-const jsonfile = require('jsonfile');
-const bugsnag = require('bugsnag');
-const watch = require('node-watch');
-const openAboutWindow = require('about-window').default;
-const storage = require('electron-json-storage');
-const LogWatcher = require('./lib/log-watcher.js').LogWatcher;
+/* eslint-disable no-undef */
+/** global: LogWatcher */
+import electron, {Menu, dialog, ipcMain} from 'electron';
+import path from 'path';
+import os from 'os';
+import {autoUpdater} from 'electron-auto-updater';
+import fs from 'fs-extra';
+import tableify from 'tableify';
+import _ from 'underscore';
+import isDev from 'electron-is-dev';
+import jsonfile from 'jsonfile';
+import bugsnag from 'bugsnag';
+import openAboutWindow from 'about-window';
+import storage from 'electron-json-storage';
 
 const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
@@ -82,16 +79,13 @@ autoUpdater.on('error', error => {
 		bugsnag.notify(error);
 	}
 });
-let watching;
-let watcher;
 let loadFile;
 const stopdrop = `&lt;script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});&lt;/script>`;
-const webview = `&lt;webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0%;" nodeintegration="on">&lt;/webview>`;
+const webview = `&lt;webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0;" nodeintegration="on">&lt;/webview>`;
 let JSONParsedEvent = [];
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
-let htmlDone; // eslint-disable-line no-unused-vars
-const css = '&lt;link rel="stylesheet" href="./node_modules/izitoast/dist/css/iziToast.min.css">&lt;script src="https://use.fontawesome.com/a39359b6f9.js">&lt;/script>&lt;style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}&lt;/style>&lt;link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
+const css = '&lt;meta name="viewport" content="width=device-width, initial-scale=1">&lt;link rel="stylesheet" href="/node_modules/izitoast/dist/css/iziToast.css">&lt;script src="https://use.fontawesome.com/a39359b6f9.js">&lt;/script>&lt;style>html, body{padding: 0;margin: 0;}#rectangle{width: 100%;height: 100%;background: red;}body{background-color: #313943;color: #bbc8d8;font-family: \'Lato\';font-size: 22px;font-weight: 500;line-height: 36px;margin-bottom: 36px;text-align: center;animation: fadein 0.5s;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;}header{position: absolute;width: 500px;height: 250px;top: 50%;left: 50%;margin-top: -125px;margin-left: -250px;text-align: center;}header h1{font-size: 60px;font-weight: 100;margin: 0;padding: 0;}#grad{background: -webkit-linear-gradient(left, #5A3F37, #2C7744);/* For Safari 5.1 to 6.0 */background: -o-linear-gradient(right, #5A3F37, #2C7744);/* For Opera 11.1 to 12.0 */background: -moz-linear-gradient(right, #5A3F37, #2C7744);/* For Firefox 3.6 to 15 */background: linear-gradient(to right, #5A3F37, #2C7744);/* Standard syntax */}hr{display: flex}@keyframes fadein{from{opacity: 0;}to{opacity: 1;}}.app{/* Disable text selection, or your app will feel like a web page */-webkit-user-select: none;-webkit-app-region: drag;/* Cover the whole window */height: 100%;/* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */background: #313943;/* Smoother startup */animation: fadein 0.5s;}body::-webkit-scrollbar{width: 1em;}body::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);}body::-webkit-scrollbar-thumb{background-color: darkgrey;outline: 1px solid slategrey;}&lt;/style>&lt;link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
 // prevent window being garbage collected
@@ -152,7 +146,7 @@ function dialogLoad() {
  */
 function uncaughtErr(err) {
 	storage.get('optOut', (error, data) => {
-		if (data) {
+		if (data &amp;&amp; !error) {
 			console.log(data);
 			if (data.out === false) {
 				bugsnag.notify(err);
@@ -161,9 +155,9 @@ function uncaughtErr(err) {
 				dialog.showErrorBox('Error!', 'Please report the following: \n' + err);
 				return data;
 			}
-		}
-		if (error) {
-			console.log(error);
+		} else {
+			console.error(error.stack || error);
+			return err;
 		}
 	});
 	console.log('ERROR! The error is: ' + err || err.stack);
@@ -222,52 +216,6 @@ function sortaSorter() {
 		});
 	}
 }
-/**
- * @description Allows one to opt-out of bugsnag reports.
- * @param yes - if yes === 0 then opt in, if === 1 opt out.
- */
-function optOut(yes) {
-	storage.get('optOut', (error, data) => {
-		if (data) {
-			console.log(data);
-			if (data.out === false) {
-				console.log('in');
-			} else if (data.out === true) {
-				console.log('out');
-			}
-		}
-		if (error) {
-			console.log(error);
-		}
-	});
-	if (yes === 1) {
-		storage.set('optOut', {out: true}, err => {
-			if (err) {
-				console.log(err);
-			}
-			dialog.showMessageBox({
-				type: 'info',
-				buttons: [],
-				title: 'Opted back into diagnostics',
-				message: 'You have opted out of auto crash/error reporting.'
-			});
-			yes = undefined;
-		});
-	} else if (yes === 0) {
-		storage.set('optOut', {out: false}, err => {
-			if (err) {
-				console.log(err);
-				bugsnag.notify(new Error(err));
-			}
-			dialog.showMessageBox({
-				type: 'info',
-				buttons: [],
-				title: 'Opted back into diagnostics',
-				message: 'You have opted into auto crash/error reporting.'
-			});
-		});
-	}
-}
 
 /**
  * Used to populate the JSONParsedEvent array, which is used to load filtered logs.
@@ -290,84 +238,51 @@ function loadFilter() {
 	process.filteredHTML = process.filteredHTML.replace('undefined', '');
 	win.loadURL('data:text/html,' + webview + css + '&lt;hr>' + stopdrop + process.filteredHTML); // eslint-disable-line no-useless-concat
 }
-/**
- * @param  {Array} loadFile - Array with path to loaded file.
- * @param  {String} html - HTML that was generated.
- * @param  {Boolean} watching - Whether or not logs are being watched.
- * @description Reads a loaded log line by line and generates JSONParsed.
- */
-function lineReader(loadFile, html, watching) { // eslint-disable-line no-unused-vars
-	JSONParsed = [];
-	const lr = new LineByLineReader(loadFile[0]);
-	lr.on('error', err => {
-		console.log(err);
-	});
-	lr.on('line', line => {
-		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-		JSONParsed.push(lineParse);
-		let htmlTabled = tableify(lineParse) + '&lt;hr>'; // eslint-disable-line prefer-const
-		html += htmlTabled;
-	});
-	lr.on('end', err => {
-		if (err) {
-			console.log(err.message);
-		}
-		if (watching === true) { // eslint-disable-line no-negated-condition
-			process.htmlDone = html;
-			process.htmlDone = process.htmlDone.replace('undefined', '');
-			watchOpen(JSONParsed);
-		} else if (watching === false) {
-			process.htmlDone = html;
-			process.htmlDone = process.htmlDone.replace('undefined', '');
-			win.loadURL('data:text/html,' + css + '&lt;hr>' + stopdrop + process.htmlDone);
-			process.logLoaded = true;
-			loadFile = '';
-		}
-	}); // eslint-disable-line semi
-}
 
-/**
- * @param  {Array}
- * @return {String}
- * Not really very good, but it was used to check if a loaded log was line delimited or not.
- */
-function logorjson(loadFile) {
-	try {
-		let obj = jsonfile.readFileSync(loadFile); // eslint-disable-line prefer-const
-		JSON.parse(obj);
-	} catch (err) {
-		return err.name;
-	}
-}
 /**
  * Code thats used to reduce duplication in loading.
  */
 function loadInit() {
-	let html;
+	let html = ''; // eslint-disable-line prefer-const
 	process.alterateLoad = true;
 	loadFile = dialogLoad();
-	let logorJSON = logorjson(loadFile); // eslint-disable-line prefer-const
-	console.log(logorJSON);
-	loadAlternate(logorJSON, loadFile, html);
+	loadAlternate(loadFile, html);
 }
 /**
- * Figures out how to load the file that was selected in loadInit()
- * @param logorJSON
- * @param loadFile
+ * @description Used in loading files to get the extension more efficiently.
+ * @param fname the filename to process.
+ * @returns {string} the extension of the file.
+ */
+function whatLoading(fname) {
+	return fname.substr((~-fname.lastIndexOf('.') >>> 0) + 2);
+}
+
+/**
+ * @description Figures out how to load the file that was selected in loadInit()
+ * @param loadFile an array with the full path of the file being loaded.
  * @param html
  */
-function loadAlternate(logorJSON, loadFile, html) {
-	watching = false;
-	if ((/\.(json)$/i).test(loadFile)) {
-		loadOutput();
-		loadFile = '';
-		logorJSON = '';
-	} else if ((/\.(log)$/i).test(loadFile)) {
-		lineReader(loadFile, html, watching);
-		logorJSON = '';
-	} else if ((/\.(html)$/i).test(loadFile)) {
-		win.loadURL(loadFile[0]);
-		logorJSON = '';
+function loadAlternate(loadFile, html) {
+	const loadIt = whatLoading(loadFile[0]);
+	console.log(loadIt);
+	switch (loadIt) {
+		case 'json':
+			loadOutput();
+			loadFile = '';
+			break;
+		case 'log':
+			lineReader(loadFile, html);
+			break;
+		case 'html':
+			win.loadURL(loadFile[0]);
+			break;
+		default:
+			dialog.showMessageBox({
+				type: 'info',
+				buttons: [],
+				title: 'Please load a file first',
+				message: 'Please load a file before attempting to save things that don\'t exist'
+			});
 	}
 }
 /**
@@ -378,20 +293,15 @@ function loadByDrop() {
 	JSONParsed = [];
 	loadFile = [];
 	loadFile.push(process.logDropPath);
-	let logorJSON = logorjson(loadFile);
-	console.log(logorJSON);
 	if ((/\.(json)$/i).test(process.logDropPath)) {
 		loadOutputDropped();
 		loadFile = '';
-		logorJSON = '';
 		process.logDropped = false;
-	} else if ((/\.(log)$/i).test(process.logDropPath) &amp;&amp; logorJSON === 'SyntaxError') {
+	} else if ((/\.(log)$/i).test(process.logDropPath)) {
 		lineReader(loadFile, html);
-		logorJSON = '';
 	} else if ((/\.(html)$/i).test(loadFile)) {
 		win.loadURL(loadFile);
 		loadFile = '';
-		logorJSON = '';
 	}
 }
 /**
@@ -399,7 +309,12 @@ function loadByDrop() {
  */
 function funcSaveHTML() {
 	if (process.logLoaded === true) {
-		dialog.showSaveDialog(fileName => {
+		dialog.showSaveDialog({
+			filters: [{
+				name: 'HTML',
+				extensions: ['html']
+			}]
+		}, fileName => {
 			if (fileName === undefined) {
 				console.log('You didn\'t save the file');
 				return;
@@ -429,7 +344,7 @@ function funcSaveHTML() {
 	}
 }
 /**
- * Loads the JSON that the program outputted.
+ * @description Loads the JSON that the program outputted.
  */
 function loadOutput() {
 	JSONParsed = [];
@@ -451,7 +366,7 @@ function loadOutput() {
 	});
 }
 /**
- * Loads the JSON outputted by the program if it was dropped.
+ * @description Loads the JSON outputted by the program if it was dropped.
  */
 function loadOutputDropped() {
 	JSONParsed = [];
@@ -473,7 +388,7 @@ function loadOutputDropped() {
 	});
 }
 /**
- * Used to save loaded file as JSON.
+ * @description Used to save loaded file as JSON.
  */
 function funcSaveJSON() {
 	if (process.logLoaded === true) {
@@ -513,43 +428,52 @@ function funcSaveJSON() {
 function watchGood(stop) {
 	process.logLoaded = true;
 	const watcher = new LogWatcher(logPath);
-	process.mainContents.executeJavaScript(`const iziToast = require('izitoast'); iziToast.show({title: 'Loading!', message: 'Please wait!', position: 'bottomCenter', image: 'icon.png', timeout: '10000'})`);
+	process.mainContents.executeJavaScript(`const iziToast = require('./node_modules/izitoast/dist/js/iziToast.js'); iziToast.show({title: 'Loading!', message: 'Please wait!', position: 'bottomCenter', image: 'icon.png', timeout: '10000'})`);
 	watcher.on('error', err => {
 		bugsnag.notify(err);
 	});
 	watcher.on('finished', () => {
 		console.log('it stopped');
-		JSONParsed = JSONParsed.reverse();
 		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + stopdrop + `&lt;script>function scroll() {window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);} window.onload = scroll;&lt;/script>` + process.htmlDone);
-		// JSONParsed = [];
-		// process.htmlDone = '';
+		win.loadURL('data:text/html,' + stopdrop + `&lt;script>&lt;/script>` + process.htmlDone);
+		process.mainContents.on('did-finish-load', () => {
+			fs.readFile(path.join(__dirname, 'index.css'), 'utf-8', (err, data) => {
+				if (!err) {
+					const formattedData = data.replace(/\s{2,10}/g, ' ').trim();
+					process.mainContents.insertCSS(formattedData);
+					process.mainContents.executeJavaScript(`function scroll() {window.scrollTo(0, document.body.scrollHeight || document.documentElement.scrollHeight);} scroll()`);
+				} else if (err) {
+					uncaughtErr(err);
+				}
+			});
+		});
 	});
 
 	watcher.on('stopped', () => {
 		console.log('nah its stopped');
 	});
 	watcher.on('data', obs => {
-		// obs = obs.reverse();
 		obs.forEach(ob => {
 			const {timestamp, event} = ob;
 			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
-			process.htmlDone += '&lt;hr>' + tableify(event, timestamp);
+			process.htmlDone += '&lt;hr>' + tableify(event + '&lt;br>');
 			console.log('\n' + timestamp, event);
 			delete ob.timestamp;
 			delete ob.event;
 			Object.keys(ob).forEach(k => {
-				if (k === 'StarPos') {
-					process.htmlDone += '(x / y / z) &lt;br>' + tableify(ob[k].join('&lt;br>')) + '&lt;br>';
-				} else if (k === 'Systems') {
-					process.htmlDone += '&lt;br>Systems Sold: &lt;br>' + tableify(ob[k].join('&lt;br>')) + '&lt;br>';
-				} else if (typeof ob[k] === 'object') {
-					let objtoarr = _.allKeys(ob[k]); // eslint-disable-line prefer-const
-					process.htmlDone += '&lt;br>' + k + tableify(objtoarr.join('&lt;br>')) + '&lt;br>';
-				} else {
-					process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '&lt;br>';
-					console.log('\t' + k, ob[k]);
-					JSONParsed.push(k + ': ' + ob[k]);
+				if (k.endsWith('_Localised') || !ob[k].toString().startsWith('$')) {
+					if (k === 'StarPos') {
+						process.htmlDone += '(x / y / z) &lt;br>' + tableify(ob[k].join('&lt;br>')) + '&lt;br>';
+					} else if (k === 'Systems') {
+						process.htmlDone += 'Systems Sold: &lt;br>' + tableify(ob[k].join('&lt;br>')) + '&lt;br>';
+					} else if (typeof ob[k] === 'object') {
+						let objtoarr = _.allKeys(ob[k]); // eslint-disable-line prefer-const
+						process.htmlDone += k + ':&lt;br>' + tableify(objtoarr.join('&lt;br>')) + '&lt;br>';
+					} else {
+						process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '&lt;br>';
+						// console.log('\t' + k, ob[k]);
+						JSONParsed.push(k + '\n' + ob[k]);
+					}
 				}
 			});
 		});
@@ -586,6 +510,7 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 	process.logDropped = true;
 	loadByDrop();
 	process.logDropped = false;
+	console.log('waddup');
 });
 /**
  * Called when app is ready, and checks for updates.
@@ -595,7 +520,7 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 	win.loadURL(`file:///${__dirname}/index.html`);
 	// watchGood();
-	if (!isDev) {
+	if (!isDev &amp;&amp; process.env.NODE_ENV !== 'test') {
 		autoUpdater.checkForUpdates();
 	}
 });
@@ -649,7 +574,7 @@ const template = [{
 	submenu: [{
 		label: 'Reload',
 		accelerator: 'CmdOrCtrl+R',
-		click(item, focusedWindow) {
+		click(focusedWindow) {
 			if (focusedWindow) {
 				focusedWindow.reload();
 			}
@@ -711,6 +636,7 @@ const template = [{
 	}
 	]
 }];
+
 const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
 </code></pre>
@@ -723,13 +649,13 @@ Menu.setApplicationMenu(menu);
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#createMainWindow">createMainWindow</a></li><li><a href="global.html#dialogLoad">dialogLoad</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#funcSaveHTML">funcSaveHTML</a></li><li><a href="global.html#funcSaveJSON">funcSaveJSON</a></li><li><a href="global.html#getChecked">getChecked</a></li><li><a href="global.html#lineReader">lineReader</a></li><li><a href="global.html#loadAlternate">loadAlternate</a></li><li><a href="global.html#loadByDrop">loadByDrop</a></li><li><a href="global.html#loadFilter">loadFilter</a></li><li><a href="global.html#loadInit">loadInit</a></li><li><a href="global.html#loadOutput">loadOutput</a></li><li><a href="global.html#loadOutputDropped">loadOutputDropped</a></li><li><a href="global.html#logorjson">logorjson</a></li><li><a href="global.html#onClosed">onClosed</a></li><li><a href="global.html#opted">opted</a></li><li><a href="global.html#optOut">optOut</a></li><li><a href="global.html#sortaSorter">sortaSorter</a></li><li><a href="global.html#template">template</a></li><li><a href="global.html#uncaughtErr">uncaughtErr</a></li><li><a href="global.html#watchGood">watchGood</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-lib_log-process.html">lib/log-process</a></li><li><a href="module-lib_opt-out.html">lib/opt-out</a></li></ul><h3>Classes</h3><ul><li><a href="LogWatcher.html">LogWatcher</a></li></ul><h3>Global</h3><ul><li><a href="global.html#createMainWindow">createMainWindow</a></li><li><a href="global.html#dialogLoad">dialogLoad</a></li><li><a href="global.html#findEvents">findEvents</a></li><li><a href="global.html#funcSaveHTML">funcSaveHTML</a></li><li><a href="global.html#funcSaveJSON">funcSaveJSON</a></li><li><a href="global.html#getChecked">getChecked</a></li><li><a href="global.html#isCommanderLog">isCommanderLog</a></li><li><a href="global.html#loadAlternate">loadAlternate</a></li><li><a href="global.html#loadByDrop">loadByDrop</a></li><li><a href="global.html#loadFilter">loadFilter</a></li><li><a href="global.html#loadInit">loadInit</a></li><li><a href="global.html#loadOutput">loadOutput</a></li><li><a href="global.html#loadOutputDropped">loadOutputDropped</a></li><li><a href="global.html#onClosed">onClosed</a></li><li><a href="global.html#opted">opted</a></li><li><a href="global.html#sortaSorter">sortaSorter</a></li><li><a href="global.html#template">template</a></li><li><a href="global.html#uncaughtErr">uncaughtErr</a></li><li><a href="global.html#watchGood">watchGood</a></li><li><a href="global.html#whatLoading">whatLoading</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat Dec 17 2016 13:31:21 GMT+1100 (AUS Eastern Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Sat Jan 14 2017 18:44:08 GMT+1100 (AUS Eastern Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
