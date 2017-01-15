@@ -53,7 +53,7 @@ autoUpdater.on('error', error => {
 });
 
 autoUpdater.on('download-progress', percent => {
-	win.setProgressBar(percent, {mode: 'normal'});
+	win.setProgressBar(percent.percent, {mode: 'normal'});
 });
 let loadFile;
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
