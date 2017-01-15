@@ -29,6 +29,7 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 		title: 'New update available.',
 		message: 'Press OK to download the update, and the application will download the update and then tell you when its done.'
 	});
+	win.loadURL(`file:///${__dirname}/index.html`)
 });
 /** Autoupdater on downloaded */
 autoUpdater.on('update-downloaded', () => { // eslint-disable-line no-unused-vars
@@ -54,6 +55,7 @@ autoUpdater.on('error', error => {
 
 autoUpdater.on('download-progress', percent => {
 	win.setProgressBar(percent.percent, {mode: 'normal'});
+	process.mainContents.executeJavaScript(`dlProgress(${Math.round(percent.percent * 100) / 100})`);
 });
 let loadFile;
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;

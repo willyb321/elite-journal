@@ -14,9 +14,24 @@
 	<h1 id="main">
 		Please load a file using the "File" menu
 	</h1>
+	<div id="Progress" style="width: 100%; height: 50%"></div>
 	<div id="holder">Or, Drag your file somewhere on this page.</div>
 </body>
 <script>
+	const ProgressBar = require('progressbar.js');
+	const line = new ProgressBar.Line('#Progress');
+	const _ = require('underscore');
+	let progressBar = new ProgressBar.Line('#Progress', {
+		strokeWidth: 2
+	});
+	function dlProgress(percent) {
+		let animateThrottled = _.throttle(
+			_.bind(progressBar.animate, progressBar),
+			500
+		);
+		animateThrottled(percent / 100);
+	}
+
 document.addEventListener('dragover', event => event.preventDefault());
 document.addEventListener('drop', event => event.preventDefault());
 	const {ipcRenderer} = require('electron');
