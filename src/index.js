@@ -29,7 +29,7 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 		title: 'New update available.',
 		message: 'Press OK to download the update, and the application will download the update and then tell you when its done.'
 	});
-	win.loadURL(`file:///${__dirname}/index.html`)
+	win.loadURL(`file:///${__dirname}/index.html`);
 });
 /** Autoupdater on downloaded */
 autoUpdater.on('update-downloaded', () => { // eslint-disable-line no-unused-vars
@@ -435,7 +435,7 @@ function watchGood(stop) {
 			const {timestamp, event} = ob;
 			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
 			process.htmlDone += '<hr>' + tableify(event + '<br>');
-			console.log('\n' + timestamp, event);
+			// console.log('\n' + timestamp, event);
 			delete ob.timestamp;
 			delete ob.event;
 			Object.keys(ob).forEach(k => {
@@ -444,9 +444,20 @@ function watchGood(stop) {
 						process.htmlDone += '(x / y / z) <br>' + tableify(ob[k].join('<br>')) + '<br>';
 					} else if (k === 'Systems') {
 						process.htmlDone += 'Systems Sold: <br>' + tableify(ob[k].join('<br>')) + '<br>';
+					} else if (k === 'Materials') {
+						let objtoarr = _.pairs(ob[k]); // eslint-disable-line prefer-const
+						let objtoarrmerged = [].concat.apply([], objtoarr);
+						objtoarrmerged = _.each(objtoarrmerged, (element, index, list) => {
+							if (!isNaN(parseInt(element, 0))) {
+								list[index] = element.toString() + '%';
+								console.log(element);
+							}
+						});
+						process.htmlDone += k + ':<br>' + tableify(objtoarrmerged.join(' <br>')) + ' <br> ';
 					} else if (typeof ob[k] === 'object') {
-						let objtoarr = _.allKeys(ob[k]); // eslint-disable-line prefer-const
-						process.htmlDone += k + ':<br>' + tableify(objtoarr.join('<br>')) + '<br>';
+						let objtoarr = _.pairs(ob[k]); // eslint-disable-line prefer-const
+						const objtoarrmerged = [].concat.apply([], objtoarr);
+						process.htmlDone += k + ':<br>' + tableify(objtoarrmerged.join(' <br>')) + ' <br> ';
 					} else {
 						process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
 						// console.log('\t' + k, ob[k]);
