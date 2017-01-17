@@ -4,6 +4,7 @@
   "version": "1.10.6",
   "description": "Parsing the elite dangerous journal and putting it in a cool format!",
   "license": "MIT",
+  "private": true,
   "repository": "willyb321/elite-journal",
   "author": {
     "name": "willyb321",

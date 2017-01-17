@@ -17,6 +17,7 @@ import jsonfile from 'jsonfile';
 import bugsnag from 'bugsnag';
 import openAboutWindow from 'about-window';
 import storage from 'electron-json-storage';
+import moment from 'moment';
 
 const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
@@ -434,7 +435,7 @@ function watchGood(stop) {
 		obs.forEach(ob => {
 			const {timestamp, event} = ob;
 			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
-			process.htmlDone += '<hr>' + tableify(event + '<br>');
+			process.htmlDone += '<hr>' + tableify(event + ` @ ${moment(timestamp).format('h:mm a - D/M ')}` + '<br>');
 			// console.log('\n' + timestamp, event);
 			delete ob.timestamp;
 			delete ob.event;
@@ -449,18 +450,21 @@ function watchGood(stop) {
 						let objtoarrmerged = [].concat.apply([], objtoarr);
 						objtoarrmerged = _.each(objtoarrmerged, (element, index, list) => {
 							if (!isNaN(parseInt(element, 0))) {
-								list[index] = element.toString() + '%';
-								console.log(element);
+								list[index] = element.toString() + '% <br>';
 							}
 						});
-						process.htmlDone += k + ':<br>' + tableify(objtoarrmerged.join(' <br>')) + ' <br> ';
+						process.htmlDone += k + ':<br>' + tableify(_.flatten(objtoarrmerged).join(' '));
 					} else if (typeof ob[k] === 'object') {
 						let objtoarr = _.pairs(ob[k]); // eslint-disable-line prefer-const
 						const objtoarrmerged = [].concat.apply([], objtoarr);
-						process.htmlDone += k + ':<br>' + tableify(objtoarrmerged.join(' <br>')) + ' <br> ';
+						process.htmlDone += k + ':<br>' + tableify(_.flatten(objtoarrmerged).join(' <br>')) + ' <br> ';
+					} else if (k === 'Ingredients') {
+						let objtoarr = _.pairs(ob[k]); // eslint-disable-line prefer-const
+						let objtoarrmerged = [].concat.apply([], objtoarr);
+						process.htmlDone += k + ':<br>' + tableify(_.flatten(objtoarrmerged).join(' <br>')) + ' <br> ';
 					} else {
 						process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
-						// console.log('\t' + k, ob[k]);
+						console.log('\t' + k, ob[k]);
 						JSONParsed.push(k + '\n' + ob[k]);
 					}
 				}

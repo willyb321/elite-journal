@@ -10,7 +10,7 @@
 	"tagName": "v%s",
 	"tagAnnotation": "v%s",
 	"buildCommand": false,
-	"changelogCommand": false,
+	"changelogCommand": "github-changes -o willyb321 -r elite-journal -k GITHUB_TOKEN --for-tag %s",
 	"requireCleanWorkingDir": false,
 	"src": {
 		"pushRepo": null,
@@ -35,7 +35,7 @@
 		"forcePublishSourceRepo": false
 	},
 	"github": {
-		"release": false,
+		"release": true,
 		"releaseName": "Release %s",
 		"tokenRef": "GITHUB_TOKEN"
 	}
