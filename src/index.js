@@ -435,7 +435,7 @@ function watchGood(stop) {
 		obs.forEach(ob => {
 			const {timestamp, event} = ob;
 			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
-			process.htmlDone += '<hr>' + tableify(event + ` @ ${moment(timestamp).format('h:mm a - D/M ')}` + '<br>');
+			process.htmlDone += '<hr>' + tableify(event + ` @ ${moment(timestamp).format('h:mm a - D/M ')}` + '<br>'); // eslint-disable-line no-useless-concat
 			// console.log('\n' + timestamp, event);
 			delete ob.timestamp;
 			delete ob.event;
@@ -460,7 +460,7 @@ function watchGood(stop) {
 						process.htmlDone += k + ':<br>' + tableify(_.flatten(objtoarrmerged).join(' <br>')) + ' <br> ';
 					} else if (k === 'Ingredients') {
 						let objtoarr = _.pairs(ob[k]); // eslint-disable-line prefer-const
-						let objtoarrmerged = [].concat.apply([], objtoarr);
+						let objtoarrmerged = [].concat.apply([], objtoarr); // eslint-disable-line prefer-const
 						process.htmlDone += k + ':<br>' + tableify(_.flatten(objtoarrmerged).join(' <br>')) + ' <br> ';
 					} else {
 						process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
