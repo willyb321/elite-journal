@@ -137,7 +137,7 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-debug@^2.6.0:
+debug@2.6.0, debug@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.0.tgz#bc596bcabe7617f11d9fa15361eded5608b8499b"
   dependencies:
@@ -153,22 +153,22 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
-electron-auto-updater@^0.10.1:
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-0.10.1.tgz#5f68e3348393f7a8cac8d4ef5caf50e788ac58e3"
+electron-auto-updater@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/electron-auto-updater/-/electron-auto-updater-1.0.0.tgz#fcaac7cb48afa9c3ea1d48b0ff7f0eee1a51418e"
   dependencies:
     bluebird-lst-c "^1.0.5"
-    debug "^2.6.0"
-    electron-builder-http "11.1.1"
+    electron-builder-http "11.3.0"
     fs-extra-p "^3.0.3"
     js-yaml "^3.7.0"
     semver "^5.3.0"
     source-map-support "^0.4.8"
 
-electron-builder-http@11.1.1:
-  version "11.1.1"
-  resolved "https://registry.yarnpkg.com/electron-builder-http/-/electron-builder-http-11.1.1.tgz#a46a1e3a3b968d0cc3e4e5b0c3e31f8227f141e0"
+electron-builder-http@11.3.0:
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/electron-builder-http/-/electron-builder-http-11.3.0.tgz#9ac35fa08da30cff3c42dc3a2444958796afd117"
   dependencies:
+    debug "2.6.0"
     fs-extra-p "^3.0.3"
 
 electron-debug@^1.1.0:
@@ -242,6 +242,13 @@ fs-extra@^1.0.0:
     graceful-fs "^4.1.2"
     jsonfile "^2.1.0"
     klaw "^1.0.0"
+
+fs-extra@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-2.0.0.tgz#337352bded4a0b714f3eb84de8cea765e9d37600"
+  dependencies:
+    graceful-fs "^4.1.2"
+    jsonfile "^2.1.0"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -350,9 +357,9 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-izitoast@^1.0.2-c:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/izitoast/-/izitoast-1.0.2.tgz#8326ed727869aa77d5c0634726358e052c9403fa"
+izitoast@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/izitoast/-/izitoast-1.1.1.tgz#8adc1f06d132ece339df8ffe863432ee2dbc2c04"
 
 jodid25519@^1.0.0:
   version "1.0.2"
@@ -541,9 +548,9 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
-source-map-support@^0.4.8:
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.8.tgz#4871918d8a3af07289182e974e32844327b2e98b"
+source-map-support@^0.4.10, source-map-support@^0.4.8:
+  version "0.4.10"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.10.tgz#d7b19038040a14c0837a18e630a196453952b378"
   dependencies:
     source-map "^0.5.3"
 

@@ -130,7 +130,7 @@ gulp.task('test', ['default', 'build:packCI'], (cb) => {
 		.pipe(ava({verbose: true}))
 });
 
-gulp.task('watch', (cb) => {
+gulp.task('watch', () => {
 	let watcher = gulp.watch('src/index.js', ['default']);
 	watcher.on('change', function(event) {
 		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
