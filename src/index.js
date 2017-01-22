@@ -8,7 +8,7 @@
 import electron, {Menu, dialog, ipcMain} from 'electron';
 import path from 'path';
 import os from 'os';
-import {autoUpdater} from 'electron-auto-updater';
+import {autoUpdater} from 'electron-updater';
 import fs from 'fs-extra';
 import tableify from 'tableify';
 import _ from 'underscore';
