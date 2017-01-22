@@ -68,7 +68,7 @@ gulp.task('build:dist', ['default'], (cb) => {
 				]
 			},
 			nsis: {
-				oneClick: true
+				oneClick: false
 			},
 			directories: {
 				app: 'src'
