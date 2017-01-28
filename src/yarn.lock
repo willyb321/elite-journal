@@ -185,9 +185,9 @@ electron-localshortcut@^0.6.0:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/electron-localshortcut/-/electron-localshortcut-0.6.1.tgz#c4e268c38a6e42f40de5618fc906d1ed608f11aa"
 
-electron-updater@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-1.1.1.tgz#39e602b60fccb51b5d48a480bcae25f2987bf5c8"
+electron-updater@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-1.2.0.tgz#ce8c133144ae6357dab1a69f71b32f2a7ed85d49"
   dependencies:
     bluebird-lst-c "^1.0.6"
     electron-builder-http "11.5.0"
@@ -537,6 +537,12 @@ sntp@1.x.x:
 source-map-support@^0.4.10:
   version "0.4.10"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.10.tgz#d7b19038040a14c0837a18e630a196453952b378"
+  dependencies:
+    source-map "^0.5.3"
+
+source-map-support@^0.4.11:
+  version "0.4.11"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.11.tgz#647f939978b38535909530885303daf23279f322"
   dependencies:
     source-map "^0.5.3"
 
