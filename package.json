@@ -37,7 +37,7 @@
     "electron": "^1.4.15",
     "electron-builder": "^11.4.4",
     "gulp": "^3.9.1",
-    "gulp-ava": "^0.15.0",
+    "gulp-ava": "^0.16.0",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
