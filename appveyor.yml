@@ -11,7 +11,7 @@ install:
 - cmd: yarn install
 cache:
 - node_modules -> package.json
-- '%USERPROFILE%\.electron'
+- '%USERPROFILE%\.electron -> package.json'
 - "%LOCALAPPDATA%\\Yarn -> package.json"
 build_script:
 - cmd: npm run release
