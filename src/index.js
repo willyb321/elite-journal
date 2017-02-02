@@ -18,6 +18,7 @@ import bugsnag from 'bugsnag';
 import openAboutWindow from 'about-window';
 import storage from 'electron-json-storage';
 import moment from 'moment';
+import shell from 'electron';
 
 const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
@@ -33,12 +34,12 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 	win.loadURL(`file:///${__dirname}/index.html`);
 });
 /** Autoupdater on downloaded */
-autoUpdater.on('update-downloaded', () => { // eslint-disable-line no-unused-vars
+autoUpdater.on('update-downloaded', (event, info) => { // eslint-disable-line no-unused-vars
 	dialog.showMessageBox({
 		type: 'info',
 		buttons: [],
 		title: 'Update ready to install.',
-		message: 'The update is downloaded, and will be installed on quit.'
+		message: 'The update is downloaded, and will be installed on quit. The version downloaded is: ' + event.version
 	});
 });
 /** Autoupdater if error */
@@ -242,7 +243,12 @@ function whatLoading(fname) {
  * @param html
  */
 function loadAlternate(loadFile, html) {
-	const loadIt = whatLoading(loadFile[0]);
+	if (Array.isArray(loadFile) === true) {
+		loadFile = loadFile[0];
+	} else if (typeof loadFile === 'string') {
+		loadFile = loadFile
+	}
+	const loadIt = whatLoading(loadFile);
 	console.log(loadIt);
 	switch (loadIt) {
 		case 'json':
@@ -253,7 +259,7 @@ function loadAlternate(loadFile, html) {
 			lineReader(loadFile, html);
 			break;
 		case 'html':
-			win.loadURL(loadFile[0]);
+			win.loadURL(loadFile);
 			break;
 		default:
 			dialog.showMessageBox({
@@ -283,6 +289,17 @@ function loadByDrop() {
 		loadFile = '';
 	}
 }
+
+function rawLog(loadFile) {
+	if (Array.isArray(loadFile) === true) {
+		shell.openItem(loadFile[0]);
+	} else if (typeof loadFile === 'string') {
+		shell.openItem(loadFile);
+	} else {
+		console.log(loadFile)
+	}
+}
+
 /**
  * Saves a loaded log as HTML
  */
@@ -549,6 +566,9 @@ const template = [{
 				watchGood(stop);
 			}
 		}
+	}, {
+		label: 'Open raw log',
+		click: rawLog(loadFile)
 	}]
 }, {
 	label: 'Filtering',
