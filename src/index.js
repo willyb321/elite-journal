@@ -5,7 +5,7 @@
  */
 /* eslint-disable no-undef */
 /** global: LogWatcher */
-import electron, {Menu, dialog, ipcMain} from 'electron';
+import electron, {Menu, dialog, ipcMain, shell} from 'electron';
 import path from 'path';
 import os from 'os';
 import {autoUpdater} from 'electron-updater';
@@ -18,7 +18,6 @@ import bugsnag from 'bugsnag';
 import openAboutWindow from 'about-window';
 import storage from 'electron-json-storage';
 import moment from 'moment';
-import shell from 'electron';
 
 const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
@@ -59,7 +58,7 @@ autoUpdater.on('download-progress', percent => {
 	win.setProgressBar(percent.percent, {mode: 'normal'});
 	process.mainContents.executeJavaScript(`dlProgress(${Math.round(percent.percent * 100) / 100})`);
 });
-let loadFile;
+
 const stopdrop = `<script>document.addEventListener('dragover', event => event.preventDefault()); document.addEventListener('drop', event => event.preventDefault()); const {ipcRenderer} = require('electron'); document.ondrop=(a=>{a.preventDefault();for(let b of a.dataTransfer.files)ipcRenderer.send("asynchronous-drop",b.path);return!1});</script>`;
 const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display:inline-flex; position:fixed; float: right; top:0;" nodeintegration="on"></webview>`;
 let JSONParsedEvent = [];
@@ -225,8 +224,8 @@ function loadFilter() {
 function loadInit() {
 	let html = ''; // eslint-disable-line prefer-const
 	process.alterateLoad = true;
-	loadFile = dialogLoad();
-	loadAlternate(loadFile, html);
+	process.loadfile = dialogLoad();
+	loadAlternate(process.loadfile, html);
 }
 /**
  * @description Used in loading files to get the extension more efficiently.
@@ -245,8 +244,6 @@ function whatLoading(fname) {
 function loadAlternate(loadFile, html) {
 	if (Array.isArray(loadFile) === true) {
 		loadFile = loadFile[0];
-	} else if (typeof loadFile === 'string') {
-		loadFile = loadFile
 	}
 	const loadIt = whatLoading(loadFile);
 	console.log(loadIt);
@@ -276,27 +273,29 @@ function loadAlternate(loadFile, html) {
 function loadByDrop() {
 	let html;
 	JSONParsed = [];
-	loadFile = [];
-	loadFile.push(process.logDropPath);
+	process.loadfile = [];
+	process.loadfile.push(process.logDropPath);
 	if ((/\.(json)$/i).test(process.logDropPath)) {
 		loadOutputDropped();
-		loadFile = '';
+		process.loadfile = '';
 		process.logDropped = false;
 	} else if ((/\.(log)$/i).test(process.logDropPath)) {
-		lineReader(loadFile, html);
-	} else if ((/\.(html)$/i).test(loadFile)) {
-		win.loadURL(loadFile);
-		loadFile = '';
+		lineReader(process.loadfile, html);
+	} else if ((/\.(html)$/i).test(process.loadfile)) {
+		win.loadURL(process.loadfile);
+		process.loadfile = '';
 	}
 }
-
-function rawLog(loadFile) {
-	if (Array.isArray(loadFile) === true) {
-		shell.openItem(loadFile[0]);
-	} else if (typeof loadFile === 'string') {
-		shell.openItem(loadFile);
+/**
+ * Used to open journal files in raw form
+ */
+function rawLog() {
+	if (Array.isArray(process.loadfile) === true) {
+		shell.openItem(process.loadfile[0]);
+	} else if (typeof process.loadfile === 'string') {
+		shell.openItem(process.loadfile);
 	} else {
-		console.log(loadFile)
+		console.log(process.loadfile);
 	}
 }
 
@@ -345,7 +344,7 @@ function funcSaveHTML() {
 function loadOutput() {
 	JSONParsed = [];
 	process.htmlDone = '';
-	jsonfile.readFile(loadFile[0], (err, obj) => {
+	jsonfile.readFile(process.loadfile[0], (err, obj) => {
 		if (err) {
 			console.log(err.message);
 		}
@@ -568,7 +567,7 @@ const template = [{
 		}
 	}, {
 		label: 'Open raw log',
-		click: rawLog(loadFile)
+		click: rawLog
 	}]
 }, {
 	label: 'Filtering',
@@ -607,12 +606,12 @@ const template = [{
 	submenu: [{
 		label: 'Learn More about Electron',
 		click() {
-			require('electron').shell.openExternal('http://electron.atom.io');
+			shell.openExternal('http://electron.atom.io');
 		}
 	}, {
 		label: 'The Github Repo',
 		click() {
-			require('electron').shell.openExternal('https://github.com/willyb321/elite-journal');
+			shell.openExternal('https://github.com/willyb321/elite-journal');
 		}
 	}, {
 		label: 'What Version am I on?',
