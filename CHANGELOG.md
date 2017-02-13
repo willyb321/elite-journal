@@ -1,6 +1,8 @@
 ## Change Log
 
-### upcoming (2017/02/13 01:07 +00:00)
+### upcoming (2017/02/13 01:12 +00:00)
+- [8452a02](https://github.com/willyb321/elite-journal/commit/8452a02822c2729d3102f3966ba80dbbf18d0359) update lockfile. (@willyb321)
+- [1d083c9](https://github.com/willyb321/elite-journal/commit/1d083c99e7ecc6b449e1ffca471721cd82f3d4ee) update changelog (@willyb321)
 - [d37686f](https://github.com/willyb321/elite-journal/commit/d37686fe3f651e0c52e5fc01e91876d8c6788ad5) update deps (@willyb321)
 - [e2e6ba7](https://github.com/willyb321/elite-journal/commit/e2e6ba7a7e742987815690c1df6497fe32033d83) update deps (@willyb321)
 
