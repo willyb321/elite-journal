@@ -148,9 +148,15 @@ dashdash@^1.12.0:
   dependencies:
     assert-plus "^1.0.0"
 
-debug@2.6.0, debug@^2.6.0:
+debug@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.0.tgz#bc596bcabe7617f11d9fa15361eded5608b8499b"
+  dependencies:
+    ms "0.7.2"
+
+debug@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.1.tgz#79855090ba2c4e3115cc7d8769491d58f0491351"
   dependencies:
     ms "0.7.2"
 
@@ -164,9 +170,9 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
-electron-builder-http@13.3.0:
-  version "13.3.0"
-  resolved "https://registry.yarnpkg.com/electron-builder-http/-/electron-builder-http-13.3.0.tgz#f309cc82da682d5b3203aa7c35d349a47193a07b"
+electron-builder-http@13.4.0:
+  version "13.4.0"
+  resolved "https://registry.yarnpkg.com/electron-builder-http/-/electron-builder-http-13.4.0.tgz#1714c386c7d2223ca48ed55ae344602562a5b18a"
   dependencies:
     debug "2.6.0"
     fs-extra-p "^3.1.0"
@@ -196,12 +202,12 @@ electron-localshortcut@^0.6.0:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/electron-localshortcut/-/electron-localshortcut-0.6.1.tgz#c4e268c38a6e42f40de5618fc906d1ed608f11aa"
 
-electron-updater@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-1.6.0.tgz#e3b1e79f7a739986b38e4015a427e6b572ec7e2e"
+electron-updater@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-1.6.1.tgz#42a63d96cd48c86d7d41f33ab9e50465f84f2291"
   dependencies:
     bluebird-lst-c "^1.0.6"
-    electron-builder-http "13.3.0"
+    electron-builder-http "13.4.0"
     fs-extra-p "^3.1.0"
     js-yaml "^3.8.1"
     semver "^5.3.0"
