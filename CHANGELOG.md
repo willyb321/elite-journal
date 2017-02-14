@@ -1,6 +1,14 @@
 ## Change Log
 
-### upcoming (2017/02/13 01:12 +00:00)
+### upcoming (2017/02/14 21:32 +00:00)
+- [87745bf](https://github.com/willyb321/elite-journal/commit/87745bf0c1b847a9cde42377b60cce4dab9a7dd2) window state storing, path ensuring - good stuff (@willyb321)
+- [74f982d](https://github.com/willyb321/elite-journal/commit/74f982d08061e305fca8b58f0a519a4540f0a55d) add deps script, update deps and lockfile (@willyb321)
+- [0367a1b](https://github.com/willyb321/elite-journal/commit/0367a1b7f12337d32129c29e44499ca1db392bc6) update .release.json to make it do changelog. (@willyb321)
+- [a2cb5a1](https://github.com/willyb321/elite-journal/commit/a2cb5a16238642081234852195fb9c77e13f37d4) dont try to inject to node modules. (@willyb321)
+- [98dccb0](https://github.com/willyb321/elite-journal/commit/98dccb03ca3576c4c5be3c4d8b99a720c6cc4fa8) v1.12.2 [build] (@willyb321)
+
+### v1.12.2 (2017/02/13 01:16 +00:00)
+- [e52815b](https://github.com/willyb321/elite-journal/commit/e52815b395e66aafe339ad990105268a55fcd4f7) changelog again (@willyb321)
 - [8452a02](https://github.com/willyb321/elite-journal/commit/8452a02822c2729d3102f3966ba80dbbf18d0359) update lockfile. (@willyb321)
 - [1d083c9](https://github.com/willyb321/elite-journal/commit/1d083c99e7ecc6b449e1ffca471721cd82f3d4ee) update changelog (@willyb321)
 - [d37686f](https://github.com/willyb321/elite-journal/commit/d37686fe3f651e0c52e5fc01e91876d8c6788ad5) update deps (@willyb321)
@@ -625,8 +633,6 @@
 ### v1.1.7 (2016/09/28 08:20 +00:00)
 - [d054d5a](https://github.com/willyb321/elite-journal/commit/d054d5abee0fe2cf6d7bbb69ce59536e306af66b) 1.1.7 (@willyb321)
 - [9c33c1c](https://github.com/willyb321/elite-journal/commit/9c33c1cb4f6b7bfc1ce2a8e4d7205e218bd9de35) fixed update notification (@willyb321)
-
-### v1.1.6 (2016/09/28 08:07 +00:00)
 - [74f1548](https://github.com/willyb321/elite-journal/commit/74f154826dd0b5e7ad74290b09fe66cf1a0c25cb) 1.1.6 (@willyb321)
 - [2cc7ceb](https://github.com/willyb321/elite-journal/commit/2cc7ceb34f348b271efe40e7d17f97149d204eca) x64 from now on. (@willyb321)
 - [3072659](https://github.com/willyb321/elite-journal/commit/3072659a63e62fa3a47c23cfa7fab8dda58df67c) updated readme a bit (@willyb321)
