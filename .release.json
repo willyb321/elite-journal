@@ -14,7 +14,7 @@
 	"requireCleanWorkingDir": false,
 	"src": {
 		"pushRepo": null,
-		"beforeStartCommand": false,
+		"beforeStartCommand": "github-changes -o willyb321 -r elite-journal -k $GITHUB_TOKEN -b develop --use-commit-body && git add CHANGELOG.md",
 		"beforeStageCommand": false,
 		"afterReleaseCommand": false
 	},

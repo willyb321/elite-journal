@@ -1,6 +1,7 @@
 ## Change Log
 
-### upcoming (2017/02/14 21:32 +00:00)
+### v1.12.3 (2017/02/14 21:32 +00:00)
+- [e48cf01](https://github.com/willyb321/elite-journal/commit/e48cf01fae7f9785ffefe4c57603f24b49450345) v1.12.3 [build] (@willyb321)
 - [87745bf](https://github.com/willyb321/elite-journal/commit/87745bf0c1b847a9cde42377b60cce4dab9a7dd2) window state storing, path ensuring - good stuff (@willyb321)
 - [74f982d](https://github.com/willyb321/elite-journal/commit/74f982d08061e305fca8b58f0a519a4540f0a55d) add deps script, update deps and lockfile (@willyb321)
 - [0367a1b](https://github.com/willyb321/elite-journal/commit/0367a1b7f12337d32129c29e44499ca1db392bc6) update .release.json to make it do changelog. (@willyb321)
@@ -629,8 +630,6 @@
 ### v1.1.8 (2016/09/28 08:59 +00:00)
 - [4ee865c](https://github.com/willyb321/elite-journal/commit/4ee865ca4e4c99470fd6c0b8867e2b85c1311baa) 1.1.8 (@willyb321)
 - [1213e7e](https://github.com/willyb321/elite-journal/commit/1213e7e7574b96bdf2091c1fcdb20af5d24ab78b) added icons! (@willyb321)
-
-### v1.1.7 (2016/09/28 08:20 +00:00)
 - [d054d5a](https://github.com/willyb321/elite-journal/commit/d054d5abee0fe2cf6d7bbb69ce59536e306af66b) 1.1.7 (@willyb321)
 - [9c33c1c](https://github.com/willyb321/elite-journal/commit/9c33c1cb4f6b7bfc1ce2a8e4d7205e218bd9de35) fixed update notification (@willyb321)
 - [74f1548](https://github.com/willyb321/elite-journal/commit/74f154826dd0b5e7ad74290b09fe66cf1a0c25cb) 1.1.6 (@willyb321)
