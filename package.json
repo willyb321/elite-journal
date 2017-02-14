@@ -22,7 +22,8 @@
     "tag": "release-it",
     "lint": "xo",
     "docs": "jsdoc -c ./conf.json",
-    "postinstall": "(cd src && yarn install)"
+    "postinstall": "(cd src && yarn install)",
+    "deps": "(ncu -au && cd src && ncu -au)"
   },
   "keywords": [
     "electron-app",
@@ -30,12 +31,12 @@
   ],
   "devDependencies": {
     "ava": "^0.18.1",
-    "babel-core": "^6.22.1",
+    "babel-core": "^6.23.1",
     "babel-preset-latest": "^6.22.0",
     "del": "^2.2.2",
     "devtron": "^1.4.0",
     "electron": "^1.4.15",
-    "electron-builder": "^13.6.0",
+    "electron-builder": "^13.7.0",
     "gulp": "^3.9.1",
     "gulp-ava": "^0.16.0",
     "gulp-babel": "^6.1.2",
@@ -48,6 +49,7 @@
     "jake": "latest",
     "jsdoc": "^3.4.3",
     "jsdoc-export-default-interop": "^0.3.1",
+    "npm-check-updates": "^2.10.2",
     "release-it": "^2.5.4",
     "rimraf": "^2.5.4",
     "spectron": "^3.6.0",
