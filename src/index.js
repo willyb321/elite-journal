@@ -18,6 +18,7 @@ import bugsnag from 'bugsnag';
 import openAboutWindow from 'about-window';
 import storage from 'electron-json-storage';
 import moment from 'moment';
+import windowStateKeeper from 'electron-window-state';
 
 const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
@@ -73,11 +74,18 @@ let mainWindow;
  * @description Makes the main window
  */
 function createMainWindow() {
+	let mainWindowState = windowStateKeeper({ // eslint-disable-line prefer-const
+		defaultWidth: 600,
+		defaultHeight: 400
+	});
 	win = new electron.BrowserWindow({
-		width: 600,
-		height: 400,
+		x: mainWindowState.x,
+		y: mainWindowState.y,
+		width: mainWindowState.width,
+		height: mainWindowState.height,
 		backgroundColor: '#313943'
 	});
+	mainWindowState.manage(win);
 	process.mainContents = win.webContents;
 	win.on('closed', onClosed);
 }
@@ -527,6 +535,11 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 app.on('ready', () => {
 	opted();
 	mainWindow = createMainWindow();
+	fs.ensureDir(logPath, err => {
+		if (err) {
+			console.log(err);
+		}
+	});
 	win.loadURL(`file:///${__dirname}/index.html`);
 	// watchGood();
 	if (!isDev && process.env.NODE_ENV !== 'test') {
