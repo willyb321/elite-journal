@@ -89,7 +89,7 @@ gulp.task('clean', () => {
 	return del(['dist/**/*', 'node_modules/', 'src/node_modules/']);
 });
 gulp.task('index', () => {
-	gulp.src('./src/**/*.html')
+	gulp.src(['./src/**/*.html', '!./src/node_modules/**'])
 		.pipe(inject(gulp.src(['./src/*.css', './src/node_modules/izitoast/dist/css/iziToast.min.css'], {read: false}), {relative: true}))
 		.pipe(gulp.dest('./src'));
 });
