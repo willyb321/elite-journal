@@ -279,7 +279,6 @@ function loadAlternate(loadFile, html) {
  * Used to load a file by dropping it on the application
  */
 function loadByDrop() {
-	let html;
 	JSONParsed = [];
 	process.loadfile = [];
 	process.loadfile.push(process.logDropPath);
@@ -288,7 +287,7 @@ function loadByDrop() {
 		process.loadfile = '';
 		process.logDropped = false;
 	} else if ((/\.(log)$/i).test(process.logDropPath)) {
-		lineReader(process.loadfile, html);
+		lineReader(process.loadfile);
 	} else if ((/\.(html)$/i).test(process.loadfile)) {
 		win.loadURL(process.loadfile);
 		process.loadfile = '';
