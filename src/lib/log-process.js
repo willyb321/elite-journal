@@ -16,7 +16,6 @@ import tableify from 'tableify';
  */
 /**
  * @param  {Array} loadFile - Array with path to loaded file.
- * @param  {String} html - HTML that was generated.
  * @description Reads a loaded log line by line and generates JSONParsed.
  */
 export default function lineReader(loadFile) { // eslint-disable-line no-unused-vars
