@@ -21,7 +21,7 @@ import tableify from 'tableify';
  */
 export default function lineReader(loadFile) { // eslint-disable-line no-unused-vars
 	JSONParsed = [];
-	let html = ''
+	let html = '';
 	const lr = new LineByLineReader(loadFile);
 	lr.on('error', err => {
 		console.log(err);
