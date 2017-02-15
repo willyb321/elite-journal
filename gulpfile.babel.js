@@ -15,7 +15,7 @@ gulp.task('default', () => {
 		if (err && err.code !== 'ENOENT') {
 			console.log(err.codeFrame);
 			return err;
-		} else {
+		}
 			return gulp.src(['src/*.js', 'src/lib/*.js', '!node_modules',
 				'!node_modules/**',
 				'!dist',
@@ -28,7 +28,6 @@ gulp.task('default', () => {
 				.pipe(concat('indexbuild.js'))
 				.pipe(sourcemaps.write('.'))
 				.pipe(gulp.dest('src'));
-		}
 	});
 });
 
@@ -125,7 +124,7 @@ gulp.task('build:packCI', (cb) => {
 		});
 });
 
-gulp.task('test', ['default', 'build:packCI'], (cb) => {
+gulp.task('test', ['default', 'build:packCI'], () => {
 	return gulp.src('test.js')
 		.pipe(ava({verbose: true}))
 });
