@@ -29,7 +29,7 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 		type: 'info',
 		buttons: [],
 		title: 'New update available.',
-		message: 'Press OK to download the update, and the application will download the update and then tell you when its done.'
+		message: 'Press OK to download the update, and the application will download the update and then tell you when its done. The version downloaded is: ' + info.version
 	});
 	win.loadURL(`file:///${__dirname}/index.html`);
 });
@@ -39,7 +39,7 @@ autoUpdater.on('update-downloaded', (event, info) => { // eslint-disable-line no
 		type: 'info',
 		buttons: [],
 		title: 'Update ready to install.',
-		message: 'The update is downloaded, and will be installed on quit. The version downloaded is: ' + event.version
+		message: 'The update is downloaded, and will be installed on quit.'
 	});
 });
 /** Autoupdater if error */
@@ -54,7 +54,9 @@ autoUpdater.on('error', error => {
 		bugsnag.notify(error);
 	}
 });
-
+/**
+ * @description Emitted on download progress.
+ */
 autoUpdater.on('download-progress', percent => {
 	win.setProgressBar(percent.percent, {mode: 'normal'});
 	process.mainContents.executeJavaScript(`dlProgress(${Math.round(percent.percent * 100) / 100})`);
@@ -79,6 +81,7 @@ function createMainWindow() {
 		defaultHeight: 400
 	});
 	win = new electron.BrowserWindow({
+		show: false,
 		x: mainWindowState.x,
 		y: mainWindowState.y,
 		width: mainWindowState.width,
@@ -534,6 +537,9 @@ ipcMain.on('asynchronous-drop', (event, arg) => {
 app.on('ready', () => {
 	opted();
 	mainWindow = createMainWindow();
+	win.once('ready-to-show', () => {
+		win.show()
+	});
 	fs.ensureDir(logPath, err => {
 		if (err) {
 			console.log(err);
