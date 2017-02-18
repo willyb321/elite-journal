@@ -23,7 +23,7 @@
     "lint": "xo",
     "docs": "jsdoc -c ./conf.json",
     "postinstall": "(cd src && yarn install)",
-    "deps": "(ncu -au && cd src && ncu -au)"
+    "deps": "(ncu -au && cd src && ncu -au && cd .. && yarn install)"
   },
   "keywords": [
     "electron-app",
@@ -36,7 +36,7 @@
     "del": "^2.2.2",
     "devtron": "^1.4.0",
     "electron": "^1.4.15",
-    "electron-builder": "^13.7.0",
+    "electron-builder": "^13.9.0",
     "gulp": "^3.9.1",
     "gulp-ava": "^0.16.0",
     "gulp-babel": "^6.1.2",
