@@ -1,5 +1,18 @@
 ## Change Log
 
+### upcoming (2017/02/20 22:01 +00:00)
+- [b5fb011](https://github.com/willyb321/elite-journal/commit/b5fb011380b3dc2e1eb3e82decf3056d81b0de9a) Merge branch 'develop' of github.com:willyb321/elite-journal into develop (@willyb321)
+- [6aba6cc](https://github.com/willyb321/elite-journal/commit/6aba6cc5c4647a118f49b96dc7390c90005ca58c) window ready to show, autoupdate things (@willyb321)
+- [67665ad](https://github.com/willyb321/elite-journal/commit/67665ad55a5eba6b1aa9b76448cd13379557c505) Merge branch 'develop' of github.com:willyb321/elite-journal into develop (@willyb321)
+- [cca34d9](https://github.com/willyb321/elite-journal/commit/cca34d9c6aa30bda970ae912a8e473f42c8c3de0) update lockfile and deps (@willyb321)
+- [37c6859](https://github.com/willyb321/elite-journal/commit/37c6859111e6816e8c3bb47c93959ad6f2c6ca0c) forgot to remove jsdoc comment (@willyb321)
+- [b053b1a](https://github.com/willyb321/elite-journal/commit/b053b1a293c473f9451e37315748357e146cc6b4) 1 semicolon (@willyb321)
+- [f4ef3f9](https://github.com/willyb321/elite-journal/commit/f4ef3f9a2ef56fe5919b0e002166c40cc94eab2c) cleaned up a couple things (@willyb321)
+
+### v1.12.4 (2017/02/14 21:48 +00:00)
+- [0202db5](https://github.com/willyb321/elite-journal/commit/0202db5b52c7c454d441ee4c9c1f8e3780f3e153) v1.12.4 [build] (@willyb321)
+- [86ebe25](https://github.com/willyb321/elite-journal/commit/86ebe255684ce206c679ee938fd30cad4fcaa7bc) Revert "update .release.json to make it do changelog." (@willyb321)
+
 ### v1.12.3 (2017/02/14 21:32 +00:00)
 - [e48cf01](https://github.com/willyb321/elite-journal/commit/e48cf01fae7f9785ffefe4c57603f24b49450345) v1.12.3 [build] (@willyb321)
 - [87745bf](https://github.com/willyb321/elite-journal/commit/87745bf0c1b847a9cde42377b60cce4dab9a7dd2) window state storing, path ensuring - good stuff (@willyb321)
@@ -626,8 +639,6 @@
 - [381afc4](https://github.com/willyb321/elite-journal/commit/381afc41e54ce948be6f20df66380d91f95224ca) added some badges because why not (@willyb321)
 - [1345f18](https://github.com/willyb321/elite-journal/commit/1345f185db17e87ec5648c1e573f97a18dbe919d) using shields.io for build status (@willyb321)
 - [109326b](https://github.com/willyb321/elite-journal/commit/109326b38d3a6acc4bf5220b004e6843ef425ca8) testing readme things (@willyb321)
-
-### v1.1.8 (2016/09/28 08:59 +00:00)
 - [4ee865c](https://github.com/willyb321/elite-journal/commit/4ee865ca4e4c99470fd6c0b8867e2b85c1311baa) 1.1.8 (@willyb321)
 - [1213e7e](https://github.com/willyb321/elite-journal/commit/1213e7e7574b96bdf2091c1fcdb20af5d24ab78b) added icons! (@willyb321)
 - [d054d5a](https://github.com/willyb321/elite-journal/commit/d054d5abee0fe2cf6d7bbb69ce59536e306af66b) 1.1.7 (@willyb321)
