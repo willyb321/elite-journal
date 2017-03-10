@@ -1,6 +1,9 @@
 ## Change Log
 
-### upcoming (2017/02/20 22:08 +00:00)
+### upcoming (2017/03/10 00:36 +00:00)
+- [73a39b1](https://github.com/willyb321/elite-journal/commit/73a39b143defeaff67c37bbbfc80d3999e66e94e) update deps (@willyb321)
+- [84c9708](https://github.com/willyb321/elite-journal/commit/84c9708db7f5695510501153fa5e5e7e691aff2f) update deps (@willyb321)
+- [8940dc1](https://github.com/willyb321/elite-journal/commit/8940dc1ed0796feae65ed6e7ef998d3096956b1e) v1.12.5 [build] (@willyb321)
 - [e132f18](https://github.com/willyb321/elite-journal/commit/e132f187fbfd68d419dc9e01e75d1c18ab8bb607) Merge branch 'develop' of https://github.com/willyb321/elite-journal into develop (@willyb321)
 
 ### v1.12.5 (2017/02/20 22:02 +00:00)

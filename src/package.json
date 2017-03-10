@@ -10,7 +10,7 @@
   "main": "indexbuild.js",
   "productName": "Elite Journal",
   "description": "Parsing the elite dangerous journal and putting it in a cool format!",
-  "version": "1.12.5",
+  "version": "1.12.6",
   "dependencies": {
     "about-window": "^1.6.1",
     "bugsnag": "^1.9.1",
