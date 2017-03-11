@@ -1,7 +1,7 @@
 {
   "name": "elite-journal",
   "productName": "Elite Journal",
-  "version": "1.12.6",
+  "version": "1.12.7",
   "description": "Parsing the elite dangerous journal and putting it in a cool format!",
   "license": "MIT",
   "private": true,
@@ -86,10 +86,10 @@
         "github",
         "bintray"
       ]
-	},
-	  "directories": {
-		  "app": "src"
-	  },
-      "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
+    },
+    "directories": {
+      "app": "src"
+    },
+    "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
   }
 }
