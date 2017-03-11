@@ -14,7 +14,7 @@
   "dependencies": {
     "about-window": "^1.6.1",
     "bugsnag": "^1.9.1",
-    "debug": "^2.6.1",
+    "debug": "^2.6.2",
     "electron-debug": "^1.1.0",
     "electron-is-dev": "^0.1.2",
     "electron-json-storage": "^3.0.1",

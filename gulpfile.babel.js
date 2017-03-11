@@ -36,16 +36,16 @@ gulp.task('build:pack', ['default'], (cb) => {
 		platform: process.platform,
 		arch: "x64",
 		config: {
-			directories: {
-				app: 'src'
+			"appId": "com.willyb321.elite-journal",
+			"win": {
+				"target": [
+					"dir"
+				],
 			},
-			win: {
-				target: [
-					'dir'
-				]
+			"directories": {
+				"app": "src"
 			},
-			iconUrl: 'https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true',
-			remoteReleases: true
+			"iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
 		}
 	})
 		.then(() => {
@@ -61,19 +61,24 @@ gulp.task('build:dist', ['default'], (cb) => {
 		platform: process.platform,
 		arch: "x64",
 		config: {
-			win: {
-				target: [
-					'nsis'
+			"appId": "com.willyb321.elite-journal",
+			"nsis": {
+				"oneClick": false,
+				"allowToChangeInstallationDirectory": true
+			},
+			"win": {
+				"target": [
+					"nsis"
+				],
+				"publish": [
+					"github",
+					"bintray"
 				]
 			},
-			nsis: {
-				oneClick: false
+			"directories": {
+				"app": "src"
 			},
-			directories: {
-				app: 'src'
-			},
-			iconUrl: 'https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true',
-			remoteReleases: true
+			"iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
 		}
 	})
 		.then(() => {
@@ -98,21 +103,19 @@ gulp.task('build:packCI', (cb) => {
 		platform: process.platform,
 		arch: "x64",
 		config: {
-			directories: {
-				app: 'src'
+			"appId": "com.willyb321.elite-journal",
+			"linux": {
+				"target": ["dir"],
 			},
-			linux: {
-				target: [
-					'dir'
-				]
+			"win": {
+				"target": [
+					"dir"
+				],
 			},
-				win: {
-					target: [
-						'dir'
-					],
-					directories: {
-						app: 'src'
-			}}
+			"directories": {
+				"app": "src"
+			},
+			"iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
 		}
 	})
 		.then(() => {
@@ -127,11 +130,4 @@ gulp.task('build:packCI', (cb) => {
 gulp.task('test', ['default', 'build:packCI'], () => {
 	return gulp.src('test.js')
 		.pipe(ava({verbose: true}))
-});
-
-gulp.task('watch', () => {
-	let watcher = gulp.watch('src/index.js', ['default']);
-	watcher.on('change', function(event) {
-		console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-	});
 });

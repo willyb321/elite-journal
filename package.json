@@ -85,12 +85,11 @@
       "publish": [
         "github",
         "bintray"
-      ],
-      "directories": {
-        "app": "src"
-      },
-      "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true",
-      "remoteReleases": true
-    }
+      ]
+	},
+	  "directories": {
+		  "app": "src"
+	  },
+      "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
   }
 }
