@@ -36,7 +36,7 @@ export default function lineReader(loadFile) { // eslint-disable-line no-unused-
 		}
 		process.htmlDone = html;
 		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone);
+		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone, {baseURLForDataURL: `file://${__dirname}${path.sep}`});
 		process.logLoaded = true;
 		loadFile = [];
 	});
