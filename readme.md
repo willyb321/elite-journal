@@ -1,7 +1,10 @@
 <p align="center">
   <img src="https://github.com/willyb321/elite-journal/blob/master/build/icon.png?raw=true"/>
 </p>
-# Elite Journal[![AppVeyor](https://img.shields.io/appveyor/ci/willyb321/elite-journal.svg?maxAge=3600)](https://ci.appveyor.com/project/willyb321/elite-journal)[![Github All Releases](https://img.shields.io/github/downloads/willyb321/elite-journal/total.svg?maxAge=3600)](https://github.com/willyb321/elite-journal/releases/latest)[![GitHub release](https://img.shields.io/github/release/willyb321/elite-journal.svg?maxAge=3600)](https://github.com/willyb321/elite-journal/releases)[![GitHub stars](https://img.shields.io/github/stars/willyb321/elite-journal.svg?style=social&label=Star&maxAge=3600)](https://github.com/willyb321/elite-journal/stargazers)[![Gratipay User](https://img.shields.io/gratipay/user/willyb321.svg?maxAge=3600)](https://gratipay.com/~willyb321/)[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/willyb321/elite-journal/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/willyb321/elite-journal/?branch=master)[![CircleCI](https://circleci.com/gh/willyb321/elite-journal.svg?style=svg)](https://circleci.com/gh/willyb321/elite-journal)
+
+# Elite Journal
+
+[![AppVeyor](https://img.shields.io/appveyor/ci/willyb321/elite-journal.svg?maxAge=3600)](https://ci.appveyor.com/project/willyb321/elite-journal)[![Github All Releases](https://img.shields.io/github/downloads/willyb321/elite-journal/total.svg?maxAge=3600)](https://github.com/willyb321/elite-journal/releases/latest)[![GitHub release](https://img.shields.io/github/release/willyb321/elite-journal.svg?maxAge=3600)](https://github.com/willyb321/elite-journal/releases)[![GitHub stars](https://img.shields.io/github/stars/willyb321/elite-journal.svg?style=social&label=Star&maxAge=3600)](https://github.com/willyb321/elite-journal/stargazers)[![Gratipay User](https://img.shields.io/gratipay/user/willyb321.svg?maxAge=3600)](https://gratipay.com/~willyb321/)[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/willyb321/elite-journal/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/willyb321/elite-journal/?branch=master)[![CircleCI](https://circleci.com/gh/willyb321/elite-journal.svg?style=svg)](https://circleci.com/gh/willyb321/elite-journal)
 
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
 
