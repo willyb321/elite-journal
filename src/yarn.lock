@@ -99,13 +99,6 @@ caseless@~0.11.0:
   version "0.11.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.11.0.tgz#715b96ea9841593cc33067923f5ec60ebda4f7d7"
 
-cb2promise@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/cb2promise/-/cb2promise-1.0.2.tgz#6b2e7a29b29ab34df99a87e63b2077116488cc6f"
-  dependencies:
-    coffee-script "*"
-    pinkie-promise "*"
-
 chalk@^1.1.1:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
@@ -115,10 +108,6 @@ chalk@^1.1.1:
     has-ansi "^2.0.0"
     strip-ansi "^3.0.0"
     supports-color "^2.0.0"
-
-coffee-script@*:
-  version "1.12.3"
-  resolved "https://registry.yarnpkg.com/coffee-script/-/coffee-script-1.12.3.tgz#de5f4b1b934a4e9f915c57acd7ad323f68f715db"
 
 combined-stream@^1.0.5, combined-stream@~1.0.5:
   version "1.0.5"
@@ -168,9 +157,9 @@ ecc-jsbn@~0.1.1:
   dependencies:
     jsbn "~0.1.0"
 
-electron-builder-http@~15.6.2:
-  version "15.6.3"
-  resolved "https://registry.yarnpkg.com/electron-builder-http/-/electron-builder-http-15.6.3.tgz#f941a9b25245a3ae678eeb11e02cce59759402e6"
+electron-builder-http@~16.6.0:
+  version "16.6.0"
+  resolved "https://registry.yarnpkg.com/electron-builder-http/-/electron-builder-http-16.6.0.tgz#60676caf0f1d9daf385ce070b07eec49efb29f0f"
   dependencies:
     debug "2.6.3"
     fs-extra-p "^4.1.0"
@@ -186,12 +175,11 @@ electron-is-dev@^0.1.0, electron-is-dev@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-0.1.2.tgz#8a1043e32b3a1da1c3f553dce28ce764246167e3"
 
-electron-json-storage@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/electron-json-storage/-/electron-json-storage-3.0.1.tgz#a5552b23bda9d28b1df163fbd4ebcf78615c1fe7"
+electron-json-storage@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/electron-json-storage/-/electron-json-storage-3.0.4.tgz#3b4e3e95e979eb1743edf55174f8daf69416c6fd"
   dependencies:
     async "^2.0.0"
-    exists-file "^3.0.0"
     lodash "^4.0.1"
     mkdirp "^0.5.1"
     rimraf "^2.5.1"
@@ -200,16 +188,16 @@ electron-localshortcut@^0.6.0:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/electron-localshortcut/-/electron-localshortcut-0.6.1.tgz#c4e268c38a6e42f40de5618fc906d1ed608f11aa"
 
-electron-updater@^1.10.4:
-  version "1.10.4"
-  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-1.10.4.tgz#41f7084fd801b096f57d798b3ffe641debf7a471"
+electron-updater@^1.11.2:
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/electron-updater/-/electron-updater-1.11.2.tgz#87afc623bd2a7d4345e7cc2329937221a85e0132"
   dependencies:
     bluebird-lst "^1.0.2"
-    electron-builder-http "~15.6.2"
+    electron-builder-http "~16.6.0"
     fs-extra-p "^4.1.0"
     js-yaml "^3.8.2"
     semver "^5.3.0"
-    source-map-support "^0.4.13"
+    source-map-support "^0.4.14"
 
 electron-window-state@^4.1.0:
   version "4.1.0"
@@ -226,12 +214,6 @@ escape-string-regexp@^1.0.2:
 esprima@^3.1.1:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-3.1.3.tgz#fdca51cee6133895e3c88d535ce49dbff62a4633"
-
-exists-file@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/exists-file/-/exists-file-3.0.0.tgz#2e886bf9c6b696a8425cff217a897060e22e7465"
-  dependencies:
-    cb2promise "^1.0.2"
 
 extend@~3.0.0:
   version "3.0.0"
@@ -484,7 +466,7 @@ path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
 
-pinkie-promise@*, pinkie-promise@^2.0.0:
+pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
   dependencies:
@@ -559,7 +541,7 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
-source-map-support@^0.4.13, source-map-support@^0.4.14:
+source-map-support@^0.4.14:
   version "0.4.14"
   resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.4.14.tgz#9d4463772598b86271b4f523f6c1f4e02a7d6aef"
   dependencies:
