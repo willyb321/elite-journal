@@ -72,8 +72,8 @@ require('electron-debug')();
 const css = '<meta name="viewport" content="width=device-width, initial-scale=1">' +
 	'<link rel="stylesheet" href="index.css">' +
 	'<link rel="stylesheet" href="node_modules/izitoast/dist/css/iziToast.css">' +
-	'<script src="https://use.fontawesome.com/a39359b6f9.js">' +
-	'</script><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
+	'<script src="https://use.fontawesome.com/a39359b6f9.js"></script>' +
+	'<link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // prevent window being garbage collected
 let mainWindow;
 /**
@@ -444,7 +444,7 @@ function watchGood(stop) {
 	watcher.on('finished', () => {
 		console.log('it stopped');
 		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + stopdrop + process.htmlDone, {baseURLForDataURL: `file://${__dirname}${path.sep}`});
+		win.loadURL('data:text/html,' + css + stopdrop + process.htmlDone, {baseURLForDataURL: `file://${__dirname}${path.sep}`});
 		process.mainContents.on('did-finish-load', () => {
 			fs.readFile(path.join(__dirname, 'index.css'), 'utf-8', (err, data) => {
 				if (!err) {
