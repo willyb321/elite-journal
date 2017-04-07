@@ -1041,7 +1041,7 @@ bluebird-lst@^1.0.2:
   dependencies:
     bluebird "^3.5.0"
 
-bluebird@^3.0.0, bluebird@^3.4.3, bluebird@^3.4.7, bluebird@~3.4.6:
+bluebird@^3.0.0, bluebird@^3.4.3, bluebird@~3.4.6:
   version "3.4.7"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.4.7.tgz#f72d760be09b7f76d08ed8fae98b289a8d05fab3"
 
@@ -1662,7 +1662,7 @@ debug@0.7.4:
   version "0.7.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-0.7.4.tgz#06e1ea8082c2cb14e39806e22e2f6f757f92af39"
 
-debug@2, debug@2.X, debug@^2.1.1, debug@^2.1.3, debug@^2.2.0:
+debug@2, debug@2.X, debug@^2.1.1, debug@^2.1.3, debug@^2.2.0, debug@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.0.tgz#bc596bcabe7617f11d9fa15361eded5608b8499b"
   dependencies:
@@ -5584,17 +5584,18 @@ req-all@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/req-all/-/req-all-1.0.0.tgz#d128569451c340b432409c656cf166260cd2628d"
 
-request@2, request@^2.45.0, request@^2.65.0, request@^2.74.0, request@^2.79.0:
-  version "2.79.0"
-  resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
+request@2, request@^2.45.0, request@^2.74.0, request@~2.75.0:
+  version "2.75.0"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.75.0.tgz#d2b8268a286da13eaa5d01adf5d18cc90f657d93"
   dependencies:
     aws-sign2 "~0.6.0"
     aws4 "^1.2.1"
+    bl "~1.1.2"
     caseless "~0.11.0"
     combined-stream "~1.0.5"
     extend "~3.0.0"
     forever-agent "~0.6.1"
-    form-data "~2.1.1"
+    form-data "~2.0.0"
     har-validator "~2.0.6"
     hawk "~3.1.3"
     http-signature "~1.1.0"
@@ -5602,12 +5603,12 @@ request@2, request@^2.45.0, request@^2.65.0, request@^2.74.0, request@^2.79.0:
     isstream "~0.1.2"
     json-stringify-safe "~5.0.1"
     mime-types "~2.1.7"
+    node-uuid "~1.4.7"
     oauth-sign "~0.8.1"
-    qs "~6.3.0"
+    qs "~6.2.0"
     stringstream "~0.0.4"
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
-    uuid "^3.0.0"
 
 request@2.74.0:
   version "2.74.0"
@@ -5635,18 +5636,17 @@ request@2.74.0:
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
 
-request@~2.75.0:
-  version "2.75.0"
-  resolved "https://registry.yarnpkg.com/request/-/request-2.75.0.tgz#d2b8268a286da13eaa5d01adf5d18cc90f657d93"
+request@^2.65.0, request@^2.79.0:
+  version "2.79.0"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.79.0.tgz#4dfe5bf6be8b8cdc37fcf93e04b65577722710de"
   dependencies:
     aws-sign2 "~0.6.0"
     aws4 "^1.2.1"
-    bl "~1.1.2"
     caseless "~0.11.0"
     combined-stream "~1.0.5"
     extend "~3.0.0"
     forever-agent "~0.6.1"
-    form-data "~2.0.0"
+    form-data "~2.1.1"
     har-validator "~2.0.6"
     hawk "~3.1.3"
     http-signature "~1.1.0"
@@ -5654,12 +5654,12 @@ request@~2.75.0:
     isstream "~0.1.2"
     json-stringify-safe "~5.0.1"
     mime-types "~2.1.7"
-    node-uuid "~1.4.7"
     oauth-sign "~0.8.1"
-    qs "~6.2.0"
+    qs "~6.3.0"
     stringstream "~0.0.4"
     tough-cookie "~2.3.0"
     tunnel-agent "~0.4.1"
+    uuid "^3.0.0"
 
 require-dir@^0.3.0:
   version "0.3.1"
@@ -6670,7 +6670,7 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
 
-validate-npm-package-name@^2.0.1, validate-npm-package-name@~2.2.2:
+validate-npm-package-name@^2.0.1, validate-npm-package-name@^2.2.2, validate-npm-package-name@~2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/validate-npm-package-name/-/validate-npm-package-name-2.2.2.tgz#f65695b22f7324442019a3c7fa39a6e7fd299085"
   dependencies:
@@ -6914,6 +6914,35 @@ xo-init@^0.5.0:
     write-pkg "^2.0.0"
 
 xo@^0.18.0, xo@^0.18.1:
+  version "0.18.1"
+  resolved "https://registry.yarnpkg.com/xo/-/xo-0.18.1.tgz#529bb1cbd612f200221d76df90639d5c88cedf54"
+  dependencies:
+    arrify "^1.0.0"
+    debug "^2.2.0"
+    deep-assign "^1.0.0"
+    eslint "^3.18.0"
+    eslint-config-xo "^0.18.0"
+    eslint-formatter-pretty "^1.0.0"
+    eslint-plugin-ava "^4.2.0"
+    eslint-plugin-import "^2.0.0"
+    eslint-plugin-no-use-extend-native "^0.3.2"
+    eslint-plugin-promise "^3.4.0"
+    eslint-plugin-unicorn "^2.1.0"
+    get-stdin "^5.0.0"
+    globby "^6.0.0"
+    has-flag "^2.0.0"
+    lodash.isequal "^4.4.0"
+    meow "^3.4.2"
+    multimatch "^2.1.0"
+    parse-gitignore "^0.3.1"
+    path-exists "^3.0.0"
+    pkg-conf "^2.0.0"
+    resolve-cwd "^1.0.0"
+    resolve-from "^2.0.0"
+    update-notifier "^2.1.0"
+    xo-init "^0.5.0"
+
+xo@^0.18.1:
   version "0.18.1"
   resolved "https://registry.yarnpkg.com/xo/-/xo-0.18.1.tgz#529bb1cbd612f200221d76df90639d5c88cedf54"
   dependencies:
