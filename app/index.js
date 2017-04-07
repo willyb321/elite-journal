@@ -69,7 +69,11 @@ let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
 // adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
-const css = '<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="index.css"><link rel="stylesheet" href="/node_modules/izitoast/dist/css/iziToast.css"><script src="https://use.fontawesome.com/a39359b6f9.js"></script><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
+const css = '<meta name="viewport" content="width=device-width, initial-scale=1">' +
+	'<link rel="stylesheet" href="index.css">' +
+	'<link rel="stylesheet" href="node_modules/izitoast/dist/css/iziToast.css">' +
+	'<script src="https://use.fontawesome.com/a39359b6f9.js">' +
+	'</script><link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
 // prevent window being garbage collected
 let mainWindow;
 /**

@@ -14,7 +14,7 @@
   "scripts": {
     "test": "gulp test",
     "prestart": "gulp && gulp index",
-    "start": "set NODE_ENV=development && electron src/indexbuild.js",
+    "start": "set NODE_ENV=development && electron app/indexbuild.js",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
     "pack": "gulp index && gulp build:pack",
     "dist": "gulp index && gulp build:dist",
@@ -22,38 +22,38 @@
     "tag": "release-it",
     "lint": "xo",
     "docs": "jsdoc -c ./conf.json",
-    "postinstall": "(cd src && yarn install)",
-    "deps": "(ncu -au && cd src && ncu -au && cd .. && yarn install)"
+    "postinstall": "(cd app && yarn install)",
+    "deps": "(ncu -au && cd app && ncu -au && cd .. && yarn install)"
   },
   "keywords": [
     "electron-app",
     "electron"
   ],
   "devDependencies": {
-    "ava": "^0.18.2",
+    "ava": "^0.19.0",
     "babel-core": "^6.24.0",
     "babel-preset-latest": "^6.24.0",
     "del": "^2.2.2",
     "devtron": "^1.4.0",
     "electron": "^1.6.2",
-    "electron-builder": "^15.5.1",
+    "electron-builder": "^16.7.1",
     "gulp": "^3.9.1",
     "gulp-ava": "^0.16.0",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
     "gulp-inject": "^4.2.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.1.0",
-    "gulp-xo": "^0.14.0",
+    "gulp-sourcemaps": "^2.5.1",
+    "gulp-uglify": "^2.1.2",
+    "gulp-xo": "^0.15.0",
     "jake": "latest",
     "jsdoc": "^3.4.3",
     "jsdoc-export-default-interop": "^0.3.1",
-    "npm-check-updates": "^2.10.3",
-    "release-it": "^2.6.0",
+    "npm-check-updates": "^2.10.5",
+    "release-it": "^2.7.1",
     "rimraf": "^2.6.1",
-    "spectron": "^3.6.0",
-    "xo": "^0.17.1"
+    "spectron": "^3.6.1",
+    "xo": "^0.18.1"
   },
   "ava": {},
   "xo": {
@@ -67,7 +67,7 @@
       "tests/*",
       "test.js",
       "gulpfile.babel.js",
-      "src/indexbuild.*",
+      "app/indexbuild.*",
       "docs/scripts/*",
       "docs/scripts/prettify/*"
     ]
@@ -86,9 +86,6 @@
         "github",
         "bintray"
       ]
-    },
-    "directories": {
-      "app": "src"
     },
     "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
   }

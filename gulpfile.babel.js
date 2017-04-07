@@ -11,12 +11,12 @@ import ava from "gulp-ava";
 const builder = require('electron-builder');
 
 gulp.task('default', () => {
-	rimraf('src/indexbuild.js*', err => {
+	rimraf('app/indexbuild.js*', err => {
 		if (err && err.code !== 'ENOENT') {
 			console.log(err.codeFrame);
 			return err;
 		}
-			return gulp.src(['src/*.js', 'src/lib/*.js', '!node_modules',
+			return gulp.src(['app/*.js', 'app/lib/*.js', '!node_modules',
 				'!node_modules/**',
 				'!dist',
 				'!dist/**'])
@@ -27,7 +27,7 @@ gulp.task('default', () => {
 				}))
 				.pipe(concat('indexbuild.js'))
 				.pipe(sourcemaps.write('.'))
-				.pipe(gulp.dest('src'));
+				.pipe(gulp.dest('app'));
 	});
 });
 
@@ -41,9 +41,6 @@ gulp.task('build:pack', ['default'], (cb) => {
 				"target": [
 					"dir"
 				],
-			},
-			"directories": {
-				"app": "src"
 			},
 			"iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
 		}
@@ -75,9 +72,6 @@ gulp.task('build:dist', ['default'], (cb) => {
 					"bintray"
 				]
 			},
-			"directories": {
-				"app": "src"
-			},
 			"iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
 		}
 	})
@@ -90,12 +84,12 @@ gulp.task('build:dist', ['default'], (cb) => {
 		});
 });
 gulp.task('clean', () => {
-	return del(['dist/**/*', 'node_modules/', 'src/node_modules/']);
+	return del(['dist/**/*', 'node_modules/', 'app/node_modules/']);
 });
 gulp.task('index', () => {
-	gulp.src(['./src/**/*.html', '!./src/node_modules/**'])
-		.pipe(inject(gulp.src(['./src/*.css', './src/node_modules/izitoast/dist/css/iziToast.min.css'], {read: false}), {relative: true}))
-		.pipe(gulp.dest('./src'));
+	gulp.src(['./app/**/*.html', '!./app/node_modules/**'])
+		.pipe(inject(gulp.src(['./app/*.css', './app/node_modules/izitoast/dist/css/iziToast.min.css'], {read: false}), {relative: true}))
+		.pipe(gulp.dest('./app'));
 });
 
 gulp.task('build:packCI', (cb) => {
@@ -111,9 +105,6 @@ gulp.task('build:packCI', (cb) => {
 				"target": [
 					"dir"
 				],
-			},
-			"directories": {
-				"app": "src"
 			},
 			"iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
 		}

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{a39359b6f9, electron-DefinitelyTyped, github-electron}" />
-    <includedPredefinedLibrary name="ECMAScript 6" />
+    <file url="file://$PROJECT_DIR$" libraries="{HTML, electron-DefinitelyTyped, electron-builder-DefinitelyTyped, electron-json-storage-DefinitelyTyped, electron-notify-DefinitelyTyped, electron-window-state-DefinitelyTyped}" />
+    <file url="PROJECT" libraries="{HTML, a39359b6f9, electron-DefinitelyTyped}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>
