@@ -41,8 +41,7 @@ gulp.task('build:pack', ['default'], (cb) => {
 				"target": [
 					"dir"
 				],
-			},
-			"iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
+			}
 		}
 	})
 		.then(() => {
@@ -71,8 +70,7 @@ gulp.task('build:dist', ['default'], (cb) => {
 					"github",
 					"bintray"
 				]
-			},
-			"iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
+			}
 		}
 	})
 		.then(() => {
@@ -105,8 +103,7 @@ gulp.task('build:packCI', (cb) => {
 				"target": [
 					"dir"
 				],
-			},
-			"iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
+			}
 		}
 	})
 		.then(() => {
