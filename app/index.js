@@ -67,14 +67,15 @@ const webview = `<webview id="foo" src="${__dirname}/filter.html" style="display
 let JSONParsedEvent = [];
 let JSONParsed = []; // eslint-disable-line prefer-const
 const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
-// adds debug features like hotkeys for triggering dev tools and reload
+// Adds debug features like hotkeys for triggering dev tools and reload
 require('electron-debug')();
+
 const css = '<meta name="viewport" content="width=device-width, initial-scale=1">' +
 	'<link rel="stylesheet" href="index.css">' +
 	'<link rel="stylesheet" href="node_modules/izitoast/dist/css/iziToast.css">' +
 	'<script src="https://use.fontawesome.com/a39359b6f9.js"></script>' +
 	'<link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700" rel="stylesheet" type="text/css">';
-// prevent window being garbage collected
+// Prevent window being garbage collected
 let mainWindow;
 /**
  * @description Makes the main window
@@ -100,7 +101,7 @@ function createMainWindow() {
  * Called by createMainWindow() on closing.
  */
 function onClosed() {
-	// dereference the window
+	// Dereference the window
 	// for multiple windows store them in an array
 	mainWindow = null;
 }
@@ -118,6 +119,7 @@ function opted() {
 
 /**
  * Used by various functions to show a dialog for loading files into the program
+ * @returns {Array} Array of file paths
  */
 function dialogLoad() {
 	return dialog.showOpenDialog({
@@ -328,7 +330,7 @@ function funcSaveHTML() {
 				console.log('You didn\'t save the file');
 				return;
 			}
-			// fileName is a string that contains the path and filename created in the save file dialog.
+			// FileName is a string that contains the path and filename created in the save file dialog.
 			if (process.isFiltered === true) {
 				fs.writeFile(fileName, css + process.filteredHTML, err => {
 					if (err) {
@@ -430,6 +432,7 @@ function funcSaveJSON() {
 		});
 	}
 }
+
 /**
  * @description New watching code. See lib/log-watcher.js for the info.
  * @param stop - if the watching should be stopped.
@@ -466,32 +469,15 @@ function watchGood(stop) {
 			const {timestamp, event} = ob;
 			JSONParsed.push('\n' + event, timestamp); // eslint-disable-line no-useless-concat
 			process.htmlDone += '<hr>' + tableify(event + ` @ ${moment(timestamp).format('h:mm a - D/M ')}` + '<br>'); // eslint-disable-line no-useless-concat
-			// console.log('\n' + timestamp, event);
+			console.log('\n' + timestamp, event);
 			delete ob.timestamp;
 			delete ob.event;
 			Object.keys(ob).forEach(k => {
 				if (k.endsWith('_Localised') || !ob[k].toString().startsWith('$')) {
 					if (k === 'StarPos') {
 						process.htmlDone += '(x / y / z) <br>' + tableify(ob[k].join('<br>')) + '<br>';
-					} else if (k === 'Systems') {
-						process.htmlDone += 'Systems Sold: <br>' + tableify(ob[k].join('<br>')) + '<br>';
-					} else if (k === 'Materials') {
-						let objtoarr = _.pairs(ob[k]); // eslint-disable-line prefer-const
-						let objtoarrmerged = [].concat.apply([], objtoarr);
-						objtoarrmerged = _.each(objtoarrmerged, (element, index, list) => {
-							if (!isNaN(parseInt(element, 0))) {
-								list[index] = element.toString() + '% <br>';
-							}
-						});
-						process.htmlDone += k + ':<br>' + tableify(_.flatten(objtoarrmerged).join(' '));
 					} else if (typeof ob[k] === 'object') {
-						let objtoarr = _.pairs(ob[k]); // eslint-disable-line prefer-const
-						const objtoarrmerged = [].concat.apply([], objtoarr);
-						process.htmlDone += k + ':<br>' + tableify(_.flatten(objtoarrmerged).join(' <br>')) + ' <br> ';
-					} else if (k === 'Ingredients') {
-						let objtoarr = _.pairs(ob[k]); // eslint-disable-line prefer-const
-						let objtoarrmerged = [].concat.apply([], objtoarr); // eslint-disable-line prefer-const
-						process.htmlDone += k + ':<br>' + tableify(_.flatten(objtoarrmerged).join(' <br>')) + ' <br> ';
+						process.htmlDone += `<center>${tableify(ob[k])}</center>`;
 					} else {
 						process.htmlDone += tableify(k) + ': ' + tableify(ob[k]) + '<br>';
 						console.log('\t' + k, ob[k]);
@@ -542,7 +528,7 @@ app.on('ready', () => {
 	opted();
 	mainWindow = createMainWindow();
 	win.once('ready-to-show', () => {
-		win.show()
+		win.show();
 	});
 	fs.ensureDir(logPath, err => {
 		if (err) {
@@ -550,7 +536,7 @@ app.on('ready', () => {
 		}
 	});
 	win.loadURL(`file:///${__dirname}/index.html`);
-	// watchGood();
+	// WatchGood();
 	if (!isDev && process.env.NODE_ENV !== 'test') {
 		autoUpdater.checkForUpdates();
 	}

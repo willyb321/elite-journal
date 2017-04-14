@@ -96,7 +96,7 @@ class LogWatcher extends events.EventEmitter {
 			});
 		} catch (err) {
 			this.emit('error', err);
-				// assumption: it crashed BEFORE an async wait
+				// Assumption: it crashed BEFORE an async wait
 				// otherwise, we'll end up with more simultaneous
 				// activity
 			setImmediate(() => this._loop());
@@ -152,7 +152,7 @@ class LogWatcher extends events.EventEmitter {
 				if (this._logDetailMap[filename]) {
 					this.bury(filename);
 				}
-				callback(null); // file deleted
+				callback(null); // File deleted
 			} else if (err) {
 				callback(err);
 			} else {
@@ -192,16 +192,16 @@ class LogWatcher extends events.EventEmitter {
 		}
 
 		if (info.ino !== stats.ino) {
-				// file replaced... can't trust it any more
+				// File replaced... can't trust it any more
 				// if the client API supported replay from scratch, we could do that
 				// but we can't yet, so:
 			CURRENT_FILE = 0;
 			this.bury(filename);
 		} else if (stats.size > info.size) {
-				// file not replaced; got longer... assume append
+				// File not replaced; got longer... assume append
 			this._ops.push(cb => this._read(filename, cb));
 		} else if (info.ino === stats.ino && info.size === stats.size) {
-				// even if mtime is different, treat it as unchanged
+				// Even if mtime is different, treat it as unchanged
 				// e.g. ^Z when COPY CON to a fake log
 				// don't queue read
 		}
@@ -219,7 +219,7 @@ class LogWatcher extends events.EventEmitter {
 		const {watermark, size} = this._logDetailMap[filename];
 		debug('_read', {filename, watermark, size});
 
-		let leftover = new Buffer('', 'utf8');
+		let leftover = Buffer.from('', 'utf8');
 
 		const s = fs.createReadStream(filename, {
 			flags: 'r',
@@ -234,7 +234,7 @@ class LogWatcher extends events.EventEmitter {
 			}
 			setImmediate(callback, null);
 			callback = () => {
-			}; // no-op
+			}; // No-op
 		};
 		s.once('error', finish);
 
