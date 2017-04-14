@@ -86,7 +86,6 @@
         "github",
         "bintray"
       ]
-    },
-    "iconUrl": "https://github.com/willyb321/elite-journal/blob/master/build/icon.ico?raw=true"
+    }
   }
 }
