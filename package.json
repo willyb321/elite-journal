@@ -30,7 +30,7 @@
     "electron"
   ],
   "devDependencies": {
-    "ava": "^0.19.1",
+    "ava": "^0.20.0",
     "babel-core": "^6.24.1",
     "babel-preset-latest": "^6.24.1",
     "del": "^2.2.2",
