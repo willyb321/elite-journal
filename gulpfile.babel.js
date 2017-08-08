@@ -50,8 +50,7 @@ gulp.task('build:dist', ['default'], (cb) => {
 					"nsis"
 				],
 				"publish": [
-					"github",
-					"bintray"
+					"github"
 				]
 			}
 		}
