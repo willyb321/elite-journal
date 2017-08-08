@@ -159,6 +159,7 @@ function watchGood(stop) {
 	watcher.on('finished', () => {
 		console.log('it stopped');
 		const compiledWatch = pug.renderFile(__dirname + '/../logload.pug', {
+			basedir: path.join(__dirname, '..'),
 			data: toPug,
 			tabled: tablified
 		});
@@ -233,9 +234,10 @@ function readLog() {
 					console.error(err);
 				} else {
 					const compiledLog = pug.renderFile(__dirname + '/../logload.pug', {
-						data: toPug,
-						tabled: tablified,
-						filename: log
+						basedir: path.join(__dirname, '..'),
+							data: toPug,
+							tabled: tablified,
+							filename: log
 					});
 					currentLoaded = compiledLog;
 					console.log(toPug[0]);

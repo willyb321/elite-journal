@@ -2,7 +2,7 @@ html, body {
 	padding: 0;
 	margin: 0;
 	height: 100%; /* Make sure this matches the native window background color that you pass to * electron.BrowserWindow({...}), otherwise your app startup will look janky. */
-	background: #313943; /* Smoother startup */
+
 	animation: fadein 0.5s;
 }
 
@@ -50,8 +50,8 @@ header h1 {
 	background: linear-gradient(to right, #5A3F37, #2C7744); /* Standard syntax */
 }
 
-table tbody {
-	color: white;
+.centerit {
+	margin: 0 auto;
 }
 
 hr {

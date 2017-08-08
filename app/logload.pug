@@ -1,10 +1,18 @@
 extends layout
 block content
+	section.hero.is-primary.is-bold
+		.hero-body
+			.container
+				h1.title Elite Journal
+				h2.subtitle The good stuff
 	if data
-		for elem,ind in data
-			hr
-			table
-				tr
-					th= elem.event
-				tr
-					td!= tabled[ind]
+		.container.is-fluid
+			for elem,ind in data
+				hr
+				table.table.centerit
+					tr.tr
+						th(style="text-align: center;")= elem.event
+					tr
+						td!= tabled[ind]
+	script
+		include render.js
