@@ -1,0 +1,12 @@
+{
+	"application/javascript": {
+		"presets": [
+			"es2015"
+		],
+		"minified": true,
+		"only": [
+			"app/*.js",
+			"app/*.js"
+		]
+	}
+}

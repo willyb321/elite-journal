@@ -1,0 +1,10 @@
+extends layout
+block content
+	if data
+		for elem,ind in data
+			hr
+			table
+				tr
+					th= elem.event
+				tr
+					td!= tabled[ind]

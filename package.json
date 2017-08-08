@@ -14,7 +14,7 @@
   "scripts": {
     "test": "gulp test",
     "prestart": "gulp && gulp index",
-    "start": "set NODE_ENV=development && electron app/indexbuild.js",
+    "start": "set NODE_ENV=development && electron app/",
     "build": "electron-zip-packager . --out=dist --overwrite --platform=win32 --arch=x64 --prune --asar",
     "pack": "gulp index && gulp build:pack",
     "dist": "gulp index && gulp build:dist",
@@ -37,6 +37,7 @@
     "devtron": "^1.4.0",
     "electron": "^1.7.5",
     "electron-builder": "^19.19.1",
+    "electron-compilers": "^5.9.0",
     "gulp": "^3.9.1",
     "gulp-ava": "^0.18.0",
     "gulp-babel": "^7.0.0",
