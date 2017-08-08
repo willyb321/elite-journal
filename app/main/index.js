@@ -181,7 +181,14 @@ function watchGood(stop) {
 		watcher.stop();
 	}
 }
-
+/**
+ * When all windows are closed, quit the app.
+ */
+app.on('window-all-closed', () => {
+	if (process.platform !== 'darwin') {
+		app.quit();
+	}
+});
 function saveHTML() {
 	if (currentLoaded) {
 		dialog.showSaveDialog({
