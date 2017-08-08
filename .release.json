@@ -1,42 +1,40 @@
 {
-	"non-interactive": false,
+	"non-interactive": true,
 	"dry-run": false,
 	"verbose": false,
 	"force": false,
-	"pkgFiles": ["package.json", "src/package.json"],
+	"pkgFiles": [
+		"package.json",
+		"app/package.json"
+	],
 	"increment": "patch",
 	"prereleaseId": null,
-	"commitMessage": "v%s [build]",
-	"tagName": "v%s",
-	"tagAnnotation": "v%s",
 	"buildCommand": false,
-
-	"requireCleanWorkingDir": false,
+	"changelogCommand": "git log --pretty=format:'* %s (%h)' [REV_RANGE]",
+	"requireCleanWorkingDir": true,
 	"src": {
+		"commitMessage": "Release v%s",
+		"tagName": "v%s",
+		"tagAnnotation": "Release v%s",
 		"pushRepo": null,
-		"beforeStartCommand": "github-changes -o willyb321 -r elite-journal -k $GITHUB_TOKEN -b develop --use-commit-body && git add CHANGELOG.md",
-		"beforeStageCommand": false,
-		"afterReleaseCommand": false
-	},
-	"dist": {
-		"repo": false,
-		"stageDir": ".stage",
-		"baseDir": "dist",
-		"files": ["**/*"],
-		"pkgFiles": null,
-		"beforeStageCommand": false,
-		"afterReleaseCommand": false
-	},
-	"npm": {
-		"publish": false,
-		"publishPath": ".",
-		"tag": "latest",
-		"private": false,
-		"forcePublishSourceRepo": false
+		"beforeStartCommand": false,
+		"beforeStageCommand": false
 	},
 	"github": {
 		"release": true,
 		"releaseName": "Release %s",
-		"tokenRef": "GITHUB_TOKEN"
+		"preRelease": false,
+		"tokenRef": "GITHUB_TOKEN",
+		"draft": true
+	},
+	"prompt": {
+		"src": {
+			"status": false,
+			"commit": true,
+			"tag": true,
+			"push": true,
+			"release": true,
+			"publish": false
+		}
 	}
 }

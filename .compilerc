@@ -6,7 +6,7 @@
 		"minified": true,
 		"only": [
 			"app/*.js",
-			"app/*.js"
+			"app/main/*.js"
 		]
 	}
 }

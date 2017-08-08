@@ -11,24 +11,7 @@ import ava from "gulp-ava";
 const builder = require('electron-builder');
 
 gulp.task('default', () => {
-	rimraf('app/indexbuild.js*', err => {
-		if (err && err.code !== 'ENOENT') {
-			console.log(err.codeFrame);
-			return err;
-		}
-			return gulp.src(['app/*.js', 'app/lib/*.js', '!node_modules',
-				'!node_modules/**',
-				'!dist',
-				'!dist/**'])
-				.pipe(sourcemaps.init())
-				.pipe(babel({
-					presets: ['latest'],
-					ignore: 'node_modules/**/*'
-				}))
-				.pipe(concat('indexbuild.js'))
-				.pipe(sourcemaps.write('.'))
-				.pipe(gulp.dest('app'));
-	});
+
 });
 
 gulp.task('build:pack', ['default'], (cb) => {
@@ -85,9 +68,9 @@ gulp.task('clean', () => {
 	return del(['dist/**/*', 'node_modules/', 'app/node_modules/']);
 });
 gulp.task('index', () => {
-	gulp.src(['./app/**/*.html', '!./app/node_modules/**'])
-		.pipe(inject(gulp.src(['./app/*.css', './app/node_modules/izitoast/dist/css/iziToast.min.css'], {read: false}), {relative: true}))
-		.pipe(gulp.dest('./app'));
+	gulp.src(['./app/html/index.html', '!./app/node_modules/**'])
+		.pipe(inject(gulp.src(['./app/css/*.css', './app/node_modules/izitoast/dist/css/iziToast.min.css'], {read: false}), {relative: true}))
+		.pipe(gulp.dest('./app/html/'));
 });
 
 gulp.task('build:packCI', (cb) => {

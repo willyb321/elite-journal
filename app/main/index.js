@@ -20,7 +20,7 @@ import openAboutWindow from 'about-window';
 import storage from 'electron-json-storage';
 import moment from 'moment';
 import windowStateKeeper from 'electron-window-state';
-import {LogWatcher} from './lib/log-watcher';
+import {LogWatcher} from '../lib/log-watcher';
 const pug = require('pug');
 require('electron-debug')();
 const app = electron.app;
@@ -36,7 +36,7 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 		title: 'New update available.',
 		message: 'Press OK to download the update, and the application will download the update and then tell you when its done. The version downloaded is: ' + info.version
 	});
-	win.loadURL(`file:///${__dirname}/index.html`);
+	win.loadURL(`file:///${__dirname}/../html/index.html`);
 });
 /** Autoupdater on downloaded */
 autoUpdater.on('update-downloaded', (event, info) => { // eslint-disable-line no-unused-vars
@@ -114,7 +114,7 @@ app.on('ready', () => {
 			console.log(err);
 		}
 	});
-	win.loadURL(`file:///${__dirname}/index.html`);
+	win.loadURL(`file:///${__dirname}/../html/index.html`);
 	// WatchGood();
 	if (!isDev && process.env.NODE_ENV !== 'test') {
 		autoUpdater.checkForUpdates();
@@ -158,12 +158,12 @@ function watchGood(stop) {
 	});
 	watcher.on('finished', () => {
 		console.log('it stopped');
-		const compiledWatch = pug.renderFile(__dirname + '/logload.pug', {
+		const compiledWatch = pug.renderFile(__dirname + '/../logload.pug', {
 			data: toPug,
 			tabled: tablified
 		});
 		currentLoaded = compiledWatch;
-		win.loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${__dirname}${path.sep}`});
+		win.loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
 	});
 
 	watcher.on('stopped', () => {
@@ -225,7 +225,7 @@ function readLog() {
 				if (err) {
 					console.error(err);
 				} else {
-					const compiledLog = pug.renderFile(__dirname + '/logload.pug', {
+					const compiledLog = pug.renderFile(__dirname + '/../logload.pug', {
 						data: toPug,
 						tabled: tablified,
 						filename: log
@@ -234,7 +234,7 @@ function readLog() {
 					console.log(toPug[0]);
 					console.log(tablified[0]);
 					console.log(`${__dirname}${path.sep}`);
-					win.loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `${__dirname}${path.sep}`})
+					win.loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
 				}
 			})
 		})

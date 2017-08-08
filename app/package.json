@@ -7,7 +7,7 @@
   "private": true,
   "license": "MIT",
   "name": "elite-journal",
-  "main": "es6-init.js",
+  "main": "main/es6-init.js",
   "productName": "Elite Journal",
   "description": "Parsing the elite dangerous journal and putting it in a cool format!",
   "version": "1.13.0",
