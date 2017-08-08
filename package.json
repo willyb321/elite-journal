@@ -87,8 +87,7 @@
         "nsis"
       ],
       "publish": [
-        "github",
-        "bintray"
+        "github"
       ]
     }
   }
