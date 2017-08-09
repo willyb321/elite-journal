@@ -5,7 +5,7 @@
  */
 /* eslint-disable no-undef */
 /** global: LogWatcher */
-import electron, {Menu, dialog, ipcMain, shell} from 'electron';
+import electron, {Menu, dialog, ipcMain as ipc, shell} from 'electron';
 import path from 'path';
 import os from 'os';
 import {autoUpdater} from 'electron-updater';
@@ -85,7 +85,7 @@ function createMainWindow() {
 		y: mainWindowState.y,
 		width: mainWindowState.width,
 		height: mainWindowState.height,
-		backgroundColor: '#313943'
+		backgroundColor: '#fff'
 	});
 	mainWindowState.manage(win);
 	process.mainContents = win.webContents;
@@ -100,7 +100,15 @@ function onClosed() {
 	// for multiple windows store them in an array
 	mainWindow = null;
 }
-
+ipc.on('loadLog', event => {
+	readLog();
+});
+ipc.on('watchLog', event => {
+	watchGood(false);
+	template[0].submenu[3].checked = true;
+	const menu = Menu.buildFromTemplate(template);
+	Menu.setApplicationMenu(menu);
+});
 /**
  * Called when app is ready, and checks for updates.
  */
@@ -211,6 +219,8 @@ function saveHTML() {
 	}
 }
 
+
+
 function readLog() {
 	let log;
 	let toPug = [];
@@ -276,6 +286,11 @@ const template = [{
 		label: 'Load',
 		accelerator: 'CmdOrCtrl+O',
 		click: readLog
+	}, {
+		label: 'Homepage',
+		click: () => {
+			win.loadURL(`file:///${__dirname}/../html/index.html`);
+		}
 	}, {
 		label: 'Watch logs',
 		accelerator: 'CmdOrCtrl+L',

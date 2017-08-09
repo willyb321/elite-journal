@@ -68,7 +68,7 @@ gulp.task('clean', () => {
 });
 gulp.task('index', () => {
 	gulp.src(['./app/html/index.html', '!./app/node_modules/**'])
-		.pipe(inject(gulp.src(['./app/css/*.css', './app/node_modules/izitoast/dist/css/iziToast.min.css'], {read: false}), {relative: true}))
+		.pipe(inject(gulp.src(['./app/css/*.css', './app/node_modules/izitoast/dist/css/iziToast.min.css', './app/node_modules/hover.css/css/hover-min.css', './app/node_modules/bulma/css/bulma.css'], {read: false}), {relative: true}))
 		.pipe(gulp.dest('./app/html/'));
 });
 
