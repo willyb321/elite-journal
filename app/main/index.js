@@ -141,7 +141,7 @@ function watchGood(stop) {
 	});
 	watcher.on('finished', () => {
 		console.log('it stopped');
-		const compiledWatch = pug.renderFile(__dirname + '/../logload.pug', {
+		const compiledWatch = pug.renderFile(path.join(__dirname, '..', 'logload.pug'), {
 			basedir: path.join(__dirname, '..'),
 			data: toPug,
 			tabled: tablified
@@ -157,7 +157,9 @@ function watchGood(stop) {
 		obs.forEach(ob => {
 			const parsed = ob;
 			_.each(Object.keys(parsed), elem => {
-				if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) delete parsed[elem];
+				if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) {
+					delete parsed[elem];
+				}
 			});
 			parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
 			toPug.push(parsed);

@@ -51,7 +51,9 @@ export function readLog() {
 			lr.on('line', line => {
 				const parsed = JSON.parse(line);
 				_.each(Object.keys(parsed), elem => {
-					if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) delete parsed[elem];
+					if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) {
+						delete parsed[elem];
+					}
 				});
 				parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
 				toPug.push(parsed);
@@ -61,7 +63,7 @@ export function readLog() {
 				if (err) {
 					console.error(err);
 				} else {
-					const compiledLog = pug.renderFile(__dirname + '/../logload.pug', {
+					const compiledLog = pug.renderFile(path.join(__dirname, '..', 'logload.pug'), {
 						basedir: path.join(__dirname, '..'),
 						data: toPug,
 						tabled: tablified,
