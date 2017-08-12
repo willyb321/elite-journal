@@ -2,6 +2,7 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{HTML, electron-DefinitelyTyped, electron-builder-DefinitelyTyped, electron-json-storage-DefinitelyTyped, electron-notify-DefinitelyTyped, electron-window-state-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/app" libraries="{HTML, electron-DefinitelyTyped}" />
     <file url="PROJECT" libraries="{HTML, a39359b6f9, electron-DefinitelyTyped}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
