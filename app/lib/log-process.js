@@ -3,41 +3,77 @@
  * @author willyb321
  * @copyright MIT
  */
-/* eslint-disable no-undef */
-/** global: JSONParsed */
-/** global: uncaughtErr */
-/** global: stopdrop */
-/** global: css */
-/** global: win */
 import LineByLineReader from 'line-by-line';
+import {dialog, webContents} from 'electron';
+import _ from 'lodash';
+import moment from 'moment';
+import pug from 'pug'
 import tableify from 'tableify';
-/**
- * @module
- */
-/**
- * @param  {Array} loadFile - Array with path to loaded file.
- * @description Reads a loaded log line by line and generates JSONParsed.
- */
-export default function lineReader(loadFile) { // eslint-disable-line no-unused-vars
-	JSONParsed = [];
-	let html = '';
-	const lr = new LineByLineReader(loadFile);
-	lr.on('error', err => {
-		console.log(err);
-	});
-	lr.on('line', line => {
-		let lineParse = JSON.parse(line); // eslint-disable-line prefer-const
-		JSONParsed.push(lineParse);
-		html += tableify(lineParse) + '<hr>';
-	});
-	lr.on('end', err => {
-		if (err) {
-			uncaughtErr(err);
+import {logPath, currentData} from '../main/index';
+import path from 'path';
+
+export function getLogPath() {
+	return new Promise((resolve, reject) => {
+		const files = dialog.showOpenDialog({
+			defaultPath: logPath,
+			buttonLabel: 'Load File',
+			filters: [{
+				name: 'Logs and saved HTML/JSON',
+				extensions: ['log', 'html', 'json']
+			}, {
+				name: 'All files',
+				extensions: ['*']
+			}]
+		}, {
+			properties: ['openFile']
+		});
+		if (files) {
+			process.loadfile = files;
+			resolve(files)
+		} else {
+			reject();
 		}
-		process.htmlDone = html;
-		process.htmlDone = process.htmlDone.replace('undefined', '');
-		win.loadURL('data:text/html,' + css + '<hr>' + stopdrop + process.htmlDone, {baseURLForDataURL: `file://${__dirname}${path.sep}`});
-		process.logLoaded = true;
-		loadFile = [];
-	});
+	})
+}
+
+export function readLog() {
+	let log;
+	let toPug = [];
+	let tablified = [];
+	getLogPath()
+		.then(logs => {
+			console.log(logs);
+			log = logs[0];
+			const lr = new LineByLineReader(log);
+			lr.on('error', err => {
+				console.log(err);
+			});
+			lr.on('line', line => {
+				const parsed = JSON.parse(line);
+				_.each(Object.keys(parsed), elem => {
+					if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) delete parsed[elem];
+				});
+				parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
+				toPug.push(parsed);
+				tablified.push(tableify(parsed));
+			});
+			lr.on('end', err => {
+				if (err) {
+					console.error(err);
+				} else {
+					const compiledLog = pug.renderFile(__dirname + '/../logload.pug', {
+						basedir: path.join(__dirname, '..'),
+						data: toPug,
+						tabled: tablified,
+						filename: log
+					});
+					currentData.log = compiledLog;
+					console.log(`${__dirname}${path.sep}`);
+					webContents.getFocusedWebContents().loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
+				}
+			})
+		})
+		.catch(() => {
+			dialog.showMessageBox({type: 'info', title: 'No log selected.', message: 'Try again.'})
+		});
 }

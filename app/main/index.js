@@ -13,19 +13,22 @@ import fs from 'fs-extra';
 import tableify from 'tableify';
 import _ from 'lodash';
 import isDev from 'electron-is-dev';
-import LineByLineReader from 'line-by-line';
 import bugsnag from 'bugsnag';
 import openAboutWindow from 'about-window';
 import moment from 'moment';
 import windowStateKeeper from 'electron-window-state';
 import {LogWatcher} from '../lib/log-watcher';
-const pug = require('pug');
+import {readLog} from '../lib/log-process';
+import pug from 'pug';
+
 require('electron-debug')();
 const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
 let win;
-let currentLoaded;
-let watcherData;
+export const currentData = {
+	log: null
+};
+
 /** Autoupdater on update available */
 autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-vars
 	dialog.showMessageBox({
@@ -37,7 +40,7 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 	win.loadURL(`file:///${__dirname}/../html/index.html`);
 });
 /** Autoupdater on downloaded */
-autoUpdater.on('update-downloaded', (event, info) => { // eslint-disable-line no-unused-vars
+autoUpdater.on('update-downloaded', () => { // eslint-disable-line no-unused-vars
 	dialog.showMessageBox({
 		type: 'info',
 		buttons: [],
@@ -53,9 +56,7 @@ autoUpdater.on('error', error => {
 		title: 'Update ready to install.',
 		message: `Sorry, we've had an error. The message is ` + error
 	});
-	if (!isDev && uncaughtErr(error) !== {out: true}) {
-		bugsnag.notify(error);
-	}
+	bugsnag.notify(error);
 });
 /**
  * @description Emitted on download progress.
@@ -64,7 +65,7 @@ autoUpdater.on('download-progress', percent => {
 	win.setProgressBar(percent.percent, {mode: 'normal'});
 });
 
-const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
+export const logPath = path.join(os.homedir(), 'Saved Games', 'Frontier Developments', 'Elite Dangerous');
 
 // Prevent window being garbage collected
 let mainWindow;
@@ -125,29 +126,7 @@ app.on('ready', () => {
 	}
 });
 
-function getLogPath() {
-	return new Promise((resolve, reject) => {
-		const files = dialog.showOpenDialog({
-			defaultPath: logPath,
-			buttonLabel: 'Load File',
-			filters: [{
-				name: 'Logs and saved HTML/JSON',
-				extensions: ['log', 'html', 'json']
-			}, {
-				name: 'All files',
-				extensions: ['*']
-			}]
-		}, {
-			properties: ['openFile']
-		});
-		if (files) {
-			process.loadfile = files;
-			resolve(files)
-		} else {
-			reject();
-		}
-	})
-}
+
 
 /**
  * @description New watching code. See lib/log-watcher.js for the info.
@@ -167,7 +146,7 @@ function watchGood(stop) {
 			data: toPug,
 			tabled: tablified
 		});
-		currentLoaded = compiledWatch;
+		currentData.log = compiledWatch;
 		win.loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
 	});
 
@@ -198,7 +177,7 @@ app.on('window-all-closed', () => {
 	}
 });
 function saveHTML() {
-	if (currentLoaded) {
+	if (currentData.log) {
 		dialog.showSaveDialog({
 			filters: [{
 				name: 'HTML',
@@ -209,7 +188,7 @@ function saveHTML() {
 				console.log('You didn\'t save the file');
 				return;
 			}
-			fs.writeFile(fileName, currentLoaded, err => {
+			fs.writeFile(fileName, currentData.log, err => {
 				if (err) {
 					console.log(err);
 				}
@@ -218,51 +197,6 @@ function saveHTML() {
 	}
 }
 
-
-
-function readLog() {
-	let log;
-	let toPug = [];
-	let tablified = [];
-	getLogPath()
-		.then(logs => {
-			console.log(logs);
-			log = logs[0];
-			const lr = new LineByLineReader(log);
-			lr.on('error', err => {
-				console.log(err);
-			});
-			lr.on('line', line => {
-				const parsed = JSON.parse(line);
-				_.each(Object.keys(parsed), elem => {
-					if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) delete parsed[elem];
-				});
-				parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
-				toPug.push(parsed);
-				tablified.push(tableify(parsed));
-			});
-			lr.on('end', err => {
-				if (err) {
-					console.error(err);
-				} else {
-					const compiledLog = pug.renderFile(__dirname + '/../logload.pug', {
-						basedir: path.join(__dirname, '..'),
-							data: toPug,
-							tabled: tablified,
-							filename: log
-					});
-					currentLoaded = compiledLog;
-					console.log(toPug[0]);
-					console.log(tablified[0]);
-					console.log(`${__dirname}${path.sep}`);
-					win.loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
-				}
-			})
-		})
-		.catch(() => {
-			dialog.showMessageBox({type: 'info', title: 'No log selected.', message: 'Try again.'})
-		});
-}
 
 function rawLog() {
 	if (Array.isArray(process.loadfile) === true) {
@@ -291,6 +225,7 @@ const template = [{
 	}, {
 		label: 'Homepage',
 		click: () => {
+			currentData.log = null;
 			win.loadURL(`file:///${__dirname}/../html/index.html`);
 		}
 	}, {
