@@ -23,7 +23,7 @@
     "lint": "xo",
     "docs": "jsdoc -c ./conf.json",
     "postinstall": "(electron-builder install-app-deps)",
-    "deps": "(ncu -au && cd app && ncu -au && cd .. && yarn install)"
+    "deps": "(ncu -au && cd app && ncu -au)"
   },
   "keywords": [
     "electron-app",
@@ -39,7 +39,7 @@
     "del": "^3.0.0",
     "devtron": "^1.4.0",
     "electron": "^1.7.5",
-    "electron-builder": "^19.19.1",
+    "electron-builder": "^19.20.1",
     "electron-compilers": "^5.9.0",
     "gulp": "^3.9.1",
     "gulp-ava": "^0.18.0",
@@ -49,7 +49,7 @@
     "gulp-inject": "^4.2.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
-    "gulp-xo": "^0.15.0",
+    "gulp-xo": "^0.16.0",
     "jake": "latest",
     "jsdoc": "^3.5.4",
     "jsdoc-export-default-interop": "^0.3.1",
