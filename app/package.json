@@ -27,12 +27,12 @@
     "izitoast": "^1.1.5",
     "jsonfile": "^3.0.1",
     "line-by-line": "^0.1.5",
+    "lodash": "^4.17.4",
     "moment": "^2.18.1",
-    "pug": "^2.0.0-rc.3",
     "progressbar.js": "^1.0.1",
+    "pug": "^2.0.0-rc.3",
     "source-map-support": "^0.4.15",
-    "tableify": "^1.0.1",
-    "underscore": "^1.8.3"
+    "tableify": "^1.0.1"
   },
   "xo": false
 }
