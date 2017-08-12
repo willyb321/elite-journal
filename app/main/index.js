@@ -11,13 +11,11 @@ import os from 'os';
 import {autoUpdater} from 'electron-updater';
 import fs from 'fs-extra';
 import tableify from 'tableify';
-import _ from 'underscore';
+import _ from 'lodash';
 import isDev from 'electron-is-dev';
 import LineByLineReader from 'line-by-line';
-import jsonfile from 'jsonfile';
 import bugsnag from 'bugsnag';
 import openAboutWindow from 'about-window';
-import storage from 'electron-json-storage';
 import moment from 'moment';
 import windowStateKeeper from 'electron-window-state';
 import {LogWatcher} from '../lib/log-watcher';
@@ -100,14 +98,12 @@ function onClosed() {
 	// for multiple windows store them in an array
 	mainWindow = null;
 }
-ipc.on('loadLog', event => {
+ipc.on('loadLog', () => {
 	readLog();
 });
-ipc.on('watchLog', event => {
+ipc.on('watchLog', () => {
 	watchGood(false);
-	template[0].submenu[3].checked = true;
-	const menu = Menu.buildFromTemplate(template);
-	Menu.setApplicationMenu(menu);
+	Menu.getApplicationMenu().items[0].submenu.items[3].checked = true;
 });
 /**
  * Called when app is ready, and checks for updates.
@@ -181,6 +177,9 @@ function watchGood(stop) {
 	watcher.on('data', obs => {
 		obs.forEach(ob => {
 			const parsed = ob;
+			_.each(Object.keys(parsed), elem => {
+				if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) delete parsed[elem];
+			});
 			parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
 			toPug.push(parsed);
 			tablified.push(tableify(parsed));
@@ -235,6 +234,9 @@ function readLog() {
 			});
 			lr.on('line', line => {
 				const parsed = JSON.parse(line);
+				_.each(Object.keys(parsed), elem => {
+					if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) delete parsed[elem];
+				});
 				parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
 				toPug.push(parsed);
 				tablified.push(tableify(parsed));
@@ -359,7 +361,7 @@ const template = [{
 	}, {
 		label: 'About',
 		click: () => openAboutWindow({
-			icon_path: path.join(__dirname, 'icon.png'), // eslint-disable-line camelcase
+			icon_path: path.join(__dirname, '..', 'icon.png'), // eslint-disable-line camelcase
 			bug_report_url: 'https://github.com/willyb321/elite-journal/issues', // eslint-disable-line camelcase
 			homepage: 'https://github.com/willyb321/elite-journal'
 		})
