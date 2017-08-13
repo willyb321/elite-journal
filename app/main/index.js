@@ -10,16 +10,12 @@ import path from 'path';
 import os from 'os';
 import {autoUpdater} from 'electron-updater';
 import fs from 'fs-extra';
-import tableify from 'tableify';
-import _ from 'lodash';
 import isDev from 'electron-is-dev';
 import bugsnag from 'bugsnag';
 import openAboutWindow from 'about-window';
-import moment from 'moment';
 import windowStateKeeper from 'electron-window-state';
-import {LogWatcher} from '../lib/log-watcher';
 import {readLog} from '../lib/log-process';
-import pug from 'pug';
+import {watchGood} from '../lib/watcher-process';
 
 require('electron-debug')();
 const app = electron.app;
@@ -128,48 +124,6 @@ app.on('ready', () => {
 
 
 
-/**
- * @description New watching code. See lib/log-watcher.js for the info.
- * @param stop - if the watching should be stopped.
- */
-function watchGood(stop) {
-	const watcher = new LogWatcher(logPath);
-	let toPug = [];
-	let tablified = [];
-	watcher.on('error', err => {
-		bugsnag.notify(err);
-	});
-	watcher.on('finished', () => {
-		console.log('it stopped');
-		const compiledWatch = pug.renderFile(path.join(__dirname, '..', 'logload.pug'), {
-			basedir: path.join(__dirname, '..'),
-			data: toPug,
-			tabled: tablified
-		});
-		currentData.log = compiledWatch;
-		win.loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
-	});
-
-	watcher.on('stopped', () => {
-		console.log('nah its stopped');
-	});
-	watcher.on('data', obs => {
-		obs.forEach(ob => {
-			const parsed = ob;
-			_.each(Object.keys(parsed), elem => {
-				if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) {
-					delete parsed[elem];
-				}
-			});
-			parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
-			toPug.push(parsed);
-			tablified.push(tableify(parsed));
-		});
-	});
-	if (stop === 1) {
-		watcher.stop();
-	}
-}
 /**
  * When all windows are closed, quit the app.
  */
