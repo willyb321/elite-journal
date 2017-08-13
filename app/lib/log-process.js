@@ -42,7 +42,6 @@ export function readLog() {
 	let tablified = [];
 	getLogPath()
 		.then(logs => {
-			console.log(logs);
 			log = logs[0];
 			const lr = new LineByLineReader(log);
 			lr.on('error', err => {
@@ -70,7 +69,6 @@ export function readLog() {
 						filename: log
 					});
 					currentData.log = compiledLog;
-					console.log(`${__dirname}${path.sep}`);
 					webContents.getFocusedWebContents().loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
 				}
 			})
