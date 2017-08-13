@@ -1,7 +1,10 @@
 /**
- * @file The file that does the log watching.
+ * @file The file that does the watcher processing.
  * @author willyb321
  * @copyright MIT
+ */
+/**
+ * @module Watcher
  */
 'use strict';
 const events = require('events');

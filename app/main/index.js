@@ -3,6 +3,9 @@
  * @author willyb321
  * @copyright MIT
  */
+/**
+ * @module Index
+ */
 /* eslint-disable no-undef */
 /** global: LogWatcher */
 import electron, {Menu, dialog, ipcMain as ipc, shell} from 'electron';
@@ -71,8 +74,8 @@ let mainWindow;
  */
 function createMainWindow() {
 	let mainWindowState = windowStateKeeper({ // eslint-disable-line prefer-const
-		defaultWidth: 600,
-		defaultHeight: 400
+		defaultWidth: 1280,
+		defaultHeight: 720
 	});
 	win = new electron.BrowserWindow({
 		show: false,

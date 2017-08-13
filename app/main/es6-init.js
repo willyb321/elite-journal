@@ -1,3 +1,6 @@
+/**
+ * @file Entry point. Initialises electron-compile.
+ */
 const appRoot = require('path').join(__dirname, '..');
 
 require('electron-compile').init(appRoot, require.resolve('./index'));

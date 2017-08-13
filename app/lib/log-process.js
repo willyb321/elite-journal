@@ -3,6 +3,9 @@
  * @author willyb321
  * @copyright MIT
  */
+/**
+ * @module Reader
+ */
 import LineByLineReader from 'line-by-line';
 import {dialog, webContents} from 'electron';
 import _ from 'lodash';
@@ -12,6 +15,10 @@ import tableify from 'tableify';
 import {logPath, currentData} from '../main/index';
 import path from 'path';
 
+/**
+ * Opens dialog that returns the path of a log file.
+ * @returns {Promise} Array with path.
+ */
 export function getLogPath() {
 	return new Promise((resolve, reject) => {
 		const files = dialog.showOpenDialog({
@@ -36,6 +43,9 @@ export function getLogPath() {
 	})
 }
 
+/**
+ * Reads log files line by line, then compiles with Pug and loads it.
+ */
 export function readLog() {
 	let log;
 	let toPug = [];

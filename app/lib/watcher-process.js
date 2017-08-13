@@ -3,6 +3,9 @@
  * @author willyb321
  * @copyright MIT
  */
+/**
+ * @module Watcher
+ */
 import electron, {webContents} from 'electron';
 import _ from 'lodash';
 import moment from 'moment';
@@ -13,6 +16,7 @@ import path from 'path';
 import bugsnag from 'bugsnag';
 import {LogWatcher} from './log-watcher';
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: electron.app.getVersion(), sendCode: true});
+
 /**
  * @description New watching code. See lib/log-watcher.js for the info.
  * @param stop - if the watching should be stopped.
