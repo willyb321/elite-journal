@@ -13,8 +13,15 @@ const path = require('path');
 const fs = require('fs-extra');
 const debug = require('debug')('wotch');
 
+/**
+ * Interval in MS to poll directory at.
+ * @type {number}
+ */
 const POLL_INTERVAL = 1000;
-
+/**
+ * Default path to journal files for Elite.
+ * @type {string}
+ */
 const DEFAULT_SAVE_DIR = path.join(
 	os.homedir(),
 	'Saved Games',
@@ -27,8 +34,8 @@ const DEFAULT_SAVE_DIR = path.join(
 class LogWatcher extends events.EventEmitter {
 	/**
 	 * Construct the log watcher.
-	 * @param dirpath
-	 * @param maxfiles
+	 * @param dirpath {string} The directory to watch.
+	 * @param maxfiles {number} Maximum amount of files to process.
 	 */
 	constructor(dirpath, maxfiles) {
 		super();
@@ -47,7 +54,7 @@ class LogWatcher extends events.EventEmitter {
 
 	/**
 	 * Bury a file
-	 * @param filename
+	 * @param filename {string} File to bury.
 	 */
 	bury(filename) {
 		debug('bury', {filename});
@@ -108,7 +115,7 @@ class LogWatcher extends events.EventEmitter {
 
 	/**
 	 * Poll the logs directory for new/updated files.
-	 * @param callback
+	 * @param callback {function}
 	 */
 	_poll(callback) {
 		debug('_poll');
@@ -144,7 +151,7 @@ class LogWatcher extends events.EventEmitter {
 
 	/**
 	 * Stat the new/updated files in log directory
-	 * @param filename
+	 * @param filename {string} Path to file to get stats of.
 	 * @param callback
 	 */
 	_statfile(filename, callback) {
@@ -167,9 +174,9 @@ class LogWatcher extends events.EventEmitter {
 
 	/**
 	 * Process the files
-	 * @param filename
-	 * @param stats
-	 * @param callback
+	 * @param filename {string} Filename to check
+	 * @param stats {object} Last modified etc
+	 * @param callback {function}
 	 */
 	_process(filename, stats, callback) {
 		debug('_process', {filename, stats});
@@ -215,8 +222,8 @@ class LogWatcher extends events.EventEmitter {
 
 	/**
 	 * Read the files
-	 * @param filename
-	 * @param callback
+	 * @param filename {string} The filename to read.
+	 * @param callback {function}
 	 */
 	_read(filename, callback) {
 		const {watermark, size} = this._logDetailMap[filename];
@@ -266,8 +273,8 @@ class LogWatcher extends events.EventEmitter {
 	}
 /**
  * Get the path of the logs.
- * @param fpath
- * @returns {boolean}
+ * @param fpath {string} Path to check.
+ * @returns {boolean} True if the directory contains journal files.
  */
 function isCommanderLog(fpath) {
 	const base = path.basename(fpath);

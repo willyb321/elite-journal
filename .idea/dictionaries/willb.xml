@@ -5,9 +5,11 @@
       <w>bugsnag</w>
       <w>builtins</w>
       <w>eslint</w>
+      <w>fpath</w>
       <w>hotkeys</w>
       <w>janky</w>
       <w>logor</w>
+      <w>maxfiles</w>
       <w>notifys</w>
       <w>stopdrop</w>
       <w>submenu</w>

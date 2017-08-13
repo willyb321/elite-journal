@@ -135,6 +135,10 @@ app.on('window-all-closed', () => {
 		app.quit();
 	}
 });
+
+/**
+ * Save current log as HTML.
+ */
 function saveHTML() {
 	if (currentData.log) {
 		dialog.showSaveDialog({
@@ -156,7 +160,9 @@ function saveHTML() {
 	}
 }
 
-
+/**
+ * Open current loaded log in default program.
+ */
 function rawLog() {
 	if (Array.isArray(process.loadfile) === true) {
 		shell.openItem(process.loadfile[0]);
@@ -169,7 +175,7 @@ function rawLog() {
 
 /**
  * Menu constructor
- * @type {Array}
+ * @type {Array} Template for the menu.
  */
 const template = [{
 	label: 'File',
@@ -193,10 +199,10 @@ const template = [{
 		type: 'checkbox',
 		id: 'checked',
 		click(checked) {
-			const stop = 1;
+			const stop = true;
 			console.log(checked.checked);
 			if (checked.checked === true) {
-				watchGood();
+				watchGood(false);
 			} else if (checked.checked === false) {
 				watchGood(stop);
 			}
