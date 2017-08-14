@@ -6,21 +6,48 @@
 /**
  * @module Index
  */
-/* eslint-disable no-undef */
-/** global: LogWatcher */
+console.time('Imports');
+console.time('FullStart');
+console.time('electron');
 import electron, {Menu, dialog, ipcMain as ipc, shell} from 'electron';
+console.timeEnd('electron');
+console.time('path');
 import path from 'path';
+console.timeEnd('path');
+console.time('os');
 import os from 'os';
+console.timeEnd('os');
+console.time('autoupdater');
 import {autoUpdater} from 'electron-updater';
+console.timeEnd('autoupdater');
+console.time('fs-extra');
 import fs from 'fs-extra';
+console.timeEnd('fs-extra');
+console.time('isDev');
 import isDev from 'electron-is-dev';
+console.timeEnd('isDev');
+console.time('bugsnag');
 import bugsnag from 'bugsnag';
+console.timeEnd('bugsnag');
+console.time('about');
 import openAboutWindow from 'about-window';
+console.timeEnd('about');
+console.time('winstate');
 import windowStateKeeper from 'electron-window-state';
+console.timeEnd('winstate');
+console.time('readLog');
 import {readLog} from '../lib/log-process';
+console.timeEnd('readLog');
+console.time('watchLog');
 import {watchGood} from '../lib/watcher-process';
-
+console.timeEnd('watchLog');
+console.time('utils');
+import {getMenuItem} from '../lib/utils';
+console.timeEnd('utils');
+console.time('debug');
 require('electron-debug')();
+console.timeEnd('debug');
+console.timeEnd('Imports');
 const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
 let win;
@@ -103,7 +130,7 @@ ipc.on('loadLog', () => {
 });
 ipc.on('watchLog', () => {
 	watchGood(false);
-	Menu.getApplicationMenu().items[0].submenu.items[3].checked = true;
+	getMenuItem('Watch logs').checked = true;
 });
 /**
  * Called when app is ready, and checks for updates.
@@ -119,6 +146,7 @@ app.on('ready', () => {
 		}
 	});
 	win.loadURL(`file:///${__dirname}/../html/index.html`);
+	console.timeEnd('FullStart');
 	// WatchGood();
 	if (!isDev && process.env.NODE_ENV !== 'test') {
 		autoUpdater.checkForUpdates();
@@ -173,10 +201,6 @@ function rawLog() {
 	}
 }
 
-/**
- * Menu constructor
- * @type {Array} Template for the menu.
- */
 const template = [{
 	label: 'File',
 	submenu: [{
@@ -269,5 +293,5 @@ const template = [{
 	]
 }];
 
-const menu = Menu.buildFromTemplate(template);
+export const menu = Menu.buildFromTemplate(template);
 Menu.setApplicationMenu(menu);
