@@ -1,0 +1,13 @@
+
+doctype html
+head
+	meta(name='viewport', content='width=device-width, initial-scale=1')
+	title Filter Form
+br
+p#events
+script
+	include filter.js
+form#myForm
+	select#selectNumber(name='plswork', onchange='updateFilter(event)')
+		for elem,ind in events
+			option.events(id= ind)= elem

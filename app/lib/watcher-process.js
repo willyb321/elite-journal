@@ -30,10 +30,12 @@ export function watchGood(stop) {
 	});
 	watcher.on('finished', () => {
 		console.log('it stopped');
+		currentData.events = _.uniq(currentData.events);
 		const compiledWatch = pug.renderFile(path.join(__dirname, '..', 'logload.pug'), {
 			basedir: path.join(__dirname, '..'),
 			data: toPug,
-			tabled: tablified
+			tabled: tablified,
+			events: currentData.events
 		});
 		currentData.log = compiledWatch;
 		webContents.getFocusedWebContents().loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
@@ -52,6 +54,7 @@ export function watchGood(stop) {
 			});
 			parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
 			toPug.push(parsed);
+			currentData.events.push(parsed.event);
 			tablified.push(tableify(parsed));
 		});
 	});

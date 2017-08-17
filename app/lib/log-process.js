@@ -66,19 +66,23 @@ export function readLog() {
 				});
 				parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
 				toPug.push(parsed);
+				currentData.events.push(parsed.event);
 				tablified.push(tableify(parsed));
 			});
 			lr.on('end', err => {
 				if (err) {
 					console.error(err);
 				} else {
+					currentData.events = _.uniq(currentData.events);
 					const compiledLog = pug.renderFile(path.join(__dirname, '..', 'logload.pug'), {
 						basedir: path.join(__dirname, '..'),
 						data: toPug,
 						tabled: tablified,
-						filename: log
+						filename: log,
+						events: currentData.events
 					});
 					currentData.log = compiledLog;
+					console.log(currentData.events)
 					webContents.getFocusedWebContents().loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
 				}
 			})

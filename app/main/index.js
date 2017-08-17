@@ -52,7 +52,8 @@ const app = electron.app;
 bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
 let win;
 export const currentData = {
-	log: null
+	log: null,
+	events: []
 };
 
 /** Autoupdater on update available */
@@ -153,7 +154,11 @@ app.on('ready', () => {
 	}
 });
 
-
+function filter() {
+	ipc.on('filter', (event, args) => {
+		console.log(args);
+	});
+}
 
 /**
  * When all windows are closed, quit the app.

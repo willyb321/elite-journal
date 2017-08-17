@@ -1,3 +1,4 @@
+const ipc = require('electron').ipcRenderer;
 const allTags1 = document.querySelectorAll('th');
 const allTags2 = document.querySelectorAll('td');
 allTags1.forEach(ob => {
