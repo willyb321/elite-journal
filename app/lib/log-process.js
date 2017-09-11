@@ -46,48 +46,55 @@ export function getLogPath() {
 /**
  * Reads log files line by line, then compiles with Pug and loads it.
  */
-export function readLog() {
-	let log;
+export function readLog(log, filter) {
 	let toPug = [];
 	let tablified = [];
-	getLogPath()
-		.then(logs => {
-			log = logs[0];
-			const lr = new LineByLineReader(log);
-			lr.on('error', err => {
-				console.log(err);
-			});
-			lr.on('line', line => {
-				const parsed = JSON.parse(line);
-				_.each(Object.keys(parsed), elem => {
-					if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) {
-						delete parsed[elem];
-					}
-				});
-				parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
-				toPug.push(parsed);
-				currentData.events.push(parsed.event);
-				tablified.push(tableify(parsed));
-			});
-			lr.on('end', err => {
-				if (err) {
-					console.error(err);
-				} else {
-					currentData.events = _.uniq(currentData.events);
-					const compiledLog = pug.renderFile(path.join(__dirname, '..', 'logload.pug'), {
-						basedir: path.join(__dirname, '..'),
-						data: toPug,
-						tabled: tablified,
-						filename: log,
-						events: currentData.events
-					});
-					currentData.log = compiledLog;
-					console.log(currentData.events)
-					webContents.getFocusedWebContents().loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
+	if (!filter) {
+		filter = 'All Events';
+	}
+	currentData.currentPath = log;
+	const lr = new LineByLineReader(log);
+	lr.on('error', err => {
+		console.log(err);
+	});
+	lr.on('line', line => {
+		let parsed = JSON.parse(line);
+		if (filter && parsed.event !== filter && filter !== 'All Events') {
+			parsed = null;
+		}
+		if (parsed) {
+			_.each(Object.keys(parsed), elem => {
+				if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) {
+					delete parsed[elem];
 				}
-			})
-		})
-		.catch(() => {
-			dialog.showMessageBox({type: 'info', title: 'No log selected.', message: 'Try again.'})
-		});
+			});
+			parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
+			toPug.push(parsed);
+			currentData.events.push(parsed.event);
+			tablified.push(tableify(parsed));
+		}
+	});
+	lr.on('end', err => {
+		if (err) {
+			console.error(err);
+		} else {
+			currentData.events = _.uniq(currentData.events);
+			const filterLog = pug.renderFile(path.join(__dirname, '..', 'filter.pug'), {
+				basedir: path.join(__dirname, '..'),
+				events: currentData.events,
+				currentEvent: filter || 'All Events'
+			});
+			const compiledLog = pug.renderFile(path.join(__dirname, '..', 'logload.pug'), {
+				basedir: path.join(__dirname, '..'),
+				data: toPug,
+				tabled: tablified,
+				filename: log,
+				events: currentData.events,
+				filterLog
+			});
+			currentData.log = compiledLog;
+			webContents.getAllWebContents()[0].loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
+			// webContents.getFocusedWebContents().loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
+		}
+	})
 }

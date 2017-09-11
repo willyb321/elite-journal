@@ -10,39 +10,51 @@ console.time('Imports');
 console.time('FullStart');
 console.time('electron');
 import electron, {Menu, dialog, ipcMain as ipc, shell} from 'electron';
+
 console.timeEnd('electron');
 console.time('path');
 import path from 'path';
+
 console.timeEnd('path');
 console.time('os');
 import os from 'os';
+
 console.timeEnd('os');
 console.time('autoupdater');
 import {autoUpdater} from 'electron-updater';
+
 console.timeEnd('autoupdater');
 console.time('fs-extra');
 import fs from 'fs-extra';
+
 console.timeEnd('fs-extra');
 console.time('isDev');
 import isDev from 'electron-is-dev';
+
 console.timeEnd('isDev');
 console.time('bugsnag');
 import bugsnag from 'bugsnag';
+
 console.timeEnd('bugsnag');
 console.time('about');
 import openAboutWindow from 'about-window';
+
 console.timeEnd('about');
 console.time('winstate');
 import windowStateKeeper from 'electron-window-state';
+
 console.timeEnd('winstate');
 console.time('readLog');
-import {readLog} from '../lib/log-process';
+import {getLogPath, readLog} from '../lib/log-process';
+
 console.timeEnd('readLog');
 console.time('watchLog');
 import {watchGood} from '../lib/watcher-process';
+
 console.timeEnd('watchLog');
 console.time('utils');
 import {getMenuItem} from '../lib/utils';
+
 console.timeEnd('utils');
 console.time('debug');
 require('electron-debug')();
@@ -53,7 +65,9 @@ bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion
 let win;
 export const currentData = {
 	log: null,
-	events: []
+	events: [],
+	filteringFor: null,
+	currentPath: null
 };
 
 /** Autoupdater on update available */
@@ -126,8 +140,15 @@ function onClosed() {
 	// for multiple windows store them in an array
 	mainWindow = null;
 }
+
 ipc.on('loadLog', () => {
-	readLog();
+	getLogPath()
+		.then(log => {
+			readLog(log[0]);
+		})
+		.catch(() => {
+			dialog.showMessageBox({type: 'info', title: 'No log selected.', message: 'Try again.'})
+		});
 });
 ipc.on('watchLog', () => {
 	watchGood(false);
@@ -154,11 +175,11 @@ app.on('ready', () => {
 	}
 });
 
-function filter() {
-	ipc.on('filter', (event, args) => {
-		console.log(args);
-	});
-}
+ipc.on('filter', (event, args) => {
+	console.log(args);
+	currentData.filteringFor = args;
+	readLog(currentData.currentPath, args);
+});
 
 /**
  * When all windows are closed, quit the app.
@@ -215,7 +236,15 @@ const template = [{
 	}, {
 		label: 'Load',
 		accelerator: 'CmdOrCtrl+O',
-		click: readLog
+		click: () => {
+			getLogPath()
+				.then(log => {
+					readLog(log[0]);
+				})
+				.catch(() => {
+					dialog.showMessageBox({type: 'info', title: 'No log selected.', message: 'Try again.'})
+				});
+		}
 	}, {
 		label: 'Homepage',
 		click: () => {

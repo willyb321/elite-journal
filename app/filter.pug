@@ -7,7 +7,11 @@ br
 p#events
 script
 	include filter.js
-form#myForm
+form#myForm()
 	select#selectNumber(name='plswork', onchange='updateFilter(event)')
+		option.events(id=0) All Events
 		for elem,ind in events
-			option.events(id= ind)= elem
+			if elem === currentEvent
+				option.events(id= ind + 1 selected)= elem
+			else
+				option.events(id= ind + 1)= elem

@@ -7,6 +7,8 @@ block content
 				h2.subtitle The good stuff
 	if data
 		.container.is-fluid
+			if filterLog
+				webview#filterView(src="data:text/html," + filterLog, style='display:inline-flex; float:right; width:640px; height:480px; display:inline-block; z-index:11111111;' nodeintegration)
 			for elem,ind in data
 				hr
 				table.table.centerit
