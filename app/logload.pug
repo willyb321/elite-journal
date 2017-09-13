@@ -8,7 +8,7 @@ block content
 	if data
 		.container.is-fluid
 			if filterLog
-				webview#filterView(src="data:text/html," + filterLog, style='display:inline-flex; float:right; width:640px; height:480px; display:inline-block; z-index:11111111;' nodeintegration)
+				webview#filterView(src="data:text/html," + filterLog, style='float:right; width:15%; height:480px; display:inline-block; position:fixed; right:0; z-index:11111111;' nodeintegration)
 			for elem,ind in data
 				hr
 				table.table.centerit
