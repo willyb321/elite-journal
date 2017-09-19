@@ -1,9 +1,9 @@
 {
 	"application/javascript": {
 		"presets": [
-			"es2015"
+			"env"
 		],
-		"minified": true,
+		"minified": false,
 		"only": [
 			"app/*.js",
 			"app/main/*.js"
