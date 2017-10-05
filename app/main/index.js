@@ -9,59 +9,47 @@
 console.time('Imports');
 console.time('FullStart');
 console.time('electron');
-import electron, {Menu, dialog, ipcMain as ipc, shell} from 'electron';
-
+import {Menu, BrowserWindow, dialog, ipcMain as ipc, shell} from 'electron';
 console.timeEnd('electron');
 console.time('path');
 import path from 'path';
-
 console.timeEnd('path');
 console.time('os');
 import os from 'os';
-
 console.timeEnd('os');
 console.time('autoupdater');
 import {autoUpdater} from 'electron-updater';
-
 console.timeEnd('autoupdater');
 console.time('fs-extra');
 import fs from 'fs-extra';
-
 console.timeEnd('fs-extra');
 console.time('isDev');
 import isDev from 'electron-is-dev';
-
 console.timeEnd('isDev');
-console.time('bugsnag');
-import bugsnag from 'bugsnag';
-
-console.timeEnd('bugsnag');
 console.time('about');
 import openAboutWindow from 'about-window';
-
 console.timeEnd('about');
 console.time('winstate');
 import windowStateKeeper from 'electron-window-state';
-
 console.timeEnd('winstate');
 console.time('readLog');
 import {getLogPath, readLog} from '../lib/log-process';
-
 console.timeEnd('readLog');
 console.time('watchLog');
 import {watchGood} from '../lib/watcher-process';
-
 console.timeEnd('watchLog');
+console.time('raven');
+import Raven from'raven';
+console.timeEnd('raven');
 console.time('utils');
 import {getMenuItem} from '../lib/utils';
-
 console.timeEnd('utils');
 console.time('debug');
 require('electron-debug')();
 console.timeEnd('debug');
 console.timeEnd('Imports');
-const app = electron.app;
-bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: app.getVersion(), sendCode: true});
+const app = require('electron').app;
+
 let win;
 export const currentData = {
 	log: null,
@@ -69,6 +57,10 @@ export const currentData = {
 	filteringFor: null,
 	currentPath: null
 };
+Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8@sentry.io/226655', {
+	release: app.getVersion(),
+	autoBreadcrumbs: true
+}).install();
 
 /** Autoupdater on update available */
 autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-vars
@@ -90,14 +82,14 @@ autoUpdater.on('update-downloaded', () => { // eslint-disable-line no-unused-var
 	});
 });
 /** Autoupdater if error */
-autoUpdater.on('error', error => {
+autoUpdater.on('error', err => {
+	Raven.captureException(err);
 	dialog.showMessageBox({
 		type: 'info',
 		buttons: [],
 		title: 'Update ready to install.',
-		message: `Sorry, we've had an error. The message is ` + error
+		message: `Sorry, we've had an error. The message is ` + err
 	});
-	bugsnag.notify(error);
 });
 /**
  * @description Emitted on download progress.
@@ -119,7 +111,7 @@ function createMainWindow() {
 		defaultWidth: 1280,
 		defaultHeight: 720
 	});
-	win = new electron.BrowserWindow({
+	win = new BrowserWindow({
 		show: false,
 		x: mainWindowState.x,
 		y: mainWindowState.y,
@@ -164,7 +156,7 @@ app.on('ready', () => {
 	});
 	fs.ensureDir(logPath, err => {
 		if (err) {
-			console.log(err);
+			Raven.captureException(err);
 		}
 	});
 	win.loadURL(`file:///${__dirname}/../html/index.html`);
@@ -207,7 +199,7 @@ function saveHTML() {
 			}
 			fs.writeFile(fileName, currentData.log, err => {
 				if (err) {
-					console.log(err);
+					Raven.captureException(err);
 				}
 			});
 		})

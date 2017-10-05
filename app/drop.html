@@ -26,7 +26,7 @@ document.addEventListener('drop', event => event.preventDefault());
 		return false;
 	};
 	holder.ondrop = (e) => {
-		e.preventDefault()
+		e.preventDefault();
 		for (let f of e.dataTransfer.files) {
 			console.log('File(s) you dragged here: ', f.path);
 			ipcRenderer.send('asynchronous-drop', f.path)

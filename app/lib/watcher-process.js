@@ -6,17 +6,20 @@
 /**
  * @module Watcher-Process
  */
-import electron, {webContents} from 'electron';
+import {webContents} from 'electron';
 import _ from 'lodash';
 import moment from 'moment';
 import pug from 'pug'
 import tableify from 'tableify';
 import {logPath, currentData} from '../main/index';
 import path from 'path';
-import bugsnag from 'bugsnag';
 import {LogWatcher} from './log-watcher';
-bugsnag.register('2ec6a43af0f3ef1f61f751191d6bd847', {appVersion: electron.app.getVersion(), sendCode: true});
+import Raven from 'raven';
 
+Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8@sentry.io/226655', {
+	release: require('electron').app.getVersion(),
+	autoBreadcrumbs: true
+}).install();
 /**
  * @description New watching code. See lib/log-watcher.js for the info.
  * @param stop {boolean} - if the watching should be stopped.
@@ -26,7 +29,8 @@ export function watchGood(stop) {
 	let toPug = [];
 	let tablified = [];
 	watcher.on('error', err => {
-		bugsnag.notify(err);
+		console.log('Error in watcher');
+		Raven.captureException(err);
 	});
 	watcher.on('finished', () => {
 		console.log('it stopped');

@@ -14,7 +14,11 @@ import pug from 'pug'
 import tableify from 'tableify';
 import {logPath, currentData} from '../main/index';
 import path from 'path';
-
+import Raven from 'raven';
+Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8@sentry.io/226655', {
+	release: require('electron').app.getVersion(),
+	autoBreadcrumbs: true
+}).install();
 /**
  * Opens dialog that returns the path of a log file.
  * @returns {Promise} Array with path.
@@ -55,7 +59,7 @@ export function readLog(log, filter) {
 	currentData.currentPath = log;
 	const lr = new LineByLineReader(log);
 	lr.on('error', err => {
-		console.log(err);
+		Raven.captureException(err);
 	});
 	lr.on('line', line => {
 		let parsed = JSON.parse(line);
@@ -76,7 +80,7 @@ export function readLog(log, filter) {
 	});
 	lr.on('end', err => {
 		if (err) {
-			console.error(err);
+			Raven.captureException(err);
 		} else {
 			currentData.events = _.uniq(currentData.events);
 			const filterLog = pug.renderFile(path.join(__dirname, '..', 'filter.pug'), {
