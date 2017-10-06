@@ -311,7 +311,7 @@ const template = [{
 	}, {
 		label: 'About',
 		click: () => openAboutWindow({
-			icon_path: path.join(__dirname, '..', 'icon.png'), // eslint-disable-line camelcase
+			icon_path: path.join(__dirname, '..', 'html', 'icon.png'), // eslint-disable-line camelcase
 			bug_report_url: 'https://github.com/willyb321/elite-journal/issues', // eslint-disable-line camelcase
 			homepage: 'https://github.com/willyb321/elite-journal'
 		})
