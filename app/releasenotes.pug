@@ -1,0 +1,9 @@
+extends layout
+block content
+	section.hero.is-primary.is-bold
+		.hero-body
+			.container
+				h1.title Release notes for Elite Journal #{version}
+				h2.subtitle Gawk at the fancy new features while they download!
+	#notes.container
+		p!= notesHTML

@@ -3,6 +3,7 @@
  * @author willyb321
  * @copyright MIT
  */
+
 /**
  * @module Index
  */
@@ -23,6 +24,9 @@ console.timeEnd('autoupdater');
 console.time('fs-extra');
 import fs from 'fs-extra';
 console.timeEnd('fs-extra');
+console.time('pug');
+import pug from 'pug';
+console.timeEnd('pug');
 console.time('isDev');
 import isDev from 'electron-is-dev';
 console.timeEnd('isDev');
@@ -71,6 +75,12 @@ autoUpdater.on('update-available', info => { // eslint-disable-line no-unused-va
 		message: 'Press OK to download the update, and the application will download the update and then tell you when its done. The version downloaded is: ' + info.version
 	});
 	win.loadURL(`file:///${__dirname}/../html/index.html`);
+	const compiledReleaseNotes = pug.renderFile(path.join(__dirname, '..', 'releasenotes.pug'), {
+		basedir: path.join(__dirname, '..'),
+		version: info.version,
+		notesHTML: info.releaseNotes
+	});
+	win.loadURL('data:text/html,' + compiledReleaseNotes, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
 });
 /** Autoupdater on downloaded */
 autoUpdater.on('update-downloaded', () => { // eslint-disable-line no-unused-vars
