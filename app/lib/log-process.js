@@ -75,7 +75,7 @@ export function readLog(log, filter) {
 			parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
 			toPug.push(parsed);
 			currentData.events.push(parsed.event);
-			tablified.push(tableify(parsed));
+			tablified.push(tableify(parsed, undefined, undefined, true));
 		}
 	});
 	lr.on('end', err => {

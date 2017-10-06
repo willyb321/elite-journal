@@ -32,7 +32,7 @@
     "progressbar.js": "^1.0.1",
     "pug": "^2.0.0-rc.4",
     "source-map-support": "^0.5.0",
-    "tableify": "^1.1.0"
+    "tableify": "github:willyb321/node-tableify#33ea8a2d2664fa7725185a886c7edf66836cb9d2"
   },
   "xo": false
 }
