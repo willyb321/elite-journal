@@ -6,7 +6,6 @@
 /**
  * @module Watcher-Process
  */
-import {webContents} from 'electron';
 import _ from 'lodash';
 import moment from 'moment';
 import pug from 'pug'
