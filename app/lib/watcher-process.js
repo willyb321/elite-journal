@@ -42,7 +42,7 @@ export function watchGood(stop) {
 			events: currentData.events
 		});
 		currentData.log = compiledWatch;
-		webContents.getFocusedWebContents().loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
+		webContents.getAllWebContents()[0].loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
 	});
 
 	watcher.on('stopped', () => {
