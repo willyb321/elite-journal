@@ -12,6 +12,12 @@ const os = require('os');
 const path = require('path');
 const fs = require('fs-extra');
 const debug = require('debug')('wotch');
+const Raven = require('raven');
+
+Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8:adbedad11d84421097182d6713727606@sentry.io/226655', {
+	release: require('electron').app.getVersion(),
+	autoBreadcrumbs: true
+}).install();
 
 /**
  * Interval in MS to poll directory at.
@@ -251,23 +257,31 @@ class LogWatcher extends events.EventEmitter {
 		s.once('end', finish);
 
 		s.on('data', chunk => {
-			const idx = chunk.lastIndexOf('\n');
-			if (idx < 0) {
-				leftover = Buffer.concat([leftover, chunk]);
-			} else {
-				this._logDetailMap[filename].watermark += idx + 1;
-				try {
-					const obs = Buffer.concat([leftover, chunk.slice(0, idx + 1)])
+			const sThis = this;
+			Raven.context(function () {
+				Raven.captureBreadcrumb({
+					data: {
+						chunk: chunk.toString()
+					}
+				});
+				const idx = chunk.lastIndexOf('\n');
+				if (idx < 0) {
+					leftover = Buffer.concat([leftover, chunk]);
+				} else {
+					sThis._logDetailMap[filename].watermark += idx + 1;
+					try {
+						const obs = Buffer.concat([leftover, chunk.slice(0, idx + 1)])
 							.toString('utf8')
 							.split(/[\r\n]+/)
 							.filter(l => l.length > 0)
 							.map(l => JSON.parse(l));
-					leftover = chunk.slice(idx + 1);
-					setImmediate(() => this.emit('data', obs) && this.emit('finished'));
-				} catch (err) {
-					finish(err);
+						leftover = chunk.slice(idx + 1);
+						setImmediate(() => sThis.emit('data', obs) && sThis.emit('finished'));
+					} catch (err) {
+						finish(err);
+					}
 				}
-			}
+			});
 		});
 	}
 	}
