@@ -53,6 +53,7 @@ export function getLogPath() {
 export function readLog(log, filter) {
 	let toPug = [];
 	let tablified = [];
+	let checkEvents = [];
 	if (!filter) {
 		filter = 'All Events';
 	}
@@ -63,6 +64,7 @@ export function readLog(log, filter) {
 	});
 	lr.on('line', line => {
 		let parsed = JSON.parse(line);
+		checkEvents.push(parsed.event);
 		if (filter && parsed.event !== filter && filter !== 'All Events') {
 			parsed = null;
 		}
@@ -74,6 +76,9 @@ export function readLog(log, filter) {
 			});
 			parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
 			toPug.push(parsed);
+			if (currentData.events.indexOf(parsed.event)) {
+
+			}
 			currentData.events.push(parsed.event);
 			tablified.push(tableify(parsed, undefined, undefined, true));
 		}
@@ -82,6 +87,9 @@ export function readLog(log, filter) {
 		if (err) {
 			Raven.captureException(err);
 		} else {
+			if (currentData.events !== checkEvents) {
+				currentData.events = checkEvents;
+			}
 			currentData.events = _.uniq(currentData.events);
 			const filterLog = pug.renderFile(path.join(__dirname, '..', 'filter.pug'), {
 				basedir: path.join(__dirname, '..'),
