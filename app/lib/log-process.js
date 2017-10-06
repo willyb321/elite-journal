@@ -15,7 +15,7 @@ import tableify from 'tableify';
 import {logPath, currentData} from '../main/index';
 import path from 'path';
 import Raven from 'raven';
-Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8@sentry.io/226655', {
+Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8:adbedad11d84421097182d6713727606@sentry.io/226655', {
 	release: require('electron').app.getVersion(),
 	autoBreadcrumbs: true
 }).install();
