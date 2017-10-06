@@ -30,7 +30,7 @@
 				<div onclick="loadLog()" class="tile hvr-shrink is-child box">
 					<p class="title">Load a file</p>
 				</div>
-				<div onclick="watchLog()" class="tile hvr-shrink is-child box">
+				<div onclick="return watchLog(this)" class="tile hvr-shrink is-child box">
 					<p class="title">Watch logs</p>
 				</div>
 			</div>
@@ -40,7 +40,9 @@
 	function loadLog() {
 		ipc.send('loadLog')
 	}
-	function watchLog() {
+	function watchLog(e) {
+		e.disabled = true;
+		e.onclick = '';
 		ipc.send('watchLog')
 	}
 </script>
