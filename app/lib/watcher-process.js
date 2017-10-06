@@ -11,7 +11,7 @@ import _ from 'lodash';
 import moment from 'moment';
 import pug from 'pug'
 import tableify from 'tableify';
-import {logPath, currentData} from '../main/index';
+import {logPath, currentData, win} from '../main/index';
 import path from 'path';
 import {LogWatcher} from './log-watcher';
 import Raven from 'raven';
@@ -42,7 +42,7 @@ export function watchGood(stop) {
 			events: currentData.events
 		});
 		currentData.log = compiledWatch;
-		webContents.getAllWebContents()[0].loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
+		win.loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
 	});
 
 	watcher.on('stopped', () => {

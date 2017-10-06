@@ -12,7 +12,7 @@ import _ from 'lodash';
 import moment from 'moment';
 import pug from 'pug'
 import tableify from 'tableify';
-import {logPath, currentData} from '../main/index';
+import {logPath, currentData, win} from '../main/index';
 import path from 'path';
 import Raven from 'raven';
 Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8:adbedad11d84421097182d6713727606@sentry.io/226655', {
@@ -97,8 +97,7 @@ export function readLog(log, filter) {
 				filterLog
 			});
 			currentData.log = compiledLog;
-			webContents.getAllWebContents()[0].loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
-			// webContents.getFocusedWebContents().loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
+			win.loadURL('data:text/html,' + compiledLog, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
 		}
 	})
 }

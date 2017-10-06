@@ -54,7 +54,7 @@ console.timeEnd('debug');
 console.timeEnd('Imports');
 const app = require('electron').app;
 
-let win;
+export let win;
 export const currentData = {
 	log: null,
 	events: [],
