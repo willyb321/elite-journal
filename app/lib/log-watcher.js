@@ -274,7 +274,22 @@ class LogWatcher extends events.EventEmitter {
 							.toString('utf8')
 							.split(/[\r\n]+/)
 							.filter(l => l.length > 0)
-							.map(l => JSON.parse(l));
+							.map(l => {
+								try {
+									return JSON.parse(l)
+								} catch (e) {
+									Raven.context(function () {
+										Raven.captureBreadcrumb({
+											message: 'Log-watcher JSON.parse failed',
+											data: {
+												line: l,
+												chunk: chunk
+											}
+										});
+										Raven.captureException(e);
+									})
+								}
+							});
 						leftover = chunk.slice(idx + 1);
 						setImmediate(() => sThis.emit('data', obs) && sThis.emit('finished'));
 					} catch (err) {
@@ -306,7 +321,7 @@ if (!module.parent) {
 		throw new Error(err.stack || err);
 	});
 
-	const watcher = new LogWatcher(DEFAULT_SAVE_DIR);
+	const watcher = new LogWatcher(DEFAULT_SAVE_DIR, 3);
 	watcher.on('error', err => {
 		console.error(err.stack || err);
 		throw new Error(err.stack || err);
