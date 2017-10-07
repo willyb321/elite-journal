@@ -15,7 +15,7 @@ const debug = require('debug')('wotch');
 const Raven = require('raven');
 
 Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8:adbedad11d84421097182d6713727606@sentry.io/226655', {
-	release: require('electron').app.getVersion(),
+	release: (!module.parent ? require('../package').version : require('electron').app.getVersion()),
 	autoBreadcrumbs: true
 }).install();
 
@@ -278,12 +278,19 @@ class LogWatcher extends events.EventEmitter {
 								try {
 									return JSON.parse(l)
 								} catch (e) {
+									debug('json.parse error', {line: l});
 									Raven.context(function () {
+										Raven.captureBreadcrumb({
+											message: 'File that crashed log watcher',
+											data: {
+												filename
+											}
+										});
 										Raven.captureBreadcrumb({
 											message: 'Log-watcher JSON.parse failed',
 											data: {
 												line: l,
-												chunk: chunk
+												chunk: chunk.toString()
 											}
 										});
 										Raven.captureException(e);
@@ -321,20 +328,21 @@ if (!module.parent) {
 		throw new Error(err.stack || err);
 	});
 
-	const watcher = new LogWatcher(DEFAULT_SAVE_DIR, 3);
+	const watcher = new LogWatcher(DEFAULT_SAVE_DIR, 1040);
 	watcher.on('error', err => {
+		watcher.stop();
 		console.error(err.stack || err);
 		throw new Error(err.stack || err);
 	});
 	watcher.on('data', obs => {
-		obs.forEach(ob => {
-			const {timestamp, event} = ob;
-			console.log('\n' + timestamp, event);
-			delete ob.timestamp;
-			delete ob.event;
-			Object.keys(ob).sort().forEach(k => {
-				console.log('\t' + k, ob[k]);
-			});
-		});
+		// obs.forEach(ob => {
+		// 	const {timestamp, event} = ob;
+		// 	console.log('\n' + timestamp, event);
+		// 	delete ob.timestamp;
+		// 	delete ob.event;
+		// 	Object.keys(ob).sort().forEach(k => {
+		// 		// console.log('\t' + k, ob[k]);
+		// 	});
+		// });
 	});
 }
