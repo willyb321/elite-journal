@@ -272,6 +272,8 @@ class LogWatcher extends events.EventEmitter {
 					try {
 						const obs = Buffer.concat([leftover, chunk.slice(0, idx + 1)])
 							.toString('utf8')
+							.replace(/\u000e/igm, '')
+							.replace(/\u000f/igm, '')
 							.split(/[\r\n]+/)
 							.filter(l => l.length > 0)
 							.map(l => {
