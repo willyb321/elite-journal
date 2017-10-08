@@ -7,7 +7,7 @@
  * @module Reader
  */
 import LineByLineReader from 'line-by-line';
-import {dialog, webContents} from 'electron';
+import {dialog} from 'electron';
 import _ from 'lodash';
 import moment from 'moment';
 import pug from 'pug'
@@ -63,25 +63,44 @@ export function readLog(log, filter) {
 		Raven.captureException(err);
 	});
 	lr.on('line', line => {
-		let parsed = JSON.parse(line);
-		checkEvents.push(parsed.event);
-		if (filter && parsed.event !== filter && filter !== 'All Events') {
-			parsed = null;
-		}
-		if (parsed) {
-			_.each(Object.keys(parsed), elem => {
-				if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) {
-					delete parsed[elem];
+		Raven.context(function() {
+			Raven.captureBreadcrumb({
+				data: {
+					line: line,
+					filename: log
 				}
 			});
-			parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
-			toPug.push(parsed);
-			if (currentData.events.indexOf(parsed.event)) {
-
+			let parsed;
+			if (!parsed) {
+				try {
+					parsed = JSON.parse(line);
+				} catch (e) {
+					Raven.captureException(e);
+					line = line
+						.replace(/\u000e/igm, '')
+						.replace(/\u000f/igm, '');
+					parsed = JSON.parse(line);
+				}
 			}
-			currentData.events.push(parsed.event);
-			tablified.push(tableify(parsed, undefined, undefined, true));
-		}
+			if (parsed) {
+				checkEvents.push(parsed.event);
+				if (filter && parsed.event !== filter && filter !== 'All Events') {
+					parsed = null;
+				}
+				parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
+				toPug.push(parsed);
+				_.each(Object.keys(parsed), elem => {
+					if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) {
+						delete parsed[elem];
+					}
+				});
+				if (currentData.events.indexOf(parsed.event)) {
+
+				}
+				currentData.events.push(parsed.event);
+				tablified.push(tableify(parsed, undefined, undefined, true));
+			}
+		})
 	});
 	lr.on('end', err => {
 		if (err) {

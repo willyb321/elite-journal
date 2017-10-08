@@ -3,7 +3,8 @@
 		"presets": [
 			"env"
 		],
-		"minified": false,
+		"plugins": ["source-map-support"],
+		"sourceMaps": "inline",
 		"only": [
 			"app/*.js",
 			"app/main/*.js"
