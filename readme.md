@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/willyb321/elite-journal/blob/master/build/icon.png?raw=true"/>
+  <img src="https://willyb321-imgproxy.herokuapp.com/k0YEbumMcrJhrcYNPkhS89rWF4b5r8voUBcDiw6c1e4/fit/256/256/no/1/aHR0cHM6Ly9naXRodWIuY29tL3dpbGx5YjMyMS9lbGl0ZS1qb3VybmFsL2Jsb2IvZGV2ZWxvcC9idWlsZC9pY29uLnBuZz9yYXc9dHJ1ZQ.png"/>
 </p>
 
 # Elite Journal
