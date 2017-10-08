@@ -1,7 +1,7 @@
 {
 	"non-interactive": true,
 	"dry-run": false,
-	"verbose": false,
+	"verbose": true,
 	"force": false,
 	"pkgFiles": [
 		"package.json",
@@ -19,6 +19,9 @@
 		"pushRepo": null,
 		"beforeStartCommand": false,
 		"beforeStageCommand": false
+	},
+	"npm": {
+		"publish": false
 	},
 	"github": {
 		"release": true,
