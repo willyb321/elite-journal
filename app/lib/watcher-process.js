@@ -6,6 +6,7 @@
 /**
  * @module Watcher-Process
  */
+import 'source-map-support/register';
 import _ from 'lodash';
 import moment from 'moment';
 import pug from 'pug'
@@ -25,6 +26,7 @@ Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8:adbedad11d84421097182d671
  */
 export function watchGood(stop) {
 	const watcher = new LogWatcher(logPath, 3);
+	currentData.watching = true;
 	let toPug = [];
 	let tablified = [];
 	watcher.on('error', err => {
@@ -37,6 +39,7 @@ export function watchGood(stop) {
 		const compiledWatch = pug.renderFile(path.join(__dirname, '..', 'logload.pug'), {
 			basedir: path.join(__dirname, '..'),
 			data: toPug,
+			watching: true,
 			tabled: tablified,
 			events: currentData.events
 		});
@@ -48,20 +51,23 @@ export function watchGood(stop) {
 		console.log('nah its stopped');
 	});
 	watcher.on('data', obs => {
-		obs.forEach(ob => {
-			const parsed = ob;
-			_.each(Object.keys(parsed), elem => {
-				if (!(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) {
-					delete parsed[elem];
-				}
+		if (obs) {
+			obs.forEach(ob => {
+				const parsed = ob || {};
+				_.each(Object.keys(parsed), elem => {
+					if (parsed && elem && !(elem.endsWith('_Localised') || !parsed[elem].toString().startsWith('$'))) {
+						delete parsed[elem];
+					}
+				});
+				parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
+				toPug.push(parsed);
+				currentData.events.push(parsed.event);
+				tablified.push(tableify(parsed, undefined, undefined, true));
 			});
-			parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
-			toPug.push(parsed);
-			currentData.events.push(parsed.event);
-			tablified.push(tableify(parsed, undefined, undefined, true));
-		});
+		}
 	});
 	if (stop) {
 		watcher.stop();
+		currentData.watching = true;
 	}
 }

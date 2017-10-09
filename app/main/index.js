@@ -9,6 +9,7 @@
  */
 console.time('Imports');
 console.time('FullStart');
+import 'source-map-support/register';
 console.time('electron');
 import {Menu, BrowserWindow, dialog, ipcMain as ipc, shell} from 'electron';
 console.timeEnd('electron');
@@ -57,6 +58,7 @@ const app = require('electron').app;
 export let win;
 export const currentData = {
 	log: null,
+	watching: false,
 	events: [],
 	filteringFor: null,
 	currentPath: null

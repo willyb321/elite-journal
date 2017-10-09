@@ -16,3 +16,6 @@ block content
 						th(style="text-align: center;")= elem.event
 					tr
 						td!= tabled[ind]
+	if watching
+		script
+			include watchscroll.js

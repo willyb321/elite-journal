@@ -7,6 +7,7 @@
  * @module Watcher
  */
 'use strict';
+import 'source-map-support/register';
 const events = require('events');
 const os = require('os');
 const path = require('path');
@@ -300,7 +301,11 @@ class LogWatcher extends events.EventEmitter {
 								}
 							});
 						leftover = chunk.slice(idx + 1);
-						setImmediate(() => sThis.emit('data', obs) && sThis.emit('finished'));
+						if (obs) {
+							setImmediate(() => sThis.emit('data', obs) && sThis.emit('finished'));
+						} else {
+							setImmediate(() => sThis.emit('data', {}) && sThis.emit('finished'));
+						}
 					} catch (err) {
 						finish(err);
 					}
