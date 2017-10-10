@@ -10,7 +10,7 @@
   "main": "main/es6-init.js",
   "productName": "Elite Journal",
   "description": "Parsing the elite dangerous journal and putting it in a cool format!",
-  "version": "1.13.8",
+  "version": "1.13.9",
   "dependencies": {
     "about-window": "^1.8.0",
     "bulma": "^0.5.3",
