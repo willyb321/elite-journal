@@ -66,6 +66,7 @@ export class LogWatcher extends events.EventEmitter {
 	 * @param filename {string} File to bury.
 	 */
 	bury(filename) {
+		log.info(`Burying: ${filename}`);
 		debug('bury', {filename});
 		this._logDetailMap[filename].tombstoned = true;
 	}
@@ -74,6 +75,7 @@ export class LogWatcher extends events.EventEmitter {
 	 * Stop running
 	 */
 	stop() {
+		log.info('Stopping Watcher');
 		debug('stop');
 
 		if (this._op === null) {
@@ -236,8 +238,8 @@ export class LogWatcher extends events.EventEmitter {
 	 */
 	_read(filename, callback) {
 		const {watermark, size} = this._logDetailMap[filename];
+		log.info(`_read: ${filename} (size: ${size}, watermark: ${watermark}`);
 		debug('_read', {filename, watermark, size});
-
 		let leftover = Buffer.from('', 'utf8');
 
 		const s = fs.createReadStream(filename, {
@@ -260,6 +262,7 @@ export class LogWatcher extends events.EventEmitter {
 		s.once('end', finish);
 
 		s.on('data', chunk => {
+			log.info('Watcher recieved a chunk of data - processing it.');
 			const sThis = this;
 			Raven.context(function () {
 				Raven.captureBreadcrumb({

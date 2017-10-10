@@ -12,13 +12,13 @@ console.time('FullStart');
 console.time('electron');
 import {Menu, BrowserWindow, dialog, ipcMain as ipc, shell} from 'electron';
 console.timeEnd('electron');
-console.time('path');
-import path from 'path';
-console.timeEnd('path');
 console.time('log');
 import log from 'electron-log';
 console.log = log.info;
 console.timeEnd('log');
+console.time('path');
+import path from 'path';
+console.timeEnd('path');
 console.time('os');
 import os from 'os';
 console.timeEnd('os');
@@ -61,7 +61,8 @@ export const currentData = {
 	watching: false,
 	events: [],
 	filteringFor: null,
-	currentPath: null
+	currentPath: null,
+	watchingFinished: 0
 };
 Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8:adbedad11d84421097182d6713727606@sentry.io/226655', {
 	release: app.getVersion(),
@@ -180,7 +181,7 @@ app.on('ready', () => {
 });
 
 ipc.on('filter', (event, args) => {
-	console.log(args);
+	log.info(`Filtering for: ${args}`);
 	currentData.filteringFor = args;
 	readLog(currentData.currentPath, args);
 });
@@ -206,7 +207,7 @@ function saveHTML() {
 			}]
 		}, fileName => {
 			if (fileName === undefined) {
-				console.log('You didn\'t save the file');
+				log.info('No file selected to save to HTML');
 				return;
 			}
 			fs.writeFile(fileName, currentData.log, err => {
@@ -227,7 +228,7 @@ function rawLog() {
 	} else if (typeof process.loadfile === 'string') {
 		shell.openItem(process.loadfile);
 	} else {
-		console.log(process.loadfile);
+		log.info(`Don't know what to do with: ${process.loadfile} when opening the raw log.`);
 	}
 }
 
@@ -261,13 +262,9 @@ const template = [{
 		type: 'checkbox',
 		id: 'checked',
 		click(checked) {
-			const stop = true;
-			console.log(checked.checked);
-			if (checked.checked === true) {
-				watchGood(false);
-			} else if (checked.checked === false) {
-				watchGood(stop);
-			}
+			const stop = !checked.checked;
+			log.info(`Watching: ${checked.checked}`);
+			watchGood(stop);
 		}
 	}, {
 		label: 'Open raw log',
@@ -309,16 +306,6 @@ const template = [{
 		label: 'The Github Repo',
 		click() {
 			shell.openExternal('https://github.com/willyb321/elite-journal');
-		}
-	}, {
-		label: 'What Version am I on?',
-		click() {
-			dialog.showMessageBox({
-				type: 'info',
-				buttons: [],
-				title: 'Please load a file first',
-				message: 'Current Version: ' + app.getVersion()
-			});
 		}
 	}, {
 		label: 'About',

@@ -11,6 +11,7 @@ import moment from 'moment';
 import pug from 'pug'
 import tableify from 'tableify';
 import {logPath, currentData, win} from '../main/index';
+import log from 'electron-log';
 import path from 'path';
 import {LogWatcher} from './log-watcher';
 import Raven from 'raven';
@@ -33,11 +34,12 @@ export function watchGood(stop) {
 	let toPug = [];
 	let tablified = [];
 	watcher.on('error', err => {
-		console.log('Error in watcher');
+		log.info('Error in watcher');
 		Raven.captureException(err);
 	});
 	watcher.on('finished', () => {
-		console.log('it stopped');
+		currentData.watchingFinished++;
+		log.info('Watcher finished a file');
 		currentData.events = _.uniq(currentData.events);
 		const compiledWatch = pug.renderFile(path.join(__dirname, '..', 'logload.pug'), {
 			basedir: path.join(__dirname, '..'),
@@ -47,11 +49,14 @@ export function watchGood(stop) {
 			events: currentData.events
 		});
 		currentData.log = compiledWatch;
-		win.loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
+		if (currentData.watchingFinished === 3) {
+			log.info('Loading data from watcher into window.');
+			win.loadURL('data:text/html,' + compiledWatch, {baseURLForDataURL: `file://${path.join(__dirname, '..')}`});
+		}
 	});
 
 	watcher.on('stopped', () => {
-		console.log('nah its stopped');
+		currentData.watching = false;
 	});
 	watcher.on('data', obs => {
 		if (obs) {
