@@ -6,7 +6,6 @@
 /**
  * @module Watcher-Process
  */
-import 'source-map-support/register';
 import _ from 'lodash';
 import moment from 'moment';
 import pug from 'pug'
@@ -15,6 +14,8 @@ import {logPath, currentData, win} from '../main/index';
 import path from 'path';
 import {LogWatcher} from './log-watcher';
 import Raven from 'raven';
+
+let watcher;
 
 Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8:adbedad11d84421097182d6713727606@sentry.io/226655', {
 	release: require('electron').app.getVersion(),
@@ -25,7 +26,9 @@ Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8:adbedad11d84421097182d671
  * @param stop {boolean} - if the watching should be stopped.
  */
 export function watchGood(stop) {
-	const watcher = new LogWatcher(logPath, 3);
+	if (!watcher) {
+		watcher = new LogWatcher(logPath, 3);
+	}
 	currentData.watching = true;
 	let toPug = [];
 	let tablified = [];
@@ -68,6 +71,6 @@ export function watchGood(stop) {
 	});
 	if (stop) {
 		watcher.stop();
-		currentData.watching = true;
+		currentData.watching = false;
 	}
 }
