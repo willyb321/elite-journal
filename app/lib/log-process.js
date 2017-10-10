@@ -65,6 +65,7 @@ export function readLog(log, filter) {
 	lr.on('line', line => {
 		Raven.context(function() {
 			Raven.captureBreadcrumb({
+				message: 'Log-process line',
 				data: {
 					line: line,
 					filename: log
@@ -82,11 +83,11 @@ export function readLog(log, filter) {
 					parsed = JSON.parse(line);
 				}
 			}
+			if (filter && parsed && parsed.event !== filter && filter !== 'All Events') {
+				parsed = null;
+			}
 			if (parsed) {
 				checkEvents.push(parsed.event);
-				if (filter && parsed.event !== filter && filter !== 'All Events') {
-					parsed = null;
-				}
 				parsed.timestamp = moment(parsed.timestamp).format('h:mm a - D/M ');
 				toPug.push(parsed);
 				_.each(Object.keys(parsed), elem => {
@@ -94,9 +95,6 @@ export function readLog(log, filter) {
 						delete parsed[elem];
 					}
 				});
-				if (currentData.events.indexOf(parsed.event)) {
-
-				}
 				currentData.events.push(parsed.event);
 				tablified.push(tableify(parsed, undefined, undefined, true));
 			}
