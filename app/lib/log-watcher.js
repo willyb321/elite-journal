@@ -7,13 +7,15 @@
  * @module Watcher
  */
 'use strict';
-import 'source-map-support/register';
-const events = require('events');
-const os = require('os');
-const path = require('path');
-const fs = require('fs-extra');
-const debug = require('debug')('wotch');
-const Raven = require('raven');
+import events from 'events';
+import os from 'os';
+import path from 'path';
+import fs from 'fs-extra';
+import debug0 from 'debug';
+import Raven from 'raven';
+import log from 'electron-log';
+
+const debug = debug0('wotch');
 
 Raven.config('https://8f7736c757ed4d2882fc24a2846d1ce8:adbedad11d84421097182d6713727606@sentry.io/226655', {
 	release: (!module.parent ? require('../package').version : require('electron').app.getVersion()),
@@ -38,7 +40,7 @@ const DEFAULT_SAVE_DIR = path.join(
 /**
  * @class
  */
-class LogWatcher extends events.EventEmitter {
+export class LogWatcher extends events.EventEmitter {
 	/**
 	 * Construct the log watcher.
 	 * @param dirpath {string} The directory to watch.
@@ -323,11 +325,6 @@ function isCommanderLog(fpath) {
 	const base = path.basename(fpath);
 	return base.indexOf('Journal.') === 0 && path.extname(fpath) === '.log';
 }
-
-module.exports = {
-	LogWatcher,
-	isCommanderLog
-};
 
 if (!module.parent) {
 	process.on('uncaughtException', err => {

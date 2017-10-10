@@ -9,13 +9,16 @@
  */
 console.time('Imports');
 console.time('FullStart');
-import 'source-map-support/register';
 console.time('electron');
 import {Menu, BrowserWindow, dialog, ipcMain as ipc, shell} from 'electron';
 console.timeEnd('electron');
 console.time('path');
 import path from 'path';
 console.timeEnd('path');
+console.time('log');
+import log from 'electron-log';
+console.log = log.info;
+console.timeEnd('log');
 console.time('os');
 import os from 'os';
 console.timeEnd('os');
@@ -28,9 +31,6 @@ console.timeEnd('fs-extra');
 console.time('pug');
 import pug from 'pug';
 console.timeEnd('pug');
-console.time('isDev');
-import isDev from 'electron-is-dev';
-console.timeEnd('isDev');
 console.time('about');
 import openAboutWindow from 'about-window';
 console.timeEnd('about');
@@ -49,12 +49,12 @@ console.timeEnd('raven');
 console.time('utils');
 import {getMenuItem} from '../lib/utils';
 console.timeEnd('utils');
-console.time('debug');
-require('electron-debug')();
-console.timeEnd('debug');
+console.time('electron-collection');
+import {debug, isDev} from 'electron-collection';
+debug({showDevTools: true});
+console.timeEnd('electron-collection');
 console.timeEnd('Imports');
 const app = require('electron').app;
-
 export let win;
 export const currentData = {
 	log: null,

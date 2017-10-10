@@ -1,7 +1,11 @@
 {
 	"application/javascript": {
 		"presets": [
-			"env"
+			"env", {
+				"targets": {
+					"node": "current"
+				}
+			}
 		],
 		"plugins": ["source-map-support"],
 		"sourceMaps": "both",

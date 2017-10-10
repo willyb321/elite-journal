@@ -7,5 +7,7 @@
 				}
 			}
 		]
-	]
+	],
+	"plugins": ["source-map-support"],
+	"sourceMaps": "both"
 }

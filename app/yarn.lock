@@ -50,6 +50,10 @@ ansi-regex@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.0.0.tgz#c5061b6e0ef8a81775e50f5d66151bf6bf371107"
 
+app-root-path@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/app-root-path/-/app-root-path-2.0.1.tgz#cd62dcf8e4fd5a417efc664d2e5b10653c651b46"
+
 argparse@^1.0.7:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/argparse/-/argparse-1.0.9.tgz#73d83bc263f86e97f8cc4f6bae1b0e90a7d22c86"
@@ -165,6 +169,20 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
+configstore@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/configstore/-/configstore-2.1.0.tgz#737a3a7036e9886102aa6099e47bb33ab1aba1a1"
+  dependencies:
+    dot-prop "^3.0.0"
+    graceful-fs "^4.1.2"
+    mkdirp "^0.5.0"
+    object-assign "^4.0.1"
+    os-tmpdir "^1.0.0"
+    osenv "^0.1.0"
+    uuid "^2.0.1"
+    write-file-atomic "^1.1.2"
+    xdg-basedir "^2.0.0"
+
 constantinople@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/constantinople/-/constantinople-3.1.0.tgz#7569caa8aa3f8d5935d62e1fa96f9f702cd81c79"
@@ -175,6 +193,19 @@ constantinople@^3.0.1:
 cookie@0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
+
+cross-spawn@^4.0.0:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-4.0.2.tgz#7b9247621c23adfdd3856004a823cbe397424d41"
+  dependencies:
+    lru-cache "^4.0.1"
+    which "^1.2.9"
+
+debug@^2.2.0:
+  version "2.6.9"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
+  dependencies:
+    ms "2.0.0"
 
 debug@^2.5.1, debug@^2.6.8:
   version "2.6.8"
@@ -202,9 +233,32 @@ deep-equal@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
 
+default-shell@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/default-shell/-/default-shell-1.0.1.tgz#752304bddc6174f49eb29cb988feea0b8813c8bc"
+
 doctypes@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/doctypes/-/doctypes-1.1.0.tgz#ea80b106a87538774e8a3a4a5afe293de489e0a9"
+
+dot-prop@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/dot-prop/-/dot-prop-3.0.0.tgz#1b708af094a49c9a0e7dbcad790aba539dac1177"
+  dependencies:
+    is-obj "^1.0.0"
+
+electron-collection@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/electron-collection/-/electron-collection-1.2.0.tgz#3d405d7c5d0d3bcffd30a0473dc67b2970229abc"
+  dependencies:
+    app-root-path "^2.0.1"
+    electron-debug "^1.4.0"
+    electron-default-menu "^1.0.1"
+    electron-is-dev "^0.3.0"
+    electron-lets-move "0.0.5"
+    electron-squirrel-startup "^1.0.0"
+    first-run "^1.2.0"
+    fix-path "^2.1.0"
 
 electron-compile@^6.4.2:
   version "6.4.2"
@@ -229,6 +283,10 @@ electron-debug@^1.4.0:
     electron-is-dev "^0.3.0"
     electron-localshortcut "^3.0.0"
 
+electron-default-menu@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/electron-default-menu/-/electron-default-menu-1.0.1.tgz#3173c5018eb507404fec63bdf3b78c38eedba808"
+
 electron-is-accelerator@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/electron-is-accelerator/-/electron-is-accelerator-0.1.2.tgz#509e510c26a56b55e17f863a4b04e111846ab27b"
@@ -236,6 +294,12 @@ electron-is-accelerator@^0.1.0:
 electron-is-dev@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/electron-is-dev/-/electron-is-dev-0.3.0.tgz#14e6fda5c68e9e4ecbeff9ccf037cbd7c05c5afe"
+
+electron-lets-move@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/electron-lets-move/-/electron-lets-move-0.0.5.tgz#c0ce753eccabeab62c3290c85fdb582879846c65"
+  dependencies:
+    sudo-prompt "^6.2.0"
 
 electron-localshortcut@^3.0.0:
   version "3.0.2"
@@ -245,6 +309,16 @@ electron-localshortcut@^3.0.0:
     electron-is-accelerator "^0.1.0"
     keyboardevent-from-electron-accelerator "^0.7.0"
     keyboardevents-areequal "^0.2.1"
+
+electron-log@^2.2.9:
+  version "2.2.9"
+  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-2.2.9.tgz#e0484cb1a8a84593095e3b69f47361ae15d73bdf"
+
+electron-squirrel-startup@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/electron-squirrel-startup/-/electron-squirrel-startup-1.0.0.tgz#19b4e55933fa0ef8f556784b9c660f772546a0b8"
+  dependencies:
+    debug "^2.2.0"
 
 electron-updater@^2.9.3:
   version "2.9.3"
@@ -279,12 +353,37 @@ esprima@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-4.0.0.tgz#4499eddcd1110e0b218bacf2fa7f7f59f55ca804"
 
+execa@^0.5.0:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/execa/-/execa-0.5.1.tgz#de3fb85cb8d6e91c85bcbceb164581785cb57b36"
+  dependencies:
+    cross-spawn "^4.0.0"
+    get-stream "^2.2.0"
+    is-stream "^1.1.0"
+    npm-run-path "^2.0.0"
+    p-finally "^1.0.0"
+    signal-exit "^3.0.0"
+    strip-eof "^1.0.0"
+
 find-up@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/find-up/-/find-up-1.1.2.tgz#6b2e9822b1a2ce0a60ab64d610eccad53cb24d0f"
   dependencies:
     path-exists "^2.0.0"
     pinkie-promise "^2.0.0"
+
+first-run@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/first-run/-/first-run-1.2.0.tgz#cc7ad02ea85ff946cc2a9c96c402f9ec4f973120"
+  dependencies:
+    configstore "^2.0.0"
+    read-pkg-up "^1.0.1"
+
+fix-path@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/fix-path/-/fix-path-2.1.0.tgz#72ece739de9af4bd63fd02da23e9a70c619b4c38"
+  dependencies:
+    shell-path "^2.0.0"
 
 fs-extra-p@^4.4.0:
   version "4.4.0"
@@ -313,6 +412,13 @@ get-caller-file@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.2.tgz#f702e63127e7e231c160a80c1554acb70d5047e5"
 
+get-stream@^2.2.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-2.3.1.tgz#5f38f93f346009666ee0150a054167f91bdd95de"
+  dependencies:
+    object-assign "^4.0.1"
+    pinkie-promise "^2.0.0"
+
 glob@^7.0.5:
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.1.tgz#805211df04faaf1c63a3600306cdf5ade50b2ec8"
@@ -324,7 +430,7 @@ glob@^7.0.5:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-graceful-fs@^4.1.2, graceful-fs@^4.1.6:
+graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.11.tgz#0e8bdfe4d1ddb8854d64e04ea7c00e2a026e5658"
 
@@ -345,6 +451,10 @@ hosted-git-info@^2.1.4:
 hover.css@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/hover.css/-/hover.css-2.2.1.tgz#11d81525f7a8fa33b564fc322c07b454b6bc51a0"
+
+imurmurhash@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -395,6 +505,10 @@ is-fullwidth-code-point@^1.0.0:
   dependencies:
     number-is-nan "^1.0.0"
 
+is-obj@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-obj/-/is-obj-1.0.1.tgz#3e4729ac1f5fde025cd7d83a896dab9f4f67db0f"
+
 is-promise@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-promise/-/is-promise-2.1.0.tgz#79a2a9ece7f096e80f36d2b2f3bc16c1ff4bf3fa"
@@ -405,9 +519,17 @@ is-regex@^1.0.3:
   dependencies:
     has "^1.0.1"
 
+is-stream@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
+
 is-utf8@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
+
+isexe@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
 
 izitoast@^1.1.5:
   version "1.1.5"
@@ -522,7 +644,7 @@ minimist@0.0.8, minimist@~0.0.1:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
-mkdirp@^0.5.1:
+mkdirp@^0.5.0, mkdirp@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
@@ -545,6 +667,12 @@ normalize-package-data@^2.3.2:
     semver "2 || 3 || 4 || 5"
     validate-npm-package-license "^3.0.1"
 
+npm-run-path@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
+  dependencies:
+    path-key "^2.0.0"
+
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
@@ -566,11 +694,30 @@ optimist@^0.6.1:
     minimist "~0.0.1"
     wordwrap "~0.0.2"
 
+os-homedir@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/os-homedir/-/os-homedir-1.0.2.tgz#ffbc4988336e0e833de0c168c7ef152121aa7fb3"
+
 os-locale@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/os-locale/-/os-locale-1.4.0.tgz#20f9f17ae29ed345e8bde583b13d2009803c14d9"
   dependencies:
     lcid "^1.0.0"
+
+os-tmpdir@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
+
+osenv@^0.1.0:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/osenv/-/osenv-0.1.4.tgz#42fe6d5953df06c8064be6f176c3d05aaaa34644"
+  dependencies:
+    os-homedir "^1.0.0"
+    os-tmpdir "^1.0.0"
+
+p-finally@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
 
 parse-json@^2.2.0:
   version "2.2.0"
@@ -587,6 +734,10 @@ path-exists@^2.0.0:
 path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
+
+path-key@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
 
 path-parse@^1.0.5:
   version "1.0.5"
@@ -800,9 +951,31 @@ set-blocking@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/set-blocking/-/set-blocking-2.0.0.tgz#045f9782d011ae9a6803ddd382b24392b3d890f7"
 
+shell-env@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/shell-env/-/shell-env-0.3.0.tgz#2250339022989165bda4eb7bf383afeaaa92dc34"
+  dependencies:
+    default-shell "^1.0.0"
+    execa "^0.5.0"
+    strip-ansi "^3.0.0"
+
+shell-path@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/shell-path/-/shell-path-2.1.0.tgz#ea7d06ae1070874a1bac5c65bb9bdd62e4f67a38"
+  dependencies:
+    shell-env "^0.3.0"
+
 shifty@^1.5.2:
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/shifty/-/shifty-1.5.4.tgz#d4362fc914dd280ddf6e522be408b21203208346"
+
+signal-exit@^3.0.0:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+slide@^1.1.5:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
 
 source-map-support@^0.4.17:
   version "0.4.18"
@@ -884,6 +1057,14 @@ strip-bom@^2.0.0:
   dependencies:
     is-utf8 "^0.2.0"
 
+strip-eof@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/strip-eof/-/strip-eof-1.0.0.tgz#bb43ff5598a6eb05d89b59fcd129c983313606bf"
+
+sudo-prompt@^6.2.0:
+  version "6.2.1"
+  resolved "https://registry.yarnpkg.com/sudo-prompt/-/sudo-prompt-6.2.1.tgz#1079211ac2cf21f5230ffbeb124ffc22cee4c2b6"
+
 symbol-observable@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.4.tgz#29bf615d4aa7121bdd898b22d4b3f9bc4e2aa03d"
@@ -923,6 +1104,10 @@ uuid@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.0.0.tgz#6728fc0459c450d796a99c31837569bdf672d728"
 
+uuid@^2.0.1:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
+
 validate-npm-package-license@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.1.tgz#2804babe712ad3379459acfbe24746ab2c303fbc"
@@ -937,6 +1122,12 @@ void-elements@^2.0.1:
 which-module@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/which-module/-/which-module-1.0.0.tgz#bba63ca861948994ff307736089e3b96026c2a4f"
+
+which@^1.2.9:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/which/-/which-1.3.0.tgz#ff04bdfc010ee547d780bec38e1ac1c2777d253a"
+  dependencies:
+    isexe "^2.0.0"
 
 window-size@0.1.0:
   version "0.1.0"
@@ -971,6 +1162,20 @@ wrap-ansi@^2.0.0:
 wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
+
+write-file-atomic@^1.1.2:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-1.3.4.tgz#f807a4f0b1d9e913ae7a48112e6cc3af1991b45f"
+  dependencies:
+    graceful-fs "^4.1.11"
+    imurmurhash "^0.1.4"
+    slide "^1.1.5"
+
+xdg-basedir@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-2.0.0.tgz#edbc903cc385fc04523d966a335504b5504d1bd2"
+  dependencies:
+    os-homedir "^1.0.0"
 
 xelement@^1.0.16:
   version "1.0.16"
