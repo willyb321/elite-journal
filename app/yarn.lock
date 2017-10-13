@@ -247,9 +247,9 @@ dot-prop@^3.0.0:
   dependencies:
     is-obj "^1.0.0"
 
-ed-logwatcher@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/ed-logwatcher/-/ed-logwatcher-0.2.0.tgz#d5834920b08147b4ef2fc18b0d15089317be3ede"
+ed-logwatcher@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/ed-logwatcher/-/ed-logwatcher-0.2.1.tgz#5e6caf89884420542f8675340ae7388a022bf490"
   dependencies:
     debug "^3.1.0"
     fs-extra "^4.0.2"
