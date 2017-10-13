@@ -247,6 +247,14 @@ dot-prop@^3.0.0:
   dependencies:
     is-obj "^1.0.0"
 
+ed-logwatcher@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/ed-logwatcher/-/ed-logwatcher-0.2.0.tgz#d5834920b08147b4ef2fc18b0d15089317be3ede"
+  dependencies:
+    debug "^3.1.0"
+    fs-extra "^4.0.2"
+    raven "^2.2.1"
+
 electron-collection@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/electron-collection/-/electron-collection-1.2.0.tgz#3d405d7c5d0d3bcffd30a0473dc67b2970229abc"

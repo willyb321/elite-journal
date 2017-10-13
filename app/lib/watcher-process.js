@@ -13,7 +13,7 @@ import tableify from 'tableify';
 import {logPath, currentData, win} from '../main/index';
 import log from 'electron-log';
 import path from 'path';
-import {LogWatcher} from './log-watcher';
+import {LogWatcher} from 'ed-logwatcher';
 import Raven from 'raven';
 
 let watcher;
