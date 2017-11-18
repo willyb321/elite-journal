@@ -107,9 +107,9 @@ builtin-modules@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
 
-bulma@^0.5.3:
-  version "0.5.3"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.5.3.tgz#be93afb6246192505c30df3f9c1c29a97d319a13"
+bulma@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.6.1.tgz#5f21a77c0c06f7d80051c06628c23516081bd649"
 
 camelcase@^1.0.2:
   version "1.2.1"
@@ -247,13 +247,12 @@ dot-prop@^3.0.0:
   dependencies:
     is-obj "^1.0.0"
 
-ed-logwatcher@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/ed-logwatcher/-/ed-logwatcher-0.2.1.tgz#5e6caf89884420542f8675340ae7388a022bf490"
+ed-logwatcher@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/ed-logwatcher/-/ed-logwatcher-1.4.0.tgz#a5b8612bdbe2a6426556ac914f0076e2c4b64101"
   dependencies:
     debug "^3.1.0"
-    fs-extra "^4.0.2"
-    raven "^2.2.1"
+    supports-color "^4.4.0"
 
 electron-collection@^1.2.0:
   version "1.2.0"
@@ -318,9 +317,9 @@ electron-localshortcut@^3.0.0:
     keyboardevent-from-electron-accelerator "^0.7.0"
     keyboardevents-areequal "^0.2.1"
 
-electron-log@^2.2.9:
-  version "2.2.9"
-  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-2.2.9.tgz#e0484cb1a8a84593095e3b69f47361ae15d73bdf"
+electron-log@^2.2.11:
+  version "2.2.11"
+  resolved "https://registry.yarnpkg.com/electron-log/-/electron-log-2.2.11.tgz#dc99118cda054aa866e47d081d1431c76baacd68"
 
 electron-squirrel-startup@^1.0.0:
   version "1.0.0"
@@ -445,6 +444,10 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
 "graceful-readlink@>= 1.0.0":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
+
+has-flag@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-2.0.0.tgz#e8207af1cc7b30d446cc70b734b5e8be18f88d51"
 
 has@^1.0.1:
   version "1.0.1"
@@ -658,9 +661,9 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-moment@^2.18.1:
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
+moment@^2.19.2:
+  version "2.19.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.19.2.tgz#8a7f774c95a64550b4c7ebd496683908f9419dbe"
 
 ms@2.0.0:
   version "2.0.0"
@@ -882,9 +885,9 @@ pug@^2.0.0-rc.4:
     pug-runtime "^2.0.3"
     pug-strip-comments "^1.0.2"
 
-raven-js@^3.18.1:
-  version "3.18.1"
-  resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.18.1.tgz#746339c08fca75c3f402d7e6b633687c3ffc6ee8"
+raven-js@^3.20.1:
+  version "3.20.1"
+  resolved "https://registry.yarnpkg.com/raven-js/-/raven-js-3.20.1.tgz#3170bdb35c05098ddb8548ee5be0687f9d763330"
 
 raven@^2.2.1:
   version "2.2.1"
@@ -1072,6 +1075,12 @@ strip-eof@^1.0.0:
 sudo-prompt@^6.2.0:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/sudo-prompt/-/sudo-prompt-6.2.1.tgz#1079211ac2cf21f5230ffbeb124ffc22cee4c2b6"
+
+supports-color@^4.4.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.5.0.tgz#be7a0de484dec5c5cddf8b3d59125044912f635b"
+  dependencies:
+    has-flag "^2.0.0"
 
 symbol-observable@^1.0.1:
   version "1.0.4"
