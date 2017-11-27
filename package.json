@@ -28,7 +28,7 @@
     "electron"
   ],
   "devDependencies": {
-    "ava": "^0.23.0",
+    "ava": "^0.24.0",
     "babel-core": "^7.0.0-beta.2",
     "babel-plugin-source-map-support": "^1.0.0",
     "babel-preset-env": "^2.0.0-beta.2",
