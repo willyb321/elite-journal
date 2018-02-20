@@ -30,7 +30,7 @@
   "devDependencies": {
     "ava": "^0.23.0",
     "babel-core": "^7.0.0-beta.2",
-    "babel-plugin-source-map-support": "^1.0.0",
+    "babel-plugin-source-map-support": "^2.0.0",
     "babel-preset-env": "^2.0.0-beta.2",
     "babel-preset-react": "^7.0.0-beta.2",
     "del": "^3.0.0",
