@@ -36,7 +36,7 @@
     "del": "^3.0.0",
     "devtron": "^1.4.0",
     "electron": "^1.8.1",
-    "electron-builder": "^19.28.4",
+    "electron-builder": "^20.1.1",
     "electron-compilers": "^5.9.0",
     "gulp": "^3.9.1",
     "gulp-ava": "^0.18.0",
