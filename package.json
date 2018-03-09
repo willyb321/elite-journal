@@ -46,7 +46,7 @@
     "gulp-inject": "^4.3.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-xo": "^0.16.0",
+    "gulp-xo": "^0.17.1",
     "jake": "latest",
     "jsdoc": "^3.5.5",
     "jsdoc-export-default-interop": "^0.3.1",
