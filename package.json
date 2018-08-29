@@ -40,7 +40,7 @@
     "electron-compilers": "^5.9.0",
     "gulp": "^3.9.1",
     "gulp-ava": "^0.18.0",
-    "gulp-babel": "^7.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
     "gulp-inject": "^4.3.0",
