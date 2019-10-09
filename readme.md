@@ -10,8 +10,7 @@
 
 > Parsing the Elite: Dangerous journal and putting it into a cool format.
 
-## Whats it actually do then?
-
+## What does it actually do then?
 Basically it allows the average joe to have a look at the journal log for [Elite: Dangerous](https://www.elitedangerous.com/) in a nice easy to read format.
 
 ## How to get it?
